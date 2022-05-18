@@ -10,6 +10,11 @@ using System.Windows.Forms;
 using WindowsFormsApp2;
 //no se ustedes pero a mi me caga cuando guapa el que lo lea jsjsjsj wapa
 //chochochochochochochochochochocho
+//holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+    //hola jsjsjs aiuda esto no es un meme
+
+    ///kkpopopopopoppopopo
 namespace WindowsFormsApplication2
 {
     public class EnlaceCassandra
