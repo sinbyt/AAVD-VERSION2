@@ -144,6 +144,12 @@
     <Compile Include="BORRAREMPLEADO.Designer.cs">
       <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUSCARNOMINA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSCARNOMINA.Designer.cs">
+      <DependentUpon>BUSCARNOMINA.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUSSINESLOGICLAYER.cs" />
     <Compile Include="CAMBIAREMPLEADO.cs">
       <SubType>Form</SubType>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BORRAREMPLEADO.resx">
       <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSCARNOMINA.resx">
+      <DependentUpon>BUSCARNOMINA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CAMBIAREMPLEADO.resx">
       <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>

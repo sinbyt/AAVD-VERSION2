@@ -16,6 +16,7 @@ namespace WindowsFormsApp2
         EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
         NuevoPuesto PuestoNuevo;
+        BUSCARNOMINA BuscarNomina;
         public formNomina()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace WindowsFormsApp2
             NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
             PuestoNuevo = new NuevoPuesto();
+            BuscarNomina = new BUSCARNOMINA();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,6 +65,11 @@ namespace WindowsFormsApp2
         private void button8_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buscarNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarNomina.ShowDialog();
         }
     }
 }

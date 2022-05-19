@@ -351,7 +351,7 @@ namespace WindowsFormsApp2
             this.cbPuesto.Items.AddRange(new object[] {
             "Supervisor",
             "Calidad",
-            "Esclavo"});
+            "Pasante"});
             this.cbPuesto.Location = new System.Drawing.Point(174, 211);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(195, 24);
