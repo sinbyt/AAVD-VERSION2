@@ -126,17 +126,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGREGAREMPLEADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGREGAREMPLEADO.designer.cs">
+      <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="AGREGARPERCEPCION.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AGREGARPERCEPCION.Designer.cs">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AGREGAREMPLEADO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AGREGAREMPLEADO.Designer.cs">
-      <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
     </Compile>
     <Compile Include="BORRAREMPLEADO.cs">
       <SubType>Form</SubType>
@@ -216,11 +216,11 @@
     <Compile Include="REPORTEGENERALDENOMINA.Designer.cs">
       <DependentUpon>REPORTEGENERALDENOMINA.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AGREGARPERCEPCION.resx">
-      <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AGREGAREMPLEADO.resx">
       <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AGREGARPERCEPCION.resx">
+      <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BORRAREMPLEADO.resx">
       <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
