@@ -52,14 +52,14 @@ namespace WindowsFormsApp2
             this.label1 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.tbDomicilio = new System.Windows.Forms.TextBox();
+            this.tbRFC = new System.Windows.Forms.TextBox();
+            this.tbRazon = new System.Windows.Forms.TextBox();
+            this.tbInicio = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // listBox3
@@ -69,7 +69,7 @@ namespace WindowsFormsApp2
             this.listBox3.Location = new System.Drawing.Point(268, 12);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(120, 36);
-            this.listBox3.TabIndex = 60;
+            this.listBox3.TabIndex = 2;
             // 
             // label12
             // 
@@ -111,7 +111,7 @@ namespace WindowsFormsApp2
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(352, 69);
+            this.label11.Location = new System.Drawing.Point(312, 60);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 17);
             this.label11.TabIndex = 55;
@@ -129,7 +129,7 @@ namespace WindowsFormsApp2
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(602, 69);
+            this.label9.Location = new System.Drawing.Point(655, 69);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 17);
             this.label9.TabIndex = 53;
@@ -138,7 +138,7 @@ namespace WindowsFormsApp2
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(220, 71);
+            this.label8.Location = new System.Drawing.Point(139, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 17);
             this.label8.TabIndex = 52;
@@ -149,7 +149,7 @@ namespace WindowsFormsApp2
             this.button1.Location = new System.Drawing.Point(542, 451);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 41);
-            this.button1.TabIndex = 51;
+            this.button1.TabIndex = 15;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -169,7 +169,7 @@ namespace WindowsFormsApp2
             this.listBox2.Location = new System.Drawing.Point(412, 254);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(239, 132);
-            this.listBox2.TabIndex = 49;
+            this.listBox2.TabIndex = 12;
             // 
             // label6
             // 
@@ -187,7 +187,7 @@ namespace WindowsFormsApp2
             this.listBox1.Location = new System.Drawing.Point(82, 254);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(245, 132);
-            this.listBox1.TabIndex = 47;
+            this.listBox1.TabIndex = 11;
             // 
             // label5
             // 
@@ -204,7 +204,7 @@ namespace WindowsFormsApp2
             this.comboBox1.Location = new System.Drawing.Point(75, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(87, 24);
-            this.comboBox1.TabIndex = 45;
+            this.comboBox1.TabIndex = 1;
             // 
             // label4
             // 
@@ -221,7 +221,7 @@ namespace WindowsFormsApp2
             this.textBox10.Location = new System.Drawing.Point(542, 386);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(234, 22);
-            this.textBox10.TabIndex = 43;
+            this.textBox10.TabIndex = 14;
             // 
             // label3
             // 
@@ -256,7 +256,7 @@ namespace WindowsFormsApp2
             this.textBox9.Location = new System.Drawing.Point(333, 386);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(203, 22);
-            this.textBox9.TabIndex = 39;
+            this.textBox9.TabIndex = 13;
             this.textBox9.Text = "$";
             // 
             // textBox8
@@ -264,72 +264,81 @@ namespace WindowsFormsApp2
             this.textBox8.Location = new System.Drawing.Point(603, 196);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 38;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(603, 91);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(141, 22);
-            this.textBox7.TabIndex = 37;
+            this.textBox8.TabIndex = 10;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(476, 196);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 36;
+            this.textBox6.TabIndex = 9;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(355, 196);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 35;
+            this.textBox5.TabIndex = 8;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(209, 196);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(122, 22);
-            this.textBox4.TabIndex = 34;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(476, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 33;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(337, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 22);
-            this.textBox2.TabIndex = 32;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(209, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 31;
+            this.textBox4.TabIndex = 7;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(713, 451);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 40);
-            this.button2.TabIndex = 61;
+            this.button2.TabIndex = 16;
             this.button2.Text = "Regresar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tbDomicilio
+            // 
+            this.tbDomicilio.Enabled = false;
+            this.tbDomicilio.Location = new System.Drawing.Point(315, 91);
+            this.tbDomicilio.Name = "tbDomicilio";
+            this.tbDomicilio.Size = new System.Drawing.Size(159, 22);
+            this.tbDomicilio.TabIndex = 4;
+            // 
+            // tbRFC
+            // 
+            this.tbRFC.Enabled = false;
+            this.tbRFC.Location = new System.Drawing.Point(480, 91);
+            this.tbRFC.Name = "tbRFC";
+            this.tbRFC.Size = new System.Drawing.Size(163, 22);
+            this.tbRFC.TabIndex = 5;
+            // 
+            // tbRazon
+            // 
+            this.tbRazon.Enabled = false;
+            this.tbRazon.Location = new System.Drawing.Point(142, 91);
+            this.tbRazon.Name = "tbRazon";
+            this.tbRazon.Size = new System.Drawing.Size(167, 22);
+            this.tbRazon.TabIndex = 3;
+            // 
+            // tbInicio
+            // 
+            this.tbInicio.Location = new System.Drawing.Point(650, 91);
+            this.tbInicio.Mask = "00/00/0000";
+            this.tbInicio.Name = "tbInicio";
+            this.tbInicio.Size = new System.Drawing.Size(188, 22);
+            this.tbInicio.TabIndex = 6;
+            this.tbInicio.ValidatingType = typeof(System.DateTime);
             // 
             // Recibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 503);
+            this.Controls.Add(this.tbInicio);
+            this.Controls.Add(this.tbDomicilio);
+            this.Controls.Add(this.tbRFC);
+            this.Controls.Add(this.tbRazon);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.label12);
@@ -354,13 +363,9 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Name = "Recibo";
             this.Text = "Recibo";
             this.ResumeLayout(false);
@@ -393,13 +398,13 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbDomicilio;
+        private System.Windows.Forms.TextBox tbRFC;
+        private System.Windows.Forms.TextBox tbRazon;
+        private System.Windows.Forms.MaskedTextBox tbInicio;
     }
 }
