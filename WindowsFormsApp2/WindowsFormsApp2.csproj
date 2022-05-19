@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp2</RootNamespace>
     <AssemblyName>WindowsFormsApp2</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -150,11 +151,6 @@
     <Compile Include="CAMBIAREMPLEADO.Designer.cs">
       <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_EMPLEADO.cs" />
-    <Compile Include="C_Empresa.cs" />
-    <Compile Include="C_Nomina.cs" />
-    <Compile Include="C_Puesto.cs" />
-    <Compile Include="C_Recibo.cs" />
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="DATOSDELAEMPRESA.cs">
       <SubType>Form</SubType>
@@ -162,7 +158,6 @@
     <Compile Include="DATOSDELAEMPRESA.Designer.cs">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_Departamento.cs" />
     <Compile Include="EDITAR NOMINA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +171,7 @@
       <DependentUpon>EliminarP.cs</DependentUpon>
     </Compile>
     <Compile Include="EnlaceCassandra.cs" />
+    <Compile Include="List.cs" />
     <Compile Include="Lista de Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +260,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Recibo.resx">
       <DependentUpon>Recibo.cs</DependentUpon>

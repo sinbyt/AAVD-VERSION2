@@ -8,6 +8,7 @@ using Cassandra.Mapping;
 using System.Configuration;
 using System.Windows.Forms;
 using WindowsFormsApp2;
+using static List;
 //no se ustedes pero a mi me caga cuando guapa el que lo lea jsjsjsj wapa
 //chochochochochochochochochochocho
 namespace WindowsFormsApplication2

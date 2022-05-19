@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Cassandra;
 using System.Windows.Forms;
-
+using static List;
 namespace WindowsFormsApp2
 {
     public partial class formAgregar : Form
