@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//PRUEBA AAAAA
 namespace WindowsFormsApp2
 {
     public partial class formInicioGT : Form
@@ -39,6 +39,11 @@ namespace WindowsFormsApp2
         private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NuevoCambiado.ShowDialog();
+        }
+
+        private void headCounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

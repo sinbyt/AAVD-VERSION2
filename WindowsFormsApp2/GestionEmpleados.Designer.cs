@@ -34,6 +34,9 @@ namespace WindowsFormsApp2
             this.borrarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.headCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +47,8 @@ namespace WindowsFormsApp2
             this.agregarEmpleadosToolStripMenuItem,
             this.borrarEmpleadosToolStripMenuItem,
             this.editarEmpleadoToolStripMenuItem,
-            this.listaDeEmpleadosToolStripMenuItem});
+            this.listaDeEmpleadosToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -78,6 +82,28 @@ namespace WindowsFormsApp2
             this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.headCounterToolStripMenuItem,
+            this.nominaToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // headCounterToolStripMenuItem
+            // 
+            this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
+            this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.headCounterToolStripMenuItem.Text = "HeadCounter";
+            this.headCounterToolStripMenuItem.Click += new System.EventHandler(this.headCounterToolStripMenuItem_Click);
+            // 
+            // nominaToolStripMenuItem
+            // 
+            this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nominaToolStripMenuItem.Text = "Nomina";
+            // 
             // formInicioGT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -100,5 +126,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem borrarEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeEmpleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem headCounterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
     }
 }
