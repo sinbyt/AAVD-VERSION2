@@ -22,5 +22,15 @@ namespace WindowsFormsApp2
             this.Close();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuevoPuesto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
