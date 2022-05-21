@@ -172,6 +172,12 @@
     <Compile Include="DATOSDELAEMPRESA.Designer.cs">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </Compile>
+    <Compile Include="DEPARTAMENTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPARTAMENTO.Designer.cs">
+      <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="EDITAR NOMINA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DATOSDELAEMPRESA.resx">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPARTAMENTO.resx">
+      <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EDITAR NOMINA.resx">
       <DependentUpon>EDITAR NOMINA.cs</DependentUpon>
