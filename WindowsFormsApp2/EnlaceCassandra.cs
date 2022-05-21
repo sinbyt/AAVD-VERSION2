@@ -9,13 +9,7 @@ using System.Configuration;
 using System.Windows.Forms;
 using WindowsFormsApp2;
 using static List;
-//no se ustedes pero a mi me caga cuando guapa el que lo lea jsjsjsj wapa
-//chochochochochochochochochochocho
-//holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-    //hola jsjsjs aiuda esto no es un meme
-
-    ///kkpopopopopoppopopo
 namespace WindowsFormsApplication2
 {
     public class EnlaceCassandra
@@ -44,7 +38,7 @@ namespace WindowsFormsApplication2
                 .AddContactPoint("127.0.0.1")
                 .Build();
 
-            _instancia = _cluster.Connect("keyspace3");
+            _instancia = _cluster.Connect("keyspace1");
         }
 
         private static void desconectar()
