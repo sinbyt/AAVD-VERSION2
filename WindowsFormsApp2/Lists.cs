@@ -1,5 +1,5 @@
 ﻿
-    public class List
+    public class Lists
     {
         public class C_Departamento
         {

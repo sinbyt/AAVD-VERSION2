@@ -191,7 +191,7 @@
       <DependentUpon>EliminarP.cs</DependentUpon>
     </Compile>
     <Compile Include="EnlaceCassandra.cs" />
-    <Compile Include="List.cs" />
+    <Compile Include="Lists.cs" />
     <Compile Include="Lista de Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
