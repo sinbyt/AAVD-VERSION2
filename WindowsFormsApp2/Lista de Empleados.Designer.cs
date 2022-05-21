@@ -69,9 +69,9 @@ namespace WindowsFormsApp2
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(464, 33);
+            this.btnBuscar.Location = new System.Drawing.Point(464, 28);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 22);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 27);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;

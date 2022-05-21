@@ -26,5 +26,10 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void btnCambiar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
