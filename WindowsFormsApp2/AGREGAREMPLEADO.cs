@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
+
     public partial class formAgregar : Form
     {
         //private BUSSINESLOGICLAYER _BussinesLogicLayer;
@@ -46,7 +47,6 @@ namespace WindowsFormsApp2
             empleado.telefono = tbEmail.Text;
 
             error = conex.InsertEmpleado(empleado);
-            //_BussinesLogicLayer.
             //ESTO ES PARA SACAR EL VALOR DE UN COMBO BOX 
             //MessageBox.Show(this.cbEstado.SelectedItem.ToString());
         }

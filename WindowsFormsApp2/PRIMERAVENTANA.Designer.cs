@@ -35,8 +35,6 @@ namespace WindowsFormsApp2
             this.button1 = new System.Windows.Forms.Button();
             this.btnRecibos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.Response = new System.Windows.Forms.Button();
-            this.RTB = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lbtitulo
@@ -98,31 +96,11 @@ namespace WindowsFormsApp2
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // Response
-            // 
-            this.Response.Location = new System.Drawing.Point(669, 63);
-            this.Response.Name = "Response";
-            this.Response.Size = new System.Drawing.Size(114, 23);
-            this.Response.TabIndex = 6;
-            this.Response.Text = "IMPRIME PDF";
-            this.Response.UseVisualStyleBackColor = true;
-            this.Response.Click += new System.EventHandler(this.BTNPDF_Click);
-            // 
-            // RTB
-            // 
-            this.RTB.Location = new System.Drawing.Point(546, 109);
-            this.RTB.Name = "RTB";
-            this.RTB.Size = new System.Drawing.Size(193, 208);
-            this.RTB.TabIndex = 7;
-            this.RTB.Text = "";
-            // 
             // formInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 450);
-            this.Controls.Add(this.RTB);
-            this.Controls.Add(this.Response);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnRecibos);
             this.Controls.Add(this.button1);
@@ -143,8 +121,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRecibos;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button Response;
-        private System.Windows.Forms.RichTextBox RTB;
     }
 }
 

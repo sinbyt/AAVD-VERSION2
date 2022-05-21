@@ -59,11 +59,12 @@ namespace WindowsFormsApp2
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbPuesto = new System.Windows.Forms.ComboBox();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,9 @@ namespace WindowsFormsApp2
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Sueldo",
+            "Bono"});
             this.comboBox3.Location = new System.Drawing.Point(22, 262);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
@@ -157,6 +161,9 @@ namespace WindowsFormsApp2
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Llegada tarde",
+            "Falta"});
             this.comboBox6.Location = new System.Drawing.Point(522, 278);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 24);
@@ -290,15 +297,19 @@ namespace WindowsFormsApp2
             // 
             this.textBox1.Location = new System.Drawing.Point(30, 450);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(48, 22);
             this.textBox1.TabIndex = 36;
+            this.textBox1.Text = "5";
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(127, 453);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(48, 22);
             this.textBox4.TabIndex = 39;
+            this.textBox4.Text = "10";
             // 
             // button7
             // 
@@ -328,32 +339,6 @@ namespace WindowsFormsApp2
             this.button9.Text = "ACEPTAR";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 125);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 17);
-            this.label14.TabIndex = 47;
-            this.label14.Text = "Departamento";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(19, 146);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 24);
-            this.comboBox9.TabIndex = 46;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(165, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
-            this.button3.TabIndex = 49;
-            this.button3.Text = "ACEPTAR";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(20, 86);
@@ -371,17 +356,60 @@ namespace WindowsFormsApp2
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // cbPuesto
+            // 
+            this.cbPuesto.FormattingEnabled = true;
+            this.cbPuesto.Items.AddRange(new object[] {
+            "Supervisor",
+            "Calidad",
+            "Pasante"});
+            this.cbPuesto.Location = new System.Drawing.Point(431, 139);
+            this.cbPuesto.Name = "cbPuesto";
+            this.cbPuesto.Size = new System.Drawing.Size(195, 24);
+            this.cbPuesto.TabIndex = 54;
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Items.AddRange(new object[] {
+            "Sistemas",
+            "Administracion",
+            "Servicio a Clientes"});
+            this.cbDepartamento.Location = new System.Drawing.Point(110, 139);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
+            this.cbDepartamento.TabIndex = 55;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 17);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Departamento";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(351, 142);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Puesto";
+            // 
             // formNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 547);
+            this.Controls.Add(this.cbPuesto);
+            this.Controls.Add(this.cbDepartamento);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox4);
@@ -448,11 +476,12 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem nuevoPuestoToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cbPuesto;
+        private System.Windows.Forms.ComboBox cbDepartamento;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

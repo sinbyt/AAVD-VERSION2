@@ -119,6 +119,7 @@ namespace WindowsFormsApp2
             this.btnCambiar.TabIndex = 18;
             this.btnCambiar.Text = "CAMBIAR";
             this.btnCambiar.UseVisualStyleBackColor = true;
+            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
             // 
             // button1
             // 

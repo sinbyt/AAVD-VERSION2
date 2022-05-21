@@ -15,13 +15,18 @@ namespace WindowsFormsApp2
         formAgregar NuevoEmpleado;
         formBorrar NuevoBorrado;
         formCambiar NuevoCambiado;
+        HEADCOUNTER nHeadCounter;
+        Lista_de_Empleados nListaEMP;
+        REPORTEGENERALDENOMINA nReporte;
         public formInicioGT()
         {
             InitializeComponent();
             NuevoEmpleado = new formAgregar();
             NuevoBorrado = new formBorrar();
             NuevoCambiado = new formCambiar();
-
+            nHeadCounter = new HEADCOUNTER();
+            nListaEMP = new Lista_de_Empleados();
+            nReporte = new REPORTEGENERALDENOMINA();
         }
 
 
@@ -39,6 +44,21 @@ namespace WindowsFormsApp2
         private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NuevoCambiado.ShowDialog();
+        }
+
+        private void headcounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nHeadCounter.ShowDialog();
+        }
+
+        private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nListaEMP.ShowDialog();
+        }
+
+        private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            nReporte.ShowDialog();
         }
     }
 }
