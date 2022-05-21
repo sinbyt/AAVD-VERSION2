@@ -8,7 +8,7 @@ using Cassandra.Mapping;
 using System.Configuration;
 using System.Windows.Forms;
 using WindowsFormsApp2;
-using static List;
+using static Lists;
 
 namespace WindowsFormsApplication2
 {

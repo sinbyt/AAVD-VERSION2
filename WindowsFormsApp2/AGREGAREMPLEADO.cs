@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Cassandra;
 using System.Windows.Forms;
-using static List;
+using static Lists;
 
 namespace WindowsFormsApp2
 {
