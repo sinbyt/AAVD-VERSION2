@@ -38,13 +38,13 @@ namespace WindowsFormsApp2
             empleado.depa = cbDepartamento.Text;
             empleado.puesto = cbPuesto.Text;
             empleado.fechaNacimiento = DTPNacimiento.Text;
-          //empleado.CURP = tbCURP.Text;
-         // empleado.NSS = tbNSS.Text;
+            empleado.CURP = mtbCURP.Text;
+            empleado.NSS = mtbNSS.Text;
             empleado.RFC = tbRFC.Text;
             empleado.domicilio = tbCalle.Text;
             empleado.banco = cbBanco.Text;
             empleado.numCuenta = tbCuenta.Text;
-          //empleado.telefono = tbEmail.Text;
+            empleado.telefono = mtbTelefono.Text;
 
             error = conex.InsertEmpleado(empleado);
             //_BussinesLogicLayer.

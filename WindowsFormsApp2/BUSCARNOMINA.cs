@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CsvHelper;
+using System.IO;
 namespace WindowsFormsApp2
 {
     public partial class BUSCARNOMINA : Form
@@ -15,6 +16,11 @@ namespace WindowsFormsApp2
         public BUSCARNOMINA()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

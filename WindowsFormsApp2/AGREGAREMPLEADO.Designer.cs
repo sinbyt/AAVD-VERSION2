@@ -70,11 +70,11 @@ namespace WindowsFormsApp2
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.DTPAlta = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCURP = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -372,11 +372,11 @@ namespace WindowsFormsApp2
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(94, 354);
+            this.label18.Location = new System.Drawing.Point(52, 354);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(58, 17);
+            this.label18.Size = new System.Drawing.Size(116, 17);
             this.label18.TabIndex = 39;
-            this.label18.Text = "Numero";
+            this.label18.Text = "Numero domicilio";
             // 
             // label19
             // 
@@ -458,13 +458,13 @@ namespace WindowsFormsApp2
             this.label21.TabIndex = 47;
             this.label21.Text = "Alta";
             // 
-            // maskedTextBox1
+            // mtbTelefono
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(536, 302);
-            this.maskedTextBox1.Mask = "(999)000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(195, 22);
-            this.maskedTextBox1.TabIndex = 12;
+            this.mtbTelefono.Location = new System.Drawing.Point(536, 302);
+            this.mtbTelefono.Mask = "(999)000-0000";
+            this.mtbTelefono.Name = "mtbTelefono";
+            this.mtbTelefono.Size = new System.Drawing.Size(195, 22);
+            this.mtbTelefono.TabIndex = 12;
             // 
             // maskedTextBox2
             // 
@@ -483,22 +483,22 @@ namespace WindowsFormsApp2
             this.maskedTextBox3.Size = new System.Drawing.Size(195, 22);
             this.maskedTextBox3.TabIndex = 17;
             // 
-            // maskedTextBox4
+            // mtbCURP
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(536, 61);
-            this.maskedTextBox4.Mask = "AAAA 999999 AAA AAAAA";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(195, 22);
-            this.maskedTextBox4.TabIndex = 2;
-            this.maskedTextBox4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
+            this.mtbCURP.Location = new System.Drawing.Point(536, 61);
+            this.mtbCURP.Mask = "AAAA 999999 AAA AAAAA";
+            this.mtbCURP.Name = "mtbCURP";
+            this.mtbCURP.Size = new System.Drawing.Size(195, 22);
+            this.mtbCURP.TabIndex = 2;
+            this.mtbCURP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
             // 
-            // maskedTextBox6
+            // mtbNSS
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(536, 114);
-            this.maskedTextBox6.Mask = "000-00-0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(195, 22);
-            this.maskedTextBox6.TabIndex = 4;
+            this.mtbNSS.Location = new System.Drawing.Point(536, 114);
+            this.mtbNSS.Mask = "000-00-0000";
+            this.mtbNSS.Name = "mtbNSS";
+            this.mtbNSS.Size = new System.Drawing.Size(195, 22);
+            this.mtbNSS.TabIndex = 4;
             // 
             // textBox1
             // 
@@ -513,11 +513,11 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 577);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox6);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.mtbNSS);
+            this.Controls.Add(this.mtbCURP);
             this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtbTelefono);
             this.Controls.Add(this.DTPAlta);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -606,11 +606,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DateTimePicker DTPAlta;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox mtbCURP;
+        private System.Windows.Forms.MaskedTextBox mtbNSS;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

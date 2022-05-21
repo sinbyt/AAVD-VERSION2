@@ -36,7 +36,9 @@ namespace WindowsFormsApp2
             this.btnRecibos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Response = new System.Windows.Forms.Button();
+            this.btnCSV = new System.Windows.Forms.Button();
             this.RTB = new System.Windows.Forms.RichTextBox();
+            this.CSVTEXT = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lbtitulo
@@ -108,6 +110,16 @@ namespace WindowsFormsApp2
             this.Response.UseVisualStyleBackColor = true;
             this.Response.Click += new System.EventHandler(this.BTNPDF_Click);
             // 
+            // btnCSV
+            // 
+            this.btnCSV.Location = new System.Drawing.Point(428, 376);
+            this.btnCSV.Name = "btnCSV";
+            this.btnCSV.Size = new System.Drawing.Size(75, 23);
+            this.btnCSV.TabIndex = 8;
+            this.btnCSV.Text = "CSV";
+            this.btnCSV.UseVisualStyleBackColor = true;
+            this.btnCSV.Click += new System.EventHandler(this.btnCSV_Click);
+            // 
             // RTB
             // 
             this.RTB.Location = new System.Drawing.Point(546, 109);
@@ -116,11 +128,21 @@ namespace WindowsFormsApp2
             this.RTB.TabIndex = 7;
             this.RTB.Text = "";
             // 
+            // CSVTEXT
+            // 
+            this.CSVTEXT.Location = new System.Drawing.Point(120, 151);
+            this.CSVTEXT.Name = "CSVTEXT";
+            this.CSVTEXT.Size = new System.Drawing.Size(100, 96);
+            this.CSVTEXT.TabIndex = 9;
+            this.CSVTEXT.Text = "";
+            // 
             // formInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 450);
+            this.Controls.Add(this.CSVTEXT);
+            this.Controls.Add(this.btnCSV);
             this.Controls.Add(this.RTB);
             this.Controls.Add(this.Response);
             this.Controls.Add(this.button2);
@@ -144,7 +166,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnRecibos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Response;
+        private System.Windows.Forms.Button btnCSV;
         private System.Windows.Forms.RichTextBox RTB;
+        private System.Windows.Forms.RichTextBox CSVTEXT;
     }
 }
 

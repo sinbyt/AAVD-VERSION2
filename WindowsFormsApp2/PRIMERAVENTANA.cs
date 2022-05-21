@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,20 +15,19 @@ using iTextSharp.text.pdf;
 
 
 
-
 namespace WindowsFormsApp2
 {
-
+   
     public partial class formInicio : Form
     {
         formInicioGT NuevaPercepcion;
         formNomina NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
-        Recibo NuevoRecibo; 
+        Recibo NuevoRecibo;
         //formEmpleados NuevoEmpleado;
         public formInicio()
         {
-            
+
             InitializeComponent();
             NuevaPercepcion = new formInicioGT();
             NuevaNomina = new formNomina();
@@ -68,7 +68,7 @@ namespace WindowsFormsApp2
 
         private void btnCambiar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnNomina_Click(object sender, EventArgs e)
@@ -129,5 +129,31 @@ namespace WindowsFormsApp2
                 }
             }
         }
+        private async void btnCSV_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TEXT Documents|*.txt", ValidateNames = true })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                   // iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4.Rotate());
+                    try
+                    {
+                        using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                        {
+                            await sw.WriteAsync(CSVTEXT.Rtf);
+                        }
+                    }                                    
+                    catch (Exception ex)
+                    {
+                        
+                    }
+                    finally
+                    {
+                        //doc.Close();
+                    }
+                }
+            }
+        } 
     }
+       
 }
