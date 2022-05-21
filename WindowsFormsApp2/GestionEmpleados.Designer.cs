@@ -81,6 +81,7 @@ namespace WindowsFormsApp2
             this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
             this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
+            this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -103,6 +104,7 @@ namespace WindowsFormsApp2
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
             this.nominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nominaToolStripMenuItem.Text = "Nomina";
+            this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
             // 
             // formInicioGT
             // 
