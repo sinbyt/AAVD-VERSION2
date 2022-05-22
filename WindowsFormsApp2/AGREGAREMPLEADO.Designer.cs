@@ -560,6 +560,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Name = "formAgregar";
             this.Text = "AGREGAR";
+            this.Load += new System.EventHandler(this.formAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
