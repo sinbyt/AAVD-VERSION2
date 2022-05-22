@@ -42,8 +42,6 @@ namespace WindowsFormsApp2
             this.btnBorrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbNSS = new System.Windows.Forms.TextBox();
-            this.tbCURP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tbCalle = new System.Windows.Forms.TextBox();
@@ -53,8 +51,6 @@ namespace WindowsFormsApp2
             this.tbCuenta = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.tbTelefono = new System.Windows.Forms.TextBox();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -67,15 +63,19 @@ namespace WindowsFormsApp2
             this.label16 = new System.Windows.Forms.Label();
             this.tbColonia = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.tbNumCasa = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.tbCP = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.DTPAlta = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +120,7 @@ namespace WindowsFormsApp2
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(195, 22);
             this.tbNombre.TabIndex = 1;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbID
             // 
@@ -177,23 +178,10 @@ namespace WindowsFormsApp2
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(387, 165);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 17);
+            this.label7.Size = new System.Drawing.Size(139, 17);
             this.label7.TabIndex = 12;
-            this.label7.Text = "NACIMIENTO";
-            // 
-            // tbNSS
-            // 
-            this.tbNSS.Location = new System.Drawing.Point(485, 109);
-            this.tbNSS.Name = "tbNSS";
-            this.tbNSS.Size = new System.Drawing.Size(195, 22);
-            this.tbNSS.TabIndex = 4;
-            // 
-            // tbCURP
-            // 
-            this.tbCURP.Location = new System.Drawing.Point(485, 56);
-            this.tbCURP.Name = "tbCURP";
-            this.tbCURP.Size = new System.Drawing.Size(195, 22);
-            this.tbCURP.TabIndex = 2;
+            this.label7.Text = "Fecha de nacimiento";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -270,20 +258,6 @@ namespace WindowsFormsApp2
             this.label13.TabIndex = 24;
             this.label13.Text = "Banco";
             // 
-            // tbTelefono
-            // 
-            this.tbTelefono.Location = new System.Drawing.Point(485, 307);
-            this.tbTelefono.Name = "tbTelefono";
-            this.tbTelefono.Size = new System.Drawing.Size(195, 22);
-            this.tbTelefono.TabIndex = 12;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(485, 261);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(195, 22);
-            this.tbEmail.TabIndex = 10;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -328,7 +302,7 @@ namespace WindowsFormsApp2
             "Sistemas",
             "Administracion",
             "Servicio a Clientes"});
-            this.cbDepartamento.Location = new System.Drawing.Point(485, 214);
+            this.cbDepartamento.Location = new System.Drawing.Point(536, 219);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
             this.cbDepartamento.TabIndex = 8;
@@ -340,7 +314,7 @@ namespace WindowsFormsApp2
             "Banco Azteca",
             "Banorte",
             "BBVA"});
-            this.cbBanco.Location = new System.Drawing.Point(485, 443);
+            this.cbBanco.Location = new System.Drawing.Point(536, 448);
             this.cbBanco.Name = "cbBanco";
             this.cbBanco.Size = new System.Drawing.Size(195, 24);
             this.cbBanco.TabIndex = 18;
@@ -359,14 +333,14 @@ namespace WindowsFormsApp2
             // 
             // DTPNacimiento
             // 
-            this.DTPNacimiento.Location = new System.Drawing.Point(485, 160);
+            this.DTPNacimiento.Location = new System.Drawing.Point(536, 165);
             this.DTPNacimiento.Name = "DTPNacimiento";
-            this.DTPNacimiento.Size = new System.Drawing.Size(283, 22);
+            this.DTPNacimiento.Size = new System.Drawing.Size(195, 22);
             this.DTPNacimiento.TabIndex = 6;
             // 
             // tbMunicipio
             // 
-            this.tbMunicipio.Location = new System.Drawing.Point(485, 396);
+            this.tbMunicipio.Location = new System.Drawing.Point(536, 401);
             this.tbMunicipio.Name = "tbMunicipio";
             this.tbMunicipio.Size = new System.Drawing.Size(195, 22);
             this.tbMunicipio.TabIndex = 16;
@@ -395,13 +369,6 @@ namespace WindowsFormsApp2
             this.label17.Size = new System.Drawing.Size(55, 17);
             this.label17.TabIndex = 37;
             this.label17.Text = "Colonia";
-            // 
-            // tbNumCasa
-            // 
-            this.tbNumCasa.Location = new System.Drawing.Point(174, 351);
-            this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(195, 22);
-            this.tbNumCasa.TabIndex = 13;
             // 
             // label18
             // 
@@ -456,17 +423,10 @@ namespace WindowsFormsApp2
             "    Veracruz de Ignacio de la Llave",
             "    Yucatán",
             "    Zacatecas"});
-            this.cbEstado.Location = new System.Drawing.Point(485, 351);
+            this.cbEstado.Location = new System.Drawing.Point(536, 356);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(195, 24);
             this.cbEstado.TabIndex = 14;
-            // 
-            // tbCP
-            // 
-            this.tbCP.Location = new System.Drawing.Point(174, 440);
-            this.tbCP.Name = "tbCP";
-            this.tbCP.Size = new System.Drawing.Size(195, 22);
-            this.tbCP.TabIndex = 17;
             // 
             // label20
             // 
@@ -475,7 +435,7 @@ namespace WindowsFormsApp2
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(95, 17);
             this.label20.TabIndex = 44;
-            this.label20.Text = "Codgio Postal";
+            this.label20.Text = "Codigo Postal";
             // 
             // contextMenuStrip1
             // 
@@ -485,9 +445,9 @@ namespace WindowsFormsApp2
             // 
             // DTPAlta
             // 
-            this.DTPAlta.Location = new System.Drawing.Point(485, 488);
+            this.DTPAlta.Location = new System.Drawing.Point(536, 493);
             this.DTPAlta.Name = "DTPAlta";
-            this.DTPAlta.Size = new System.Drawing.Size(283, 22);
+            this.DTPAlta.Size = new System.Drawing.Size(195, 22);
             this.DTPAlta.TabIndex = 20;
             // 
             // label21
@@ -499,18 +459,71 @@ namespace WindowsFormsApp2
             this.label21.TabIndex = 47;
             this.label21.Text = "Alta";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(536, 302);
+            this.maskedTextBox1.Mask = "(999)000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(195, 22);
+            this.maskedTextBox1.TabIndex = 12;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(174, 354);
+            this.maskedTextBox2.Mask = "99999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(195, 22);
+            this.maskedTextBox2.TabIndex = 13;
+            this.maskedTextBox2.ValidatingType = typeof(int);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(174, 437);
+            this.maskedTextBox3.Mask = "00000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(195, 22);
+            this.maskedTextBox3.TabIndex = 17;
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(536, 61);
+            this.maskedTextBox4.Mask = "AAAA 999999 AAA AAAAA";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(195, 22);
+            this.maskedTextBox4.TabIndex = 2;
+            this.maskedTextBox4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox4_MaskInputRejected);
+            // 
+            // maskedTextBox6
+            // 
+            this.maskedTextBox6.Location = new System.Drawing.Point(536, 114);
+            this.maskedTextBox6.Mask = "000-00-0000";
+            this.maskedTextBox6.Name = "maskedTextBox6";
+            this.maskedTextBox6.Size = new System.Drawing.Size(195, 22);
+            this.maskedTextBox6.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(536, 264);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(195, 22);
+            this.textBox1.TabIndex = 10;
+            // 
             // formAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 577);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.maskedTextBox6);
+            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.DTPAlta);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.tbCP);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.tbNumCasa);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.tbColonia);
             this.Controls.Add(this.label17);
@@ -522,8 +535,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.tbTelefono);
-            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tbCuenta);
@@ -533,8 +544,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.tbRFC);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.tbNSS);
-            this.Controls.Add(this.tbCURP);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
@@ -570,8 +579,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbNSS;
-        private System.Windows.Forms.TextBox tbCURP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbCalle;
@@ -581,8 +588,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox tbCuenta;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tbTelefono;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ListBox listBox1;
@@ -595,14 +600,18 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox tbColonia;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox tbNumCasa;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.TextBox tbCP;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DateTimePicker DTPAlta;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

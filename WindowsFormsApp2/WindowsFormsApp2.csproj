@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp2</RootNamespace>
     <AssemblyName>WindowsFormsApp2</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -125,23 +126,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGREGAREMPLEADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AGREGAREMPLEADO.designer.cs">
+      <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="AGREGARPERCEPCION.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AGREGARPERCEPCION.Designer.cs">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </Compile>
-    <Compile Include="AGREGAREMPLEADO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AGREGAREMPLEADO.Designer.cs">
-      <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
-    </Compile>
     <Compile Include="BORRAREMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BORRAREMPLEADO.Designer.cs">
       <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUSCARNOMINA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUSCARNOMINA.Designer.cs">
+      <DependentUpon>BUSCARNOMINA.cs</DependentUpon>
     </Compile>
     <Compile Include="BUSSINESLOGICLAYER.cs" />
     <Compile Include="CAMBIAREMPLEADO.cs">
@@ -150,11 +157,6 @@
     <Compile Include="CAMBIAREMPLEADO.Designer.cs">
       <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_EMPLEADO.cs" />
-    <Compile Include="C_Empresa.cs" />
-    <Compile Include="C_Nomina.cs" />
-    <Compile Include="C_Puesto.cs" />
-    <Compile Include="C_Recibo.cs" />
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="DATOSDELAEMPRESA.cs">
       <SubType>Form</SubType>
@@ -162,7 +164,12 @@
     <Compile Include="DATOSDELAEMPRESA.Designer.cs">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </Compile>
-    <Compile Include="C_Departamento.cs" />
+    <Compile Include="DEPARTAMENTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPARTAMENTO.Designer.cs">
+      <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="EDITAR NOMINA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,12 +183,13 @@
       <DependentUpon>EliminarP.cs</DependentUpon>
     </Compile>
     <Compile Include="EnlaceCassandra.cs" />
-    <Compile Include="HEADCOUNTER.cs">
+    <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HEADCOUNTER.Designer.cs">
-      <DependentUpon>HEADCOUNTER.cs</DependentUpon>
+    <Compile Include="InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lists.cs" />
     <Compile Include="Lista de Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,14 +234,17 @@
     <Compile Include="REPORTEGENERALDENOMINA.Designer.cs">
       <DependentUpon>REPORTEGENERALDENOMINA.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AGREGARPERCEPCION.resx">
-      <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AGREGAREMPLEADO.resx">
       <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AGREGARPERCEPCION.resx">
+      <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BORRAREMPLEADO.resx">
       <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUSCARNOMINA.resx">
+      <DependentUpon>BUSCARNOMINA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CAMBIAREMPLEADO.resx">
       <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
@@ -241,14 +252,17 @@
     <EmbeddedResource Include="DATOSDELAEMPRESA.resx">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DEPARTAMENTO.resx">
+      <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EDITAR NOMINA.resx">
       <DependentUpon>EDITAR NOMINA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarP.resx">
       <DependentUpon>EliminarP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HEADCOUNTER.resx">
-      <DependentUpon>HEADCOUNTER.cs</DependentUpon>
+    <EmbeddedResource Include="InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lista de Empleados.resx">
       <DependentUpon>Lista de Empleados.cs</DependentUpon>
@@ -273,6 +287,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Recibo.resx">
       <DependentUpon>Recibo.cs</DependentUpon>

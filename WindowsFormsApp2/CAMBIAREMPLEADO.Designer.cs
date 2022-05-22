@@ -36,39 +36,39 @@ namespace WindowsFormsApp2
             this.label1 = new System.Windows.Forms.Label();
             this.btnCambiar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbApellidos = new System.Windows.Forms.TextBox();
-            this.tbID = new System.Windows.Forms.TextBox();
-            this.tbPuesto = new System.Windows.Forms.TextBox();
-            this.tbNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.mtbNombre = new System.Windows.Forms.MaskedTextBox();
+            this.mtbApellido = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNum = new System.Windows.Forms.MaskedTextBox();
+            this.mtbRFC = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCuenta = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCURP = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNacimiento = new System.Windows.Forms.MaskedTextBox();
+            this.mtbEmail = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.mtbDomicilio = new System.Windows.Forms.MaskedTextBox();
+            this.cbBanco = new System.Windows.Forms.ComboBox();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.cbPuesto = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(659, 415);
+            this.btnBack.Location = new System.Drawing.Point(659, 344);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 23);
             this.btnBack.TabIndex = 19;
@@ -104,7 +104,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(141, 384);
+            this.label1.Location = new System.Drawing.Point(188, 384);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(600, 17);
             this.label1.TabIndex = 8;
@@ -113,7 +113,7 @@ namespace WindowsFormsApp2
             // 
             // btnCambiar
             // 
-            this.btnCambiar.Location = new System.Drawing.Point(358, 415);
+            this.btnCambiar.Location = new System.Drawing.Point(404, 344);
             this.btnCambiar.Name = "btnCambiar";
             this.btnCambiar.Size = new System.Drawing.Size(94, 23);
             this.btnCambiar.TabIndex = 18;
@@ -130,24 +130,10 @@ namespace WindowsFormsApp2
             this.button1.Text = " Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(484, 257);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(87, 22);
-            this.textBox9.TabIndex = 14;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(484, 208);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(87, 22);
-            this.textBox10.TabIndex = 12;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(386, 257);
+            this.label14.Location = new System.Drawing.Point(340, 266);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 17);
             this.label14.TabIndex = 56;
@@ -156,46 +142,25 @@ namespace WindowsFormsApp2
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(386, 213);
+            this.label15.Location = new System.Drawing.Point(340, 212);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 17);
             this.label15.TabIndex = 55;
             this.label15.Text = "Email";
             // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(173, 304);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(87, 22);
-            this.textBox8.TabIndex = 15;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(93, 307);
+            this.label13.Location = new System.Drawing.Point(93, 300);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 17);
             this.label13.TabIndex = 53;
             this.label13.Text = "Banco";
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(173, 264);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(87, 22);
-            this.textBox5.TabIndex = 13;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(173, 216);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(87, 22);
-            this.textBox6.TabIndex = 11;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(93, 267);
+            this.label10.Location = new System.Drawing.Point(93, 260);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 17);
             this.label10.TabIndex = 50;
@@ -204,31 +169,16 @@ namespace WindowsFormsApp2
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(93, 219);
+            this.label11.Location = new System.Drawing.Point(93, 206);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 17);
             this.label11.TabIndex = 49;
             this.label11.Text = "RFC";
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(484, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(87, 22);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(484, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(87, 22);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(392, 80);
+            this.label8.Location = new System.Drawing.Point(346, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 17);
             this.label8.TabIndex = 46;
@@ -237,30 +187,16 @@ namespace WindowsFormsApp2
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(392, 43);
+            this.label9.Location = new System.Drawing.Point(346, 47);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 17);
             this.label9.TabIndex = 45;
             this.label9.Text = "CURP";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(484, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 22);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(484, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(87, 22);
-            this.textBox2.TabIndex = 8;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(386, 163);
+            this.label6.Location = new System.Drawing.Point(340, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
             this.label6.TabIndex = 42;
@@ -269,39 +205,11 @@ namespace WindowsFormsApp2
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(386, 124);
+            this.label7.Location = new System.Drawing.Point(340, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 41;
             this.label7.Text = "NACIMIENTO";
-            // 
-            // tbApellidos
-            // 
-            this.tbApellidos.Location = new System.Drawing.Point(173, 79);
-            this.tbApellidos.Name = "tbApellidos";
-            this.tbApellidos.Size = new System.Drawing.Size(87, 22);
-            this.tbApellidos.TabIndex = 5;
-            // 
-            // tbID
-            // 
-            this.tbID.Location = new System.Drawing.Point(173, 119);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(87, 22);
-            this.tbID.TabIndex = 7;
-            // 
-            // tbPuesto
-            // 
-            this.tbPuesto.Location = new System.Drawing.Point(173, 160);
-            this.tbPuesto.Name = "tbPuesto";
-            this.tbPuesto.Size = new System.Drawing.Size(87, 22);
-            this.tbPuesto.TabIndex = 9;
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.Location = new System.Drawing.Point(173, 42);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(87, 22);
-            this.tbNombre.TabIndex = 3;
             // 
             // label5
             // 
@@ -339,13 +247,6 @@ namespace WindowsFormsApp2
             this.label16.TabIndex = 32;
             this.label16.Text = "Nombre";
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(173, 341);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(195, 22);
-            this.textBox7.TabIndex = 16;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -355,35 +256,156 @@ namespace WindowsFormsApp2
             this.label3.TabIndex = 59;
             this.label3.Text = "Numero de cuenta";
             // 
+            // mtbNombre
+            // 
+            this.mtbNombre.Location = new System.Drawing.Point(173, 42);
+            this.mtbNombre.Mask = "AAAAAAAAAAAA";
+            this.mtbNombre.Name = "mtbNombre";
+            this.mtbNombre.Size = new System.Drawing.Size(140, 22);
+            this.mtbNombre.TabIndex = 3;
+            // 
+            // mtbApellido
+            // 
+            this.mtbApellido.Location = new System.Drawing.Point(173, 82);
+            this.mtbApellido.Name = "mtbApellido";
+            this.mtbApellido.Size = new System.Drawing.Size(140, 22);
+            this.mtbApellido.TabIndex = 4;
+            // 
+            // mtbNum
+            // 
+            this.mtbNum.Location = new System.Drawing.Point(173, 121);
+            this.mtbNum.Name = "mtbNum";
+            this.mtbNum.Size = new System.Drawing.Size(140, 22);
+            this.mtbNum.TabIndex = 5;
+            // 
+            // mtbRFC
+            // 
+            this.mtbRFC.Location = new System.Drawing.Point(173, 203);
+            this.mtbRFC.Mask = "AAAAAAAAAAAAA";
+            this.mtbRFC.Name = "mtbRFC";
+            this.mtbRFC.Size = new System.Drawing.Size(140, 22);
+            this.mtbRFC.TabIndex = 7;
+            // 
+            // mtbCuenta
+            // 
+            this.mtbCuenta.Location = new System.Drawing.Point(173, 344);
+            this.mtbCuenta.Name = "mtbCuenta";
+            this.mtbCuenta.Size = new System.Drawing.Size(140, 22);
+            this.mtbCuenta.TabIndex = 10;
+            // 
+            // mtbCURP
+            // 
+            this.mtbCURP.Location = new System.Drawing.Point(438, 47);
+            this.mtbCURP.Mask = "AAAAAAAAAAAAAAAA";
+            this.mtbCURP.Name = "mtbCURP";
+            this.mtbCURP.Size = new System.Drawing.Size(139, 22);
+            this.mtbCURP.TabIndex = 11;
+            // 
+            // mtbNSS
+            // 
+            this.mtbNSS.Location = new System.Drawing.Point(438, 82);
+            this.mtbNSS.Mask = "9999999999";
+            this.mtbNSS.Name = "mtbNSS";
+            this.mtbNSS.Size = new System.Drawing.Size(139, 22);
+            this.mtbNSS.TabIndex = 12;
+            this.mtbNSS.ValidatingType = typeof(int);
+            // 
+            // mtbNacimiento
+            // 
+            this.mtbNacimiento.Location = new System.Drawing.Point(438, 125);
+            this.mtbNacimiento.Mask = "00/00/0000";
+            this.mtbNacimiento.Name = "mtbNacimiento";
+            this.mtbNacimiento.Size = new System.Drawing.Size(139, 22);
+            this.mtbNacimiento.TabIndex = 13;
+            this.mtbNacimiento.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtbEmail
+            // 
+            this.mtbEmail.Location = new System.Drawing.Point(438, 209);
+            this.mtbEmail.Name = "mtbEmail";
+            this.mtbEmail.Size = new System.Drawing.Size(139, 22);
+            this.mtbEmail.TabIndex = 15;
+            // 
+            // mtbTelefono
+            // 
+            this.mtbTelefono.Location = new System.Drawing.Point(438, 263);
+            this.mtbTelefono.Mask = "000-000-0000";
+            this.mtbTelefono.Name = "mtbTelefono";
+            this.mtbTelefono.Size = new System.Drawing.Size(139, 22);
+            this.mtbTelefono.TabIndex = 16;
+            // 
+            // mtbDomicilio
+            // 
+            this.mtbDomicilio.Location = new System.Drawing.Point(173, 255);
+            this.mtbDomicilio.Name = "mtbDomicilio";
+            this.mtbDomicilio.Size = new System.Drawing.Size(140, 22);
+            this.mtbDomicilio.TabIndex = 8;
+            // 
+            // cbBanco
+            // 
+            this.cbBanco.FormattingEnabled = true;
+            this.cbBanco.Items.AddRange(new object[] {
+            "Banco Azteca",
+            "Banorte",
+            "BBVA"});
+            this.cbBanco.Location = new System.Drawing.Point(173, 303);
+            this.cbBanco.Name = "cbBanco";
+            this.cbBanco.Size = new System.Drawing.Size(140, 24);
+            this.cbBanco.TabIndex = 9;
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Items.AddRange(new object[] {
+            "Sistemas",
+            "Administracion",
+            "Servicio a Clientes"});
+            this.cbDepartamento.Location = new System.Drawing.Point(438, 164);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
+            this.cbDepartamento.TabIndex = 60;
+            // 
+            // cbPuesto
+            // 
+            this.cbPuesto.FormattingEnabled = true;
+            this.cbPuesto.Items.AddRange(new object[] {
+            "Supervisor",
+            "Calidad",
+            "Pasante"});
+            this.cbPuesto.Location = new System.Drawing.Point(173, 160);
+            this.cbPuesto.Name = "cbPuesto";
+            this.cbPuesto.Size = new System.Drawing.Size(161, 24);
+            this.cbPuesto.TabIndex = 61;
+            // 
             // formCambiar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.cbPuesto);
+            this.Controls.Add(this.cbDepartamento);
+            this.Controls.Add(this.cbBanco);
+            this.Controls.Add(this.mtbDomicilio);
+            this.Controls.Add(this.mtbTelefono);
+            this.Controls.Add(this.mtbEmail);
+            this.Controls.Add(this.mtbNacimiento);
+            this.Controls.Add(this.mtbNSS);
+            this.Controls.Add(this.mtbCURP);
+            this.Controls.Add(this.mtbCuenta);
+            this.Controls.Add(this.mtbRFC);
+            this.Controls.Add(this.mtbNum);
+            this.Controls.Add(this.mtbApellido);
+            this.Controls.Add(this.mtbNombre);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.tbApellidos);
-            this.Controls.Add(this.tbID);
-            this.Controls.Add(this.tbPuesto);
-            this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label12);
@@ -411,33 +433,33 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCambiar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbApellidos;
-        private System.Windows.Forms.TextBox tbID;
-        private System.Windows.Forms.TextBox tbPuesto;
-        private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox mtbNombre;
+        private System.Windows.Forms.MaskedTextBox mtbApellido;
+        private System.Windows.Forms.MaskedTextBox mtbNum;
+        private System.Windows.Forms.MaskedTextBox mtbRFC;
+        private System.Windows.Forms.MaskedTextBox mtbCuenta;
+        private System.Windows.Forms.MaskedTextBox mtbCURP;
+        private System.Windows.Forms.MaskedTextBox mtbNSS;
+        private System.Windows.Forms.MaskedTextBox mtbNacimiento;
+        private System.Windows.Forms.MaskedTextBox mtbEmail;
+        private System.Windows.Forms.MaskedTextBox mtbTelefono;
+        private System.Windows.Forms.MaskedTextBox mtbDomicilio;
+        private System.Windows.Forms.ComboBox cbBanco;
+        private System.Windows.Forms.ComboBox cbDepartamento;
+        private System.Windows.Forms.ComboBox cbPuesto;
     }
 }

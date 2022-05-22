@@ -23,7 +23,7 @@ namespace WindowsFormsApp2
         formInicioGT NuevaPercepcion;
         formNomina NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
-        Recibo NuevoRecibo; 
+        Recibo NuevoRecibo;
         //formEmpleados NuevoEmpleado;
         public formInicio()
         {
@@ -104,5 +104,40 @@ namespace WindowsFormsApp2
             }
         }
         //CON ESTO SE IMPRIME UN PDF PARA EL RICHTEXTBOX RTB
+        private void BTNPDF_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF FILE|*.pdf", ValidateNames = true })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4.Rotate());
+                    try
+                    {
+                        PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                        doc.Open();
+                        doc.Add(new iTextSharp.text.Paragraph(RTB.Text));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    finally
+                    {
+                        doc.Close();
+                    }
+                }
+            }
+        }
+
+        private void formInicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+         
+        }
     }
 }

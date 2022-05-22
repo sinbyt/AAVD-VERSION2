@@ -45,6 +45,7 @@ namespace WindowsFormsApp2
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -54,17 +55,13 @@ namespace WindowsFormsApp2
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cbPuesto = new System.Windows.Forms.ComboBox();
-            this.cbDepartamento = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +71,7 @@ namespace WindowsFormsApp2
             this.comboBox1.Location = new System.Drawing.Point(14, 45);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(66, 24);
-            this.comboBox1.TabIndex = 0;
+            this.comboBox1.TabIndex = 1;
             // 
             // comboBox3
             // 
@@ -85,7 +82,7 @@ namespace WindowsFormsApp2
             this.comboBox3.Location = new System.Drawing.Point(22, 262);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 2;
+            this.comboBox3.TabIndex = 8;
             // 
             // comboBox5
             // 
@@ -93,7 +90,7 @@ namespace WindowsFormsApp2
             this.comboBox5.Location = new System.Drawing.Point(95, 45);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(66, 24);
-            this.comboBox5.TabIndex = 4;
+            this.comboBox5.TabIndex = 2;
             // 
             // label1
             // 
@@ -156,7 +153,7 @@ namespace WindowsFormsApp2
             this.listBox1.Location = new System.Drawing.Point(23, 321);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(180, 84);
-            this.listBox1.TabIndex = 16;
+            this.listBox1.TabIndex = 10;
             // 
             // comboBox6
             // 
@@ -167,7 +164,7 @@ namespace WindowsFormsApp2
             this.comboBox6.Location = new System.Drawing.Point(522, 278);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 24);
-            this.comboBox6.TabIndex = 17;
+            this.comboBox6.TabIndex = 14;
             // 
             // menuStrip1
             // 
@@ -176,7 +173,8 @@ namespace WindowsFormsApp2
             this.nuevoToolStripMenuItem,
             this.eliminarToolStripMenuItem,
             this.editarToolStripMenuItem,
-            this.nuevoPuestoToolStripMenuItem});
+            this.nuevoPuestoToolStripMenuItem,
+            this.buscarNominaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(945, 28);
@@ -211,12 +209,19 @@ namespace WindowsFormsApp2
             this.nuevoPuestoToolStripMenuItem.Text = "Nuevo Puesto";
             this.nuevoPuestoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPuestoToolStripMenuItem_Click);
             // 
+            // buscarNominaToolStripMenuItem
+            // 
+            this.buscarNominaToolStripMenuItem.Name = "buscarNominaToolStripMenuItem";
+            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.buscarNominaToolStripMenuItem.Text = "Buscar Nomina";
+            this.buscarNominaToolStripMenuItem.Click += new System.EventHandler(this.buscarNominaToolStripMenuItem_Click);
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(693, 278);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(98, 23);
-            this.button4.TabIndex = 22;
+            this.button4.TabIndex = 15;
             this.button4.Text = "ACEPTAR";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -225,7 +230,7 @@ namespace WindowsFormsApp2
             this.button5.Location = new System.Drawing.Point(223, 263);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(98, 23);
-            this.button5.TabIndex = 23;
+            this.button5.TabIndex = 9;
             this.button5.Text = "ACEPTAR";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -255,14 +260,14 @@ namespace WindowsFormsApp2
             this.listBox2.Location = new System.Drawing.Point(522, 326);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(165, 84);
-            this.listBox2.TabIndex = 31;
+            this.listBox2.TabIndex = 16;
             // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(693, 326);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(98, 23);
-            this.button6.TabIndex = 32;
+            this.button6.TabIndex = 17;
             this.button6.Text = "DESHACER";
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -289,7 +294,7 @@ namespace WindowsFormsApp2
             this.button2.Location = new System.Drawing.Point(223, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 35;
+            this.button2.TabIndex = 11;
             this.button2.Text = "DESHACER";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -313,19 +318,19 @@ namespace WindowsFormsApp2
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(672, 490);
+            this.button7.Location = new System.Drawing.Point(670, 439);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(113, 45);
-            this.button7.TabIndex = 44;
+            this.button7.TabIndex = 18;
             this.button7.Text = "Guardar";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(819, 490);
+            this.button8.Location = new System.Drawing.Point(817, 439);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(116, 45);
-            this.button8.TabIndex = 45;
+            this.button8.TabIndex = 19;
             this.button8.Text = "Cancelar";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -335,85 +340,81 @@ namespace WindowsFormsApp2
             this.button9.Location = new System.Drawing.Point(177, 46);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(98, 23);
-            this.button9.TabIndex = 48;
+            this.button9.TabIndex = 3;
             this.button9.Text = "ACEPTAR";
             this.button9.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 125);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 17);
+            this.label14.TabIndex = 47;
+            this.label14.Text = "Departamento";
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(19, 146);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(121, 24);
+            this.comboBox9.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(165, 146);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "ACEPTAR";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(20, 86);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 51;
+            this.dateTimePicker1.TabIndex = 4;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(19, 192);
+            this.checkBox1.Location = new System.Drawing.Point(23, 199);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(219, 21);
-            this.checkBox1.TabIndex = 52;
+            this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // cbPuesto
+            // maskedTextBox1
             // 
-            this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Items.AddRange(new object[] {
-            "Supervisor",
-            "Calidad",
-            "Pasante"});
-            this.cbPuesto.Location = new System.Drawing.Point(431, 139);
-            this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(195, 24);
-            this.cbPuesto.TabIndex = 54;
+            this.maskedTextBox1.Location = new System.Drawing.Point(22, 450);
+            this.maskedTextBox1.Mask = "00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(50, 22);
+            this.maskedTextBox1.TabIndex = 12;
             // 
-            // cbDepartamento
+            // maskedTextBox2
             // 
-            this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Items.AddRange(new object[] {
-            "Sistemas",
-            "Administracion",
-            "Servicio a Clientes"});
-            this.cbDepartamento.Location = new System.Drawing.Point(110, 139);
-            this.cbDepartamento.Name = "cbDepartamento";
-            this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
-            this.cbDepartamento.TabIndex = 55;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Departamento";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 142);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Puesto";
+            this.maskedTextBox2.Location = new System.Drawing.Point(120, 448);
+            this.maskedTextBox2.Mask = "00";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(56, 22);
+            this.maskedTextBox2.TabIndex = 13;
             // 
             // formNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 547);
-            this.Controls.Add(this.cbPuesto);
-            this.Controls.Add(this.cbDepartamento);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(945, 494);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
@@ -468,8 +469,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
@@ -479,9 +478,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem nuevoPuestoToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox cbPuesto;
-        private System.Windows.Forms.ComboBox cbDepartamento;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem buscarNominaToolStripMenuItem;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
     }
 }
