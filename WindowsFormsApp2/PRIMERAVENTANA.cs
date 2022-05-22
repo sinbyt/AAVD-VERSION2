@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using static WindowsFormsApp2.FUNCIONES;
 
 
 
@@ -24,6 +25,7 @@ namespace WindowsFormsApp2
         formNomina NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
         Recibo NuevoRecibo;
+        LOGIN NuevoLogin;
         //formEmpleados NuevoEmpleado;
         public formInicio()
         {
@@ -33,6 +35,7 @@ namespace WindowsFormsApp2
             NuevaNomina = new formNomina();
             NuevoDatos = new Datos_de_la_empresa();
             NuevoRecibo = new Recibo();
+            NuevoLogin = new LOGIN();
             //NuevoEmpleado = new formEmpleados();
         }
 
@@ -153,7 +156,18 @@ namespace WindowsFormsApp2
                     }
                 }
             }
-        } 
+        }
+
+        private void btnLetra_Click(object sender, EventArgs e)
+        {
+            //NumeroALetras(tbLETRAS)
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NuevoLogin.Show();
+            
+        }
     }
        
 }

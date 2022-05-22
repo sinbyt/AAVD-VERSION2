@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Cassandra;
 using System.Windows.Forms;
+using static WindowsFormsApp2.FUNCIONES;
 using static List;
 
 namespace WindowsFormsApp2
@@ -46,6 +48,18 @@ namespace WindowsFormsApp2
             empleado.numCuenta = tbCuenta.Text;
             empleado.telefono = mtbTelefono.Text;
 
+
+            MessageBox.Show(NumeroALetras(empleado.telefono), "probar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            /*
+            if (EsValidoRFC(empleado.RFC) ==false)
+            {
+                MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (EsValidoCURP(empleado.CURP) == false)
+            {
+                MessageBox.Show("Porfavor ponga un CURP valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            */
             error = conex.InsertEmpleado(empleado);
             //_BussinesLogicLayer.
             //ESTO ES PARA SACAR EL VALOR DE UN COMBO BOX 

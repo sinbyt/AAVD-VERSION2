@@ -461,7 +461,6 @@ namespace WindowsFormsApp2
             // mtbTelefono
             // 
             this.mtbTelefono.Location = new System.Drawing.Point(536, 302);
-            this.mtbTelefono.Mask = "(999)000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(195, 22);
             this.mtbTelefono.TabIndex = 12;

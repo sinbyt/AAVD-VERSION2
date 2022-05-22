@@ -185,6 +185,7 @@
       <DependentUpon>EliminarP.cs</DependentUpon>
     </Compile>
     <Compile Include="EnlaceCassandra.cs" />
+    <Compile Include="FUNCIONES.cs" />
     <Compile Include="HeadCounter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +198,12 @@
     </Compile>
     <Compile Include="Lista de Empleados.Designer.cs">
       <DependentUpon>Lista de Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
     </Compile>
     <Compile Include="PRIMERAVENTANA.cs">
       <SubType>Form</SubType>
@@ -265,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lista de Empleados.resx">
       <DependentUpon>Lista de Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRIMERAVENTANA.resx">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>

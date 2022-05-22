@@ -39,6 +39,9 @@ namespace WindowsFormsApp2
             this.btnCSV = new System.Windows.Forms.Button();
             this.RTB = new System.Windows.Forms.RichTextBox();
             this.CSVTEXT = new System.Windows.Forms.RichTextBox();
+            this.tbLETRAS = new System.Windows.Forms.TextBox();
+            this.btnLetra = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbtitulo
@@ -112,7 +115,7 @@ namespace WindowsFormsApp2
             // 
             // btnCSV
             // 
-            this.btnCSV.Location = new System.Drawing.Point(428, 376);
+            this.btnCSV.Location = new System.Drawing.Point(440, 403);
             this.btnCSV.Name = "btnCSV";
             this.btnCSV.Size = new System.Drawing.Size(75, 23);
             this.btnCSV.TabIndex = 8;
@@ -136,11 +139,41 @@ namespace WindowsFormsApp2
             this.CSVTEXT.TabIndex = 9;
             this.CSVTEXT.Text = "";
             // 
+            // tbLETRAS
+            // 
+            this.tbLETRAS.Location = new System.Drawing.Point(72, 50);
+            this.tbLETRAS.Name = "tbLETRAS";
+            this.tbLETRAS.Size = new System.Drawing.Size(148, 22);
+            this.tbLETRAS.TabIndex = 10;
+            // 
+            // btnLetra
+            // 
+            this.btnLetra.Location = new System.Drawing.Point(153, 93);
+            this.btnLetra.Name = "btnLetra";
+            this.btnLetra.Size = new System.Drawing.Size(75, 23);
+            this.btnLetra.TabIndex = 11;
+            this.btnLetra.Text = "IMPRIME NUMERO EN LETRAS";
+            this.btnLetra.UseVisualStyleBackColor = true;
+            this.btnLetra.Click += new System.EventHandler(this.btnLetra_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(120, 366);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // formInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnLetra);
+            this.Controls.Add(this.tbLETRAS);
             this.Controls.Add(this.CSVTEXT);
             this.Controls.Add(this.btnCSV);
             this.Controls.Add(this.RTB);
@@ -169,6 +202,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnCSV;
         private System.Windows.Forms.RichTextBox RTB;
         private System.Windows.Forms.RichTextBox CSVTEXT;
+        private System.Windows.Forms.TextBox tbLETRAS;
+        private System.Windows.Forms.Button btnLetra;
+        private System.Windows.Forms.Button button3;
     }
 }
 
