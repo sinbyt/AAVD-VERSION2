@@ -12,7 +12,7 @@ namespace WindowsFormsApp2
 {
     public partial class formInicioGT : Form
     {
-        formAgregar NuevoEmpleado;
+        //formAgregar NuevoEmpleado;
         formBorrar NuevoBorrado;
         formCambiar NuevoCambiado;
         REPORTEGENERALDENOMINA NuevoReporteN;
@@ -21,7 +21,7 @@ namespace WindowsFormsApp2
         public formInicioGT()
         {
             InitializeComponent();
-            NuevoEmpleado = new formAgregar();
+           // NuevoEmpleado = new formAgregar();
             NuevoBorrado = new formBorrar();
             NuevoCambiado = new formCambiar();
             NuevoReporteN = new REPORTEGENERALDENOMINA();
@@ -33,33 +33,9 @@ namespace WindowsFormsApp2
 
         private void agregarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevoEmpleado.ShowDialog();
+           // NuevoEmpleado.ShowDialog();
         }
 
-        private void borrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoBorrado.ShowDialog();
-        }
-
-        private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoCambiado.ShowDialog();
-        }
-
-        private void headCounterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoHeadcounter.ShowDialog();
-
-        }
-
-        private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevaListaEmp.ShowDialog();
-        }
-
-        private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoReporteN.ShowDialog();
-        }
+       
     }
 }

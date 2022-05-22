@@ -21,7 +21,7 @@ namespace WindowsFormsApp2
    
     public partial class formInicio : Form
     {
-        formInicioGT NuevaPercepcion;
+        formAgregar NuevaPercepcion;
         formNomina NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
         Recibo NuevoRecibo;
@@ -31,7 +31,7 @@ namespace WindowsFormsApp2
         {
 
             InitializeComponent();
-            NuevaPercepcion = new formInicioGT();
+            NuevaPercepcion = new formAgregar();
             NuevaNomina = new formNomina();
             NuevoDatos = new Datos_de_la_empresa();
             NuevoRecibo = new Recibo();
