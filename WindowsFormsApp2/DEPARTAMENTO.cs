@@ -19,6 +19,7 @@ namespace WindowsFormsApp2
 
         public DEPARTAMENTO()
         {
+            List<Departamento> lst = new List<Departamento>();
             InitializeComponent();
         }
 
@@ -44,6 +45,7 @@ namespace WindowsFormsApp2
 
         private void DEPARTAMENTOS_Load(object sender, EventArgs e)
         {
+            //foreach (Departamento d in lst)
           
         }
 
@@ -53,10 +55,22 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Departamento departamento = new Departamento();
-            departamento.nomDepa = depaText.Text;
-            departamento.sueldoBase = sueldotext.Text;
-       
+            //Departamento departamento = new Departamento();
+            //departamento.nomDepa = depaText.Text;
+            //departamento.sueldoBase = sueldotext.Text;
+
+            new Departamento { nomDepa = depaText.Text, sueldoBase = sueldotext.Text };
+        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
