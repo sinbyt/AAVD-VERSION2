@@ -300,21 +300,9 @@ namespace WindowsFormsApp2
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 450);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(48, 22);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "5";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 453);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(48, 22);
-            this.textBox4.TabIndex = 39;
-            this.textBox4.Text = "10";
             // 
             // button7
             // 
@@ -346,29 +334,9 @@ namespace WindowsFormsApp2
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 125);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 17);
-            this.label14.TabIndex = 47;
-            this.label14.Text = "Departamento";
-            // 
             // comboBox9
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(19, 146);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 24);
-            this.comboBox9.TabIndex = 5;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(165, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "ACEPTAR";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
