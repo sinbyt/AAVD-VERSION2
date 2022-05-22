@@ -36,8 +36,9 @@ namespace WindowsFormsApp2
             this.btnRecibos = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Response = new System.Windows.Forms.Button();
+            this.btnCSV = new System.Windows.Forms.Button();
             this.RTB = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.CSVTEXT = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lbtitulo
@@ -109,6 +110,16 @@ namespace WindowsFormsApp2
             this.Response.UseVisualStyleBackColor = true;
             this.Response.Click += new System.EventHandler(this.BTNPDF_Click);
             // 
+            // btnCSV
+            // 
+            this.btnCSV.Location = new System.Drawing.Point(428, 376);
+            this.btnCSV.Name = "btnCSV";
+            this.btnCSV.Size = new System.Drawing.Size(75, 23);
+            this.btnCSV.TabIndex = 8;
+            this.btnCSV.Text = "CSV";
+            this.btnCSV.UseVisualStyleBackColor = true;
+            this.btnCSV.Click += new System.EventHandler(this.btnCSV_Click);
+            // 
             // RTB
             // 
             this.RTB.Location = new System.Drawing.Point(546, 109);
@@ -117,22 +128,21 @@ namespace WindowsFormsApp2
             this.RTB.TabIndex = 7;
             this.RTB.Text = "";
             // 
-            // button3
+            // CSVTEXT
             // 
-            this.button3.Location = new System.Drawing.Point(313, 352);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "depa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.CSVTEXT.Location = new System.Drawing.Point(120, 151);
+            this.CSVTEXT.Name = "CSVTEXT";
+            this.CSVTEXT.Size = new System.Drawing.Size(100, 96);
+            this.CSVTEXT.TabIndex = 9;
+            this.CSVTEXT.Text = "";
             // 
             // formInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.CSVTEXT);
+            this.Controls.Add(this.btnCSV);
             this.Controls.Add(this.RTB);
             this.Controls.Add(this.Response);
             this.Controls.Add(this.button2);
@@ -143,7 +153,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.lbtitulo);
             this.Name = "formInicio";
             this.Text = "INICIO";
-            this.Load += new System.EventHandler(this.formInicio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,8 +166,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnRecibos;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Response;
+        private System.Windows.Forms.Button btnCSV;
         private System.Windows.Forms.RichTextBox RTB;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RichTextBox CSVTEXT;
     }
 }
 

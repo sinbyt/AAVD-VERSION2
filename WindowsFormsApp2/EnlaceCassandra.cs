@@ -8,8 +8,9 @@ using Cassandra.Mapping;
 using System.Configuration;
 using System.Windows.Forms;
 using WindowsFormsApp2;
-using static Lists;
+using static List;
 
+   
 namespace WindowsFormsApplication2
 {
     public class EnlaceCassandra
@@ -38,7 +39,7 @@ namespace WindowsFormsApplication2
                 .AddContactPoint("127.0.0.1")
                 .Build();
 
-            _instancia = _cluster.Connect("keyspace1");
+            _instancia = _cluster.Connect("keyspace3");
         }
 
         private static void desconectar()
@@ -66,13 +67,13 @@ namespace WindowsFormsApplication2
                 query = query + query1 + query2 + " APPLY BATCH;";
 
 
-                _instancia.Execute(query);
+                _instancia.Execute(query1);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(ex.Message);
                 Err = true;
-                throw e;
+                throw ex;
             }
             finally
             {
@@ -83,7 +84,9 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
+        //public List<Empleado>
 
+    
     }
 }
 
