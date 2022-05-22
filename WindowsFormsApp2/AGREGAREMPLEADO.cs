@@ -76,5 +76,10 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void formAgregar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
