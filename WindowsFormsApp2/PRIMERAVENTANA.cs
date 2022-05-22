@@ -23,7 +23,7 @@ namespace WindowsFormsApp2
         formInicioGT NuevaPercepcion;
         formNomina NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
-        Recibo NuevoRecibo; 
+        Recibo NuevoRecibo;
         //formEmpleados NuevoEmpleado;
         public formInicio()
         {
@@ -128,6 +128,16 @@ namespace WindowsFormsApp2
                     }
                 }
             }
+        }
+
+        private void formInicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+         
         }
     }
 }

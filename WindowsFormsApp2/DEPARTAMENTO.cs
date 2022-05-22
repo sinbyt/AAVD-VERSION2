@@ -14,6 +14,9 @@ namespace WindowsFormsApp2
 {
     public partial class DEPARTAMENTO : Form
     {
+
+        
+
         public DEPARTAMENTO()
         {
             InitializeComponent();
@@ -53,7 +56,7 @@ namespace WindowsFormsApp2
             Departamento departamento = new Departamento();
             departamento.nomDepa = depaText.Text;
             departamento.sueldoBase = sueldotext.Text;
-
+       
         }
     }
 }
