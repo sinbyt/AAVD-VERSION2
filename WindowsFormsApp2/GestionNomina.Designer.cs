@@ -58,9 +58,6 @@ namespace WindowsFormsApp2
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -79,6 +76,9 @@ namespace WindowsFormsApp2
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Sueldo",
+            "Bono"});
             this.comboBox3.Location = new System.Drawing.Point(22, 262);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
@@ -158,6 +158,9 @@ namespace WindowsFormsApp2
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Llegada tarde",
+            "Falta"});
             this.comboBox6.Location = new System.Drawing.Point(522, 278);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 24);
@@ -295,6 +298,12 @@ namespace WindowsFormsApp2
             this.button2.Text = "DESHACER";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            // 
+            // textBox4
+            // 
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(670, 439);
@@ -325,29 +334,9 @@ namespace WindowsFormsApp2
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 125);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 17);
-            this.label14.TabIndex = 47;
-            this.label14.Text = "Departamento";
-            // 
             // comboBox9
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(19, 146);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 24);
-            this.comboBox9.TabIndex = 5;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(165, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "ACEPTAR";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -391,10 +380,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.comboBox9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button2);
@@ -457,9 +443,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripMenuItem nuevoPuestoToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
