@@ -5,36 +5,40 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cassandra;
+
 using static WindowsFormsApp2.FUNCIONES;
 using static WindowsFormsApp2.LOGIN;
 namespace WindowsFormsApp2
 {
     public partial class LOGIN : Form
     {
-        
+        formInicio NuevoInicio;
         public LOGIN()
         {
             InitializeComponent();
-            
+            NuevoInicio = new formInicio();
             
         }
         //SE QUEDA COMO NULO A LA VERGA NO SE PORQUE A LA VERGA ME CAGA A LA VERGA AAAAAAAAAAAAAAAA
         //string usuario = tbUsuario;
-        string USUARIO;
-        string CONTRA;
-        private void btnLogin_Click(object sender, EventArgs e)
+        
+        public void btnLogin_Click(object sender, EventArgs e)
         {
-            tbUsuario.Text = USUARIO;
-            tbContra.Text = CONTRA;
-            if(USUARIO == "Diego" && CONTRA == "GUAPOTE")
+            string T1 = tbUsuario.Text;
+            string T2 = tbContra.Text;
+           
+            if(T1 == "DIEGO" && T2 == "22")
             {
-                MessageBox.Show("USTED INICIO SESION", "Buenas noticias",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("USTED INICIO SESION", "Buenas noticias",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                NuevoInicio.ShowDialog();
             }
             else
             {
-                MessageBox.Show("USTED la cago", "Buenas noticias", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha habido un error, intente otra vez", "Malas noticias", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

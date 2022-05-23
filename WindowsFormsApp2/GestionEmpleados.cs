@@ -48,12 +48,12 @@ namespace WindowsFormsApp2
 
         private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nListaEMP.ShowDialog();
+            //nListaEMP.ShowDialog();
         }
 
         private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nReporte.ShowDialog();
+            //nReporte.ShowDialog();
         }
 
     }

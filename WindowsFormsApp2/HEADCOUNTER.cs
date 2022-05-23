@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class HEADCOUNTER : Form
+    public partial class HeadCounter : Form
     {
-        public HEADCOUNTER()
+        public HeadCounter()
         {
             InitializeComponent();
         }

@@ -71,11 +71,11 @@ namespace WindowsFormsApp2
             this.DTPAlta = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbNum = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCP = new System.Windows.Forms.MaskedTextBox();
             this.mtbCURP = new System.Windows.Forms.MaskedTextBox();
             this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.borrarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,7 +128,6 @@ namespace WindowsFormsApp2
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(195, 22);
             this.tbNombre.TabIndex = 1;
-            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbID
             // 
@@ -470,26 +469,27 @@ namespace WindowsFormsApp2
             // mtbTelefono
             // 
             this.mtbTelefono.Location = new System.Drawing.Point(528, 337);
+            this.mtbTelefono.Mask = "(999)000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(195, 22);
             this.mtbTelefono.TabIndex = 12;
             // 
-            // maskedTextBox2
+            // mtbNum
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(166, 389);
-            this.maskedTextBox2.Mask = "99999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(195, 22);
-            this.maskedTextBox2.TabIndex = 13;
-            this.maskedTextBox2.ValidatingType = typeof(int);
+            this.mtbNum.Location = new System.Drawing.Point(166, 389);
+            this.mtbNum.Mask = "99999";
+            this.mtbNum.Name = "mtbNum";
+            this.mtbNum.Size = new System.Drawing.Size(195, 22);
+            this.mtbNum.TabIndex = 13;
+            this.mtbNum.ValidatingType = typeof(int);
             // 
-            // maskedTextBox3
+            // mtbCP
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(166, 472);
-            this.maskedTextBox3.Mask = "00000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(195, 22);
-            this.maskedTextBox3.TabIndex = 17;
+            this.mtbCP.Location = new System.Drawing.Point(166, 472);
+            this.mtbCP.Mask = "00000";
+            this.mtbCP.Name = "mtbCP";
+            this.mtbCP.Size = new System.Drawing.Size(195, 22);
+            this.mtbCP.TabIndex = 17;
             // 
             // mtbCURP
             // 
@@ -508,12 +508,12 @@ namespace WindowsFormsApp2
             this.mtbNSS.Size = new System.Drawing.Size(195, 22);
             this.mtbNSS.TabIndex = 4;
             // 
-            // textBox1
+            // tbEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(528, 299);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 10;
+            this.tbEmail.Location = new System.Drawing.Point(528, 299);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(195, 22);
+            this.tbEmail.TabIndex = 10;
             // 
             // menuStrip1
             // 
@@ -577,11 +577,11 @@ namespace WindowsFormsApp2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 577);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.mtbNSS);
             this.Controls.Add(this.mtbCURP);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.mtbCP);
+            this.Controls.Add(this.mtbNum);
             this.Controls.Add(this.mtbTelefono);
             this.Controls.Add(this.DTPAlta);
             this.Controls.Add(this.label21);
@@ -624,10 +624,8 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Name = "formAgregar";
             this.Text = "AGREGAR";
-
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,11 +674,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DateTimePicker DTPAlta;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox mtbNum;
+        private System.Windows.Forms.MaskedTextBox mtbCP;
         private System.Windows.Forms.MaskedTextBox mtbCURP;
         private System.Windows.Forms.MaskedTextBox mtbNSS;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem borrarEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarEmpleadoToolStripMenuItem;

@@ -46,20 +46,21 @@ namespace WindowsFormsApp2
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.tbNetoLetra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbNeto = new System.Windows.Forms.TextBox();
+            this.tbRFC = new System.Windows.Forms.TextBox();
+            this.tbCURP = new System.Windows.Forms.TextBox();
+            this.tbNSS = new System.Windows.Forms.TextBox();
+            this.tbEmpleado = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tbDomicilio = new System.Windows.Forms.TextBox();
-            this.tbRFC = new System.Windows.Forms.TextBox();
+            this.tbRFCEMP = new System.Windows.Forms.TextBox();
             this.tbRazon = new System.Windows.Forms.TextBox();
             this.tbInicio = new System.Windows.Forms.MaskedTextBox();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox3
@@ -152,6 +153,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 15;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -215,13 +217,13 @@ namespace WindowsFormsApp2
             this.label4.TabIndex = 44;
             this.label4.Text = "Año:";
             // 
-            // textBox10
+            // tbNetoLetra
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(542, 386);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(234, 22);
-            this.textBox10.TabIndex = 14;
+            this.tbNetoLetra.Enabled = false;
+            this.tbNetoLetra.Location = new System.Drawing.Point(542, 386);
+            this.tbNetoLetra.Name = "tbNetoLetra";
+            this.tbNetoLetra.Size = new System.Drawing.Size(234, 22);
+            this.tbNetoLetra.TabIndex = 14;
             // 
             // label3
             // 
@@ -250,42 +252,42 @@ namespace WindowsFormsApp2
             this.label1.TabIndex = 40;
             this.label1.Text = "Datos de empresa";
             // 
-            // textBox9
+            // tbNeto
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(333, 386);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(203, 22);
-            this.textBox9.TabIndex = 13;
-            this.textBox9.Text = "$";
+            this.tbNeto.Enabled = false;
+            this.tbNeto.Location = new System.Drawing.Point(333, 386);
+            this.tbNeto.Name = "tbNeto";
+            this.tbNeto.Size = new System.Drawing.Size(203, 22);
+            this.tbNeto.TabIndex = 13;
+            this.tbNeto.Text = "$";
             // 
-            // textBox8
+            // tbRFC
             // 
-            this.textBox8.Location = new System.Drawing.Point(603, 196);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 10;
+            this.tbRFC.Location = new System.Drawing.Point(603, 196);
+            this.tbRFC.Name = "tbRFC";
+            this.tbRFC.Size = new System.Drawing.Size(100, 22);
+            this.tbRFC.TabIndex = 10;
             // 
-            // textBox6
+            // tbCURP
             // 
-            this.textBox6.Location = new System.Drawing.Point(476, 196);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 9;
+            this.tbCURP.Location = new System.Drawing.Point(476, 196);
+            this.tbCURP.Name = "tbCURP";
+            this.tbCURP.Size = new System.Drawing.Size(100, 22);
+            this.tbCURP.TabIndex = 9;
             // 
-            // textBox5
+            // tbNSS
             // 
-            this.textBox5.Location = new System.Drawing.Point(355, 196);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 8;
+            this.tbNSS.Location = new System.Drawing.Point(355, 196);
+            this.tbNSS.Name = "tbNSS";
+            this.tbNSS.Size = new System.Drawing.Size(100, 22);
+            this.tbNSS.TabIndex = 8;
             // 
-            // textBox4
+            // tbEmpleado
             // 
-            this.textBox4.Location = new System.Drawing.Point(209, 196);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(122, 22);
-            this.textBox4.TabIndex = 7;
+            this.tbEmpleado.Location = new System.Drawing.Point(209, 196);
+            this.tbEmpleado.Name = "tbEmpleado";
+            this.tbEmpleado.Size = new System.Drawing.Size(122, 22);
+            this.tbEmpleado.TabIndex = 7;
             // 
             // button2
             // 
@@ -305,13 +307,13 @@ namespace WindowsFormsApp2
             this.tbDomicilio.Size = new System.Drawing.Size(159, 22);
             this.tbDomicilio.TabIndex = 4;
             // 
-            // tbRFC
+            // tbRFCEMP
             // 
-            this.tbRFC.Enabled = false;
-            this.tbRFC.Location = new System.Drawing.Point(480, 91);
-            this.tbRFC.Name = "tbRFC";
-            this.tbRFC.Size = new System.Drawing.Size(163, 22);
-            this.tbRFC.TabIndex = 5;
+            this.tbRFCEMP.Enabled = false;
+            this.tbRFCEMP.Location = new System.Drawing.Point(480, 91);
+            this.tbRFCEMP.Name = "tbRFCEMP";
+            this.tbRFCEMP.Size = new System.Drawing.Size(163, 22);
+            this.tbRFCEMP.TabIndex = 5;
             // 
             // tbRazon
             // 
@@ -330,14 +332,25 @@ namespace WindowsFormsApp2
             this.tbInicio.TabIndex = 6;
             this.tbInicio.ValidatingType = typeof(System.DateTime);
             // 
+            // btnPDF
+            // 
+            this.btnPDF.Location = new System.Drawing.Point(379, 451);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(124, 41);
+            this.btnPDF.TabIndex = 60;
+            this.btnPDF.Text = "IMPRIMIR";
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
             // Recibo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 503);
+            this.Controls.Add(this.btnPDF);
             this.Controls.Add(this.tbInicio);
             this.Controls.Add(this.tbDomicilio);
-            this.Controls.Add(this.tbRFC);
+            this.Controls.Add(this.tbRFCEMP);
             this.Controls.Add(this.tbRazon);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox3);
@@ -357,15 +370,15 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.tbNetoLetra);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbNeto);
+            this.Controls.Add(this.tbRFC);
+            this.Controls.Add(this.tbCURP);
+            this.Controls.Add(this.tbNSS);
+            this.Controls.Add(this.tbEmpleado);
             this.Name = "Recibo";
             this.Text = "Recibo";
             this.ResumeLayout(false);
@@ -392,19 +405,20 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox tbNetoLetra;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbNeto;
+        private System.Windows.Forms.TextBox tbRFC;
+        private System.Windows.Forms.TextBox tbCURP;
+        private System.Windows.Forms.TextBox tbNSS;
+        private System.Windows.Forms.TextBox tbEmpleado;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbDomicilio;
-        private System.Windows.Forms.TextBox tbRFC;
+        private System.Windows.Forms.TextBox tbRFCEMP;
         private System.Windows.Forms.TextBox tbRazon;
         private System.Windows.Forms.MaskedTextBox tbInicio;
+        private System.Windows.Forms.Button btnPDF;
     }
 }

@@ -34,6 +34,8 @@ namespace WindowsFormsApp2
             this.label2 = new System.Windows.Forms.Label();
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbContra = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -49,7 +51,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 25);
+            this.label1.Location = new System.Drawing.Point(160, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 1;
@@ -58,7 +60,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(137, 140);
+            this.label2.Location = new System.Drawing.Point(160, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 2;
@@ -66,23 +68,45 @@ namespace WindowsFormsApp2
             // 
             // tbUsuario
             // 
-            this.tbUsuario.Location = new System.Drawing.Point(140, 56);
+            this.tbUsuario.Location = new System.Drawing.Point(163, 131);
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(160, 22);
             this.tbUsuario.TabIndex = 3;
             // 
             // tbContra
             // 
-            this.tbContra.Location = new System.Drawing.Point(140, 184);
+            this.tbContra.Location = new System.Drawing.Point(163, 230);
             this.tbContra.Name = "tbContra";
             this.tbContra.Size = new System.Drawing.Size(160, 22);
             this.tbContra.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(160, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Tipo de usuario";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Gerente",
+            "Empleado"});
+            this.comboBox1.Location = new System.Drawing.Point(163, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.TabIndex = 6;
             // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 290);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbContra);
             this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.label2);
@@ -102,5 +126,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.TextBox tbContra;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
