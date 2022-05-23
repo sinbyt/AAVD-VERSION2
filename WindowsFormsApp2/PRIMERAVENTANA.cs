@@ -25,7 +25,7 @@ namespace WindowsFormsApp2
         formNomina NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
         Recibo NuevoRecibo;
-        LOGIN NuevoLogin;
+        //LOGIN NuevoLogin;
         //formEmpleados NuevoEmpleado;
         public formInicio()
         {
@@ -35,7 +35,7 @@ namespace WindowsFormsApp2
             NuevaNomina = new formNomina();
             NuevoDatos = new Datos_de_la_empresa();
             NuevoRecibo = new Recibo();
-            NuevoLogin = new LOGIN();
+            //NuevoLogin = new LOGIN();
             //NuevoEmpleado = new formEmpleados();
         }
 
@@ -107,56 +107,8 @@ namespace WindowsFormsApp2
             }
         }
         //CON ESTO SE IMPRIME UN PDF PARA EL RICHTEXTBOX RTB
-        private void BTNPDF_Click(object sender, EventArgs e)
-        {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "PDF FILE|*.pdf", ValidateNames = true })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4.Rotate());
-                    try
-                    {
-                        PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
-                        doc.Open();
-                        doc.Add(new iTextSharp.text.Paragraph(RTB.Text));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                    finally
-                    {
-                        doc.Close();
-                    }
-                }
-            }
-        }
-        private async void btnCSV_Click(object sender, EventArgs e)
-        {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TEXT Documents|*.txt", ValidateNames = true })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                   // iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A4.Rotate());
-                    try
-                    {
-                        using (StreamWriter sw = new StreamWriter(sfd.FileName))
-                        {
-                            await sw.WriteAsync(CSVTEXT.Rtf);
-                        }
-                    }                                    
-                    catch (Exception ex)
-                    {
-                        
-                    }
-                    finally
-                    {
-                        //doc.Close();
-                    }
-                }
-            }
-        }
+        
+        
 
         private void btnLetra_Click(object sender, EventArgs e)
         {
@@ -165,8 +117,13 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NuevoLogin.Show();
+           // NuevoLogin.Show();
             
+        }
+
+        private void formInicio_Load(object sender, EventArgs e)
+        {
+
         }
     }
        

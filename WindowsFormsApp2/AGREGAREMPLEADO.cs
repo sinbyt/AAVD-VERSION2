@@ -62,9 +62,8 @@ namespace WindowsFormsApp2
             empleado.numCuenta = tbCuenta.Text;
             empleado.telefono = mtbTelefono.Text;
 
-
-            MessageBox.Show(NumeroALetras(empleado.telefono), "probar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            /*
+            
+            
             if (EsValidoRFC(empleado.RFC) ==false)
             {
                 MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,10 +72,58 @@ namespace WindowsFormsApp2
             {
                 MessageBox.Show("Porfavor ponga un CURP valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            if (tbNombre.Text != "" && tbApellidos.Text != "" && cbDepartamento.Text != "" && cbPuesto.Text != "" && mtbCURP.Text != "" && mtbNSS.Text != "" && DTPNacimiento.Text != "" && tbRFC.Text != "" && tbCalle.Text != "" && cbBanco.Text != "" && tbCuenta.Text != "" && mtbTelefono.Text != "")
+            {
+                MessageBox.Show("Bienvenido al equipo!", "FELICIDADES!!!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Porfavor agregue la informacion completa", "ERROR");
+                  tbNombre.Text = "";
+                tbApellidos.Text = "";
+                cbDepartamento.Text = "";
+                cbPuesto.Text = "";
+                mtbCURP.Text = "";
+                mtbNSS.Text = "";
+                DTPNacimiento.Text = "";
+                tbRFC.Text = "";
+                tbCalle.Text = "";
+                cbBanco.Text = "";
+                tbCuenta.Text = "";
+                mtbTelefono.Text = "";
+                tbColonia.Text= "";
+                mtbNSS.Text = "";
+                mtbNum.Text = "";
+                tbID.Text = "";
+                tbEmail.Text = "";
+                tbMunicipio.Text = "";
+                mtbCP.Text = "";
+
+            }
+            tbNombre.Text = "";
+            tbApellidos.Text = "";
+            cbDepartamento.Text = "";
+            cbPuesto.Text = "";
+            mtbCURP.Text = "";
+            mtbNSS.Text = "";
+            DTPNacimiento.Text = "";
+            tbRFC.Text = "";
+            tbCalle.Text = "";
+            cbBanco.Text = "";
+            tbCuenta.Text = "";
+            mtbTelefono.Text = "";
+            tbColonia.Text = "";
+            mtbNSS.Text = "";
+            mtbNum.Text = "";
+            tbID.Text = "";
+            tbEmail.Text = "";
+            tbMunicipio.Text = "";
+            mtbCP.Text = "";
             error = conex.InsertEmpleado(empleado);
             //ESTO ES PARA SACAR EL VALOR DE UN COMBO BOX 
             //MessageBox.Show(this.cbEstado.SelectedItem.ToString());
+
+
         }
 
         private void label7_Click(object sender, EventArgs e)

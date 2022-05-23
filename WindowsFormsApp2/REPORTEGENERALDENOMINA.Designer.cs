@@ -53,6 +53,7 @@ namespace WindowsFormsApp2
             this.btnGenerar.TabIndex = 1;
             this.btnGenerar.Text = "GENERAR";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // REPORTEGENERALDENOMINA
             // 

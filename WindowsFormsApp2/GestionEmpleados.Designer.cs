@@ -97,8 +97,8 @@ namespace WindowsFormsApp2
             // headcounterToolStripMenuItem
             // 
 
-          //  this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
-            //this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+           // this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
+          //  this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             //this.headCounterToolStripMenuItem.Text = "HeadCounter";
            // this.headCounterToolStripMenuItem.Click += new System.EventHandler(this.headCounterToolStripMenuItem_Click);
 

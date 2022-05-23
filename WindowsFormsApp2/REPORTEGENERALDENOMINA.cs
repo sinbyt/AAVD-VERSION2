@@ -16,5 +16,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(NumeroALetras(empleado.telefono), "probar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
