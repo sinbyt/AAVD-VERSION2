@@ -12,39 +12,34 @@ namespace WindowsFormsApp2
 {
     public partial class formInicioGT : Form
     {
-        formAgregar NuevoEmpleado;
+        //formAgregar NuevoEmpleado;
         formBorrar NuevoBorrado;
         formCambiar NuevoCambiado;
-        //HEADCOUNTER nHeadCounter;
-        Lista_de_Empleados nListaEMP;
-        REPORTEGENERALDENOMINA nReporte;
+
+        REPORTEGENERALDENOMINA NuevoReporteN;
+        Lista_de_Empleados NuevaListaEmp;
+        HeadCounter NuevoHeadcounter;
+
         public formInicioGT()
         {
             InitializeComponent();
-            NuevoEmpleado = new formAgregar();
+           // NuevoEmpleado = new formAgregar();
             NuevoBorrado = new formBorrar();
             NuevoCambiado = new formCambiar();
-            //nHeadCounter = new HEADCOUNTER();
-            nListaEMP = new Lista_de_Empleados();
-            nReporte = new REPORTEGENERALDENOMINA();
+
+            NuevoReporteN = new REPORTEGENERALDENOMINA();
+            NuevaListaEmp = new Lista_de_Empleados();
+            NuevoHeadcounter = new HeadCounter();
+
         }
 
 
 
         private void agregarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevoEmpleado.ShowDialog();
+           // NuevoEmpleado.ShowDialog();
         }
 
-        private void borrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoBorrado.ShowDialog();
-        }
-
-        private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoCambiado.ShowDialog();
-        }
 
         private void headcounterToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -60,5 +55,6 @@ namespace WindowsFormsApp2
         {
             nReporte.ShowDialog();
         }
+
     }
 }

@@ -76,12 +76,20 @@ namespace WindowsFormsApp2
             this.mtbCURP = new System.Windows.Forms.MaskedTextBox();
             this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.borrarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.headCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 61);
+            this.label1.Location = new System.Drawing.Point(86, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 0;
@@ -90,7 +98,7 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 214);
+            this.label3.Location = new System.Drawing.Point(86, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 2;
@@ -99,7 +107,7 @@ namespace WindowsFormsApp2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 165);
+            this.label4.Location = new System.Drawing.Point(16, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 17);
             this.label4.TabIndex = 3;
@@ -108,7 +116,7 @@ namespace WindowsFormsApp2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(94, 114);
+            this.label5.Location = new System.Drawing.Point(86, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 4;
@@ -116,7 +124,7 @@ namespace WindowsFormsApp2
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(174, 58);
+            this.tbNombre.Location = new System.Drawing.Point(166, 93);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(195, 22);
             this.tbNombre.TabIndex = 1;
@@ -124,14 +132,14 @@ namespace WindowsFormsApp2
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(174, 160);
+            this.tbID.Location = new System.Drawing.Point(166, 195);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(195, 22);
             this.tbID.TabIndex = 5;
             // 
             // tbApellidos
             // 
-            this.tbApellidos.Location = new System.Drawing.Point(174, 111);
+            this.tbApellidos.Location = new System.Drawing.Point(166, 146);
             this.tbApellidos.Name = "tbApellidos";
             this.tbApellidos.Size = new System.Drawing.Size(195, 22);
             this.tbApellidos.TabIndex = 3;
@@ -139,7 +147,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(910, 450);
+            this.label2.Location = new System.Drawing.Point(920, 505);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 17);
             this.label2.TabIndex = 9;
@@ -147,7 +155,7 @@ namespace WindowsFormsApp2
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(651, 525);
+            this.btnSave.Location = new System.Drawing.Point(889, 525);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(118, 40);
             this.btnSave.TabIndex = 21;
@@ -157,7 +165,7 @@ namespace WindowsFormsApp2
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(834, 525);
+            this.btnBorrar.Location = new System.Drawing.Point(1072, 525);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(118, 40);
             this.btnBorrar.TabIndex = 22;
@@ -167,7 +175,7 @@ namespace WindowsFormsApp2
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(387, 217);
+            this.label6.Location = new System.Drawing.Point(379, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
             this.label6.TabIndex = 13;
@@ -176,7 +184,7 @@ namespace WindowsFormsApp2
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(387, 165);
+            this.label7.Location = new System.Drawing.Point(379, 200);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 17);
             this.label7.TabIndex = 12;
@@ -186,7 +194,7 @@ namespace WindowsFormsApp2
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(393, 116);
+            this.label8.Location = new System.Drawing.Point(385, 151);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 17);
             this.label8.TabIndex = 17;
@@ -195,7 +203,7 @@ namespace WindowsFormsApp2
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(393, 59);
+            this.label9.Location = new System.Drawing.Point(385, 94);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 17);
             this.label9.TabIndex = 0;
@@ -203,14 +211,14 @@ namespace WindowsFormsApp2
             // 
             // tbCalle
             // 
-            this.tbCalle.Location = new System.Drawing.Point(174, 314);
+            this.tbCalle.Location = new System.Drawing.Point(166, 349);
             this.tbCalle.Name = "tbCalle";
             this.tbCalle.Size = new System.Drawing.Size(195, 22);
             this.tbCalle.TabIndex = 11;
             // 
             // tbRFC
             // 
-            this.tbRFC.Location = new System.Drawing.Point(174, 261);
+            this.tbRFC.Location = new System.Drawing.Point(166, 296);
             this.tbRFC.Name = "tbRFC";
             this.tbRFC.Size = new System.Drawing.Size(195, 22);
             this.tbRFC.TabIndex = 9;
@@ -218,7 +226,7 @@ namespace WindowsFormsApp2
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(94, 317);
+            this.label10.Location = new System.Drawing.Point(86, 352);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 17);
             this.label10.TabIndex = 21;
@@ -227,7 +235,7 @@ namespace WindowsFormsApp2
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(94, 264);
+            this.label11.Location = new System.Drawing.Point(86, 299);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 17);
             this.label11.TabIndex = 20;
@@ -235,7 +243,7 @@ namespace WindowsFormsApp2
             // 
             // tbCuenta
             // 
-            this.tbCuenta.Location = new System.Drawing.Point(174, 490);
+            this.tbCuenta.Location = new System.Drawing.Point(166, 525);
             this.tbCuenta.Name = "tbCuenta";
             this.tbCuenta.Size = new System.Drawing.Size(195, 22);
             this.tbCuenta.TabIndex = 19;
@@ -243,7 +251,7 @@ namespace WindowsFormsApp2
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(43, 493);
+            this.label12.Location = new System.Drawing.Point(35, 528);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(125, 17);
             this.label12.TabIndex = 25;
@@ -252,7 +260,7 @@ namespace WindowsFormsApp2
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(405, 443);
+            this.label13.Location = new System.Drawing.Point(397, 478);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 17);
             this.label13.TabIndex = 24;
@@ -261,7 +269,7 @@ namespace WindowsFormsApp2
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(393, 307);
+            this.label14.Location = new System.Drawing.Point(385, 342);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(64, 17);
             this.label14.TabIndex = 29;
@@ -270,7 +278,7 @@ namespace WindowsFormsApp2
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(393, 264);
+            this.label15.Location = new System.Drawing.Point(385, 299);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 17);
             this.label15.TabIndex = 28;
@@ -280,14 +288,14 @@ namespace WindowsFormsApp2
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(796, 12);
+            this.listBox1.Location = new System.Drawing.Point(796, 82);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(353, 420);
             this.listBox1.TabIndex = 24;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1055, 527);
+            this.button1.Location = new System.Drawing.Point(1087, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 38);
             this.button1.TabIndex = 23;
@@ -302,7 +310,7 @@ namespace WindowsFormsApp2
             "Sistemas",
             "Administracion",
             "Servicio a Clientes"});
-            this.cbDepartamento.Location = new System.Drawing.Point(536, 219);
+            this.cbDepartamento.Location = new System.Drawing.Point(528, 254);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
             this.cbDepartamento.TabIndex = 8;
@@ -314,7 +322,7 @@ namespace WindowsFormsApp2
             "Banco Azteca",
             "Banorte",
             "BBVA"});
-            this.cbBanco.Location = new System.Drawing.Point(536, 448);
+            this.cbBanco.Location = new System.Drawing.Point(528, 483);
             this.cbBanco.Name = "cbBanco";
             this.cbBanco.Size = new System.Drawing.Size(195, 24);
             this.cbBanco.TabIndex = 18;
@@ -326,21 +334,21 @@ namespace WindowsFormsApp2
             "Supervisor",
             "Calidad",
             "Pasante"});
-            this.cbPuesto.Location = new System.Drawing.Point(174, 211);
+            this.cbPuesto.Location = new System.Drawing.Point(166, 246);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(195, 24);
             this.cbPuesto.TabIndex = 7;
             // 
             // DTPNacimiento
             // 
-            this.DTPNacimiento.Location = new System.Drawing.Point(536, 165);
+            this.DTPNacimiento.Location = new System.Drawing.Point(528, 200);
             this.DTPNacimiento.Name = "DTPNacimiento";
             this.DTPNacimiento.Size = new System.Drawing.Size(195, 22);
             this.DTPNacimiento.TabIndex = 6;
             // 
             // tbMunicipio
             // 
-            this.tbMunicipio.Location = new System.Drawing.Point(536, 401);
+            this.tbMunicipio.Location = new System.Drawing.Point(528, 436);
             this.tbMunicipio.Name = "tbMunicipio";
             this.tbMunicipio.Size = new System.Drawing.Size(195, 22);
             this.tbMunicipio.TabIndex = 16;
@@ -348,7 +356,7 @@ namespace WindowsFormsApp2
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(393, 396);
+            this.label16.Location = new System.Drawing.Point(385, 431);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(67, 17);
             this.label16.TabIndex = 35;
@@ -356,7 +364,7 @@ namespace WindowsFormsApp2
             // 
             // tbColonia
             // 
-            this.tbColonia.Location = new System.Drawing.Point(174, 396);
+            this.tbColonia.Location = new System.Drawing.Point(166, 431);
             this.tbColonia.Name = "tbColonia";
             this.tbColonia.Size = new System.Drawing.Size(195, 22);
             this.tbColonia.TabIndex = 15;
@@ -364,7 +372,7 @@ namespace WindowsFormsApp2
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(94, 401);
+            this.label17.Location = new System.Drawing.Point(86, 436);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(55, 17);
             this.label17.TabIndex = 37;
@@ -373,7 +381,7 @@ namespace WindowsFormsApp2
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(52, 354);
+            this.label18.Location = new System.Drawing.Point(44, 389);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(116, 17);
             this.label18.TabIndex = 39;
@@ -382,7 +390,7 @@ namespace WindowsFormsApp2
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(393, 351);
+            this.label19.Location = new System.Drawing.Point(385, 386);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(52, 17);
             this.label19.TabIndex = 41;
@@ -423,7 +431,7 @@ namespace WindowsFormsApp2
             "    Veracruz de Ignacio de la Llave",
             "    Yucatán",
             "    Zacatecas"});
-            this.cbEstado.Location = new System.Drawing.Point(536, 356);
+            this.cbEstado.Location = new System.Drawing.Point(528, 391);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(195, 24);
             this.cbEstado.TabIndex = 14;
@@ -431,7 +439,7 @@ namespace WindowsFormsApp2
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(51, 443);
+            this.label20.Location = new System.Drawing.Point(43, 478);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(95, 17);
             this.label20.TabIndex = 44;
@@ -445,7 +453,7 @@ namespace WindowsFormsApp2
             // 
             // DTPAlta
             // 
-            this.DTPAlta.Location = new System.Drawing.Point(536, 493);
+            this.DTPAlta.Location = new System.Drawing.Point(528, 528);
             this.DTPAlta.Name = "DTPAlta";
             this.DTPAlta.Size = new System.Drawing.Size(195, 22);
             this.DTPAlta.TabIndex = 20;
@@ -453,7 +461,7 @@ namespace WindowsFormsApp2
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(405, 490);
+            this.label21.Location = new System.Drawing.Point(397, 525);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(32, 17);
             this.label21.TabIndex = 47;
@@ -461,15 +469,14 @@ namespace WindowsFormsApp2
             // 
             // mtbTelefono
             // 
-            this.mtbTelefono.Location = new System.Drawing.Point(536, 302);
-            this.mtbTelefono.Mask = "(999)000-0000";
+            this.mtbTelefono.Location = new System.Drawing.Point(528, 337);
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(195, 22);
             this.mtbTelefono.TabIndex = 12;
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(174, 354);
+            this.maskedTextBox2.Location = new System.Drawing.Point(166, 389);
             this.maskedTextBox2.Mask = "99999";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(195, 22);
@@ -478,7 +485,7 @@ namespace WindowsFormsApp2
             // 
             // maskedTextBox3
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(174, 437);
+            this.maskedTextBox3.Location = new System.Drawing.Point(166, 472);
             this.maskedTextBox3.Mask = "00000";
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(195, 22);
@@ -486,7 +493,7 @@ namespace WindowsFormsApp2
             // 
             // mtbCURP
             // 
-            this.mtbCURP.Location = new System.Drawing.Point(536, 61);
+            this.mtbCURP.Location = new System.Drawing.Point(528, 96);
             this.mtbCURP.Mask = "AAAA 999999 AAA AAAAA";
             this.mtbCURP.Name = "mtbCURP";
             this.mtbCURP.Size = new System.Drawing.Size(195, 22);
@@ -495,7 +502,7 @@ namespace WindowsFormsApp2
             // 
             // mtbNSS
             // 
-            this.mtbNSS.Location = new System.Drawing.Point(536, 114);
+            this.mtbNSS.Location = new System.Drawing.Point(528, 149);
             this.mtbNSS.Mask = "000-00-0000";
             this.mtbNSS.Name = "mtbNSS";
             this.mtbNSS.Size = new System.Drawing.Size(195, 22);
@@ -503,16 +510,73 @@ namespace WindowsFormsApp2
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(536, 264);
+            this.textBox1.Location = new System.Drawing.Point(528, 299);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 22);
             this.textBox1.TabIndex = 10;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.borrarEmpleadosToolStripMenuItem,
+            this.editarEmpleadoToolStripMenuItem,
+            this.listaDeEmpleadosToolStripMenuItem,
+            this.reportesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1193, 28);
+            this.menuStrip1.TabIndex = 48;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // borrarEmpleadosToolStripMenuItem
+            // 
+            this.borrarEmpleadosToolStripMenuItem.Name = "borrarEmpleadosToolStripMenuItem";
+            this.borrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.borrarEmpleadosToolStripMenuItem.Text = "Borrar empleados";
+            this.borrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.borrarEmpleadosToolStripMenuItem_Click_1);
+            // 
+            // editarEmpleadoToolStripMenuItem
+            // 
+            this.editarEmpleadoToolStripMenuItem.Name = "editarEmpleadoToolStripMenuItem";
+            this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.editarEmpleadoToolStripMenuItem.Text = "Editar empleado";
+            this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click_1);
+            // 
+            // listaDeEmpleadosToolStripMenuItem
+            // 
+            this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
+            this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
+            this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click_1);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.headCounterToolStripMenuItem,
+            this.nominaToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // headCounterToolStripMenuItem
+            // 
+            this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
+            this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.headCounterToolStripMenuItem.Text = "HeadCounter";
+            // 
+            // nominaToolStripMenuItem
+            // 
+            this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.nominaToolStripMenuItem.Text = "Nomina";
             // 
             // formAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 577);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.mtbNSS);
             this.Controls.Add(this.mtbCURP);
@@ -560,7 +624,10 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Name = "formAgregar";
             this.Text = "AGREGAR";
-            this.Load += new System.EventHandler(this.formAgregar_Load);
+
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,5 +681,12 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.MaskedTextBox mtbCURP;
         private System.Windows.Forms.MaskedTextBox mtbNSS;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem borrarEmpleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarEmpleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeEmpleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem headCounterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
     }
 }

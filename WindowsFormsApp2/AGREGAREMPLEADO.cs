@@ -5,21 +5,36 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Cassandra;
 using System.Windows.Forms;
+
+using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
+
 
 namespace WindowsFormsApp2
 {
 
     public partial class formAgregar : Form
     {
+
+        formBorrar NuevoBorrado;
+        formCambiar NuevoCambiado;
+        REPORTEGENERALDENOMINA NuevoReporteN;
+        Lista_de_Empleados NuevaListaEmp;
+        HeadCounter NuevoHeadcounter;
         //private BUSSINESLOGICLAYER _BussinesLogicLayer;
         public formAgregar()
         {
             InitializeComponent();
             //_BussinesLogicLayer = new BUSSINESLOGICLAYER();
+            NuevoBorrado = new formBorrar();
+            NuevoCambiado = new formCambiar();
+            NuevoReporteN = new REPORTEGENERALDENOMINA();
+            NuevaListaEmp = new Lista_de_Empleados();
+            NuevoHeadcounter = new HeadCounter();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,6 +62,18 @@ namespace WindowsFormsApp2
             empleado.numCuenta = tbCuenta.Text;
             empleado.telefono = mtbTelefono.Text;
 
+
+            MessageBox.Show(NumeroALetras(empleado.telefono), "probar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            /*
+            if (EsValidoRFC(empleado.RFC) ==false)
+            {
+                MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (EsValidoCURP(empleado.CURP) == false)
+            {
+                MessageBox.Show("Porfavor ponga un CURP valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            */
             error = conex.InsertEmpleado(empleado);
             //ESTO ES PARA SACAR EL VALOR DE UN COMBO BOX 
             //MessageBox.Show(this.cbEstado.SelectedItem.ToString());
@@ -72,13 +99,45 @@ namespace WindowsFormsApp2
 
         }
 
-        private void tbNombre_TextChanged(object sender, EventArgs e)
+        private void borrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            NuevoBorrado.ShowDialog();
+        }
+
+        private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoCambiado.ShowDialog();
+        }
+
+        private void headCounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoHeadcounter.ShowDialog();
 
         }
 
-        private void formAgregar_Load(object sender, EventArgs e)
+        private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            NuevaListaEmp.ShowDialog();
+        }
+
+        private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoReporteN.ShowDialog();
+        }
+
+        private void borrarEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NuevoBorrado.ShowDialog();
+        }
+
+        private void editarEmpleadoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NuevoCambiado.ShowDialog();
+        }
+
+        private void listaDeEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NuevaListaEmp.ShowDialog();
 
         }
     }
