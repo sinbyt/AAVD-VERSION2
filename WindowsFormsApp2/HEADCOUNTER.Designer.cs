@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class HEADCOUNTER
+    partial class HeadCounter
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGenerar = new System.Windows.Forms.Button();
             this.gridEmpleados = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,17 +44,9 @@ namespace WindowsFormsApp2
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmpleados)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnGenerar
-            // 
-            this.btnGenerar.Location = new System.Drawing.Point(476, 40);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(86, 23);
-            this.btnGenerar.TabIndex = 1;
-            this.btnGenerar.Text = "GENERAR";
-            this.btnGenerar.UseVisualStyleBackColor = true;
             // 
             // gridEmpleados
             // 
@@ -75,7 +66,7 @@ namespace WindowsFormsApp2
             this.Column11,
             this.Column12,
             this.Column13});
-            this.gridEmpleados.Location = new System.Drawing.Point(12, 69);
+            this.gridEmpleados.Location = new System.Drawing.Point(46, 144);
             this.gridEmpleados.Name = "gridEmpleados";
             this.gridEmpleados.RowHeadersWidth = 51;
             this.gridEmpleados.RowTemplate.Height = 24;
@@ -180,22 +171,31 @@ namespace WindowsFormsApp2
             this.Column13.Name = "Column13";
             this.Column13.Width = 125;
             // 
-            // HEADCOUNTER
+            // btnGenerar
+            // 
+            this.btnGenerar.Location = new System.Drawing.Point(483, 52);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(101, 38);
+            this.btnGenerar.TabIndex = 5;
+            this.btnGenerar.Text = "GENERAR";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            // 
+            // HeadCounter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 493);
-            this.Controls.Add(this.gridEmpleados);
+            this.ClientSize = new System.Drawing.Size(1113, 550);
             this.Controls.Add(this.btnGenerar);
-            this.Name = "HEADCOUNTER";
-            this.Text = "HEADCOUNTER";
+            this.Controls.Add(this.gridEmpleados);
+            this.Name = "HeadCounter";
+            this.Text = "HeadCounter";
             ((System.ComponentModel.ISupportInitialize)(this.gridEmpleados)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnGenerar;
+
         private System.Windows.Forms.DataGridView gridEmpleados;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
@@ -211,5 +211,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
