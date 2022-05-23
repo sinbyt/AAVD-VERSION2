@@ -35,7 +35,7 @@ namespace WindowsFormsApp2
             this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.headCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.headcounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,30 +81,36 @@ namespace WindowsFormsApp2
             this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
             this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
+
            // this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click);
+
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.headCounterToolStripMenuItem,
+            this.headcounterToolStripMenuItem,
             this.nominaToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
-            // headCounterToolStripMenuItem
+            // headcounterToolStripMenuItem
             // 
+
             this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
             this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.headCounterToolStripMenuItem.Text = "HeadCounter";
            // this.headCounterToolStripMenuItem.Click += new System.EventHandler(this.headCounterToolStripMenuItem_Click);
+
             // 
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
             this.nominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nominaToolStripMenuItem.Text = "Nomina";
+
           //  this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
+
             // 
             // formInicioGT
             // 
@@ -129,7 +135,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem editarEmpleadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem headCounterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem headcounterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
     }
 }

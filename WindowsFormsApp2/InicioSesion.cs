@@ -10,26 +10,31 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class formCambiar : Form
+    public partial class InicioSesion : Form
     {
-        public formCambiar()
+        public InicioSesion()
         {
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnCambiar_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+       
         }
     }
 }

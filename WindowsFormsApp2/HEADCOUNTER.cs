@@ -7,20 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using CsvHelper;
-using System.IO;
+
 namespace WindowsFormsApp2
 {
-    public partial class BUSCARNOMINA : Form
+    public partial class HEADCOUNTER : Form
     {
-        public BUSCARNOMINA()
+        public HEADCOUNTER()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

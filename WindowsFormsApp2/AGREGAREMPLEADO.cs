@@ -9,11 +9,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Cassandra;
 using System.Windows.Forms;
+
 using static WindowsFormsApp2.FUNCIONES;
-using static List;
+using static Lists;
+
 
 namespace WindowsFormsApp2
 {
+
     public partial class formAgregar : Form
     {
 
@@ -72,7 +75,6 @@ namespace WindowsFormsApp2
             }
             */
             error = conex.InsertEmpleado(empleado);
-            //_BussinesLogicLayer.
             //ESTO ES PARA SACAR EL VALOR DE UN COMBO BOX 
             //MessageBox.Show(this.cbEstado.SelectedItem.ToString());
         }
@@ -96,6 +98,7 @@ namespace WindowsFormsApp2
         {
 
         }
+
         private void borrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NuevoBorrado.ShowDialog();
@@ -135,6 +138,7 @@ namespace WindowsFormsApp2
         private void listaDeEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             NuevaListaEmp.ShowDialog();
+
         }
     }
 }

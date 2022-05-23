@@ -1,5 +1,5 @@
 ﻿
-    public class List
+    public class Lists
     {
         public class C_Departamento
         {
@@ -13,7 +13,13 @@
             public string proporSal { get; set; }
 
         }
-        public class Empleado
+      public class Departamento
+      {
+        public string nomDepa{ get; set; }
+        public string sueldoBase { get; set; }
+
+      }
+    public class Empleado
         {
 
             public int ID_Empleado { get; set; }

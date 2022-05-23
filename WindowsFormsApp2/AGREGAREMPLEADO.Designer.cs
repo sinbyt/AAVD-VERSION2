@@ -128,6 +128,7 @@ namespace WindowsFormsApp2
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(195, 22);
             this.tbNombre.TabIndex = 1;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbID
             // 
@@ -623,8 +624,10 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label1);
             this.Name = "formAgregar";
             this.Text = "AGREGAR";
+
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
