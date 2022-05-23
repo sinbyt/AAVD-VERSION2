@@ -191,18 +191,27 @@
       <DependentUpon>EliminarP.cs</DependentUpon>
     </Compile>
     <Compile Include="EnlaceCassandra.cs" />
-    <Compile Include="InicioSesion.cs">
+
+    <Compile Include="FUNCIONES.cs" />
+    <Compile Include="HeadCounter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioSesion.Designer.cs">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
+    <Compile Include="HeadCounter.Designer.cs">
+      <DependentUpon>HeadCounter.cs</DependentUpon>
     </Compile>
     <Compile Include="Lists.cs" />
+
     <Compile Include="Lista de Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lista de Empleados.Designer.cs">
       <DependentUpon>Lista de Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
     </Compile>
     <Compile Include="PRIMERAVENTANA.cs">
       <SubType>Form</SubType>
@@ -269,11 +278,16 @@
     <EmbeddedResource Include="EliminarP.resx">
       <DependentUpon>EliminarP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioSesion.resx">
-      <DependentUpon>InicioSesion.cs</DependentUpon>
+
+    <EmbeddedResource Include="HeadCounter.resx">
+      <DependentUpon>HeadCounter.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Lista de Empleados.resx">
       <DependentUpon>Lista de Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRIMERAVENTANA.resx">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>

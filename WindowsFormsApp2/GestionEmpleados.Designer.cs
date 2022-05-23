@@ -67,21 +67,23 @@ namespace WindowsFormsApp2
             this.borrarEmpleadosToolStripMenuItem.Name = "borrarEmpleadosToolStripMenuItem";
             this.borrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.borrarEmpleadosToolStripMenuItem.Text = "Borrar empleados";
-            this.borrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.borrarEmpleadosToolStripMenuItem_Click);
+            //this.borrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.borrarEmpleadosToolStripMenuItem_Click);
             // 
             // editarEmpleadoToolStripMenuItem
             // 
             this.editarEmpleadoToolStripMenuItem.Name = "editarEmpleadoToolStripMenuItem";
             this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.editarEmpleadoToolStripMenuItem.Text = "Editar empleado";
-            this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click);
+            //this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click);
             // 
             // listaDeEmpleadosToolStripMenuItem
             // 
             this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
             this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
-            this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click);
+
+           // this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click);
+
             // 
             // reportesToolStripMenuItem
             // 
@@ -94,17 +96,21 @@ namespace WindowsFormsApp2
             // 
             // headcounterToolStripMenuItem
             // 
-            this.headcounterToolStripMenuItem.Name = "headcounterToolStripMenuItem";
-            this.headcounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.headcounterToolStripMenuItem.Text = "Headcounter";
-            this.headcounterToolStripMenuItem.Click += new System.EventHandler(this.headcounterToolStripMenuItem_Click);
+
+            this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
+            this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.headCounterToolStripMenuItem.Text = "HeadCounter";
+           // this.headCounterToolStripMenuItem.Click += new System.EventHandler(this.headCounterToolStripMenuItem_Click);
+
             // 
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
             this.nominaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nominaToolStripMenuItem.Text = "Nomina";
-            this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
+
+          //  this.nominaToolStripMenuItem.Click += new System.EventHandler(this.nominaToolStripMenuItem_Click);
+
             // 
             // formInicioGT
             // 
