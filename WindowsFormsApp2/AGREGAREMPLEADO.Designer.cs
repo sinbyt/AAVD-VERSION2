@@ -128,6 +128,7 @@ namespace WindowsFormsApp2
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(195, 22);
             this.tbNombre.TabIndex = 1;
+        //    this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbID
             // 

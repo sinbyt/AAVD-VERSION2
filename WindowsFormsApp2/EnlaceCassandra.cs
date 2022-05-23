@@ -49,6 +49,37 @@ namespace WindowsFormsApplication2
 
         //public bool InsertEmpleados(Empleados param);
 
+        ///USUARIO=====================================================================
+        public bool InsertEmpleado(Usuario param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+             
+                var query1 = "insert intoUsuario(usuario, tipous, contra)";
+                query1 = "values'({0}','{1}','{2}','{3}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.usuario, param.tipous + param.contra);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///EMPLEADO=====================================================================
         public bool InsertEmpleado(Empleado param)
         {
             var Err = false; // SI no hay error
@@ -56,15 +87,19 @@ namespace WindowsFormsApplication2
             {
                 conectar();
                 //var fecha = param.fechaAlta.ToString("yyyy-MM-dd");
-                var ID_Empleado = new Guid();
-                ID_Empleado = Guid.NewGuid();
+               // var ID_Empleado = new Guid();
+                //ID_Empleado = Guid.NewGuid();
 
-                var query = "INICIO NUEVO EMPLEADO";
-                var query1 = "insert into users(id, nom, F_Alta, edad, depa, puesto, F_Nacimiento, CURP, NSS, RFC, domicilio, banco, cuenta, telefono, email) values({0}, '{1}', '{2}', '{3}''{4}', '{5}', '{6}''{7}', '{8}', '{9}''{10}', '{11}', '{12}''{13}', '{14}', '{15}'); ";
-                query1 = string.Format(query1, ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email);
-                var query2 = "insert into users2(id, name, email) values({0}, '{1}', '{2}'); ";
+               // var query = "INICIO NUEVO EMPLEADO";
+                var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra) ";
+                query1 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
+
+
+                //var query2 = "insert into users2(id, name, email) values({0}, '{1}', '{2}'); ";
                 //query2 = string.Format(query2, ID_Empleado, param.name, param.email);
-                query = query + query1 + query2 + " APPLY BATCH;";
+                //query = query + query1 + query2 + " APPLY BATCH;";
 
 
                 _instancia.Execute(query1);
@@ -84,11 +119,198 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
-        //public List<Empleado>
+        ///PER_DEC=====================================================================
+        public bool Insertperdec(PER_DEC param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+                var query1 = "insert into PER_DEC(tipoDato, conceptopPD, clavePD, porcentPD, monto)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.tipoDato, param.conceptopPD + param.clavePD, param.porcentPD, param.monto);
+                
 
-    
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///NOMINA=====================================================================
+        public bool InsertNomina(NOMINA param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();        
+                var query1 = "insert into NOMINA(numEmp,nomEmple, FechaNom, percept, deducc, sueldoB, sueldoN, jornada, NumRec,depa,puesto)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.numEmp, param.nomEmple + param.FechaNom, param.percept, param.deducc, param.sueldoB, param.sueldoN, param.jornada, param.NumRec, param.depa, param.puesto);
+
+
+         
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///RECIBO=====================================================================
+        public bool InsertRecibo(RECIBO param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+                var query1 = "insert intoRECIBO(numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percept, param.deducc, param.NumRec, param.sueldoB, param.sueldoN, param.jornada, param.fechaAlta, param.depa, param.puesto, param.sueldoNletra, param.RegPat, param.RFC_emple, param.RFC_EMP, param.inicioOp,param.razon_social, param.nomEmpresa);
+
+
+
+
+               _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///REPORTE_GEN_NOM=====================================================================
+        public bool InsertReporteGenNom(REPORTE_GEN_NOM param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+                var query1 = "insert REPORTE_GEN_NOM(depa, puesto, FechaNom, NomEmple, edad,salDiario)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6});";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.depa, param.puesto, param.FechaNom, param.NomEmple, param.edad, param.salDiario);
+                
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///REPORTE_HEADCOUNTER=====================================================================
+        public bool InsertReporte(REPORTE_HEADCOUNTER param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+                var query1 = "insert into REPORTE_HEADCOUNTER(depa, puesto, cantEmple, anio,mes, nombreEmp)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6});";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.depa, param.puesto, param.cantEmple, param.anio, param.mes, param.nombreEmp);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///REPORTE_NOM=====================================================================
+        public bool InsertReporte(REPORTE_NOM param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+                var query1 = "insert into REPORTE_NOM(sumpercep, sumdeducc, depa, sumSueldoN, sumSueldoB,anio,mes)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.sumpercep, param.sumdeducc, param.depa, param.sumSueldoN, param.sumSueldoB, param.anio, param.mes);
+                
+             
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+
+
+
+
     }
 }
+
+
+
+
 
         //DESDE AQUI EMPIEZA LO DEL PROFE
         /*
