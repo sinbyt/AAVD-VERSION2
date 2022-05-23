@@ -50,7 +50,7 @@ namespace WindowsFormsApplication2
         //public bool InsertEmpleados(Empleados param);
 
         ///USUARIO=====================================================================
-        public bool InsertEmpleado(Usuario param)
+        public bool InsertUsuario(Usuario param)
         {
             var Err = false; // SI no hay error
             try
@@ -87,23 +87,26 @@ namespace WindowsFormsApplication2
             {
                 conectar();
                 //var fecha = param.fechaAlta.ToString("yyyy-MM-dd");
-               // var ID_Empleado = new Guid();
-                //ID_Empleado = Guid.NewGuid();
+               var ID_Empleado = new Guid();
+               ID_Empleado = Guid.NewGuid();
 
-               // var query = "INICIO NUEVO EMPLEADO";
-                var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra) ";
+                var query = "BEGIN BATCH ";
+                var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
                 query1 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
 
 
-                //var query2 = "insert into users2(id, name, email) values({0}, '{1}', '{2}'); ";
-                //query2 = string.Format(query2, ID_Empleado, param.name, param.email);
-                //query = query + query1 + query2 + " APPLY BATCH;";
+                var query2 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
+                query2 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
+                query2 = string.Format(query2, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
+                query = query + query1 + query2 + " APPLY BATCH;";
 
 
                 _instancia.Execute(query1);
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -118,6 +121,8 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+
+
 
         ///PER_DEC=====================================================================
         public bool Insertperdec(PER_DEC param)
