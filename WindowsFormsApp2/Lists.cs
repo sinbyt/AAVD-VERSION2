@@ -13,7 +13,15 @@
             public string proporSal { get; set; }
 
         }
-  
+
+
+    public class Usuario
+    {
+        public string usuario { get; set; }
+        public string tipous { get; set; }
+        public string contra { get; set; }
+    }
+
     public class Empleado
         {
 

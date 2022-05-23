@@ -49,6 +49,37 @@ namespace WindowsFormsApplication2
 
         //public bool InsertEmpleados(Empleados param);
 
+        ///USUARIO=====================================================================
+        public bool InsertEmpleado(Usuario param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+             
+                var query1 = "insert intoUsuario(usuario, tipous, contra)";
+                query1 = "values'({0}','{1}','{2}','{3}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.usuario, param.tipous + param.contra);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        ///EMPLEADO=====================================================================
         public bool InsertEmpleado(Empleado param)
         {
             var Err = false; // SI no hay error
@@ -88,6 +119,7 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
+        ///PER_DEC=====================================================================
         public bool Insertperdec(PER_DEC param)
         {
             var Err = false; // SI no hay error
@@ -117,6 +149,7 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
+        ///NOMINA=====================================================================
         public bool InsertNomina(NOMINA param)
         {
             var Err = false; // SI no hay error
@@ -148,6 +181,7 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
+        ///RECIBO=====================================================================
         public bool InsertRecibo(RECIBO param)
         {
             var Err = false; // SI no hay error
@@ -179,7 +213,7 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
-       
+        ///REPORTE_GEN_NOM=====================================================================
         public bool InsertReporteGenNom(REPORTE_GEN_NOM param)
         {
             var Err = false; // SI no hay error
@@ -208,6 +242,7 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
+        ///REPORTE_HEADCOUNTER=====================================================================
         public bool InsertReporte(REPORTE_HEADCOUNTER param)
         {
             var Err = false; // SI no hay error
@@ -236,7 +271,7 @@ namespace WindowsFormsApplication2
             return Err;
         }
 
-
+        ///REPORTE_NOM=====================================================================
         public bool InsertReporte(REPORTE_NOM param)
         {
             var Err = false; // SI no hay error
@@ -267,7 +302,6 @@ namespace WindowsFormsApplication2
         }
 
 
-        //public List<Empleado>
 
 
 
