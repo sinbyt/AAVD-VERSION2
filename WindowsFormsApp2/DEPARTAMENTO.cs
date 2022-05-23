@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
             //departamento.nomDepa = depaText.Text;
             //departamento.sueldoBase = sueldotext.Text;
 
-            new Departamento { nomDepa = depaText.Text, sueldoBase = sueldotext.Text };
+           // new Departamento { nomDepa = depaText.Text, sueldoBase = sueldotext.Text };
         
         }
 
