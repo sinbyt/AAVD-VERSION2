@@ -16,5 +16,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void gridEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

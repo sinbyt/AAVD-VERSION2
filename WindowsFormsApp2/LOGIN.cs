@@ -41,5 +41,10 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Ha habido un error, intente otra vez", "Malas noticias", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

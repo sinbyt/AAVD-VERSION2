@@ -123,7 +123,7 @@ namespace WindowsFormsApplication2
         }
         public List<Empleado> Get_All_Empleado()
         {
-            string query = "SELECT * FROM Empleado";
+            string query = "SELECT ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra FROM Empleado;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -166,7 +166,7 @@ namespace WindowsFormsApplication2
         }
         public List<PER_DEC> Get_All_perdec()
         {
-            string query = "SELECT * FROM PER_DEC";
+            string query = "SELECT tipoDato, conceptopPD, clavePD, porcentPD, monto FROM PER_DEC;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -242,7 +242,7 @@ namespace WindowsFormsApplication2
         }
         public List<RECIBO> Get_All_Recibo() {
 
-            string query = "SELECT * FROM RECIBO";
+            string query = "SELECT numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa FROM RECIBO;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -286,7 +286,7 @@ namespace WindowsFormsApplication2
         public List<REPORTE_GEN_NOM> Get_All_REPORTE_GEN_NOM()
         {
 
-            string query = "SELECT * FROM REPORTE_GEN_NOM";
+            string query = "SELECT depa, puesto, FechaNom, NomEmple, edad,salDiario FROM REPORTE_GEN_NOM;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -330,7 +330,7 @@ namespace WindowsFormsApplication2
         public List<REPORTE_HEADCOUNTER> Get_All_REPORTE_HEADCOUNTER()
         {
 
-            string query = "SELECT * FROM REPORTE_HEADCOUNTER";
+            string query = "SELECT depa, puesto, cantEmple, anio,mes, nombreEmp FROM REPORTE_HEADCOUNTER;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -376,7 +376,7 @@ namespace WindowsFormsApplication2
         public List<REPORTE_NOM> Get_All_REPORTE_NOM()
         {
 
-            string query = "SELECT * FROM REPORTE_NOM";
+            string query = "SELECT sumpercep, sumdeducc, depa, sumSueldoN, sumSueldoB,anio,mes FROM REPORTE_NOM; ";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
