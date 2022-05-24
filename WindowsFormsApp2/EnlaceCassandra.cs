@@ -56,7 +56,7 @@ namespace WindowsFormsApplication2
             try
             {
                 conectar();
-             
+
                 var query1 = "insert intoUsuario(usuario, tipous, contra)";
                 query1 = "values'({0}','{1}','{2}','{3}');";
                 query1 += "if not exists; ";
@@ -87,8 +87,8 @@ namespace WindowsFormsApplication2
             {
                 conectar();
                 //var fecha = param.fechaAlta.ToString("yyyy-MM-dd");
-               var ID_Empleado = new Guid();
-               ID_Empleado = Guid.NewGuid();
+                var ID_Empleado = new Guid();
+                ID_Empleado = Guid.NewGuid();
 
                 var query = "BEGIN BATCH ";
                 var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
@@ -121,7 +121,18 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+        public List<Empleado> Get_All_Empleado()
+        {
+            string query = "SELECT * FROM Empleado";
+            conectar();
 
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<Empleado> empleado = mapper.Fetch<Empleado>(query);
+
+            desconectar();
+            return empleado.ToList();
+
+        }
 
 
         ///PER_DEC=====================================================================
@@ -135,7 +146,7 @@ namespace WindowsFormsApplication2
                 query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}');";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.tipoDato, param.conceptopPD + param.clavePD, param.porcentPD, param.monto);
-                
+
 
                 _instancia.Execute(query1);
             }
@@ -153,6 +164,18 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+        public List<PER_DEC> Get_All_perdec()
+        {
+            string query = "SELECT * FROM PER_DEC";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<PER_DEC> perdec = mapper.Fetch<PER_DEC>(query);
+
+            desconectar();
+            return perdec.ToList();
+
+        }
 
         ///NOMINA=====================================================================
         public bool InsertNomina(NOMINA param)
@@ -160,14 +183,14 @@ namespace WindowsFormsApplication2
             var Err = false; // SI no hay error
             try
             {
-                conectar();        
+                conectar();
                 var query1 = "insert into NOMINA(numEmp,nomEmple, FechaNom, percept, deducc, sueldoB, sueldoN, jornada, NumRec,depa,puesto)";
                 query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}');";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.numEmp, param.nomEmple + param.FechaNom, param.percept, param.deducc, param.sueldoB, param.sueldoN, param.jornada, param.NumRec, param.depa, param.puesto);
 
 
-         
+
 
                 _instancia.Execute(query1);
             }
@@ -196,40 +219,11 @@ namespace WindowsFormsApplication2
                 var query1 = "insert intoRECIBO(numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa)";
                 query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}');";
                 query1 += "if not exists; ";
-                query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percept, param.deducc, param.NumRec, param.sueldoB, param.sueldoN, param.jornada, param.fechaAlta, param.depa, param.puesto, param.sueldoNletra, param.RegPat, param.RFC_emple, param.RFC_EMP, param.inicioOp,param.razon_social, param.nomEmpresa);
+                query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percept, param.deducc, param.NumRec, param.sueldoB, param.sueldoN, param.jornada, param.fechaAlta, param.depa, param.puesto, param.sueldoNletra, param.RegPat, param.RFC_emple, param.RFC_EMP, param.inicioOp, param.razon_social, param.nomEmpresa);
 
 
 
 
-               _instancia.Execute(query1);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                Err = true;
-                throw ex;
-            }
-            finally
-            {
-                // desconectar o cerrar la conexión
-                desconectar();
-
-            }
-            return Err;
-        }
-
-        ///REPORTE_GEN_NOM=====================================================================
-        public bool InsertReporteGenNom(REPORTE_GEN_NOM param)
-        {
-            var Err = false; // SI no hay error
-            try
-            {
-                conectar();
-                var query1 = "insert REPORTE_GEN_NOM(depa, puesto, FechaNom, NomEmple, edad,salDiario)";
-                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6});";
-                query1 += "if not exists; ";
-                query1 = string.Format(query1, param.depa, param.puesto, param.FechaNom, param.NomEmple, param.edad, param.salDiario);
-                
                 _instancia.Execute(query1);
             }
             catch (Exception ex)
@@ -246,6 +240,63 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+        public List<RECIBO> Get_All_Recibo() {
+
+            string query = "SELECT * FROM RECIBO";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<RECIBO> recibo = mapper.Fetch<RECIBO>(query);
+
+            desconectar();
+            return recibo.ToList();
+
+        }
+
+
+        ///REPORTE_GEN_NOM=====================================================================
+        public bool InsertReporteGenNom(REPORTE_GEN_NOM param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+                var query1 = "insert REPORTE_GEN_NOM(depa, puesto, FechaNom, NomEmple, edad,salDiario)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6});";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.depa, param.puesto, param.FechaNom, param.NomEmple, param.edad, param.salDiario);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        public List<REPORTE_GEN_NOM> Get_All_REPORTE_GEN_NOM()
+        {
+
+            string query = "SELECT * FROM REPORTE_GEN_NOM";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<REPORTE_GEN_NOM> recibo = mapper.Fetch<REPORTE_GEN_NOM>(query);
+
+            desconectar();
+            return recibo.ToList();
+
+        }
+
 
         ///REPORTE_HEADCOUNTER=====================================================================
         public bool InsertReporte(REPORTE_HEADCOUNTER param)
@@ -275,6 +326,21 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+
+        public List<REPORTE_HEADCOUNTER> Get_All_REPORTE_HEADCOUNTER()
+        {
+
+            string query = "SELECT * FROM REPORTE_HEADCOUNTER";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<REPORTE_HEADCOUNTER> rehead = mapper.Fetch<REPORTE_HEADCOUNTER>(query);
+
+            desconectar();
+            return rehead.ToList();
+
+        }
+
 
         ///REPORTE_NOM=====================================================================
         public bool InsertReporte(REPORTE_NOM param)
@@ -307,6 +373,19 @@ namespace WindowsFormsApplication2
         }
 
 
+        public List<REPORTE_NOM> Get_All_REPORTE_NOM()
+        {
+
+            string query = "SELECT * FROM REPORTE_NOM";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<REPORTE_NOM> renom = mapper.Fetch<REPORTE_NOM>(query);
+
+            desconectar();
+            return renom.ToList();
+
+        }
 
 
 
