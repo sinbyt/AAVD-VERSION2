@@ -90,6 +90,61 @@ namespace WindowsFormsApplication2
                 var ID_Empleado = new Guid();
                 ID_Empleado = Guid.NewGuid();
 
+                var fechaAlta = DateTime.Now.ToString("yyyy'-'MM'-'dd");
+
+                string telefonos = "";
+                string emails = "";
+
+
+                int i = 0;
+                foreach (string telefono_ in param.telefono)
+                {
+                    if (i == 0)
+                    {
+                        telefonos += "{" + telefono_;
+                    }
+                    else if (i == (param.telefono.Count - 1))
+                    {
+                        telefonos += ", " + telefono_ + "} ";
+                    }
+                    else
+                    {
+                        telefonos += ", " + telefono_;
+                    }
+
+                    if (i == 0 && i == (param.telefono.Count - 1))
+                    {
+                        telefonos += "} ";
+                    }
+
+                    i++;
+                }
+
+                i = 0;
+                foreach (string email in param.email)
+                {
+                    if (i == 0)
+                    {
+                        emails += "{" + email;
+                    }
+                    else if (i == (param.email.Count - 1))
+                    {
+                        emails += ", " + email + "} ";
+                    }
+                    else
+                    {
+                        emails += ", " + email;
+                    }
+
+                    if (i == 0 && i == (param.email.Count - 1))
+                    {
+                        emails += "} ";
+                    }
+
+                    i++;
+
+                }
+
                 var query = "BEGIN BATCH ";
                 var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
                 query1 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
@@ -121,6 +176,262 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+        public void EditEmpleado(Empleado param, string oldDepto, string oldPuesto)
+        {
+
+            try
+            {
+                conectar();
+
+
+                string telefonos = "";
+                string emails = "";
+
+
+                int i = 0;
+                foreach (string telefono in param.telefono)
+                {
+                    if (i == 0)
+                    {
+                        telefonos += "{" + telefono;
+                    }
+                    else if (i == (param.telefono.Count - 1))
+                    {
+                        telefonos += ", " + telefono + "} ";
+                    }
+                    else
+                    {
+                        telefonos += ", " + telefono;
+                    }
+
+                    if (i == 0 && i == (param.telefono.Count - 1))
+                    {
+                        telefonos += "} ";
+                    }
+
+                    i++;
+                }
+
+                i = 0;
+                foreach (string email in param.email)
+                {
+                    if (i == 0)
+                    {
+                        emails += "{" + email;
+                    }
+                    else if (i == (param.email.Count - 1))
+                    {
+                        emails += ", " + email + "} ";
+                    }
+                    else
+                    {
+                        emails += ", " + email;
+                    }
+
+                    if (i == 0 && i == (param.email.Count - 1))
+                    {
+                        emails += "} ";
+                    }
+
+
+
+
+
+                    i++;
+
+                }
+
+
+                var query1 = "update empleados set nombre ='";
+                query1 += param.ID_Empleado;
+                query1 += "', ID_Empleado='";
+                query1 += param.nombre;
+                query1 += "', nombre='";
+                query1 += param.apellidos;
+                query1 += "', apellidos='";
+                query1 += param.fechaAlta;
+                query1 += "', fechaAlta='";
+                query1 += param.edad;
+                query1 += "', edad='";
+                query1 += param.depa;
+                query1 += "', depa='";
+                query1 += param.puesto;
+                query1 += "', puesto='";
+                query1 += param.fechaAlta;
+                query1 += "', fechaAlta='";
+                query1 += param.CURP;
+                query1 += "', CURP='";
+                query1 += param.NSS;
+                query1 += "', NSS='";
+                query1 += param.RFC;
+                query1 += "', RFC='";
+                query1 += param.domicilio;
+                query1 += "', domicilio='";
+                query1 += param.banco;
+                query1 += "', banco=";
+                query1 += emails;
+                query1 += ", email=";
+                query1 += telefonos;
+                query1 += ", telefono=";
+                query1 += param.contra;
+                query1 += ", contra=";
+                query1 += " where ID_Empleado=";
+                query1 += param.ID_Empleado;
+                query1 += ";";
+
+                #region PRAGMA 
+                /*
+
+                if (oldDepto != "" && oldPuesto != "")
+                {
+                    var query2 = "UPDATE cantidad_empleados_por_departamento SET cantidad = cantidad - 1 WHERE departamento ='";
+                    query2 += oldDepto;
+                    query2 += "';";
+
+                    SimpleStatement simpleStatement2 = new SimpleStatement(query2);
+
+                    var query3 = "UPDATE cantidad_empleados_por_departamento_puesto SET cantidad = cantidad - 1 WHERE departamento ='";
+                    query3 += oldDepto;
+                    query3 += "' AND puesto='";
+                    query3 += oldPuesto;
+                    query3 += "';";
+
+                    SimpleStatement simpleStatement3 = new SimpleStatement(query3);
+
+                    var query4 = "UPDATE cantidad_empleados_por_departamento SET cantidad = cantidad + 1 WHERE departamento ='";
+                    query4 += param.depa;
+                    query4 += "';";
+
+                    SimpleStatement simpleStatement4 = new SimpleStatement(query4);
+
+                    var query5 = "UPDATE cantidad_empleados_por_departamento_puesto SET cantidad = cantidad + 1 WHERE departamento ='";
+                    query5 += param.depa;
+                    query5 += "' AND puesto='";
+                    query5 += param.depa;
+                    query5 += "';";
+
+                    SimpleStatement simpleStatement5 = new SimpleStatement(query5);
+
+                    var query6 = "DELETE FROM empleados_por_departamento WHERE departamento ='";
+                    query6 += oldDepto;
+                    query6 += "' AND num_empleado=";
+                    query6 += param.ID_Empleado;
+                    query6 += ";";
+
+                    SimpleStatement simpleStatement6 = new SimpleStatement(query6);
+
+
+                    var query7 = "INSERT INTO empleados_por_departamento(num_empleado, nombre, departamento) VALUES(";
+                    query7 += param.nombre;
+                    query7 += ",'";
+                    query7 += param.nombre;
+                    query7 += "','";
+                    query7 += param.depa;
+                    query7 += "');";
+
+                    SimpleStatement simpleStatement7 = new SimpleStatement(query7);
+
+
+                    BatchStatement batchCounter = new BatchStatement().SetBatchType(BatchType.Counter).Add(simpleStatement2).Add(simpleStatement3).Add(simpleStatement4).Add(simpleStatement5);
+                    BatchStatement batchNormal = new BatchStatement().SetBatchType(BatchType.Logged).Add(simpleStatement6).Add(simpleStatement7);
+
+                    _instancia.Execute(batchNormal);
+                    _instancia.Execute(batchCounter);
+
+
+                }
+                /*
+                else if (oldDepto != "")
+                {
+
+                    var query2 = "UPDATE cantidad_empleados_por_depart  amento SET cantidad = cantidad - 1 WHERE departamento ='";
+                    query2 += oldDepto;
+                    query2 += "';";
+
+                    SimpleStatement simpleStatement2 = new SimpleStatement(query2);
+
+                    var query4 = "UPDATE cantidad_empleados_por_departamento SET cantidad = cantidad + 1 WHERE departamento ='";
+                    query4 += param.depa;
+                    query4 += "';";
+
+                    SimpleStatement simpleStatement4 = new SimpleStatement(query4);
+
+
+                    var query6 = "DELETE FROM empleados_por_departamento WHERE departamento ='";
+                    query6 += oldDepto;
+                    query6 += "' AND num_empleado=";
+                    query6 += param.ID_Empleado;
+                    query6 += ";";
+
+                    SimpleStatement simpleStatement6 = new SimpleStatement(query6);
+
+
+                    var query7 = "INSERT INTO empleados_por_departamento(num_empleado, nombre, departamento) VALUES(";
+                    query7 += param.nombre;
+                    query7 += ",'";
+                    query7 += param.nombre;
+                    query7 += "','";
+                    query7 += param.depa;
+                    query7 += "');";
+
+                    SimpleStatement simpleStatement7 = new SimpleStatement(query7);
+
+
+                    BatchStatement batchCounter = new BatchStatement().SetBatchType(BatchType.Counter).Add(simpleStatement2).Add(simpleStatement4);
+                    BatchStatement batchNormal = new BatchStatement().SetBatchType(BatchType.Logged).Add(simpleStatement6).Add(simpleStatement7);
+
+                    _instancia.Execute(batchNormal);
+                    _instancia.Execute(batchCounter);
+
+
+
+                }
+                else if (oldPuesto != "")
+                {
+
+                    var query3 = "UPDATE cantidad_empleados_por_departamento_puesto SET cantidad = cantidad - 1 WHERE departamento ='";
+                    query3 += param.departamento;
+                    query3 += "' AND puesto='";
+                    query3 += oldPuesto;
+                    query3 += "';";
+
+                    SimpleStatement simpleStatement3 = new SimpleStatement(query3);
+
+                    var query5 = "UPDATE cantidad_empleados_por_departamento_puesto SET cantidad = cantidad + 1 WHERE departamento ='";
+                    query5 += param.depa;
+                    query5 += "' AND puesto='";
+                    query5 += param.nom;
+                    query5 += "';";
+
+                    SimpleStatement simpleStatement5 = new SimpleStatement(query5);
+
+                    BatchStatement batchCounter = new BatchStatement().SetBatchType(BatchType.Counter).Add(simpleStatement3).Add(simpleStatement5);
+
+                    _session.Execute(batchCounter);
+
+
+                }
+
+                */
+                #endregion
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+
+        }
+
+
+
         public List<Empleado> Get_All_Empleado()
         {
             string query = "SELECT ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra FROM Empleado;";
@@ -216,7 +527,7 @@ namespace WindowsFormsApplication2
             try
             {
                 conectar();
-                var query1 = "insert intoRECIBO(numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa)";
+                var query1 = "insert into RECIBO(numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa)";
                 query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}');";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percept, param.deducc, param.NumRec, param.sueldoB, param.sueldoN, param.jornada, param.fechaAlta, param.depa, param.puesto, param.sueldoNletra, param.RegPat, param.RFC_emple, param.RFC_EMP, param.inicioOp, param.razon_social, param.nomEmpresa);
@@ -413,7 +724,7 @@ namespace WindowsFormsApplication2
             return Err;
             
         }
-            //DIANA QUE ES ESO TENGO MIEDO AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+         
         //public List<Datos_de_la_empresa> Get_All_InfoEmpresa()
         //{
 
