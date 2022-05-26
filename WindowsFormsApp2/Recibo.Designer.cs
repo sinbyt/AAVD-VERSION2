@@ -40,11 +40,11 @@ namespace WindowsFormsApp2
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbDec = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbPer = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbFecha = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbNetoLetra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -164,14 +164,14 @@ namespace WindowsFormsApp2
             this.label7.TabIndex = 50;
             this.label7.Text = "Deducciones:";
             // 
-            // listBox2
+            // lbDec
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(412, 254);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(239, 132);
-            this.listBox2.TabIndex = 12;
+            this.lbDec.FormattingEnabled = true;
+            this.lbDec.ItemHeight = 16;
+            this.lbDec.Location = new System.Drawing.Point(412, 254);
+            this.lbDec.Name = "lbDec";
+            this.lbDec.Size = new System.Drawing.Size(239, 132);
+            this.lbDec.TabIndex = 12;
             // 
             // label6
             // 
@@ -182,14 +182,14 @@ namespace WindowsFormsApp2
             this.label6.TabIndex = 48;
             this.label6.Text = "Percepciones:";
             // 
-            // listBox1
+            // lbPer
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(82, 254);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(245, 132);
-            this.listBox1.TabIndex = 11;
+            this.lbPer.FormattingEnabled = true;
+            this.lbPer.ItemHeight = 16;
+            this.lbPer.Location = new System.Drawing.Point(82, 254);
+            this.lbPer.Name = "lbPer";
+            this.lbPer.Size = new System.Drawing.Size(245, 132);
+            this.lbPer.TabIndex = 11;
             // 
             // label5
             // 
@@ -200,13 +200,13 @@ namespace WindowsFormsApp2
             this.label5.TabIndex = 46;
             this.label5.Text = "Periodo:";
             // 
-            // comboBox1
+            // cbFecha
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(75, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(87, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cbFecha.FormattingEnabled = true;
+            this.cbFecha.Location = new System.Drawing.Point(75, 24);
+            this.cbFecha.Name = "cbFecha";
+            this.cbFecha.Size = new System.Drawing.Size(87, 24);
+            this.cbFecha.TabIndex = 1;
             // 
             // label4
             // 
@@ -220,7 +220,7 @@ namespace WindowsFormsApp2
             // tbNetoLetra
             // 
             this.tbNetoLetra.Enabled = false;
-            this.tbNetoLetra.Location = new System.Drawing.Point(542, 386);
+            this.tbNetoLetra.Location = new System.Drawing.Point(542, 384);
             this.tbNetoLetra.Name = "tbNetoLetra";
             this.tbNetoLetra.Size = new System.Drawing.Size(234, 22);
             this.tbNetoLetra.TabIndex = 14;
@@ -334,7 +334,7 @@ namespace WindowsFormsApp2
             // 
             // btnPDF
             // 
-            this.btnPDF.Location = new System.Drawing.Point(379, 451);
+            this.btnPDF.Location = new System.Drawing.Point(38, 450);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(124, 41);
             this.btnPDF.TabIndex = 60;
@@ -364,11 +364,11 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lbDec);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbPer);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbFecha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tbNetoLetra);
             this.Controls.Add(this.label3);
@@ -399,11 +399,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lbDec;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbPer;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbFecha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbNetoLetra;
         private System.Windows.Forms.Label label3;

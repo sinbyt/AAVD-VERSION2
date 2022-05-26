@@ -35,7 +35,7 @@ namespace WindowsFormsApp2
             this.tbUsuario = new System.Windows.Forms.TextBox();
             this.tbContra = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbTUsuario = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -89,23 +89,23 @@ namespace WindowsFormsApp2
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo de usuario";
             // 
-            // comboBox1
+            // cbTUsuario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTUsuario.FormattingEnabled = true;
+            this.cbTUsuario.Items.AddRange(new object[] {
             "Gerente",
             "Empleado"});
-            this.comboBox1.Location = new System.Drawing.Point(163, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
-            this.comboBox1.TabIndex = 6;
+            this.cbTUsuario.Location = new System.Drawing.Point(163, 39);
+            this.cbTUsuario.Name = "cbTUsuario";
+            this.cbTUsuario.Size = new System.Drawing.Size(160, 24);
+            this.cbTUsuario.TabIndex = 6;
             // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 290);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbTUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbContra);
             this.Controls.Add(this.tbUsuario);
@@ -127,6 +127,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.TextBox tbContra;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbTUsuario;
     }
 }

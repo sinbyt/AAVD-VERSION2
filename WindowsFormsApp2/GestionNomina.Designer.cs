@@ -62,6 +62,10 @@ namespace WindowsFormsApp2
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.cbPuesto = new System.Windows.Forms.ComboBox();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -298,12 +302,6 @@ namespace WindowsFormsApp2
             this.button2.Text = "DESHACER";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            // 
-            // textBox4
-            // 
-            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(670, 439);
@@ -312,6 +310,7 @@ namespace WindowsFormsApp2
             this.button7.TabIndex = 18;
             this.button7.Text = "Guardar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -331,12 +330,6 @@ namespace WindowsFormsApp2
             this.button9.TabIndex = 3;
             this.button9.Text = "ACEPTAR";
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            // comboBox9
-            // 
-            // 
             // 
             // dateTimePicker1
             // 
@@ -371,11 +364,57 @@ namespace WindowsFormsApp2
             this.maskedTextBox2.Size = new System.Drawing.Size(56, 22);
             this.maskedTextBox2.TabIndex = 13;
             // 
+            // cbPuesto
+            // 
+            this.cbPuesto.FormattingEnabled = true;
+            this.cbPuesto.Items.AddRange(new object[] {
+            "Supervisor",
+            "Calidad",
+            "Pasante"});
+            this.cbPuesto.Location = new System.Drawing.Point(634, 153);
+            this.cbPuesto.Name = "cbPuesto";
+            this.cbPuesto.Size = new System.Drawing.Size(195, 24);
+            this.cbPuesto.TabIndex = 36;
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Items.AddRange(new object[] {
+            "Sistemas",
+            "Administracion",
+            "Servicio a Clientes"});
+            this.cbDepartamento.Location = new System.Drawing.Point(181, 155);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
+            this.cbDepartamento.TabIndex = 37;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 17);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Departamento";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(554, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Puesto";
+            // 
             // formNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 494);
+            this.Controls.Add(this.cbPuesto);
+            this.Controls.Add(this.cbDepartamento);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.checkBox1);
@@ -449,5 +488,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem buscarNominaToolStripMenuItem;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.ComboBox cbPuesto;
+        private System.Windows.Forms.ComboBox cbDepartamento;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

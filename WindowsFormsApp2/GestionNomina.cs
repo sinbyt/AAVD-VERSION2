@@ -71,5 +71,10 @@ namespace WindowsFormsApp2
         {
             BuscarNomina.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

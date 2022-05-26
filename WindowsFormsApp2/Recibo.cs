@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using static WindowsFormsApp2.FUNCIONES;
+using static Lists;
 namespace WindowsFormsApp2
 {
     public partial class Recibo : Form
@@ -54,6 +55,13 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+
+            var error = false;
+            RECIBO recibo = new RECIBO();
+            recibo.nomEmple = tbEmpleado.Text;
+            //recibo.
+
             /*
               AQUI ESTA EL CSV AAAAAAAAAAAAAAAAAAAAAAAA
             private async void btnCSV_Click(object sender, EventArgs e)

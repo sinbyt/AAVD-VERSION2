@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Cassandra;
 using System.Windows.Forms;
-
+using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
 
@@ -43,7 +43,8 @@ namespace WindowsFormsApp2
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            //if()
+            
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
 
             var error = false;
