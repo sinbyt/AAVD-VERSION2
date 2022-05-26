@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static WindowsFormsApp2.LOGIN;
+using static WindowsFormsApp2.FUNCIONES;
+using static Lists;
 namespace WindowsFormsApp2
 {
     public partial class formNomina : Form
@@ -74,7 +76,18 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+            var error = false;
+            NOMINA NuevaNom = new NOMINA();
 
+            NuevaNom.FechaNom = cbMes.Text + cbAnio.Text;
+            NuevaNom.percept = cbPercepciones.Text;
+            NuevaNom.deducc = cbDeducciones.Text;
+            NuevaNom.jornada = cbDias.Text;
+            NuevaNom.depa = cbDepartamento.Text;
+            NuevaNom.puesto = cbPuesto.Text;
+
+            error = conex.InsertNomina(NuevaNom);
         }
     }
 }

@@ -386,8 +386,48 @@ namespace WindowsFormsApplication2
             return renom.ToList();
 
         }
+    public bool InsertEmpresa(Empresa param)
+        {
+            var Err = false;
+            try
+            {
+                conectar();
+                var query1 = "insert into Empresa(razon_social, nombreEmp, domicilioFis,inicioOp, RFC_EMP )";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.razon_social, param.nombreEmp + param.domicilioFis, param.inicioOp, param.RFC_EMP);
+                _instancia.Execute(query1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
 
+            }
+            return Err;
+            
+        }
+            //DIANA QUE ES ESO TENGO MIEDO AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        //public List<Datos_de_la_empresa> Get_All_InfoEmpresa()
+        //{
 
+        //    string query1 = "SELECT razon_social, nombreEmp, domicilioFis, inicioOp, RFC_EMP; ";
+        //    conectar();
+
+        //    IMapper mapper = new Mapper(_instancia);
+        //    IEnumerable<REPORTE_NOM> renom = mapper.Fetch<Datos_de_la_empresa>(query1);
+
+        //    desconectar();
+        //    return renom.ToList();
+
+        //}
+       
 
     }
 }

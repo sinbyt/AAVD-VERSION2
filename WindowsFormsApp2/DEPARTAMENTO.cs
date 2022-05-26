@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Lists;
+using static WindowsFormsApp2.FUNCIONES;
 
 
 namespace WindowsFormsApp2
@@ -55,12 +56,27 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Departamento departamento = new Departamento();
-            //departamento.nomDepa = depaText.Text;
-            //departamento.sueldoBase = sueldotext.Text;
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+            var error = false;
 
-           // new Departamento { nomDepa = depaText.Text, sueldoBase = sueldotext.Text };
-        
+            Departamento NuevoDepa = new Departamento();
+            NuevoDepa.nomDepa = tbdepa.Text;
+            NuevoDepa.SueldoBase = mtbSueldo.Text;
+            if (tbdepa.Text != "" && mtbSueldo.Text != "")
+            {
+                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+            }
+            //if (mtbRazon.Text != "" && mtbNombreEmp.Text != "" && mtbDomicilio.Text != "" && mtbINICIO.Text != "" && mtbRFC.Text != "")
+            //{
+            //    MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "MUCHAS GRACIAS!!!", MessageBoxButtons.OK);
+
+            //}
+            //mtbRazon.Text = "";
+            //mtbNombreEmp.Text = "";
+            //mtbDomicilio.Text = "";
+            //mtbINICIO.Text = "";
+            //mtbRFC.Text = "";
+
         }
 
         private void button2_Click(object sender, EventArgs e)

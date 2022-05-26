@@ -29,17 +29,17 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbMes = new System.Windows.Forms.ComboBox();
+            this.cbPercepciones = new System.Windows.Forms.ComboBox();
+            this.cbAnio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.lbPercepciones = new System.Windows.Forms.ListBox();
+            this.cbDeducciones = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,7 @@ namespace WindowsFormsApp2
             this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbDeducciones = new System.Windows.Forms.ListBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -60,41 +60,65 @@ namespace WindowsFormsApp2
             this.button9 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbISR = new System.Windows.Forms.MaskedTextBox();
+            this.mtbIMSS = new System.Windows.Forms.MaskedTextBox();
             this.cbPuesto = new System.Windows.Forms.ComboBox();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbDias = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbMes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(14, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(66, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cbMes.FormattingEnabled = true;
+            this.cbMes.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cbMes.Location = new System.Drawing.Point(14, 45);
+            this.cbMes.Name = "cbMes";
+            this.cbMes.Size = new System.Drawing.Size(66, 24);
+            this.cbMes.TabIndex = 1;
             // 
-            // comboBox3
+            // cbPercepciones
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbPercepciones.FormattingEnabled = true;
+            this.cbPercepciones.Items.AddRange(new object[] {
             "Sueldo",
             "Bono"});
-            this.comboBox3.Location = new System.Drawing.Point(22, 262);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 8;
+            this.cbPercepciones.Location = new System.Drawing.Point(22, 262);
+            this.cbPercepciones.Name = "cbPercepciones";
+            this.cbPercepciones.Size = new System.Drawing.Size(121, 24);
+            this.cbPercepciones.TabIndex = 8;
             // 
-            // comboBox5
+            // cbAnio
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(95, 45);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(66, 24);
-            this.comboBox5.TabIndex = 2;
+            this.cbAnio.FormattingEnabled = true;
+            this.cbAnio.Items.AddRange(new object[] {
+            "2015",
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
+            this.cbAnio.Location = new System.Drawing.Point(95, 45);
+            this.cbAnio.Name = "cbAnio";
+            this.cbAnio.Size = new System.Drawing.Size(66, 24);
+            this.cbAnio.TabIndex = 2;
             // 
             // label1
             // 
@@ -150,25 +174,25 @@ namespace WindowsFormsApp2
             this.label11.TabIndex = 15;
             this.label11.Text = "año";
             // 
-            // listBox1
+            // lbPercepciones
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(23, 321);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(180, 84);
-            this.listBox1.TabIndex = 10;
+            this.lbPercepciones.FormattingEnabled = true;
+            this.lbPercepciones.ItemHeight = 16;
+            this.lbPercepciones.Location = new System.Drawing.Point(23, 321);
+            this.lbPercepciones.Name = "lbPercepciones";
+            this.lbPercepciones.Size = new System.Drawing.Size(180, 84);
+            this.lbPercepciones.TabIndex = 10;
             // 
-            // comboBox6
+            // cbDeducciones
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.cbDeducciones.FormattingEnabled = true;
+            this.cbDeducciones.Items.AddRange(new object[] {
             "Llegada tarde",
             "Falta"});
-            this.comboBox6.Location = new System.Drawing.Point(522, 278);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 24);
-            this.comboBox6.TabIndex = 14;
+            this.cbDeducciones.Location = new System.Drawing.Point(522, 278);
+            this.cbDeducciones.Name = "cbDeducciones";
+            this.cbDeducciones.Size = new System.Drawing.Size(121, 24);
+            this.cbDeducciones.TabIndex = 14;
             // 
             // menuStrip1
             // 
@@ -181,42 +205,42 @@ namespace WindowsFormsApp2
             this.buscarNominaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(945, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(945, 30);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // nuevoPuestoToolStripMenuItem
             // 
             this.nuevoPuestoToolStripMenuItem.Name = "nuevoPuestoToolStripMenuItem";
-            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
             this.nuevoPuestoToolStripMenuItem.Text = "Nuevo Puesto";
             this.nuevoPuestoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPuestoToolStripMenuItem_Click);
             // 
             // buscarNominaToolStripMenuItem
             // 
             this.buscarNominaToolStripMenuItem.Name = "buscarNominaToolStripMenuItem";
-            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
             this.buscarNominaToolStripMenuItem.Text = "Buscar Nomina";
             this.buscarNominaToolStripMenuItem.Click += new System.EventHandler(this.buscarNominaToolStripMenuItem_Click);
             // 
@@ -257,14 +281,14 @@ namespace WindowsFormsApp2
             this.label17.TabIndex = 29;
             this.label17.Text = "ISR";
             // 
-            // listBox2
+            // lbDeducciones
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(522, 326);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(165, 84);
-            this.listBox2.TabIndex = 16;
+            this.lbDeducciones.FormattingEnabled = true;
+            this.lbDeducciones.ItemHeight = 16;
+            this.lbDeducciones.Location = new System.Drawing.Point(522, 326);
+            this.lbDeducciones.Name = "lbDeducciones";
+            this.lbDeducciones.Size = new System.Drawing.Size(165, 84);
+            this.lbDeducciones.TabIndex = 16;
             // 
             // button6
             // 
@@ -348,21 +372,21 @@ namespace WindowsFormsApp2
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // mtbISR
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(22, 450);
-            this.maskedTextBox1.Mask = "00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(50, 22);
-            this.maskedTextBox1.TabIndex = 12;
+            this.mtbISR.Location = new System.Drawing.Point(22, 450);
+            this.mtbISR.Mask = "00";
+            this.mtbISR.Name = "mtbISR";
+            this.mtbISR.Size = new System.Drawing.Size(50, 22);
+            this.mtbISR.TabIndex = 12;
             // 
-            // maskedTextBox2
+            // mtbIMSS
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(120, 448);
-            this.maskedTextBox2.Mask = "00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(56, 22);
-            this.maskedTextBox2.TabIndex = 13;
+            this.mtbIMSS.Location = new System.Drawing.Point(120, 448);
+            this.mtbIMSS.Mask = "00";
+            this.mtbIMSS.Name = "mtbIMSS";
+            this.mtbIMSS.Size = new System.Drawing.Size(56, 22);
+            this.mtbIMSS.TabIndex = 13;
             // 
             // cbPuesto
             // 
@@ -406,17 +430,68 @@ namespace WindowsFormsApp2
             this.label4.TabIndex = 35;
             this.label4.Text = "Puesto";
             // 
+            // cbDias
+            // 
+            this.cbDias.FormattingEnabled = true;
+            this.cbDias.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cbDias.Location = new System.Drawing.Point(634, 45);
+            this.cbDias.Name = "cbDias";
+            this.cbDias.Size = new System.Drawing.Size(195, 24);
+            this.cbDias.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(554, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 17);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Dias trabajados";
+            // 
             // formNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 494);
+            this.Controls.Add(this.cbDias);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtbIMSS);
+            this.Controls.Add(this.mtbISR);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button9);
@@ -426,22 +501,22 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lbDeducciones);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.cbDeducciones);
+            this.Controls.Add(this.lbPercepciones);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbAnio);
+            this.Controls.Add(this.cbPercepciones);
+            this.Controls.Add(this.cbMes);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "formNomina";
@@ -455,23 +530,23 @@ namespace WindowsFormsApp2
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbMes;
+        private System.Windows.Forms.ComboBox cbPercepciones;
+        private System.Windows.Forms.ComboBox cbAnio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ListBox lbPercepciones;
+        private System.Windows.Forms.ComboBox cbDeducciones;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lbDeducciones;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
@@ -486,11 +561,13 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ToolStripMenuItem buscarNominaToolStripMenuItem;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mtbISR;
+        private System.Windows.Forms.MaskedTextBox mtbIMSS;
         private System.Windows.Forms.ComboBox cbPuesto;
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbDias;
+        private System.Windows.Forms.Label label5;
     }
 }

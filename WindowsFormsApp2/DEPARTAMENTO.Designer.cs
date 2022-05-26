@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.depaText = new System.Windows.Forms.TextBox();
+            this.tbdepa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.sueldotext = new System.Windows.Forms.MaskedTextBox();
+            this.mtbSueldo = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.depa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldobase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // depaText
+            // tbdepa
             // 
-            this.depaText.Location = new System.Drawing.Point(203, 39);
-            this.depaText.Name = "depaText";
-            this.depaText.Size = new System.Drawing.Size(188, 22);
-            this.depaText.TabIndex = 0;
-            this.depaText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbdepa.Location = new System.Drawing.Point(203, 39);
+            this.tbdepa.Name = "tbdepa";
+            this.tbdepa.Size = new System.Drawing.Size(188, 22);
+            this.tbdepa.TabIndex = 0;
+            this.tbdepa.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -69,14 +70,14 @@
             this.label2.Text = "Sueldo Base";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // sueldotext
+            // mtbSueldo
             // 
-            this.sueldotext.Location = new System.Drawing.Point(203, 80);
-            this.sueldotext.Mask = "99999";
-            this.sueldotext.Name = "sueldotext";
-            this.sueldotext.Size = new System.Drawing.Size(188, 22);
-            this.sueldotext.TabIndex = 4;
-            this.sueldotext.ValidatingType = typeof(int);
+            this.mtbSueldo.Location = new System.Drawing.Point(203, 80);
+            this.mtbSueldo.Mask = "999999";
+            this.mtbSueldo.Name = "mtbSueldo";
+            this.mtbSueldo.Size = new System.Drawing.Size(188, 22);
+            this.mtbSueldo.TabIndex = 4;
+            this.mtbSueldo.ValidatingType = typeof(int);
             // 
             // button1
             // 
@@ -97,6 +98,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(450, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(326, 313);
@@ -106,14 +108,18 @@
             // depa
             // 
             this.depa.HeaderText = "Departamento";
+            this.depa.MinimumWidth = 6;
             this.depa.Name = "depa";
             this.depa.ReadOnly = true;
+            this.depa.Width = 125;
             // 
             // sueldobase
             // 
             this.sueldobase.HeaderText = "Sueldo base";
+            this.sueldobase.MinimumWidth = 6;
             this.sueldobase.Name = "sueldobase";
             this.sueldobase.ReadOnly = true;
+            this.sueldobase.Width = 125;
             // 
             // button2
             // 
@@ -135,19 +141,29 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(181, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "$";
+            // 
             // DEPARTAMENTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 443);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.sueldotext);
+            this.Controls.Add(this.mtbSueldo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.depaText);
+            this.Controls.Add(this.tbdepa);
             this.Name = "DEPARTAMENTO";
             this.Text = "DEPARTAMENTOS";
             this.Load += new System.EventHandler(this.DEPARTAMENTOS_Load);
@@ -159,15 +175,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox depaText;
+        private System.Windows.Forms.TextBox tbdepa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox sueldotext;
+        private System.Windows.Forms.MaskedTextBox mtbSueldo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn depa;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldobase;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
     }
 }

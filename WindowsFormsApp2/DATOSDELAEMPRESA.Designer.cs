@@ -46,15 +46,19 @@ namespace WindowsFormsApp2
             this.button2 = new System.Windows.Forms.Button();
             this.mtbRazon = new System.Windows.Forms.MaskedTextBox();
             this.mtbDomicilio = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbRFC = new System.Windows.Forms.MaskedTextBox();
+            this.mtbINICIO = new System.Windows.Forms.MaskedTextBox();
             this.tbInicio = new System.Windows.Forms.MaskedTextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.mtbNombreEmp = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbRazon
             // 
             this.tbRazon.Enabled = false;
-            this.tbRazon.Location = new System.Drawing.Point(209, 59);
+            this.tbRazon.Location = new System.Drawing.Point(199, 59);
             this.tbRazon.Name = "tbRazon";
             this.tbRazon.Size = new System.Drawing.Size(263, 22);
             this.tbRazon.TabIndex = 1;
@@ -173,6 +177,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 9;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -198,22 +203,22 @@ namespace WindowsFormsApp2
             this.mtbDomicilio.Size = new System.Drawing.Size(290, 22);
             this.mtbDomicilio.TabIndex = 6;
             // 
-            // maskedTextBox3
+            // mtbRFC
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(803, 145);
-            this.maskedTextBox3.Mask = "9999999999999";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(163, 22);
-            this.maskedTextBox3.TabIndex = 7;
+            this.mtbRFC.Location = new System.Drawing.Point(803, 145);
+            this.mtbRFC.Mask = "9999999999999";
+            this.mtbRFC.Name = "mtbRFC";
+            this.mtbRFC.Size = new System.Drawing.Size(163, 22);
+            this.mtbRFC.TabIndex = 7;
             // 
-            // maskedTextBox4
+            // mtbINICIO
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(988, 145);
-            this.maskedTextBox4.Mask = "00/00/0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(258, 22);
-            this.maskedTextBox4.TabIndex = 8;
-            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+            this.mtbINICIO.Location = new System.Drawing.Point(988, 145);
+            this.mtbINICIO.Mask = "00/00/0000";
+            this.mtbINICIO.Name = "mtbINICIO";
+            this.mtbINICIO.Size = new System.Drawing.Size(258, 22);
+            this.mtbINICIO.TabIndex = 8;
+            this.mtbINICIO.ValidatingType = typeof(System.DateTime);
             // 
             // tbInicio
             // 
@@ -224,14 +229,51 @@ namespace WindowsFormsApp2
             this.tbInicio.TabIndex = 40;
             this.tbInicio.ValidatingType = typeof(System.DateTime);
             // 
+            // tbNombre
+            // 
+            this.tbNombre.Enabled = false;
+            this.tbNombre.Location = new System.Drawing.Point(1252, 57);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(263, 22);
+            this.tbNombre.TabIndex = 41;
+            // 
+            // mtbNombreEmp
+            // 
+            this.mtbNombreEmp.Location = new System.Drawing.Point(1252, 145);
+            this.mtbNombreEmp.Name = "mtbNombreEmp";
+            this.mtbNombreEmp.Size = new System.Drawing.Size(263, 22);
+            this.mtbNombreEmp.TabIndex = 43;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(1249, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Nombre";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1249, 118);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 17);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "Nombre";
+            // 
             // Datos_de_la_empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 284);
+            this.ClientSize = new System.Drawing.Size(1520, 284);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.mtbNombreEmp);
+            this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.tbInicio);
-            this.Controls.Add(this.maskedTextBox4);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.mtbINICIO);
+            this.Controls.Add(this.mtbRFC);
             this.Controls.Add(this.mtbDomicilio);
             this.Controls.Add(this.mtbRazon);
             this.Controls.Add(this.button2);
@@ -275,8 +317,12 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox mtbRazon;
         private System.Windows.Forms.MaskedTextBox mtbDomicilio;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox mtbRFC;
+        private System.Windows.Forms.MaskedTextBox mtbINICIO;
         private System.Windows.Forms.MaskedTextBox tbInicio;
+        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.MaskedTextBox mtbNombreEmp;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
     }
 }

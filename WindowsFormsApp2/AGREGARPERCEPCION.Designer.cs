@@ -102,10 +102,14 @@ namespace WindowsFormsApp2
             this.btnGuardarPercepcion.TabIndex = 6;
             this.btnGuardarPercepcion.Text = "Guardar";
             this.btnGuardarPercepcion.UseVisualStyleBackColor = true;
+            this.btnGuardarPercepcion.Click += new System.EventHandler(this.btnGuardarPercepcion_Click);
             // 
             // cbPerDec
             // 
             this.cbPerDec.FormattingEnabled = true;
+            this.cbPerDec.Items.AddRange(new object[] {
+            "Percepcion",
+            "Deduccion"});
             this.cbPerDec.Location = new System.Drawing.Point(57, 33);
             this.cbPerDec.Name = "cbPerDec";
             this.cbPerDec.Size = new System.Drawing.Size(121, 24);
@@ -141,6 +145,9 @@ namespace WindowsFormsApp2
             // cbPorcenMonto
             // 
             this.cbPorcenMonto.FormattingEnabled = true;
+            this.cbPorcenMonto.Items.AddRange(new object[] {
+            "Porcentaje",
+            "Monto"});
             this.cbPorcenMonto.Location = new System.Drawing.Point(59, 211);
             this.cbPorcenMonto.Name = "cbPorcenMonto";
             this.cbPorcenMonto.Size = new System.Drawing.Size(121, 24);
