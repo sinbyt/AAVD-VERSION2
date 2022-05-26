@@ -121,6 +121,18 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+
+        //public void ActualizarEmpleado(Empleado empleado)
+        //{
+        //    try
+        //    {
+        //        string query = @"Actualizar empleados SET nombre = @nombre, apellidos = @apellidos, fechaAlta = @fechaAlta, edad = @edad, depa = @depa, puesto = @puesto fechaNacimiento = @fechanacimiento, CURP= @CURP, NSS= @NSS, RFC= @RFC, domicilio = @Domicilio,banco = @banco, numCuenta = @numCuenta, telefono = @telefono, email = @email, contra = @contra"
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //}
         public List<Empleado> Get_All_Empleado()
         {
             string query = "SELECT ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra FROM Empleado;";
