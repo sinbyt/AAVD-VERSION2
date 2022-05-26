@@ -16,7 +16,7 @@ namespace WindowsFormsApp2
         [STAThread]
         static void Main()
         {
-
+            string filepath = @"C:\Users\E\Desktop\GGGGGGG\TEXTO.TXT";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LOGIN());
