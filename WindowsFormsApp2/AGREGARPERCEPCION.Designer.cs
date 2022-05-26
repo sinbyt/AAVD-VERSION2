@@ -126,6 +126,7 @@ namespace WindowsFormsApp2
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(118, 22);
             this.tbValor.TabIndex = 5;
+            this.tbValor.TextChanged += new System.EventHandler(this.tbValor_TextChanged);
             // 
             // label3
             // 
@@ -135,6 +136,7 @@ namespace WindowsFormsApp2
             this.label3.Size = new System.Drawing.Size(188, 17);
             this.label3.TabIndex = 50;
             this.label3.Text = "Valor de Porcentaje o Monto";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cbPorcenMonto
             // 

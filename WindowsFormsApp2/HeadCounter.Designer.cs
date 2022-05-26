@@ -66,12 +66,13 @@ namespace WindowsFormsApp2
             this.Column11,
             this.Column12,
             this.Column13});
-            this.gridEmpleados.Location = new System.Drawing.Point(46, 144);
+            this.gridEmpleados.Location = new System.Drawing.Point(68, 134);
             this.gridEmpleados.Name = "gridEmpleados";
             this.gridEmpleados.RowHeadersWidth = 51;
             this.gridEmpleados.RowTemplate.Height = 24;
             this.gridEmpleados.Size = new System.Drawing.Size(975, 384);
             this.gridEmpleados.TabIndex = 4;
+            this.gridEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEmpleados_CellContentClick);
             // 
             // Column1
             // 
