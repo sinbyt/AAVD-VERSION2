@@ -11,7 +11,7 @@ public class Lists
         public class Departamento
         {
             public string nomDepa { get; set; }
-            public string SueldoBase { get; set; }
+            public string sueldoBase { get; set; }
         }
 
         public class Puesto
@@ -35,11 +35,11 @@ public class Lists
             public int ID_Empleado { get; set; }
             public string nombre { get; set; }
             public string apellidos { get; set; }
-            public LocalDate fechaAlta { get; set; }
-            public string edad { get; set; }
+            public string fechaAlta { get; set; }
+            public int edad { get; set; }
             public string depa { get; set; }
             public string puesto { get; set; }
-            public LocalDate fechaNacimiento { get; set; }
+            public string fechaNacimiento { get; set; }
             public string CURP { get; set; }
             public string NSS { get; set; }
             public string RFC { get; set; }
@@ -67,8 +67,8 @@ public class Lists
         public string tipoDato { get; set; }
         public string conceptopPD { get; set; }
         public string clavePD { get; set; }
-        public float porcentPD { get; set; }
-        public float monto { get; set; }
+        public string porcentPD { get; set; }
+        public string monto { get; set; }
        
     }
 
@@ -78,8 +78,8 @@ public class Lists
             public string nomEmple { get; set; }
             public string FechaNom { get; set; }
             public float percept { get; set; }
-            public float deducc { get; set; }
-            public float sueldoB { get; set; }
+            public string deducc { get; set; }
+            public string sueldoB { get; set; }
             public float sueldoN { get; set; }
             public int jornada { get; set; }
             public int NumRec { get; set; }

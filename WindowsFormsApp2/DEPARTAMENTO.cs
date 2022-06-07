@@ -61,10 +61,25 @@ namespace WindowsFormsApp2
 
             Departamento NuevoDepa = new Departamento();
             NuevoDepa.nomDepa = tbdepa.Text;
-            NuevoDepa.SueldoBase = mtbSueldo.Text;
+            NuevoDepa.sueldoBase = mtbSueldo.Text;
             if (tbdepa.Text != "" && mtbSueldo.Text != "")
             {
-                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+                error = conex.InsertDepa(NuevoDepa);
+
+
+                if (error)
+                {
+                    MessageBox.Show("No se pudo agregar al alumno");
+                }
+                else
+                {
+                    MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+
+                   // MessageBox.Show("el alumno se agregó con éxito.");
+                    tbdepa.Text = "";
+                    mtbSueldo.Text = "";
+                    
+                }
             }
             //if (mtbRazon.Text != "" && mtbNombreEmp.Text != "" && mtbDomicilio.Text != "" && mtbINICIO.Text != "" && mtbRFC.Text != "")
             //{

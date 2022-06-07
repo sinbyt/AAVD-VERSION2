@@ -222,6 +222,7 @@ namespace WindowsFormsApp2
             // 
             // tbInicio
             // 
+            this.tbInicio.Enabled = false;
             this.tbInicio.Location = new System.Drawing.Point(988, 57);
             this.tbInicio.Mask = "00/00/0000";
             this.tbInicio.Name = "tbInicio";

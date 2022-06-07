@@ -8,6 +8,19 @@ namespace WindowsFormsApp2
 {
     public static class FUNCIONES
     {
+
+        public static int GetLastDayOfMonth( string fecha)
+        {
+            int diasMes = 0;
+            DateTime dateTime = DateTime.Parse(fecha);
+
+            //new DateTime(dateTime.Year, dateTime.Month, DateTime.DaysInMonth(dateTime.Year, dateTime.Month));
+
+            diasMes = DateTime.DaysInMonth(dateTime.Year, dateTime.Month);
+            return diasMes;
+        }
+
+            
         public static bool EsValidoRFC(string text)
         {
             int i = 0;
@@ -40,7 +53,7 @@ namespace WindowsFormsApp2
             }
             return true;
         }
-
+        
 
 
         public static bool EsValidoCURP(string text)
@@ -168,6 +181,5 @@ namespace WindowsFormsApp2
         
     }
 
-        
-}
+    }
 }

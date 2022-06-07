@@ -77,6 +77,7 @@ namespace WindowsFormsApp2
             // 
             this.tbContra.Location = new System.Drawing.Point(163, 230);
             this.tbContra.Name = "tbContra";
+            this.tbContra.PasswordChar = '*';
             this.tbContra.Size = new System.Drawing.Size(160, 22);
             this.tbContra.TabIndex = 4;
             // 

@@ -49,22 +49,45 @@ namespace WindowsFormsApp2
 
             var error = false;
             Empleado empleado = new Empleado();
+            //empleado.ID_Empleado=
             empleado.nombre = tbNombre.Text;
             empleado.apellidos = tbApellidos.Text;
             empleado.fechaAlta = DTPAlta.Text;
+
             empleado.depa = cbDepartamento.Text;
             empleado.puesto = cbPuesto.Text;
+
+            //string fecha = DTPNacimiento.Value.ToString("yyyy-MM-dd");
+    
+            //GetLastDayOfMonth(empleado.fechaNacimiento);
+           // empleado.fechaNacimiento = LocalDate.Parse(DTPNacimiento, "yyyy/mm/dd");
+           // LocalDate fecNac = new LocalDate(empleado.fechaNacimiento.Year, empleado.fechaNacimiento.Month, empleado.fechaNacimiento.Day);
             empleado.fechaNacimiento = DTPNacimiento.Text;
-            empleado.CURP = mtbCURP.Text;
+            //empleado.edad= 
+
+            // empleado.fechaNacimiento = LocalDate.Parse(DTPNacimiento, "yyyy/mm/dd");
+           // DateTime Now
+           // DateTime fecha = DateTime.Parse(empleado.fechaNacimiento);
+            DateTime fechaact = DateTime.Now;
+            //string fechaAct = LocalDate.Parse(fechaact, "yyyy/mm/dd");
+            //  DateTime fechafin = DateTime.Now.Subtract(fecha);
+             //TimeSpan dif= fechaact-fecha;
+           // int age = (DateTime.Now - fecha);
+            //empleado.edad = 
+        empleado.CURP = mtbCURP.Text;
             empleado.NSS = mtbNSS.Text;
             empleado.RFC = tbRFC.Text;
             empleado.domicilio = tbCalle.Text;
             empleado.banco = cbBanco.Text;
             empleado.numCuenta = tbCuenta.Text;
-            empleado.telefono = mtbTelefono.Text;
+            //empleado.telefono = tbCuenta.Text;
+            //empleado.email = tbCuenta.Text;
+            //empleado.contra = tbCuenta.Text;
 
-            
-            
+
+
+
+
             if (EsValidoRFC(empleado.RFC) ==false)
             {
                 MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -91,7 +114,7 @@ namespace WindowsFormsApp2
                 tbCalle.Text = "";
                 cbBanco.Text = "";
                 tbCuenta.Text = "";
-                mtbTelefono.Text = "";
+               
                 tbColonia.Text= "";
                 mtbNSS.Text = "";
                 mtbNum.Text = "";

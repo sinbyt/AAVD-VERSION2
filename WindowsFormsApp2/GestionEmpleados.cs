@@ -56,5 +56,9 @@ namespace WindowsFormsApp2
             //nReporte.ShowDialog();
         }
 
+        private void listaDeEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

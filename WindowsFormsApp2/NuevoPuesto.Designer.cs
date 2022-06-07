@@ -63,6 +63,7 @@ namespace WindowsFormsApp2
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(121, 22);
             this.tbNombre.TabIndex = 64;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // label2
             // 

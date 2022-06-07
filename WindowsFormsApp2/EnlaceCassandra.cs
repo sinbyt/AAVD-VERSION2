@@ -39,7 +39,7 @@ namespace WindowsFormsApplication2
                 .AddContactPoint("127.0.0.1")
                 .Build();
 
-            _instancia = _cluster.Connect("keyspace3");
+            _instancia = _cluster.Connect("keyspace1");
         }
 
         private static void desconectar()
@@ -50,6 +50,65 @@ namespace WindowsFormsApplication2
         //public bool InsertEmpleados(Empleados param);
 
         ///USUARIO=====================================================================
+        public bool InsertDepa(Departamento param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+
+                var query1 = "insert into Departamento(nomDepa, sueldoBase) ";
+                query1 += "values('{0}','{1}')";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.nomDepa, param.sueldoBase);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Err = true;
+                throw e;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+
+        public bool InsertPuesto(Puesto param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+
+                var query1 = "insert into Puesto(nomPuesto, proporSal) ";
+                query1 += "values('{0}','{1}')";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.nomPuesto, param.proporSal);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Err = true;
+                throw e;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
         public bool InsertUsuario(Usuario param)
         {
             var Err = false; // SI no hay error
