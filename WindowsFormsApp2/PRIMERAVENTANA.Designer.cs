@@ -79,6 +79,7 @@ namespace WindowsFormsApp2
             // 
             // btnRecibos
             // 
+            this.btnRecibos.Enabled = false;
             this.btnRecibos.Location = new System.Drawing.Point(313, 294);
             this.btnRecibos.Name = "btnRecibos";
             this.btnRecibos.Size = new System.Drawing.Size(180, 23);
