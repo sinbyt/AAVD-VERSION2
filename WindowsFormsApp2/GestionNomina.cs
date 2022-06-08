@@ -22,6 +22,7 @@ namespace WindowsFormsApp2
         BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         Puesto NuevoPuesto;
+
         public FORMNOMINA()
         {
             InitializeComponent();
@@ -86,8 +87,11 @@ namespace WindowsFormsApp2
             var error = false;
             NOMINA NuevaNom = new NOMINA();
 
+
+
             NuevaNom.FechaNom = cbMes.Text + cbAnio.Text;
-            //NuevaNom.percept = cbPercepciones.Text;
+            //NuevaNom.percept = cbPercepciones.;
+
             NuevaNom.deducc = cbDeducciones.Text;
             //NuevaNom.jornada = cbDias.Text;
             NuevaNom.depa = cbDepartamento.Text;
@@ -102,6 +106,16 @@ namespace WindowsFormsApp2
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
             //            text1.Close();
 
+        }
+
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoDepartamento.ShowDialog();
+        }
+
+        private void puestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoPuesto.ShowDialog();
         }
     }
 }
