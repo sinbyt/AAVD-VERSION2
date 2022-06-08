@@ -77,12 +77,12 @@ public class Lists
             public string numEmp { get; set; }
             public string nomEmple { get; set; }
             public string FechaNom { get; set; }
-            public float percept { get; set; }
+            public string percept { get; set; }
             public string deducc { get; set; }
             public string sueldoB { get; set; }
-            public float sueldoN { get; set; }
+            public string sueldoN { get; set; }
             public int jornada { get; set; }
-            public int NumRec { get; set; }
+            public string NumRec { get; set; }
             public string depa { get; set; }
             public string puesto { get; set; }
         }

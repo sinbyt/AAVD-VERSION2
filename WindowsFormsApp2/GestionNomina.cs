@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
+
 using System.IO;
 namespace WindowsFormsApp2
 {
@@ -86,11 +87,39 @@ namespace WindowsFormsApp2
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
+            Empleado NuevoEmp = new Empleado();
+            string sueldoBase;
+            string nivelSalarial;
+            //EnlaceCassandra enlace = new EnlaceCassandra();
+            //var dptoSource = enlace.Get_All_Departamentos();
+            //var pstoSource = enlace.Get_All_Puestos();
+            NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
 
+            int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
+            /*
+            foreach (Departamento departamento in dptoSource)
+            {
+                if (departamento.nomDepa == NuevoEmp.depa)
+                {
+                    sueldoBase = departamento.sueldoBase;
+                    break;
+                }
+            }
 
+            //Se obtiene el nivel salarial
+            foreach (Puesto Nuevopuesto in pstoSource)
+            {
+                /*
+                if (Nuevopuesto.nomPuesto == NuevoEmp.puesto)
+                {
+                    nivelSalarial = Nuevopuesto.proporSal;
+                    break;
+                }
+            }
+            */
+            // NuevaNom.sueldoB = float.Parse()
 
-            NuevaNom.FechaNom = cbMes.Text + cbAnio.Text;
-            //NuevaNom.percept = cbPercepciones.;
+            NuevaNom.percept = cbPercepciones.Text;
 
             NuevaNom.deducc = cbDeducciones.Text;
             //NuevaNom.jornada = cbDias.Text;
@@ -116,6 +145,11 @@ namespace WindowsFormsApp2
         private void puestoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NuevoPuesto.ShowDialog();
+        }
+
+        private void btnCSV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

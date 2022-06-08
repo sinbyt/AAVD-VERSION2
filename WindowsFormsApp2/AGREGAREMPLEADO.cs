@@ -50,6 +50,7 @@ namespace WindowsFormsApp2
             var error = false;
             Empleado empleado = new Empleado();
             //empleado.ID_Empleado=
+
             empleado.nombre = tbNombre.Text;
             empleado.apellidos = tbApellidos.Text;
             empleado.fechaAlta = DTPAlta.Text;

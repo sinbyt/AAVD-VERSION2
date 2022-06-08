@@ -73,6 +73,7 @@ namespace WindowsFormsApp2
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCSV = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -416,11 +417,11 @@ namespace WindowsFormsApp2
             this.sueldoB,
             this.banco,
             this.numCuenta});
-            this.dataGridView1.Location = new System.Drawing.Point(806, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(652, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(640, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(815, 249);
             this.dataGridView1.TabIndex = 50;
             // 
             // numEmp
@@ -497,11 +498,22 @@ namespace WindowsFormsApp2
             this.puestoToolStripMenuItem.Text = "Puesto";
             this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
+            // btnCSV
+            // 
+            this.btnCSV.Location = new System.Drawing.Point(1351, 322);
+            this.btnCSV.Name = "btnCSV";
+            this.btnCSV.Size = new System.Drawing.Size(116, 45);
+            this.btnCSV.TabIndex = 53;
+            this.btnCSV.Text = "Generar CSV";
+            this.btnCSV.UseVisualStyleBackColor = true;
+            this.btnCSV.Click += new System.EventHandler(this.btnCSV_Click);
+            // 
             // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1479, 638);
+            this.Controls.Add(this.btnCSV);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
@@ -594,5 +606,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puestoToolStripMenuItem;
+        private System.Windows.Forms.Button btnCSV;
     }
 }
