@@ -99,5 +99,10 @@ namespace WindowsFormsApp2
             //            text1.Close();
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
