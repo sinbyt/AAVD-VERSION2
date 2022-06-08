@@ -46,11 +46,13 @@ namespace WindowsFormsApp2
             this.btnEliminarP = new System.Windows.Forms.Button();
             this.btnEliminarD = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOKP
             // 
-            this.btnOKP.Location = new System.Drawing.Point(182, 114);
+            this.btnOKP.Location = new System.Drawing.Point(745, 100);
             this.btnOKP.Name = "btnOKP";
             this.btnOKP.Size = new System.Drawing.Size(98, 23);
             this.btnOKP.TabIndex = 4;
@@ -59,7 +61,7 @@ namespace WindowsFormsApp2
             // 
             // btnOKT
             // 
-            this.btnOKT.Location = new System.Drawing.Point(182, 63);
+            this.btnOKT.Location = new System.Drawing.Point(323, 62);
             this.btnOKT.Name = "btnOKT";
             this.btnOKT.Size = new System.Drawing.Size(98, 23);
             this.btnOKT.TabIndex = 2;
@@ -78,7 +80,7 @@ namespace WindowsFormsApp2
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(33, 94);
+            this.label9.Location = new System.Drawing.Point(596, 80);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 17);
             this.label9.TabIndex = 26;
@@ -95,7 +97,7 @@ namespace WindowsFormsApp2
             // cbPercepciones
             // 
             this.cbPercepciones.FormattingEnabled = true;
-            this.cbPercepciones.Location = new System.Drawing.Point(36, 114);
+            this.cbPercepciones.Location = new System.Drawing.Point(599, 100);
             this.cbPercepciones.Name = "cbPercepciones";
             this.cbPercepciones.Size = new System.Drawing.Size(121, 24);
             this.cbPercepciones.TabIndex = 3;
@@ -104,7 +106,7 @@ namespace WindowsFormsApp2
             // 
             this.lbPercepcion.FormattingEnabled = true;
             this.lbPercepcion.ItemHeight = 16;
-            this.lbPercepcion.Location = new System.Drawing.Point(36, 175);
+            this.lbPercepcion.Location = new System.Drawing.Point(599, 161);
             this.lbPercepcion.Name = "lbPercepcion";
             this.lbPercepcion.Size = new System.Drawing.Size(307, 84);
             this.lbPercepcion.TabIndex = 5;
@@ -112,7 +114,7 @@ namespace WindowsFormsApp2
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 159);
+            this.label8.Location = new System.Drawing.Point(595, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(142, 17);
             this.label8.TabIndex = 37;
@@ -121,7 +123,7 @@ namespace WindowsFormsApp2
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 262);
+            this.label7.Location = new System.Drawing.Point(598, 248);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(147, 17);
             this.label7.TabIndex = 36;
@@ -131,14 +133,14 @@ namespace WindowsFormsApp2
             // 
             this.lbDeduccion.FormattingEnabled = true;
             this.lbDeduccion.ItemHeight = 16;
-            this.lbDeduccion.Location = new System.Drawing.Point(489, 175);
+            this.lbDeduccion.Location = new System.Drawing.Point(1052, 161);
             this.lbDeduccion.Name = "lbDeduccion";
             this.lbDeduccion.Size = new System.Drawing.Size(165, 84);
             this.lbDeduccion.TabIndex = 9;
             // 
             // btnOKD
             // 
-            this.btnOKD.Location = new System.Drawing.Point(660, 109);
+            this.btnOKD.Location = new System.Drawing.Point(1223, 95);
             this.btnOKD.Name = "btnOKD";
             this.btnOKD.Size = new System.Drawing.Size(98, 23);
             this.btnOKD.TabIndex = 8;
@@ -148,7 +150,7 @@ namespace WindowsFormsApp2
             // cbDeducciones
             // 
             this.cbDeducciones.FormattingEnabled = true;
-            this.cbDeducciones.Location = new System.Drawing.Point(487, 109);
+            this.cbDeducciones.Location = new System.Drawing.Point(1050, 95);
             this.cbDeducciones.Name = "cbDeducciones";
             this.cbDeducciones.Size = new System.Drawing.Size(121, 24);
             this.cbDeducciones.TabIndex = 7;
@@ -156,7 +158,7 @@ namespace WindowsFormsApp2
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(492, 89);
+            this.label6.Location = new System.Drawing.Point(1055, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 41;
@@ -165,7 +167,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(492, 154);
+            this.label2.Location = new System.Drawing.Point(1055, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 17);
             this.label2.TabIndex = 40;
@@ -173,7 +175,7 @@ namespace WindowsFormsApp2
             // 
             // btnEliminarP
             // 
-            this.btnEliminarP.Location = new System.Drawing.Point(245, 265);
+            this.btnEliminarP.Location = new System.Drawing.Point(808, 251);
             this.btnEliminarP.Name = "btnEliminarP";
             this.btnEliminarP.Size = new System.Drawing.Size(98, 23);
             this.btnEliminarP.TabIndex = 6;
@@ -182,7 +184,7 @@ namespace WindowsFormsApp2
             // 
             // btnEliminarD
             // 
-            this.btnEliminarD.Location = new System.Drawing.Point(556, 265);
+            this.btnEliminarD.Location = new System.Drawing.Point(1119, 251);
             this.btnEliminarD.Name = "btnEliminarD";
             this.btnEliminarD.Size = new System.Drawing.Size(98, 23);
             this.btnEliminarD.TabIndex = 10;
@@ -191,7 +193,7 @@ namespace WindowsFormsApp2
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(672, 393);
+            this.button8.Location = new System.Drawing.Point(1235, 379);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(116, 45);
             this.button8.TabIndex = 11;
@@ -199,11 +201,21 @@ namespace WindowsFormsApp2
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 115);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(545, 287);
+            this.dataGridView1.TabIndex = 42;
+            // 
             // EDITAR_NOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1362, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.btnEliminarD);
             this.Controls.Add(this.btnEliminarP);
@@ -223,6 +235,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.cbPercepciones);
             this.Name = "EDITAR_NOMINA";
             this.Text = "EDITAR_NOMINA";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +260,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button btnEliminarP;
         private System.Windows.Forms.Button btnEliminarD;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

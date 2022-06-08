@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
         AGREGARPERCEPCION NuevaNomina;
         EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
-        NuevoPuesto PuestoNuevo;
+        Puesto PuestoNuevo;
         BUSCARNOMINA BuscarNomina;
         public formNomina()
         {
@@ -26,7 +26,7 @@ namespace WindowsFormsApp2
             NuevaNomina = new AGREGARPERCEPCION();
             NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
-            PuestoNuevo = new NuevoPuesto();
+            PuestoNuevo = new Puesto();
             BuscarNomina = new BUSCARNOMINA();
         }
 

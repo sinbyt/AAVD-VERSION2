@@ -66,9 +66,9 @@ namespace WindowsFormsApp2
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbDias = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbMes
@@ -132,7 +132,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(525, 305);
+            this.label2.Location = new System.Drawing.Point(387, 306);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 17);
             this.label2.TabIndex = 6;
@@ -141,7 +141,7 @@ namespace WindowsFormsApp2
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(527, 258);
+            this.label6.Location = new System.Drawing.Point(389, 259);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 10;
@@ -189,7 +189,7 @@ namespace WindowsFormsApp2
             this.cbDeducciones.Items.AddRange(new object[] {
             "Llegada tarde",
             "Falta"});
-            this.cbDeducciones.Location = new System.Drawing.Point(522, 278);
+            this.cbDeducciones.Location = new System.Drawing.Point(384, 279);
             this.cbDeducciones.Name = "cbDeducciones";
             this.cbDeducciones.Size = new System.Drawing.Size(121, 24);
             this.cbDeducciones.TabIndex = 14;
@@ -205,48 +205,48 @@ namespace WindowsFormsApp2
             this.buscarNominaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(945, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1378, 33);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // nuevoPuestoToolStripMenuItem
             // 
             this.nuevoPuestoToolStripMenuItem.Name = "nuevoPuestoToolStripMenuItem";
-            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
+            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
             this.nuevoPuestoToolStripMenuItem.Text = "Nuevo Puesto";
             this.nuevoPuestoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPuestoToolStripMenuItem_Click);
             // 
             // buscarNominaToolStripMenuItem
             // 
             this.buscarNominaToolStripMenuItem.Name = "buscarNominaToolStripMenuItem";
-            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(123, 26);
+            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(152, 29);
             this.buscarNominaToolStripMenuItem.Text = "Buscar Nomina";
             this.buscarNominaToolStripMenuItem.Click += new System.EventHandler(this.buscarNominaToolStripMenuItem_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(693, 278);
+            this.button4.Location = new System.Drawing.Point(555, 279);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(98, 23);
             this.button4.TabIndex = 15;
@@ -285,14 +285,14 @@ namespace WindowsFormsApp2
             // 
             this.lbDeducciones.FormattingEnabled = true;
             this.lbDeducciones.ItemHeight = 16;
-            this.lbDeducciones.Location = new System.Drawing.Point(522, 326);
+            this.lbDeducciones.Location = new System.Drawing.Point(384, 327);
             this.lbDeducciones.Name = "lbDeducciones";
             this.lbDeducciones.Size = new System.Drawing.Size(165, 84);
             this.lbDeducciones.TabIndex = 16;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(693, 326);
+            this.button6.Location = new System.Drawing.Point(555, 327);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(98, 23);
             this.button6.TabIndex = 17;
@@ -328,7 +328,7 @@ namespace WindowsFormsApp2
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(670, 439);
+            this.button7.Location = new System.Drawing.Point(532, 440);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(113, 45);
             this.button7.TabIndex = 18;
@@ -338,7 +338,7 @@ namespace WindowsFormsApp2
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(817, 439);
+            this.button8.Location = new System.Drawing.Point(679, 440);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(116, 45);
             this.button8.TabIndex = 19;
@@ -395,7 +395,7 @@ namespace WindowsFormsApp2
             "Supervisor",
             "Calidad",
             "Pasante"});
-            this.cbPuesto.Location = new System.Drawing.Point(634, 153);
+            this.cbPuesto.Location = new System.Drawing.Point(496, 154);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(195, 24);
             this.cbPuesto.TabIndex = 36;
@@ -407,7 +407,7 @@ namespace WindowsFormsApp2
             "Sistemas",
             "Administracion",
             "Servicio a Clientes"});
-            this.cbDepartamento.Location = new System.Drawing.Point(181, 155);
+            this.cbDepartamento.Location = new System.Drawing.Point(166, 153);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
             this.cbDepartamento.TabIndex = 37;
@@ -415,7 +415,7 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 153);
+            this.label3.Location = new System.Drawing.Point(17, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 38;
@@ -424,68 +424,27 @@ namespace WindowsFormsApp2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(554, 156);
+            this.label4.Location = new System.Drawing.Point(416, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 35;
             this.label4.Text = "Puesto";
             // 
-            // cbDias
+            // dataGridView1
             // 
-            this.cbDias.FormattingEnabled = true;
-            this.cbDias.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.cbDias.Location = new System.Drawing.Point(634, 45);
-            this.cbDias.Name = "cbDias";
-            this.cbDias.Size = new System.Drawing.Size(195, 24);
-            this.cbDias.TabIndex = 40;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(554, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 17);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Dias trabajados";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(825, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(517, 369);
+            this.dataGridView1.TabIndex = 41;
             // 
             // formNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 494);
-            this.Controls.Add(this.cbDias);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(1378, 780);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.label3);
@@ -523,6 +482,7 @@ namespace WindowsFormsApp2
             this.Text = "Calculo de Nomina";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,7 +527,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbDias;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

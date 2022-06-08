@@ -80,7 +80,7 @@ namespace WindowsFormsApplication2
         }
 
 
-        public bool InsertPuesto(Puesto param)
+        public bool InsertPuesto(Lists.Puesto param)
         {
             var Err = false; // SI no hay error
             try

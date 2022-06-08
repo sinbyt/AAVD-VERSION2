@@ -39,7 +39,6 @@ namespace WindowsFormsApp2
             this.tbApellidos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@ namespace WindowsFormsApp2
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.cbBanco = new System.Windows.Forms.ComboBox();
@@ -83,7 +81,11 @@ namespace WindowsFormsApp2
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.headCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,7 +130,6 @@ namespace WindowsFormsApp2
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(195, 22);
             this.tbNombre.TabIndex = 1;
-        //    this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
             // 
             // tbID
             // 
@@ -147,7 +148,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(920, 505);
+            this.label2.Location = new System.Drawing.Point(764, 490);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(169, 17);
             this.label2.TabIndex = 9;
@@ -155,22 +156,13 @@ namespace WindowsFormsApp2
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(889, 525);
+            this.btnSave.Location = new System.Drawing.Point(767, 516);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(118, 40);
             this.btnSave.TabIndex = 21;
             this.btnSave.Text = "ACEPTAR";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(1072, 525);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(118, 40);
-            this.btnBorrar.TabIndex = 22;
-            this.btnBorrar.Text = "BORRAR";
-            this.btnBorrar.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -284,18 +276,9 @@ namespace WindowsFormsApp2
             this.label15.TabIndex = 28;
             this.label15.Text = "Email";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(796, 82);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(353, 420);
-            this.listBox1.TabIndex = 24;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1087, 38);
+            this.button1.Location = new System.Drawing.Point(1016, 50);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 38);
             this.button1.TabIndex = 23;
@@ -526,28 +509,28 @@ namespace WindowsFormsApp2
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1193, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1504, 33);
             this.menuStrip1.TabIndex = 48;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // borrarEmpleadosToolStripMenuItem
             // 
             this.borrarEmpleadosToolStripMenuItem.Name = "borrarEmpleadosToolStripMenuItem";
-            this.borrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.borrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(174, 29);
             this.borrarEmpleadosToolStripMenuItem.Text = "Borrar empleados";
             this.borrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.borrarEmpleadosToolStripMenuItem_Click_1);
             // 
             // editarEmpleadoToolStripMenuItem
             // 
             this.editarEmpleadoToolStripMenuItem.Name = "editarEmpleadoToolStripMenuItem";
-            this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(162, 29);
             this.editarEmpleadoToolStripMenuItem.Text = "Editar empleado";
             this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click_1);
             // 
             // listaDeEmpleadosToolStripMenuItem
             // 
             this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
-            this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(185, 29);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
             this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click_1);
             // 
@@ -557,26 +540,57 @@ namespace WindowsFormsApp2
             this.headCounterToolStripMenuItem,
             this.nominaToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // headCounterToolStripMenuItem
             // 
             this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
-            this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
             this.headCounterToolStripMenuItem.Text = "HeadCounter";
             // 
             // nominaToolStripMenuItem
             // 
             this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
-            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
             this.nominaToolStripMenuItem.Text = "Nomina";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(767, 96);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(640, 249);
+            this.dataGridView1.TabIndex = 49;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1413, 93);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 40);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "Editar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1413, 146);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 40);
+            this.button3.TabIndex = 51;
+            this.button3.Text = "Eliminar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // formAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1193, 577);
+            this.ClientSize = new System.Drawing.Size(1504, 577);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.mtbNSS);
@@ -599,7 +613,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.cbBanco);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tbCuenta);
@@ -613,7 +626,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbApellidos);
@@ -627,6 +639,7 @@ namespace WindowsFormsApp2
             this.Text = "AGREGAR";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -643,7 +656,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox tbApellidos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -657,7 +669,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.ComboBox cbBanco;
@@ -687,5 +698,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem headCounterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
