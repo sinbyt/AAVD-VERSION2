@@ -81,23 +81,23 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            /*
+            
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
 
             NuevaNom.FechaNom = cbMes.Text + cbAnio.Text;
-            NuevaNom.percept = cbPercepciones.Text;
+            //NuevaNom.percept = cbPercepciones.Text;
             NuevaNom.deducc = cbDeducciones.Text;
-            NuevaNom.jornada = cbDias.Text;
+            //NuevaNom.jornada = cbDias.Text;
             NuevaNom.depa = cbDepartamento.Text;
             NuevaNom.puesto = cbPuesto.Text;
 
             error = conex.InsertNomina(NuevaNom);
-            */
+            
 
             TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
-            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," +  "," + cbDepartamento.Text + "," + cbPuesto.Text);
+            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text +   "," + cbDepartamento.Text + "," + cbPuesto.Text);
             text1.Close();
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
             //            text1.Close();
