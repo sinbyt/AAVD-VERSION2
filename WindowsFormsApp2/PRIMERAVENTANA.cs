@@ -22,9 +22,11 @@ namespace WindowsFormsApp2
     public partial class formInicio : Form
     {
         formAgregar NuevaPercepcion;
-        formNomina NuevaNomina;
+        FORMNOMINA NuevaNomina;
         Datos_de_la_empresa NuevoDatos;
-        Recibo NuevoRecibo;
+        Recibo_EMP NuevoRecibo;
+        HeadCounter NuevoHead;
+        REPORTEGENERALDENOMINA NuevoRNomina;
         //LOGIN NuevoLogin;
         //formEmpleados NuevoEmpleado;
         public formInicio()
@@ -32,9 +34,11 @@ namespace WindowsFormsApp2
 
             InitializeComponent();
             NuevaPercepcion = new formAgregar();
-            NuevaNomina = new formNomina();
+            NuevaNomina = new FORMNOMINA();
             NuevoDatos = new Datos_de_la_empresa();
-            NuevoRecibo = new Recibo();
+            NuevoRecibo = new Recibo_EMP();
+            NuevoHead = new HeadCounter();
+            NuevoRNomina = new REPORTEGENERALDENOMINA();
             //NuevoLogin = new LOGIN();
             //NuevoEmpleado = new formEmpleados();
         }
@@ -124,6 +128,16 @@ namespace WindowsFormsApp2
         private void formInicio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            NuevoHead.ShowDialog();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            NuevoRNomina.ShowDialog();
         }
     }
        
