@@ -12,14 +12,29 @@ namespace WindowsFormsApp2
 {
     public partial class HeadCounter : Form
     {
+        Reporte_de_nomina NuevoRNomina;
+        REPORTEGENERALDENOMINA NuevoRGN;
         public HeadCounter()
         {
+
             InitializeComponent();
+            NuevoRNomina = new Reporte_de_nomina();
+            NuevoRGN = new REPORTEGENERALDENOMINA();
         }
 
         private void gridEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void reporteNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoRNomina.ShowDialog();
+        }
+
+        private void reporteGeneralNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoRGN.ShowDialog();
         }
     }
 }
