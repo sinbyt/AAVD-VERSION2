@@ -42,10 +42,6 @@ namespace WindowsFormsApp2
             this.cbDeducciones = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoPuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -75,6 +71,9 @@ namespace WindowsFormsApp2
             this.numCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCSV = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +94,7 @@ namespace WindowsFormsApp2
             "10",
             "11",
             "12"});
-            this.cbMes.Location = new System.Drawing.Point(14, 45);
+            this.cbMes.Location = new System.Drawing.Point(15, 59);
             this.cbMes.Name = "cbMes";
             this.cbMes.Size = new System.Drawing.Size(66, 24);
             this.cbMes.TabIndex = 1;
@@ -123,7 +122,7 @@ namespace WindowsFormsApp2
             "2020",
             "2021",
             "2022"});
-            this.cbAnio.Location = new System.Drawing.Point(95, 45);
+            this.cbAnio.Location = new System.Drawing.Point(96, 59);
             this.cbAnio.Name = "cbAnio";
             this.cbAnio.Size = new System.Drawing.Size(66, 24);
             this.cbAnio.TabIndex = 2;
@@ -131,7 +130,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 25);
+            this.label1.Location = new System.Drawing.Point(21, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 5;
@@ -176,7 +175,7 @@ namespace WindowsFormsApp2
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(107, 25);
+            this.label11.Location = new System.Drawing.Point(108, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(32, 17);
             this.label11.TabIndex = 15;
@@ -207,41 +206,20 @@ namespace WindowsFormsApp2
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
-            this.eliminarToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.nuevoPuestoToolStripMenuItem,
-            this.buscarNominaToolStripMenuItem});
+            this.departamentoToolStripMenuItem,
+            this.puestoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1479, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1479, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(12, 29);
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(12, 29);
-            // 
-            // nuevoPuestoToolStripMenuItem
-            // 
-            this.nuevoPuestoToolStripMenuItem.Name = "nuevoPuestoToolStripMenuItem";
-            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(12, 29);
-            // 
-            // buscarNominaToolStripMenuItem
-            // 
-            this.buscarNominaToolStripMenuItem.Name = "buscarNominaToolStripMenuItem";
-            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(12, 29);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.nuevoToolStripMenuItem.Text = "Nueva P/D";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -260,6 +238,7 @@ namespace WindowsFormsApp2
             this.button5.TabIndex = 9;
             this.button5.Text = "ACEPTAR";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label16
             // 
@@ -332,6 +311,7 @@ namespace WindowsFormsApp2
             this.button7.TabIndex = 18;
             this.button7.Text = "Guardar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -341,10 +321,11 @@ namespace WindowsFormsApp2
             this.button8.TabIndex = 19;
             this.button8.Text = "Cancelar";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(185, 46);
+            this.button9.Location = new System.Drawing.Point(186, 60);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(98, 23);
             this.button9.TabIndex = 3;
@@ -353,7 +334,7 @@ namespace WindowsFormsApp2
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 100);
+            this.dateTimePicker1.Location = new System.Drawing.Point(15, 114);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 4;
@@ -436,41 +417,54 @@ namespace WindowsFormsApp2
             this.sueldoB,
             this.banco,
             this.numCuenta});
-            this.dataGridView1.Location = new System.Drawing.Point(806, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(652, 60);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(640, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(815, 249);
             this.dataGridView1.TabIndex = 50;
             // 
             // numEmp
             // 
             this.numEmp.HeaderText = "Num. Empleado";
+            this.numEmp.MinimumWidth = 6;
             this.numEmp.Name = "numEmp";
+            this.numEmp.Width = 125;
             // 
             // nomEmp
             // 
             this.nomEmp.HeaderText = "Nombre Empleado";
+            this.nomEmp.MinimumWidth = 6;
             this.nomEmp.Name = "nomEmp";
+            this.nomEmp.Width = 125;
             // 
             // fecha
             // 
             this.fecha.HeaderText = "Fecha ";
+            this.fecha.MinimumWidth = 6;
             this.fecha.Name = "fecha";
+            this.fecha.Width = 125;
             // 
             // sueldoB
             // 
             this.sueldoB.HeaderText = "Sueldo Bruto";
+            this.sueldoB.MinimumWidth = 6;
             this.sueldoB.Name = "sueldoB";
+            this.sueldoB.Width = 125;
             // 
             // banco
             // 
             this.banco.HeaderText = "Banco";
+            this.banco.MinimumWidth = 6;
             this.banco.Name = "banco";
+            this.banco.Width = 125;
             // 
             // numCuenta
             // 
             this.numCuenta.HeaderText = "Numero de cuenta";
+            this.numCuenta.MinimumWidth = 6;
             this.numCuenta.Name = "numCuenta";
+            this.numCuenta.Width = 125;
             // 
             // groupBox1
             // 
@@ -490,11 +484,36 @@ namespace WindowsFormsApp2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Deducciones fijas";
             // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
+            // 
+            // puestoToolStripMenuItem
+            // 
+            this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.puestoToolStripMenuItem.Text = "Puesto";
+            this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
+            // 
+            // btnCSV
+            // 
+            this.btnCSV.Location = new System.Drawing.Point(1351, 322);
+            this.btnCSV.Name = "btnCSV";
+            this.btnCSV.Size = new System.Drawing.Size(116, 45);
+            this.btnCSV.TabIndex = 53;
+            this.btnCSV.Text = "Generar CSV";
+            this.btnCSV.UseVisualStyleBackColor = true;
+            this.btnCSV.Click += new System.EventHandler(this.btnCSV_Click);
+            // 
             // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1479, 638);
+            this.Controls.Add(this.btnCSV);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
@@ -567,13 +586,9 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ToolStripMenuItem nuevoPuestoToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ToolStripMenuItem buscarNominaToolStripMenuItem;
         private System.Windows.Forms.MaskedTextBox mtbISR;
         private System.Windows.Forms.MaskedTextBox mtbIMSS;
         private System.Windows.Forms.ComboBox cbPuesto;
@@ -589,5 +604,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridViewTextBoxColumn numCuenta;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puestoToolStripMenuItem;
+        private System.Windows.Forms.Button btnCSV;
     }
 }

@@ -9,7 +9,7 @@ namespace WindowsFormsApp2
     public static class FUNCIONES
     {
 
-        public static int GetLastDayOfMonth( string fecha)
+        public static int GetLastDayOfMonth(string fecha)
         {
             int diasMes = 0;
             DateTime dateTime = DateTime.Parse(fecha);
@@ -180,6 +180,17 @@ namespace WindowsFormsApp2
             return num2Text;
         
     }
+
+        public static int SUELDOMENSUAL(string fecha)
+        {
+            int diasMes = 0;
+            DateTime dateTime = DateTime.Parse(fecha);
+
+            //new DateTime(dateTime.Year, dateTime.Month, DateTime.DaysInMonth(dateTime.Year, dateTime.Month));
+
+            diasMes = DateTime.DaysInMonth(dateTime.Year, dateTime.Month);
+            return diasMes;
+        }
 
     }
 

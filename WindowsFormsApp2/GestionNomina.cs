@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
+
 using System.IO;
 namespace WindowsFormsApp2
 {
@@ -22,6 +23,7 @@ namespace WindowsFormsApp2
         BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         Puesto NuevoPuesto;
+
         public FORMNOMINA()
         {
             InitializeComponent();
@@ -81,26 +83,72 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            /*
+            
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
+            Empleado NuevoEmp = new Empleado();
+            string sueldoBase;
+            string nivelSalarial;
+            //EnlaceCassandra enlace = new EnlaceCassandra();
+            //var dptoSource = enlace.Get_All_Departamentos();
+            //var pstoSource = enlace.Get_All_Puestos();
+            NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
 
-            NuevaNom.FechaNom = cbMes.Text + cbAnio.Text;
+            int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
+            /*
+            foreach (Departamento departamento in dptoSource)
+            {
+                if (departamento.nomDepa == NuevoEmp.depa)
+                {
+                    sueldoBase = departamento.sueldoBase;
+                    break;
+                }
+            }
+
+            //Se obtiene el nivel salarial
+            foreach (Puesto Nuevopuesto in pstoSource)
+            {
+                /*
+                if (Nuevopuesto.nomPuesto == NuevoEmp.puesto)
+                {
+                    nivelSalarial = Nuevopuesto.proporSal;
+                    break;
+                }
+            }
+            */
+            // NuevaNom.sueldoB = float.Parse()
+
             NuevaNom.percept = cbPercepciones.Text;
+
             NuevaNom.deducc = cbDeducciones.Text;
-            NuevaNom.jornada = cbDias.Text;
+            //NuevaNom.jornada = cbDias.Text;
             NuevaNom.depa = cbDepartamento.Text;
             NuevaNom.puesto = cbPuesto.Text;
 
             error = conex.InsertNomina(NuevaNom);
-            */
+            
 
             TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
-            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," +  "," + cbDepartamento.Text + "," + cbPuesto.Text);
+            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text +   "," + cbDepartamento.Text + "," + cbPuesto.Text);
             text1.Close();
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
             //            text1.Close();
+
+        }
+
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoDepartamento.ShowDialog();
+        }
+
+        private void puestoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoPuesto.ShowDialog();
+        }
+
+        private void btnCSV_Click(object sender, EventArgs e)
+        {
 
         }
     }
