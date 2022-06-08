@@ -20,7 +20,10 @@ namespace WindowsFormsApp2
             return diasMes;
         }
 
-            
+        public static double getPorcentaje(double cantidad, double porcentaje) {
+            double cantidadPorcentaje = cantidad * (porcentaje / 100);
+            return cantidadPorcentaje;
+        }    
         public static bool EsValidoRFC(string text)
         {
             int i = 0;

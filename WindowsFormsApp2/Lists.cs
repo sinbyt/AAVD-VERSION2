@@ -69,7 +69,8 @@ public class Lists
         public string clavePD { get; set; }
         public string porcentPD { get; set; }
         public string monto { get; set; }
-       
+        public bool tipo { get; set; }
+
     }
 
     public class NOMINA

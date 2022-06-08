@@ -42,13 +42,14 @@ namespace WindowsFormsApp2
             this.cbDeducciones = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lbDeducciones = new System.Windows.Forms.ListBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -71,8 +72,6 @@ namespace WindowsFormsApp2
             this.numCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCSV = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -210,16 +209,30 @@ namespace WindowsFormsApp2
             this.puestoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1479, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1479, 33);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // departamentoToolStripMenuItem
+            // 
+            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
+            this.departamentoToolStripMenuItem.Text = "Departamento";
+            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
+            // 
+            // puestoToolStripMenuItem
+            // 
+            this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.puestoToolStripMenuItem.Text = "Puesto";
+            this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -229,6 +242,7 @@ namespace WindowsFormsApp2
             this.button4.TabIndex = 15;
             this.button4.Text = "ACEPTAR";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -275,15 +289,6 @@ namespace WindowsFormsApp2
             this.button6.TabIndex = 17;
             this.button6.Text = "DESHACER";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(172, 589);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(20, 17);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "%";
             // 
             // label20
             // 
@@ -484,20 +489,6 @@ namespace WindowsFormsApp2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Deducciones fijas";
             // 
-            // departamentoToolStripMenuItem
-            // 
-            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
-            this.departamentoToolStripMenuItem.Text = "Departamento";
-            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
-            // 
-            // puestoToolStripMenuItem
-            // 
-            this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
-            this.puestoToolStripMenuItem.Text = "Puesto";
-            this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
-            // 
             // btnCSV
             // 
             this.btnCSV.Location = new System.Drawing.Point(1312, 336);
@@ -528,7 +519,6 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.lbDeducciones);
             this.Controls.Add(this.label17);
@@ -580,7 +570,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ListBox lbDeducciones;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button7;

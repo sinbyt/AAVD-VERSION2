@@ -541,10 +541,10 @@ namespace WindowsFormsApplication2
             try
             {
                 conectar();
-                var query1 = "insert into PER_DEC(tipoDato, conceptopPD, clavePD, porcentPD, monto)";
-                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}');";
+                var query1 = "insert into PER_DEC(clavePD,tipoDato, conceptopPD, porcentPD, monto,tipo)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}');";
                 query1 += "if not exists; ";
-                query1 = string.Format(query1, param.tipoDato, param.conceptopPD + param.clavePD, param.porcentPD, param.monto);
+                query1 = string.Format(query1, param.conceptopPD ,param.tipoDato, param.clavePD, param.porcentPD, param.monto,param.tipo);
 
 
                 _instancia.Execute(query1);
@@ -565,7 +565,7 @@ namespace WindowsFormsApplication2
         }
         public List<PER_DEC> Get_All_perdec()
         {
-            string query = "SELECT tipoDato, conceptopPD, clavePD, porcentPD, monto FROM PER_DEC;";
+            string query = "SELECT clavePD, tipoDato, conceptopPD, porcentPD, monto, tipo FROM PER_DEC;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -573,6 +573,32 @@ namespace WindowsFormsApplication2
 
             desconectar();
             return perdec.ToList();
+
+        }
+
+        public List<PER_DEC> Get_All_per()
+        {
+            string query = "  SELECT clavePD, conceptopPD, porcentPD, monto, tipo FROM PER_DEC  WHERE tipoDato = 'percepcion';";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<PER_DEC> per = mapper.Fetch<PER_DEC>(query);
+
+            desconectar();
+            return per.ToList();
+
+        }
+
+        public List<PER_DEC> Get_All_deduc()
+        {
+            string query = "  SELECT clavePD, conceptopPD, porcentPD, monto, tipo FROM PER_DEC  WHERE tipoDato = 'deduccion';";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<PER_DEC> deduc = mapper.Fetch<PER_DEC>(query);
+
+            desconectar();
+            return deduc.ToList();
 
         }
 
