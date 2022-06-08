@@ -182,4 +182,10 @@ namespace WindowsFormsApp2
     }
 
     }
+
+    public static class calculoNomina {
+
+       
+    }
+
 }
