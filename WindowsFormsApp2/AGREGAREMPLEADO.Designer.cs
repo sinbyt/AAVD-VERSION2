@@ -84,6 +84,11 @@ namespace WindowsFormsApp2
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -509,7 +514,7 @@ namespace WindowsFormsApp2
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1504, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1441, 33);
             this.menuStrip1.TabIndex = 48;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -558,11 +563,18 @@ namespace WindowsFormsApp2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numEmp,
+            this.nomEmp,
+            this.puesto,
+            this.depa,
+            this.RFC});
             this.dataGridView1.Location = new System.Drawing.Point(767, 96);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(640, 249);
             this.dataGridView1.TabIndex = 49;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
@@ -583,11 +595,36 @@ namespace WindowsFormsApp2
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // numEmp
+            // 
+            this.numEmp.HeaderText = "Num. Empleado";
+            this.numEmp.Name = "numEmp";
+            // 
+            // nomEmp
+            // 
+            this.nomEmp.HeaderText = "Nombre Empleado";
+            this.nomEmp.Name = "nomEmp";
+            // 
+            // puesto
+            // 
+            this.puesto.HeaderText = "Puesto";
+            this.puesto.Name = "puesto";
+            // 
+            // depa
+            // 
+            this.depa.HeaderText = "departamento";
+            this.depa.Name = "depa";
+            // 
+            // RFC
+            // 
+            this.RFC.HeaderText = "RFC";
+            this.RFC.Name = "RFC";
+            // 
             // formAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1504, 577);
+            this.ClientSize = new System.Drawing.Size(1441, 577);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -701,5 +738,10 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn puesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn depa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RFC;
     }
 }

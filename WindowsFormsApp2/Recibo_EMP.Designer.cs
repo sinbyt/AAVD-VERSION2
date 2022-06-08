@@ -348,7 +348,7 @@ namespace WindowsFormsApp2
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(124, 41);
             this.btnPDF.TabIndex = 60;
-            this.btnPDF.Text = "IMPRIMIR";
+            this.btnPDF.Text = "Generar PDF";
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
