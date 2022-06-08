@@ -15,9 +15,9 @@ using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
 namespace WindowsFormsApp2
 {
-    public partial class Recibo : Form
+    public partial class Recibo_EMP : Form
     {
-        public Recibo()
+        public Recibo_EMP()
         {
             InitializeComponent();
         }

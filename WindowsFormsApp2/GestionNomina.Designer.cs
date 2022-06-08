@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class formNomina
+    partial class FORMNOMINA
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,8 @@ namespace WindowsFormsApp2
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPuestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarNominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puestosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -202,47 +204,63 @@ namespace WindowsFormsApp2
             this.eliminarToolStripMenuItem,
             this.editarToolStripMenuItem,
             this.nuevoPuestoToolStripMenuItem,
-            this.buscarNominaToolStripMenuItem});
+            this.buscarNominaToolStripMenuItem,
+            this.departamentosToolStripMenuItem,
+            this.puestosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1378, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1378, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // nuevoPuestoToolStripMenuItem
             // 
             this.nuevoPuestoToolStripMenuItem.Name = "nuevoPuestoToolStripMenuItem";
-            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(141, 29);
+            this.nuevoPuestoToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
             this.nuevoPuestoToolStripMenuItem.Text = "Nuevo Puesto";
             this.nuevoPuestoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPuestoToolStripMenuItem_Click);
             // 
             // buscarNominaToolStripMenuItem
             // 
             this.buscarNominaToolStripMenuItem.Name = "buscarNominaToolStripMenuItem";
-            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(152, 29);
+            this.buscarNominaToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
             this.buscarNominaToolStripMenuItem.Text = "Buscar Nomina";
             this.buscarNominaToolStripMenuItem.Click += new System.EventHandler(this.buscarNominaToolStripMenuItem_Click);
+            // 
+            // departamentosToolStripMenuItem
+            // 
+            this.departamentosToolStripMenuItem.Name = "departamentosToolStripMenuItem";
+            this.departamentosToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.departamentosToolStripMenuItem.Text = "Departamentos";
+            this.departamentosToolStripMenuItem.Click += new System.EventHandler(this.departamentosToolStripMenuItem_Click);
+            // 
+            // puestosToolStripMenuItem
+            // 
+            this.puestosToolStripMenuItem.Name = "puestosToolStripMenuItem";
+            this.puestosToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.puestosToolStripMenuItem.Text = "Puestos";
+            this.puestosToolStripMenuItem.Click += new System.EventHandler(this.puestosToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -435,11 +453,12 @@ namespace WindowsFormsApp2
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(825, 49);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(517, 369);
             this.dataGridView1.TabIndex = 41;
             // 
-            // formNomina
+            // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -478,7 +497,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.cbMes);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "formNomina";
+            this.Name = "FORMNOMINA";
             this.Text = "Calculo de Nomina";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -528,5 +547,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem puestosToolStripMenuItem;
     }
 }

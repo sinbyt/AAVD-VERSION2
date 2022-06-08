@@ -13,12 +13,12 @@ namespace WindowsFormsApp2
     public partial class VENTANA1_EMPLEADO : Form
     {
         formCambiar CambiarEmp;
-        Recibo NuevoRecibo;
+        Recibo_EMP NuevoRecibo;
         public VENTANA1_EMPLEADO()
         {
             InitializeComponent();
             CambiarEmp = new formCambiar();
-            NuevoRecibo = new Recibo();
+            NuevoRecibo = new Recibo_EMP();
         }
 
         private void button1_Click(object sender, EventArgs e)

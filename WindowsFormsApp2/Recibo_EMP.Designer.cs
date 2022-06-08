@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class Recibo
+    partial class Recibo_EMP
     {
         /// <summary>
         /// Required designer variable.

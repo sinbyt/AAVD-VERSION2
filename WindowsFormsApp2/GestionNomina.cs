@@ -13,14 +13,16 @@ using static Lists;
 using System.IO;
 namespace WindowsFormsApp2
 {
-    public partial class formNomina : Form
+    public partial class FORMNOMINA : Form
     {
         AGREGARPERCEPCION NuevaNomina;
         EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
         Puesto PuestoNuevo;
         BUSCARNOMINA BuscarNomina;
-        public formNomina()
+        DEPARTAMENTO NuevoDepartamento;
+        Puesto NuevoPuesto;
+        public FORMNOMINA()
         {
             InitializeComponent();
             NuevaNomina = new AGREGARPERCEPCION();
@@ -28,6 +30,8 @@ namespace WindowsFormsApp2
             NuevaNominaEditada = new EDITAR_NOMINA();
             PuestoNuevo = new Puesto();
             BuscarNomina = new BUSCARNOMINA();
+            NuevoDepartamento = new DEPARTAMENTO();
+            NuevoPuesto = new Puesto();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -93,11 +97,21 @@ namespace WindowsFormsApp2
             */
 
             TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
-            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," + cbDias.Text + "," + cbDepartamento.Text + "," + cbPuesto.Text);
+            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," +  "," + cbDepartamento.Text + "," + cbPuesto.Text);
             text1.Close();
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
             //            text1.Close();
 
+        }
+
+        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoDepartamento.ShowDialog();
+        }
+
+        private void puestosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevoPuesto.ShowDialog();
         }
     }
 }
