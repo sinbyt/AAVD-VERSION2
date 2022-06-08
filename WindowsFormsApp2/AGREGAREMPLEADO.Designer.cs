@@ -74,22 +74,14 @@ namespace WindowsFormsApp2
             this.mtbCURP = new System.Windows.Forms.MaskedTextBox();
             this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.borrarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.headCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nominaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1.SuspendLayout();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -504,62 +496,6 @@ namespace WindowsFormsApp2
             this.tbEmail.Size = new System.Drawing.Size(195, 22);
             this.tbEmail.TabIndex = 10;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.borrarEmpleadosToolStripMenuItem,
-            this.editarEmpleadoToolStripMenuItem,
-            this.listaDeEmpleadosToolStripMenuItem,
-            this.reportesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1441, 33);
-            this.menuStrip1.TabIndex = 48;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // borrarEmpleadosToolStripMenuItem
-            // 
-            this.borrarEmpleadosToolStripMenuItem.Name = "borrarEmpleadosToolStripMenuItem";
-            this.borrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(174, 29);
-            this.borrarEmpleadosToolStripMenuItem.Text = "Borrar empleados";
-            this.borrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.borrarEmpleadosToolStripMenuItem_Click_1);
-            // 
-            // editarEmpleadoToolStripMenuItem
-            // 
-            this.editarEmpleadoToolStripMenuItem.Name = "editarEmpleadoToolStripMenuItem";
-            this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(162, 29);
-            this.editarEmpleadoToolStripMenuItem.Text = "Editar empleado";
-            this.editarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.editarEmpleadoToolStripMenuItem_Click_1);
-            // 
-            // listaDeEmpleadosToolStripMenuItem
-            // 
-            this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
-            this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(185, 29);
-            this.listaDeEmpleadosToolStripMenuItem.Text = "Lista de empleados";
-            this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click_1);
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.headCounterToolStripMenuItem,
-            this.nominaToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // headCounterToolStripMenuItem
-            // 
-            this.headCounterToolStripMenuItem.Name = "headCounterToolStripMenuItem";
-            this.headCounterToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
-            this.headCounterToolStripMenuItem.Text = "HeadCounter";
-            // 
-            // nominaToolStripMenuItem
-            // 
-            this.nominaToolStripMenuItem.Name = "nominaToolStripMenuItem";
-            this.nominaToolStripMenuItem.Size = new System.Drawing.Size(202, 30);
-            this.nominaToolStripMenuItem.Text = "Nomina";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -571,10 +507,46 @@ namespace WindowsFormsApp2
             this.RFC});
             this.dataGridView1.Location = new System.Drawing.Point(767, 96);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(640, 249);
             this.dataGridView1.TabIndex = 49;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // numEmp
+            // 
+            this.numEmp.HeaderText = "Num. Empleado";
+            this.numEmp.MinimumWidth = 6;
+            this.numEmp.Name = "numEmp";
+            this.numEmp.Width = 125;
+            // 
+            // nomEmp
+            // 
+            this.nomEmp.HeaderText = "Nombre Empleado";
+            this.nomEmp.MinimumWidth = 6;
+            this.nomEmp.Name = "nomEmp";
+            this.nomEmp.Width = 125;
+            // 
+            // puesto
+            // 
+            this.puesto.HeaderText = "Puesto";
+            this.puesto.MinimumWidth = 6;
+            this.puesto.Name = "puesto";
+            this.puesto.Width = 125;
+            // 
+            // depa
+            // 
+            this.depa.HeaderText = "departamento";
+            this.depa.MinimumWidth = 6;
+            this.depa.Name = "depa";
+            this.depa.Width = 125;
+            // 
+            // RFC
+            // 
+            this.RFC.HeaderText = "RFC";
+            this.RFC.MinimumWidth = 6;
+            this.RFC.Name = "RFC";
+            this.RFC.Width = 125;
             // 
             // button2
             // 
@@ -595,40 +567,14 @@ namespace WindowsFormsApp2
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // numEmp
-            // 
-            this.numEmp.HeaderText = "Num. Empleado";
-            this.numEmp.Name = "numEmp";
-            // 
-            // nomEmp
-            // 
-            this.nomEmp.HeaderText = "Nombre Empleado";
-            this.nomEmp.Name = "nomEmp";
-            // 
-            // puesto
-            // 
-            this.puesto.HeaderText = "Puesto";
-            this.puesto.Name = "puesto";
-            // 
-            // depa
-            // 
-            this.depa.HeaderText = "departamento";
-            this.depa.Name = "depa";
-            // 
-            // RFC
-            // 
-            this.RFC.HeaderText = "RFC";
-            this.RFC.Name = "RFC";
-            // 
             // formAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1441, 577);
+            this.ClientSize = new System.Drawing.Size(1550, 577);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.mtbNSS);
             this.Controls.Add(this.mtbCURP);
@@ -673,9 +619,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "formAgregar";
-            this.Text = "AGREGAR";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Text = "Gestion de empleados";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -728,13 +672,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.MaskedTextBox mtbCURP;
         private System.Windows.Forms.MaskedTextBox mtbNSS;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem borrarEmpleadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listaDeEmpleadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem headCounterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nominaToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

@@ -129,9 +129,7 @@ namespace WindowsFormsApp2
             error = conex.InsertNomina(NuevaNom);
             
 
-            TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
-            text1.Write(cbMes.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text +   "," + cbDepartamento.Text + "," + cbPuesto.Text);
-            text1.Close();
+            
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
             //            text1.Close();
 
@@ -149,7 +147,9 @@ namespace WindowsFormsApp2
 
         private void btnCSV_Click(object sender, EventArgs e)
         {
-
+            TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
+            text1.Write(cbMes.Text + "," + cbAnio.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," + cbDepartamento.Text + "," + cbPuesto.Text);
+            text1.Close();
         }
     }
 }

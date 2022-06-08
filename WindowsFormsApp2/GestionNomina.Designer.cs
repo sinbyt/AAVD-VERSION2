@@ -500,7 +500,7 @@ namespace WindowsFormsApp2
             // 
             // btnCSV
             // 
-            this.btnCSV.Location = new System.Drawing.Point(1351, 322);
+            this.btnCSV.Location = new System.Drawing.Point(1312, 336);
             this.btnCSV.Name = "btnCSV";
             this.btnCSV.Size = new System.Drawing.Size(116, 45);
             this.btnCSV.TabIndex = 53;
