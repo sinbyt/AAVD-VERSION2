@@ -103,15 +103,5 @@ namespace WindowsFormsApp2
             //            text1.Close();
 
         }
-
-        private void departamentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoDepartamento.ShowDialog();
-        }
-
-        private void puestosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NuevoPuesto.ShowDialog();
-        }
     }
 }
