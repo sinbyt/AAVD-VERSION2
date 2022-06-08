@@ -209,28 +209,28 @@ namespace WindowsFormsApp2
             this.puestoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1479, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1479, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
             this.departamentoToolStripMenuItem.Text = "Departamento";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // puestoToolStripMenuItem
             // 
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.puestoToolStripMenuItem.Text = "Puesto";
             this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
@@ -353,6 +353,7 @@ namespace WindowsFormsApp2
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // mtbISR
             // 
@@ -373,10 +374,6 @@ namespace WindowsFormsApp2
             // cbPuesto
             // 
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Items.AddRange(new object[] {
-            "Supervisor",
-            "Calidad",
-            "Pasante"});
             this.cbPuesto.Location = new System.Drawing.Point(164, 239);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(195, 24);
@@ -385,10 +382,6 @@ namespace WindowsFormsApp2
             // cbDepartamento
             // 
             this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Items.AddRange(new object[] {
-            "Sistemas",
-            "Administracion",
-            "Servicio a Clientes"});
             this.cbDepartamento.Location = new System.Drawing.Point(164, 196);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
