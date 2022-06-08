@@ -34,6 +34,43 @@ namespace WindowsFormsApp2
             BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
+
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+           // var error = false;
+
+            var dptoSource = conex.GetDepa();
+            var pstSource = conex.GetPuesto();
+            var perSource = conex.Get_All_per();
+            var dedSource = conex.Get_All_deduc();
+
+
+            //carga depas
+            foreach (Departamento nuevodepa in dptoSource)
+            {
+                cbDepartamento.Items.Add(nuevodepa.nomDepa);
+                
+            }
+            //carga puesto
+            foreach (Puesto puesto in pstSource)
+            {
+                cbPuesto.Items.Add(puesto.nomPuesto);
+
+            }
+            //carga percepciones
+            
+            foreach (PERDEC perdec in perSource)
+            {
+                cbPercepciones.Items.Add(perdec.conceptoPD);
+
+            }
+            
+            //carga deducciones
+
+            foreach (PERDEC perdec in dedSource)
+            {
+                cbDeducciones.Items.Add(perdec.conceptoPD);
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -70,18 +107,9 @@ namespace WindowsFormsApp2
         {
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
-           // NOMINA NuevaNom = new NOMINA();
+           
+            lbPercepciones.Items.Add(cbPercepciones.Text);
             
-            //EnlaceCassandra enlace = new EnlaceCassandra();
-            var dptoSource = conex.GetDepa();
-            var pstoSource = conex.GetPuesto();
-            cbDepartamento.Items.Add(dptoSource);
-            cbPuesto.Items.Add(pstoSource);
-
-            cbPuesto.Items.Add(pstoSource);
-            //agregar percepciones al list box
-            cbDepartamento.Items.Add(dptoSource);
-            cbPuesto.Items.Add(pstoSource);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -175,7 +203,23 @@ namespace WindowsFormsApp2
         private void button4_Click(object sender, EventArgs e)
         {
             //agregar deducciones al list box
+            lbDeducciones.Items.Add(cbDeducciones.Text);
 
+        }
+
+        private void lbPercepciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+       
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

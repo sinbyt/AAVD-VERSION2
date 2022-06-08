@@ -62,14 +62,12 @@ public class Lists
             public string inicioOp { get; set; }
 
         }
-    public class PER_DEC
+    public class PERDEC
     {
         public string tipoDato { get; set; }
-        public string conceptopPD { get; set; }
-        public string clavePD { get; set; }
+        public string conceptoPD { get; set; }
         public string porcentPD { get; set; }
         public string monto { get; set; }
-        public bool tipo { get; set; }
 
     }
 

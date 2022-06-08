@@ -489,14 +489,14 @@ namespace WindowsFormsApplication2
 
         }
         ///PUESTO=====================================================================
-        public bool InsertPuesto(Lists.Puesto param)
+        public bool InsertPuesto(Puesto param)
         {
             var Err = false; // SI no hay error
             try
             {
                 conectar();
 
-                var query1 = "insert into Puesto(nomPuesto, proporSal) ";
+                var query1 = "insert into Puesto(nomPuesto, proporSal)";
                 query1 += "values('{0}','{1}')";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.nomPuesto, param.proporSal);
@@ -534,24 +534,28 @@ namespace WindowsFormsApplication2
 
 
 
-        ///PER_DEC=====================================================================
-        public bool Insertperdec(PER_DEC param)
+        ///PERDEC=====================================================================
+        public bool Insertperdec(PERDEC param)
         {
             var Err = false; // SI no hay error
             try
             {
+
+
+            
                 conectar();
-                var query1 = "insert into PER_DEC(clavePD,tipoDato, conceptopPD, porcentPD, monto,tipo)";
-                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}');";
-                query1 += "if not exists; ";
-                query1 = string.Format(query1, param.conceptopPD ,param.tipoDato, param.clavePD, param.porcentPD, param.monto,param.tipo);
+                var query5 = "insert into PERDEC(conceptoPD,monto, porcentPD, tipoDato)";
+                query5 += "values('{0}','{1}','{2}','{3}')";
+                query5 += "if not exists; ";
+                query5 = string.Format(query5, param.conceptoPD ,param.monto, param.porcentPD, param.tipoDato);
 
 
-                _instancia.Execute(query1);
+                _instancia.Execute(query5);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+
                 Err = true;
                 throw ex;
             }
@@ -563,45 +567,97 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
-        public List<PER_DEC> Get_All_perdec()
+        
+
+        public List<PERDEC> Get_All_perdec()
         {
-            string query = "SELECT clavePD, tipoDato, conceptopPD, porcentPD, monto, tipo FROM PER_DEC;";
+            string query = "SELECT clavePD, tipoDato, conceptoPD, porcentPD, monto FROM PERDEC;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
-            IEnumerable<PER_DEC> perdec = mapper.Fetch<PER_DEC>(query);
+            IEnumerable<PERDEC> perdec = mapper.Fetch<PERDEC>(query);
 
             desconectar();
             return perdec.ToList();
 
+
         }
 
-        public List<PER_DEC> Get_All_per()
+        public List<PERDEC> Get_All_per()
         {
-            string query = "  SELECT clavePD, conceptopPD, porcentPD, monto, tipo FROM PER_DEC  WHERE tipoDato = 'percepcion';";
-            conectar();
-
-            IMapper mapper = new Mapper(_instancia);
-            IEnumerable<PER_DEC> per = mapper.Fetch<PER_DEC>(query);
-
-            desconectar();
-            return per.ToList();
-
+         
+            try
+            {
+                string qry = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Percepcion'ALLOW FILTERING;";
+               
+                conectar();
+                IMapper mapper = new Mapper(_instancia);
+                IEnumerable<PERDEC> lista = mapper.Fetch<PERDEC>(qry);
+                return lista.ToList();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                desconectar();
+            }
         }
 
-        public List<PER_DEC> Get_All_deduc()
+        public List<PERDEC> Get_All_deduc()
         {
-            string query = "  SELECT clavePD, conceptopPD, porcentPD, monto, tipo FROM PER_DEC  WHERE tipoDato = 'deduccion';";
-            conectar();
+            try
+            {
+                string qry = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Deduccion'ALLOW FILTERING;";
 
-            IMapper mapper = new Mapper(_instancia);
-            IEnumerable<PER_DEC> deduc = mapper.Fetch<PER_DEC>(query);
-
-            desconectar();
-            return deduc.ToList();
-
+                conectar();
+                IMapper mapper = new Mapper(_instancia);
+                IEnumerable<PERDEC> lista = mapper.Fetch<PERDEC>(qry);
+                return lista.ToList();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            finally
+            {
+                desconectar();
+            }
         }
 
+
+        public void InsertDeduccionEmpleado(PERDEC param)
+        {
+
+            try
+            {
+                conectar();
+
+
+                var query1 = "INSERT INTO deducciones_por_empleado_fecha (conceptoPD, monto, porcentaje, tipoDato)";
+               
+                query1 += "values('{0}','{1}','{2}','{3}');";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.conceptoPD, param.monto, param.porcentPD, param.tipoDato);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+
+        }
         ///NOMINA=====================================================================
         public bool InsertNomina(NOMINA param)
         {
@@ -610,7 +666,7 @@ namespace WindowsFormsApplication2
             {
                 conectar();
                 var query1 = "insert into NOMINA(numEmp,nomEmple, FechaNom, percept, deducc, sueldoB, sueldoN, jornada, NumRec,depa,puesto)";
-                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}');";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.numEmp, param.nomEmple + param.FechaNom, param.percept, param.deducc, param.sueldoB, param.sueldoN, param.jornada, param.NumRec, param.depa, param.puesto);
 
