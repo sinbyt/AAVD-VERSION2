@@ -19,10 +19,10 @@ namespace WindowsFormsApp2
         AGREGARPERCEPCION NuevaNomina;
         EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
-        Puesto PuestoNuevo;
+        PUESTO PuestoNuevo;
         BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
-        Puesto NuevoPuesto;
+        PUESTO NuevoPuesto;
 
         public FORMNOMINA()
         {
@@ -30,10 +30,10 @@ namespace WindowsFormsApp2
             NuevaNomina = new AGREGARPERCEPCION();
             NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
-            PuestoNuevo = new Puesto();
+            PuestoNuevo = new PUESTO();
             BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
-            NuevoPuesto = new Puesto();
+            NuevoPuesto = new PUESTO();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -91,12 +91,12 @@ namespace WindowsFormsApp2
             string sueldoBase;
             string nivelSalarial;
             //EnlaceCassandra enlace = new EnlaceCassandra();
-            //var dptoSource = enlace.Get_All_Departamentos();
-            //var pstoSource = enlace.Get_All_Puestos();
+            var dptoSource = conex.GetDepa();
+            var pstoSource = conex.Get_All_Puestos();
             NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
 
             int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
-            /*
+            
             foreach (Departamento departamento in dptoSource)
             {
                 if (departamento.nomDepa == NuevoEmp.depa)
@@ -107,16 +107,16 @@ namespace WindowsFormsApp2
             }
 
             //Se obtiene el nivel salarial
-            foreach (Puesto Nuevopuesto in pstoSource)
+            foreach (PUESTO Nuevopuesto in pstoSource)
             {
-                /*
+                
                 if (Nuevopuesto.nomPuesto == NuevoEmp.puesto)
                 {
                     nivelSalarial = Nuevopuesto.proporSal;
                     break;
                 }
             }
-            */
+            
             // NuevaNom.sueldoB = float.Parse()
 
             NuevaNom.percept = cbPercepciones.Text;

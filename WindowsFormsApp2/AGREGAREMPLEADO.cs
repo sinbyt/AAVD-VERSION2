@@ -11,6 +11,7 @@ using Cassandra;
 using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
+
 using static Lists;
 
 
@@ -44,7 +45,7 @@ namespace WindowsFormsApp2
         private void btnSave_Click(object sender, EventArgs e)
         {
             //if()
-            
+
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
 
             var error = false;
@@ -57,25 +58,17 @@ namespace WindowsFormsApp2
 
             empleado.depa = cbDepartamento.Text;
             empleado.puesto = cbPuesto.Text;
-
-            //string fecha = DTPNacimiento.Value.ToString("yyyy-MM-dd");
-    
-            //GetLastDayOfMonth(empleado.fechaNacimiento);
-           // empleado.fechaNacimiento = LocalDate.Parse(DTPNacimiento, "yyyy/mm/dd");
-           // LocalDate fecNac = new LocalDate(empleado.fechaNacimiento.Year, empleado.fechaNacimiento.Month, empleado.fechaNacimiento.Day);
             empleado.fechaNacimiento = DTPNacimiento.Text;
-            //empleado.edad= 
 
-            // empleado.fechaNacimiento = LocalDate.Parse(DTPNacimiento, "yyyy/mm/dd");
-           // DateTime Now
-           // DateTime fecha = DateTime.Parse(empleado.fechaNacimiento);
-            DateTime fechaact = DateTime.Now;
-            //string fechaAct = LocalDate.Parse(fechaact, "yyyy/mm/dd");
-            //  DateTime fechafin = DateTime.Now.Subtract(fecha);
-             //TimeSpan dif= fechaact-fecha;
-           // int age = (DateTime.Now - fecha);
-            //empleado.edad = 
-        empleado.CURP = mtbCURP.Text;
+          //Calcular Edad
+            DateTime today = DateTime.Today;
+            DateTime bday = DateTime.Parse(empleado.fechaNacimiento);
+            int age = today.Year - bday.Year;
+            if (bday > today.AddYears(-age))
+                age--;
+            empleado.edad = age;
+
+            empleado.CURP = mtbCURP.Text;
             empleado.NSS = mtbNSS.Text;
             empleado.RFC = tbRFC.Text;
             empleado.domicilio = tbCalle.Text;
@@ -83,12 +76,8 @@ namespace WindowsFormsApp2
             empleado.numCuenta = tbCuenta.Text;
             //empleado.telefono = tbCuenta.Text;
             //empleado.email = tbCuenta.Text;
-            //empleado.contra = tbCuenta.Text;
-
-
-
-
-
+            empleado.contra = tbCuenta.Text;
+        
             if (EsValidoRFC(empleado.RFC) ==false)
             {
                 MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);

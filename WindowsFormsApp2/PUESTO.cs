@@ -11,9 +11,9 @@ using static Lists;
 
 namespace WindowsFormsApp2
 {
-    public partial class Puesto : Form
+    public partial class PUESTO : Form
     {
-        public Puesto()
+        public PUESTO()
         {
             InitializeComponent();
         }

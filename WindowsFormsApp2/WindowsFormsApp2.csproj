@@ -229,11 +229,11 @@
     <Compile Include="GestionEmpleados.Designer.cs">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Puesto.cs">
+    <Compile Include="PUESTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Puesto.Designer.cs">
-      <DependentUpon>Puesto.cs</DependentUpon>
+    <Compile Include="PUESTO.Designer.cs">
+      <DependentUpon>PUESTO.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -306,8 +306,8 @@
     <EmbeddedResource Include="GestionEmpleados.resx">
       <DependentUpon>GestionEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Puesto.resx">
-      <DependentUpon>Puesto.cs</DependentUpon>
+    <EmbeddedResource Include="PUESTO.resx">
+      <DependentUpon>PUESTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

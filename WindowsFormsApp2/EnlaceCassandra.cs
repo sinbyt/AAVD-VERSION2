@@ -50,64 +50,9 @@ namespace WindowsFormsApplication2
         //public bool InsertEmpleados(Empleados param);
 
         ///USUARIO=====================================================================
-        public bool InsertDepa(Departamento param)
-        {
-            var Err = false; // SI no hay error
-            try
-            {
-                conectar();
-
-                var query1 = "insert into Departamento(nomDepa, sueldoBase) ";
-                query1 += "values('{0}','{1}')";
-                query1 += "if not exists; ";
-                query1 = string.Format(query1, param.nomDepa, param.sueldoBase);
-
-                _instancia.Execute(query1);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                Err = true;
-                throw e;
-            }
-            finally
-            {
-                // desconectar o cerrar la conexión
-                desconectar();
-
-            }
-            return Err;
-        }
 
 
-        public bool InsertPuesto(Lists.Puesto param)
-        {
-            var Err = false; // SI no hay error
-            try
-            {
-                conectar();
 
-                var query1 = "insert into Puesto(nomPuesto, proporSal) ";
-                query1 += "values('{0}','{1}')";
-                query1 += "if not exists; ";
-                query1 = string.Format(query1, param.nomPuesto, param.proporSal);
-
-                _instancia.Execute(query1);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                Err = true;
-                throw e;
-            }
-            finally
-            {
-                // desconectar o cerrar la conexión
-                desconectar();
-
-            }
-            return Err;
-        }
 
         public bool InsertUsuario(Usuario param)
         {
@@ -116,7 +61,7 @@ namespace WindowsFormsApplication2
             {
                 conectar();
 
-                var query1 = "insert intoUsuario(usuario, tipous, contra)";
+                var query1 = "insert into Usuario (usuario, tipous, contra)";
                 query1 = "values'({0}','{1}','{2}','{3}');";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.usuario, param.tipous + param.contra);
@@ -488,9 +433,6 @@ namespace WindowsFormsApplication2
             }
 
         }
-
-
-
         public List<Empleado> Get_All_Empleado()
         {
             string query = "SELECT ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra FROM Empleado;";
@@ -503,6 +445,93 @@ namespace WindowsFormsApplication2
             return empleado.ToList();
 
         }
+
+        ///DEPARTAMENTO=====================================================================
+        public bool InsertDepa(Departamento param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+
+                var query1 = "insert into Departamento(nomDepa, sueldoBase) ";
+                query1 += "values('{0}','{1}')";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.nomDepa, param.sueldoBase);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Err = true;
+                throw e;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        public List<Departamento> GetDepa()
+        {
+            string query = "SELECT nomDepa, sueldoBase FROM Departamento";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<Departamento> depas = mapper.Fetch<Departamento>(query);
+
+            desconectar();
+            return depas.ToList();
+
+        }
+        ///PUESTO=====================================================================
+        public bool InsertPuesto(Lists.Puesto param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+                conectar();
+
+                var query1 = "insert into Puesto(nomPuesto, proporSal) ";
+                query1 += "values('{0}','{1}')";
+                query1 += "if not exists; ";
+                query1 = string.Format(query1, param.nomPuesto, param.proporSal);
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                Err = true;
+                throw e;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+
+        public List<Puesto> GetPuesto()
+        {
+            string query = "SELECT nomPuesto, proporSal FROM Puesto";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<Puesto> puesto = mapper.Fetch<Puesto>(query);
+
+            desconectar();
+            return puesto.ToList();
+
+        }
+
 
 
         ///PER_DEC=====================================================================

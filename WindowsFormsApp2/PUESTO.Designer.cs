@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class Puesto
+    partial class PUESTO
     {
         /// <summary>
         /// Required designer variable.
