@@ -30,9 +30,7 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbClave = new System.Windows.Forms.TextBox();
             this.tbConcepto = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.btnGuardarPercepcion = new System.Windows.Forms.Button();
@@ -44,7 +42,6 @@ namespace WindowsFormsApp2
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,30 +55,14 @@ namespace WindowsFormsApp2
             this.label10.TabIndex = 27;
             this.label10.Text = "Concepto";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(56, 134);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 17);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Clave";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 191);
+            this.label1.Location = new System.Drawing.Point(53, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 17);
             this.label1.TabIndex = 30;
             this.label1.Text = "Porcentaje O Monto";
-            // 
-            // tbClave
-            // 
-            this.tbClave.Location = new System.Drawing.Point(59, 154);
-            this.tbClave.Name = "tbClave";
-            this.tbClave.Size = new System.Drawing.Size(118, 22);
-            this.tbClave.TabIndex = 3;
             // 
             // tbConcepto
             // 
@@ -89,6 +70,7 @@ namespace WindowsFormsApp2
             this.tbConcepto.Name = "tbConcepto";
             this.tbConcepto.Size = new System.Drawing.Size(118, 22);
             this.tbConcepto.TabIndex = 2;
+            this.tbConcepto.TextChanged += new System.EventHandler(this.tbConcepto_TextChanged);
             // 
             // button8
             // 
@@ -132,7 +114,7 @@ namespace WindowsFormsApp2
             // 
             // tbValor
             // 
-            this.tbValor.Location = new System.Drawing.Point(60, 266);
+            this.tbValor.Location = new System.Drawing.Point(57, 232);
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(118, 22);
             this.tbValor.TabIndex = 5;
@@ -141,7 +123,7 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 246);
+            this.label3.Location = new System.Drawing.Point(54, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(188, 17);
             this.label3.TabIndex = 50;
@@ -154,10 +136,11 @@ namespace WindowsFormsApp2
             this.cbPorcenMonto.Items.AddRange(new object[] {
             "Porcentaje",
             "Monto"});
-            this.cbPorcenMonto.Location = new System.Drawing.Point(59, 211);
+            this.cbPorcenMonto.Location = new System.Drawing.Point(56, 177);
             this.cbPorcenMonto.Name = "cbPorcenMonto";
             this.cbPorcenMonto.Size = new System.Drawing.Size(121, 24);
             this.cbPorcenMonto.TabIndex = 4;
+            this.cbPorcenMonto.SelectedIndexChanged += new System.EventHandler(this.cbPorcenMonto_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -165,13 +148,12 @@ namespace WindowsFormsApp2
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tipo,
             this.Concepto,
-            this.Clave,
             this.Valor});
-            this.dataGridView1.Location = new System.Drawing.Point(275, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(449, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 202);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 202);
             this.dataGridView1.TabIndex = 51;
             // 
             // Tipo
@@ -187,13 +169,6 @@ namespace WindowsFormsApp2
             this.Concepto.MinimumWidth = 6;
             this.Concepto.Name = "Concepto";
             this.Concepto.Width = 125;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "Clave";
-            this.Clave.MinimumWidth = 6;
-            this.Clave.Name = "Clave";
-            this.Clave.Width = 125;
             // 
             // Valor
             // 
@@ -216,12 +191,11 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.button8);
             this.Controls.Add(this.btnGuardarPercepcion);
             this.Controls.Add(this.tbConcepto);
-            this.Controls.Add(this.tbClave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Name = "AGREGARPERCEPCION";
-            this.Text = "Agregar Percepcion";
+            this.Text = "Agregar Percepcion/Deduccion";
+            this.Load += new System.EventHandler(this.AGREGARPERCEPCION_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,13 +204,16 @@ namespace WindowsFormsApp2
 
         #endregion
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbClave;
         private System.Windows.Forms.TextBox tbConcepto;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnGuardarPercepcion;
         private System.Windows.Forms.ComboBox cbPerDec;
+
+        /*this.cbPerDec.Items.AddRange(new object[] {
+            "Percepcion",
+            "Deduccion"});
+    */
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbValor;
         private System.Windows.Forms.Label label3;
@@ -244,7 +221,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
     }
 }

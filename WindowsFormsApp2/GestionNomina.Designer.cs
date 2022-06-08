@@ -188,6 +188,7 @@ namespace WindowsFormsApp2
             this.lbPercepciones.Name = "lbPercepciones";
             this.lbPercepciones.Size = new System.Drawing.Size(180, 84);
             this.lbPercepciones.TabIndex = 10;
+            this.lbPercepciones.SelectedIndexChanged += new System.EventHandler(this.lbPercepciones_SelectedIndexChanged);
             // 
             // cbDeducciones
             // 
@@ -353,6 +354,7 @@ namespace WindowsFormsApp2
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // mtbISR
             // 
@@ -393,6 +395,7 @@ namespace WindowsFormsApp2
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
             this.cbDepartamento.TabIndex = 37;
+            this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
             // 
             // label3
             // 

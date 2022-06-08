@@ -38,24 +38,54 @@ namespace WindowsFormsApp2
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
 
-            PER_DEC PERCEPCIONDEDUCCION = new PER_DEC();
+            PERDEC PERCEPCIONDEDUCCION = new PERDEC();
 
             PERCEPCIONDEDUCCION.tipoDato = cbPerDec.Text;
-            PERCEPCIONDEDUCCION.conceptopPD = tbConcepto.Text;
-            PERCEPCIONDEDUCCION.clavePD = tbClave.Text;
-            PERCEPCIONDEDUCCION.porcentPD = tbValor.Text;
+            PERCEPCIONDEDUCCION.conceptoPD = tbConcepto.Text;
+            PERCEPCIONDEDUCCION.porcentPD = cbPorcenMonto.Text;
             PERCEPCIONDEDUCCION.monto = tbValor.Text;
 
-            if (cbPerDec.Text != "" && tbConcepto.Text != "" && tbClave.Text != "" && tbValor.Text != "")
-            {
-                MessageBox.Show("Ahora puede usar este concepto", "MUCHAS GRACIAS!!!", MessageBoxButtons.OK);
+            
+           if (cbPerDec.Text != "" && tbConcepto.Text != "" && tbValor.Text != "")
+           {
+                    error = conex.Insertperdec(PERCEPCIONDEDUCCION);
 
-            }
-            cbPerDec.Text = "";
-            tbConcepto.Text = "";
-            tbClave.Text = "";
-            tbValor.Text = "";
-                error = conex.Insertperdec(PERCEPCIONDEDUCCION);
+                    
+                if (error)
+                {
+                    MessageBox.Show("No se pudo agregar al alumno");
+                }
+                else
+                {
+
+                    MessageBox.Show("Ahora puede usar este concepto", "MUCHAS GRACIAS!!!", MessageBoxButtons.OK);
+                    cbPerDec.Text = "";
+                    tbConcepto.Text = "";
+                    tbValor.Text = "";
+                }
+           }
+                //MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+
+            
+            
+
+         
+          
+
+        }
+
+        private void AGREGARPERCEPCION_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPorcenMonto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbConcepto_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
