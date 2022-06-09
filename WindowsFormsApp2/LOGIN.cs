@@ -18,12 +18,12 @@ namespace WindowsFormsApp2
     public partial class LOGIN : Form
     {
         formInicio NuevoInicio;
-        VENTANA1_EMPLEADO NuevaVentanaEmp;
+        INICIO NuevaVentanaEmp;
         public LOGIN()
         {
             InitializeComponent();
             NuevoInicio = new formInicio();
-            NuevaVentanaEmp = new VENTANA1_EMPLEADO();
+            NuevaVentanaEmp = new INICIO();
         }
         //SE QUEDA COMO NULO A LA VERGA NO SE PORQUE A LA VERGA ME CAGA A LA VERGA AAAAAAAAAAAAAAAA
         //string usuario = tbUsuario;

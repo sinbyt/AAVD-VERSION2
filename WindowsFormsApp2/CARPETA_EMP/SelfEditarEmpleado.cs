@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2.Nomina
+namespace WindowsFormsApp2.Empleado
 {
-    public partial class NominaIndividual : Form
+    public partial class SelfEditarEmpleado : Form
     {
-        public NominaIndividual()
+        public SelfEditarEmpleado()
         {
             InitializeComponent();
-        }
-
-        private void NominaIndividual_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,20 +10,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class VENTANA1_EMPLEADO : Form
+    public partial class INICIO : Form
     {
         //formCambiar CambiarEmp;
         Recibo_EMP NuevoRecibo;
-        public VENTANA1_EMPLEADO()
+        
+        public INICIO()
         {
             InitializeComponent();
             //CambiarEmp = new formCambiar();
             NuevoRecibo = new Recibo_EMP();
+            //NuevoActualizar = new Empleado.SelfEditarEmpleado();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // CambiarEmp.ShowDialog();
+             //NuevoActualizar.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

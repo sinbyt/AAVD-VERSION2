@@ -47,7 +47,7 @@ namespace WindowsFormsApp2
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(24, 167);
+            this.button3.Location = new System.Drawing.Point(41, 180);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 30);
             this.button3.TabIndex = 2;
@@ -57,14 +57,14 @@ namespace WindowsFormsApp2
             // 
             // tbPorcentaje
             // 
-            this.tbPorcentaje.Location = new System.Drawing.Point(54, 161);
+            this.tbPorcentaje.Location = new System.Drawing.Point(30, 136);
             this.tbPorcentaje.Name = "tbPorcentaje";
             this.tbPorcentaje.Size = new System.Drawing.Size(121, 22);
             this.tbPorcentaje.TabIndex = 4;
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(54, 92);
+            this.tbNombre.Location = new System.Drawing.Point(30, 66);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(121, 22);
             this.tbNombre.TabIndex = 64;
@@ -73,7 +73,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 72);
+            this.label2.Location = new System.Drawing.Point(55, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 65;
@@ -82,7 +82,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 138);
+            this.label1.Location = new System.Drawing.Point(27, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 63;
@@ -94,29 +94,34 @@ namespace WindowsFormsApp2
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nompuesto,
             this.proporsal});
-            this.dataGridView1.Location = new System.Drawing.Point(299, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(302, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(428, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 295);
             this.dataGridView1.TabIndex = 66;
             // 
             // nompuesto
             // 
             this.nompuesto.HeaderText = "Puesto";
+            this.nompuesto.MinimumWidth = 6;
             this.nompuesto.Name = "nompuesto";
             this.nompuesto.ReadOnly = true;
+            this.nompuesto.Width = 125;
             // 
             // proporsal
             // 
             this.proporsal.HeaderText = "Proporción salarial";
+            this.proporsal.MinimumWidth = 6;
             this.proporsal.Name = "proporsal";
             this.proporsal.ReadOnly = true;
+            this.proporsal.Width = 125;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(600, 138);
+            this.button1.Location = new System.Drawing.Point(760, 91);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 23);
             this.button1.TabIndex = 67;
@@ -125,7 +130,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(600, 181);
+            this.button2.Location = new System.Drawing.Point(760, 161);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 23);
             this.button2.TabIndex = 68;
@@ -135,34 +140,41 @@ namespace WindowsFormsApp2
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Location = new System.Drawing.Point(36, 79);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tbNombre);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tbPorcentaje);
+            this.groupBox1.Location = new System.Drawing.Point(36, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(179, 242);
+            this.groupBox1.Size = new System.Drawing.Size(206, 295);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Crear  nuevo puesto";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 0;
             // 
             // PUESTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 371);
+            this.ClientSize = new System.Drawing.Size(906, 371);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.tbPorcentaje);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "PUESTO";
             this.Text = "Gestion de Puestos";
             this.Load += new System.EventHandler(this.NuevoPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
