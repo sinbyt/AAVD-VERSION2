@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
             NuevoPuesto = new PUESTO();
 
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
-           // var error = false;
+            // var error = false;
 
             var dptoSource = conex.GetDepa();
             var pstSource = conex.GetPuesto();
@@ -48,7 +48,7 @@ namespace WindowsFormsApp2
             foreach (Departamento nuevodepa in dptoSource)
             {
                 cbDepartamento.Items.Add(nuevodepa.nomDepa);
-                
+
             }
             //carga puesto
             foreach (Puesto puesto in pstSource)
@@ -57,13 +57,13 @@ namespace WindowsFormsApp2
 
             }
             //carga percepciones
-            
+
             foreach (PERDEC perdec in perSource)
             {
                 cbPercepciones.Items.Add(perdec.conceptoPD);
 
             }
-            
+
             //carga deducciones
 
             foreach (PERDEC perdec in dedSource)
@@ -107,9 +107,9 @@ namespace WindowsFormsApp2
         {
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
-           
+
             lbPercepciones.Items.Add(cbPercepciones.Text);
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace WindowsFormsApp2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
@@ -134,7 +134,7 @@ namespace WindowsFormsApp2
             //EnlaceCassandra enlace = new EnlaceCassandra();
             var dptoSource = conex.GetDepa();
             var pstoSource = conex.GetPuesto();
-            NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
+            NuevaNom.FechaNom = cbAnio.Text + "/" + cbMes.Text + "/" + "01";
 
             cbDepartamento.Items.Add(dptoSource);
             cbPuesto.Items.Add(pstoSource);
@@ -143,7 +143,7 @@ namespace WindowsFormsApp2
 
 
             int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
-            
+
             foreach (Departamento departamento in dptoSource)
             {
                 if (departamento.nomDepa == NuevoEmp.depa)
@@ -154,10 +154,10 @@ namespace WindowsFormsApp2
             }
 
             //Se obtiene el nivel salarial
-            
+
             foreach (Puesto Nuevopuesto in pstoSource)
             {
-                
+
                 if (Nuevopuesto.nomPuesto == NuevoEmp.puesto)
                 {
                     nivelSalarial = Nuevopuesto.proporSal;
@@ -173,11 +173,11 @@ namespace WindowsFormsApp2
             //NuevaNom.jornada = cbDias.Text;
             NuevaNom.depa = cbDepartamento.Text;
             NuevaNom.puesto = cbPuesto.Text;
-            
-            error = conex.InsertNomina(NuevaNom);
-            
 
-            
+            error = conex.InsertNomina(NuevaNom);
+
+
+
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
             //            text1.Close();
 
@@ -214,13 +214,10 @@ namespace WindowsFormsApp2
 
         private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-       
+
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
