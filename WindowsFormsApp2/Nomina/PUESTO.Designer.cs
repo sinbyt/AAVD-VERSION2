@@ -41,11 +41,12 @@ namespace WindowsFormsApp2
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(209, 115);
+            this.button3.Location = new System.Drawing.Point(24, 167);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 23);
             this.button3.TabIndex = 2;
@@ -92,13 +93,13 @@ namespace WindowsFormsApp2
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nompuesto,
             this.proporsal});
-            this.dataGridView1.Location = new System.Drawing.Point(413, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(299, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(304, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 242);
             this.dataGridView1.TabIndex = 66;
             // 
             // nompuesto
@@ -137,12 +138,13 @@ namespace WindowsFormsApp2
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Location = new System.Drawing.Point(36, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 167);
+            this.groupBox1.Size = new System.Drawing.Size(179, 242);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informacion";
+            this.groupBox1.Text = "Crear  nuevo puesto";
             // 
             // PUESTO
             // 
@@ -156,12 +158,12 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.tbPorcentaje);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
             this.Name = "PUESTO";
             this.Text = "Gestion de Puestos";
             this.Load += new System.EventHandler(this.NuevoPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbdepa
@@ -82,7 +83,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(324, 182);
+            this.button1.Location = new System.Drawing.Point(157, 200);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 5;
@@ -153,12 +154,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(35, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(388, 209);
+            this.groupBox1.Size = new System.Drawing.Size(388, 313);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informacion";
+            this.groupBox1.Text = "Crear nuevo departamento";
             // 
             // DEPARTAMENTO
             // 
@@ -169,7 +171,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.mtbSueldo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -179,6 +180,7 @@
             this.Text = "Gestion de departamentos";
             this.Load += new System.EventHandler(this.DEPARTAMENTOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

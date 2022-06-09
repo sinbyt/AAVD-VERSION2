@@ -221,7 +221,7 @@ namespace WindowsFormsApp2
             this.Informacion.Size = new System.Drawing.Size(234, 375);
             this.Informacion.TabIndex = 54;
             this.Informacion.TabStop = false;
-            this.Informacion.Text = "Informacion";
+            this.Informacion.Text = "Nueva Percepcion/deduccion";
             // 
             // AGREGARPERCEPCION
             // 
