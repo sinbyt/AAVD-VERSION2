@@ -104,6 +104,7 @@ namespace WindowsFormsApp2
             this.cbPerDec.Name = "cbPerDec";
             this.cbPerDec.Size = new System.Drawing.Size(183, 24);
             this.cbPerDec.TabIndex = 1;
+            this.cbPerDec.SelectedIndexChanged += new System.EventHandler(this.cbPerDec_SelectedIndexChanged);
             // 
             // label2
             // 

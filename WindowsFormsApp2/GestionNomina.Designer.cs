@@ -31,7 +31,6 @@ namespace WindowsFormsApp2
         {
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.cbPercepciones = new System.Windows.Forms.ComboBox();
-            this.cbAnio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -105,30 +104,10 @@ namespace WindowsFormsApp2
             // cbPercepciones
             // 
             this.cbPercepciones.FormattingEnabled = true;
-            this.cbPercepciones.Items.AddRange(new object[] {
-            "Sueldo",
-            "Bono"});
             this.cbPercepciones.Location = new System.Drawing.Point(19, 60);
             this.cbPercepciones.Name = "cbPercepciones";
             this.cbPercepciones.Size = new System.Drawing.Size(178, 24);
             this.cbPercepciones.TabIndex = 8;
-            // 
-            // cbAnio
-            // 
-            this.cbAnio.FormattingEnabled = true;
-            this.cbAnio.Items.AddRange(new object[] {
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021",
-            "2022"});
-            this.cbAnio.Location = new System.Drawing.Point(177, 38);
-            this.cbAnio.Name = "cbAnio";
-            this.cbAnio.Size = new System.Drawing.Size(66, 24);
-            this.cbAnio.TabIndex = 2;
             // 
             // label1
             // 
@@ -197,9 +176,6 @@ namespace WindowsFormsApp2
             // cbDeducciones
             // 
             this.cbDeducciones.FormattingEnabled = true;
-            this.cbDeducciones.Items.AddRange(new object[] {
-            "Llegada tarde",
-            "Falta"});
             this.cbDeducciones.Location = new System.Drawing.Point(339, 61);
             this.cbDeducciones.Name = "cbDeducciones";
             this.cbDeducciones.Size = new System.Drawing.Size(183, 24);
@@ -285,6 +261,7 @@ namespace WindowsFormsApp2
             this.button2.TabIndex = 11;
             this.button2.Text = "DESHACER";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button7
             // 
@@ -447,7 +424,6 @@ namespace WindowsFormsApp2
             this.groupBox3.Controls.Add(this.cbMes);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.cbAnio);
             this.groupBox3.Location = new System.Drawing.Point(13, 47);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(393, 82);
@@ -458,7 +434,7 @@ namespace WindowsFormsApp2
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(249, 40);
+            this.maskedTextBox1.Location = new System.Drawing.Point(177, 41);
             this.maskedTextBox1.Mask = "9999";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(66, 22);
@@ -572,7 +548,6 @@ namespace WindowsFormsApp2
 
         private System.Windows.Forms.ComboBox cbMes;
         private System.Windows.Forms.ComboBox cbPercepciones;
-        private System.Windows.Forms.ComboBox cbAnio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
+
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
 
@@ -17,10 +18,8 @@ namespace WindowsFormsApp2
     public partial class FORMNOMINA : Form
     {
         AGREGARPERCEPCION NuevaNomina;
-        //EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
         PUESTO PuestoNuevo;
-      //  BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
 
@@ -28,10 +27,8 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             NuevaNomina = new AGREGARPERCEPCION();
-          //  NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
             PuestoNuevo = new PUESTO();
-           // BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
 
@@ -309,18 +306,23 @@ namespace WindowsFormsApp2
 
         }
 
-      /*  private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                cbDepartamento.Enabled = false;
-                cbPuesto.Enabled = false;
-            }
-            else
-            {
-                cbDepartamento.Enabled = true;
-                cbPuesto.Enabled = true;
-            }
-        }*/
+
+        }
+
+        /*  private void checkBox1_CheckedChanged(object sender, EventArgs e)
+          {
+              if (checkBox1.Checked)
+              {
+                  cbDepartamento.Enabled = false;
+                  cbPuesto.Enabled = false;
+              }
+              else
+              {
+                  cbDepartamento.Enabled = true;
+                  cbPuesto.Enabled = true;
+              }
+          }*/
     }
 }

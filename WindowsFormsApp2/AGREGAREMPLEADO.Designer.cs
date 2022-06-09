@@ -279,10 +279,6 @@ namespace WindowsFormsApp2
             // cbDepartamento
             // 
             this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Items.AddRange(new object[] {
-            "Sistemas",
-            "Administracion",
-            "Servicio a Clientes"});
             this.cbDepartamento.Location = new System.Drawing.Point(515, 196);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
@@ -303,10 +299,6 @@ namespace WindowsFormsApp2
             // cbPuesto
             // 
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Items.AddRange(new object[] {
-            "Supervisor",
-            "Calidad",
-            "Pasante"});
             this.cbPuesto.Location = new System.Drawing.Point(166, 246);
             this.cbPuesto.Name = "cbPuesto";
             this.cbPuesto.Size = new System.Drawing.Size(195, 24);
