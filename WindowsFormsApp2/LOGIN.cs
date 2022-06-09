@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using Cassandra;
 using static WindowsFormsApp2.FUNCIONES;
 using static WindowsFormsApp2.LOGIN;
-using static WindowsFormsApp2.EliminarP;
 using static WindowsFormsApp2.formAgregar;
 
 namespace WindowsFormsApp2

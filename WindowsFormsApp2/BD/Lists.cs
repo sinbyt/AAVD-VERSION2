@@ -32,7 +32,7 @@ public class Lists
     public class Empleado
         {
 
-            public int ID_Empleado { get; set; }
+            public Guid ID_Empleado { get; set; }
             public string nombre { get; set; }
             public string apellidos { get; set; }
             public string fechaAlta { get; set; }
@@ -46,8 +46,8 @@ public class Lists
             public string domicilio { get; set; }
             public string banco { get; set; }
             public string numCuenta { get; set; }
-            public List<string> telefono { get; set; }
-             public List<string>email { get; set; }
+        public string telefono { get; set; }
+        public string email { get; set; }
             public string contra { get; set; }
 
     }
@@ -73,19 +73,39 @@ public class Lists
 
     public class NOMINA
         {
-            public string numEmp { get; set; }
+            public Guid numEmp { get; set; }
             public string nomEmple { get; set; }
             public string FechaNom { get; set; }
-            public string percept { get; set; }
-            public string deducc { get; set; }
+            public List<string> percep { get; set; }
+        public string perpepT { get; set; }
+        public string deduccT { get; set; }
+            public List<string> deducc { get; set; }
             public string sueldoB { get; set; }
             public string sueldoN { get; set; }
             public int jornada { get; set; }
-            public string NumRec { get; set; }
             public string depa { get; set; }
             public string puesto { get; set; }
-        }
-        public class RECIBO
+    
+    }
+
+    public class listapercep
+    {
+        public string idemp { get; set; }
+        public string fechanom { get; set; }
+        public string nom { get; set; }
+        public double monto { get; set; }
+
+    }
+
+    public class listadeduc
+    {
+
+        public Guid idemp { get; set; }
+        public string fechanom { get; set; }
+        public string nom { get; set; }
+        public double monto { get; set; }
+    }
+    public class RECIBO
         {
         public string numEmp { get; set; }
         public string nomEmple { get; set; }

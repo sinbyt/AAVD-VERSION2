@@ -91,76 +91,20 @@ namespace WindowsFormsApplication2
             {
                 conectar();
                 //var fecha = param.fechaAlta.ToString("yyyy-MM-dd");
-                var ID_Empleado = new Guid();
-                ID_Empleado = Guid.NewGuid();
+             
 
-                var fechaAlta = DateTime.Now.ToString("yyyy'-'MM'-'dd");
-
-                string telefonos = "";
-                string emails = "";
-
-
-                int i = 0;
-                foreach (string telefono_ in param.telefono)
-                {
-                    if (i == 0)
-                    {
-                        telefonos += "{" + telefono_;
-                    }
-                    else if (i == (param.telefono.Count - 1))
-                    {
-                        telefonos += ", " + telefono_ + "} ";
-                    }
-                    else
-                    {
-                        telefonos += ", " + telefono_;
-                    }
-
-                    if (i == 0 && i == (param.telefono.Count - 1))
-                    {
-                        telefonos += "} ";
-                    }
-
-                    i++;
-                }
-
-                i = 0;
-                foreach (string email in param.email)
-                {
-                    if (i == 0)
-                    {
-                        emails += "{" + email;
-                    }
-                    else if (i == (param.email.Count - 1))
-                    {
-                        emails += ", " + email + "} ";
-                    }
-                    else
-                    {
-                        emails += ", " + email;
-                    }
-
-                    if (i == 0 && i == (param.email.Count - 1))
-                    {
-                        emails += "} ";
-                    }
-
-                    i++;
-
-                }
-
-                var query = "BEGIN BATCH ";
+               // var query = "BEGIN BATCH ";
                 var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
-                query1 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
+                query1 += "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
                 query1 += "if not exists; ";
                 query1 = string.Format(query1, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
 
-
+                /*
                 var query2 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
                 query2 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
                 query2 = string.Format(query2, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
                 query = query + query1 + query2 + " APPLY BATCH;";
-
+                */
 
                 _instancia.Execute(query1);
             }
@@ -179,6 +123,9 @@ namespace WindowsFormsApplication2
 
             }
             return Err;
+
+
+           
         }
         public void EditEmpleado(Empleado param, string oldDepto, string oldPuesto)
         {
@@ -188,100 +135,14 @@ namespace WindowsFormsApplication2
                 conectar();
 
 
-                string telefonos = "";
-                string emails = "";
-
-
-                int i = 0;
-                foreach (string telefono in param.telefono)
-                {
-                    if (i == 0)
-                    {
-                        telefonos += "{" + telefono;
-                    }
-                    else if (i == (param.telefono.Count - 1))
-                    {
-                        telefonos += ", " + telefono + "} ";
-                    }
-                    else
-                    {
-                        telefonos += ", " + telefono;
-                    }
-
-                    if (i == 0 && i == (param.telefono.Count - 1))
-                    {
-                        telefonos += "} ";
-                    }
-
-                    i++;
-                }
-
-                i = 0;
-                foreach (string email in param.email)
-                {
-                    if (i == 0)
-                    {
-                        emails += "{" + email;
-                    }
-                    else if (i == (param.email.Count - 1))
-                    {
-                        emails += ", " + email + "} ";
-                    }
-                    else
-                    {
-                        emails += ", " + email;
-                    }
-
-                    if (i == 0 && i == (param.email.Count - 1))
-                    {
-                        emails += "} ";
-                    }
 
 
 
-
-
-                    i++;
-
-                }
-
-
-                var query1 = "update empleados set nombre ='";
-                query1 += param.ID_Empleado;
-                query1 += "', ID_Empleado='";
-                query1 += param.nombre;
-                query1 += "', nombre='";
-                query1 += param.apellidos;
-                query1 += "', apellidos='";
-                query1 += param.fechaAlta;
-                query1 += "', fechaAlta='";
-                query1 += param.edad;
-                query1 += "', edad='";
-                query1 += param.depa;
-                query1 += "', depa='";
-                query1 += param.puesto;
-                query1 += "', puesto='";
-                query1 += param.fechaAlta;
-                query1 += "', fechaAlta='";
-                query1 += param.CURP;
-                query1 += "', CURP='";
-                query1 += param.NSS;
-                query1 += "', NSS='";
-                query1 += param.RFC;
-                query1 += "', RFC='";
-                query1 += param.domicilio;
-                query1 += "', domicilio='";
-                query1 += param.banco;
-                query1 += "', banco=";
-                query1 += emails;
-                query1 += ", email=";
-                query1 += telefonos;
-                query1 += ", telefono=";
-                query1 += param.contra;
-                query1 += ", contra=";
-                query1 += " where ID_Empleado=";
-                query1 += param.ID_Empleado;
-                query1 += ";";
+                var query1 = "ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra";
+               // query1 +=  param.ID_Empleado,  param.nombre, param.apellidos, param.fechaAlta ,  param.edad ,  param.depa ,  param.puesto ,  param.fechaNacimiento ,  param.CURP ,  param.NSS ,  param.RFC ,  param.domicilio ,  param.banco,  param.email ,  param.numCuenta ,  param.telefono ,  param.contra 
+             
+            //    query1 += param.ID_Empleado;
+           //     query1 += ";";
 
                 #region PRAGMA 
                 /*
@@ -444,6 +305,33 @@ namespace WindowsFormsApplication2
             desconectar();
             return empleado.ToList();
 
+        }
+        public bool EliminarEmpleado(Guid id_emp)
+        {
+            try
+            {
+             //   Empleado delemp = get(id_emp);
+                string delqry = "update Empleado set Activo = false where NUM_Empleado = ?;";
+               // string dellogin = "delete from Log_Empleado where Correo_electronico = ?;";
+                conectar();
+                var delete_empleado = _instancia.Prepare(delqry);
+                //  var delete_login = _instancia.Prepare(dellogin);
+                var batch = new BatchStatement()
+                            .Add(delete_empleado.Bind(id_emp));
+                           // .Add(delete_login.Bind(delemp.correo_electronico))
+                           // .Add(delete_rem.Bind((sbyte)1, delemp.correo_electronico));
+                _instancia.Execute(batch);
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                desconectar();
+            }
         }
 
         ///DEPARTAMENTO=====================================================================
@@ -665,10 +553,10 @@ namespace WindowsFormsApplication2
             try
             {
                 conectar();
-                var query1 = "insert into NOMINA(numEmp,nomEmple, FechaNom, percept, deducc, sueldoB, sueldoN, jornada, NumRec,depa,puesto)";
-                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')";
+                var query1 = "insert into NOMINA(numEmp,nomEmple, FechaNom, percep,percepT, deducc,deduccT, sueldoB, sueldoN, jornada,depa,puesto)";
+                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')";
                 query1 += "if not exists; ";
-                query1 = string.Format(query1, param.numEmp, param.nomEmple + param.FechaNom, param.percept, param.deducc, param.sueldoB, param.sueldoN, param.jornada, param.NumRec, param.depa, param.puesto);
+                query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percep,param.perpepT, param.deducc, param.deduccT, param.sueldoB, param.sueldoN, param.jornada,  param.depa, param.puesto);
 
 
 
@@ -689,6 +577,97 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
+
+        public bool listapercepc(listapercep param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+
+                conectar();
+                var query5 = "insert into listapercep(idemp,fechanom,nom, monto)";
+                query5 += "values('{0}','{1}','{2}','{3}')";
+                query5 += "if not exists; ";
+                query5 = string.Format(query5, param.idemp, param.fechanom, param.nom, param.monto);
+
+
+                _instancia.Execute(query5);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+        public List<listapercep> GetlistPercep()
+        {
+            string query = "SELECT idemp, fechanom,nom,monto FROM Puesto";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<listapercep> lista = mapper.Fetch<listapercep>(query);
+
+            desconectar();
+            return lista.ToList();
+
+        }
+
+
+        public bool listadeducc(listadeduc param)
+        {
+            var Err = false; // SI no hay error
+            try
+            {
+
+                conectar();
+                var query5 = "insert into listadeducc(idemp,fechanom,nom, monto)";
+                query5 += "values('{0}','{1}','{2}','{3}')";
+                query5 += "if not exists; ";
+                query5 = string.Format(query5, param.idemp, param.fechanom, param.nom, param.monto);
+
+
+                _instancia.Execute(query5);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                Err = true;
+                throw ex;
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+            return Err;
+        }
+
+
+        public List<listadeduc> GetlistDeduc()
+        {
+            string query = "SELECT idemp, fechanom,nom,monto FROM Puesto";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<listadeduc> lista2 = mapper.Fetch<listadeduc>(query);
+
+            desconectar();
+            return lista2.ToList();
+
+        }
+
 
         ///RECIBO=====================================================================
         public bool InsertRecibo(RECIBO param)

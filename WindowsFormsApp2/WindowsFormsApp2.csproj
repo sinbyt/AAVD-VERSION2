@@ -134,35 +134,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AGREGAREMPLEADO.cs">
+    <Compile Include="Empleado\AGREGAREMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AGREGAREMPLEADO.designer.cs">
+    <Compile Include="Empleado\AGREGAREMPLEADO.designer.cs">
       <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="AGREGARPERCEPCION.cs">
+    <Compile Include="Nomina\AGREGARPERCEPCION.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AGREGARPERCEPCION.Designer.cs">
+    <Compile Include="Nomina\AGREGARPERCEPCION.Designer.cs">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </Compile>
-    <Compile Include="BORRAREMPLEADO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BORRAREMPLEADO.Designer.cs">
-      <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BUSCARNOMINA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BUSCARNOMINA.Designer.cs">
-      <DependentUpon>BUSCARNOMINA.cs</DependentUpon>
-    </Compile>
     <Compile Include="BUSSINESLOGICLAYER.cs" />
-    <Compile Include="CAMBIAREMPLEADO.cs">
+    <Compile Include="Empleado\CAMBIAREMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CAMBIAREMPLEADO.Designer.cs">
+    <Compile Include="Empleado\CAMBIAREMPLEADO.Designer.cs">
       <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer.cs" />
@@ -172,44 +160,38 @@
     <Compile Include="DATOSDELAEMPRESA.Designer.cs">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </Compile>
-    <Compile Include="DEPARTAMENTO.cs">
+    <Compile Include="Nomina\DEPARTAMENTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DEPARTAMENTO.Designer.cs">
+    <Compile Include="Nomina\DEPARTAMENTO.Designer.cs">
       <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
     </Compile>
-    <Compile Include="EDITAR NOMINA.cs">
+    <Compile Include="Nomina\EDITAR NOMINA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EDITAR NOMINA.Designer.cs">
+    <Compile Include="Nomina\EDITAR NOMINA.Designer.cs">
       <DependentUpon>EDITAR NOMINA.cs</DependentUpon>
     </Compile>
-    <Compile Include="EliminarP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarP.Designer.cs">
-      <DependentUpon>EliminarP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EnlaceCassandra.cs" />
+    <Compile Include="BD\EnlaceCassandra.cs" />
     <Compile Include="FUNCIONES.cs" />
-    <Compile Include="HeadCounter.cs">
+    <Compile Include="Reportes\HeadCounter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HeadCounter.Designer.cs">
+    <Compile Include="Reportes\HeadCounter.Designer.cs">
       <DependentUpon>HeadCounter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lists.cs" />
-    <Compile Include="Lista de Empleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lista de Empleados.Designer.cs">
-      <DependentUpon>Lista de Empleados.cs</DependentUpon>
-    </Compile>
+    <Compile Include="BD\Lists.cs" />
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LOGIN.Designer.cs">
       <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina\GestionNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nomina\GestionNomina.Designer.cs">
+      <DependentUpon>GestionNomina.cs</DependentUpon>
     </Compile>
     <Compile Include="PRIMERAVENTANA.cs">
       <SubType>Form</SubType>
@@ -217,96 +199,69 @@
     <Compile Include="PRIMERAVENTANA.Designer.cs">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionNomina.cs">
+    <Compile Include="Nomina\PUESTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionNomina.Designer.cs">
-      <DependentUpon>GestionNomina.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestionEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionEmpleados.Designer.cs">
-      <DependentUpon>GestionEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PUESTO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PUESTO.Designer.cs">
+    <Compile Include="Nomina\PUESTO.Designer.cs">
       <DependentUpon>PUESTO.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recibo_EMP.cs">
+    <Compile Include="Empleado\Recibo_EMP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recibo_EMP.Designer.cs">
+    <Compile Include="Empleado\Recibo_EMP.Designer.cs">
       <DependentUpon>Recibo_EMP.cs</DependentUpon>
     </Compile>
-    <Compile Include="REPORTEGENERALDENOMINA.cs">
+    <Compile Include="Reportes\REPORTEGENERALDENOMINA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="REPORTEGENERALDENOMINA.Designer.cs">
+    <Compile Include="Reportes\REPORTEGENERALDENOMINA.Designer.cs">
       <DependentUpon>REPORTEGENERALDENOMINA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reporte_de_nomina.cs">
+    <Compile Include="Reportes\Reporte_de_nomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reporte_de_nomina.Designer.cs">
+    <Compile Include="Reportes\Reporte_de_nomina.Designer.cs">
       <DependentUpon>Reporte_de_nomina.cs</DependentUpon>
     </Compile>
-    <Compile Include="VENTANA1_EMPLEADO.cs">
+    <Compile Include="Empleado\VENTANA1_EMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VENTANA1_EMPLEADO.Designer.cs">
+    <Compile Include="Empleado\VENTANA1_EMPLEADO.Designer.cs">
       <DependentUpon>VENTANA1_EMPLEADO.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AGREGAREMPLEADO.resx">
+    <EmbeddedResource Include="Empleado\AGREGAREMPLEADO.resx">
       <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AGREGARPERCEPCION.resx">
+    <EmbeddedResource Include="Nomina\AGREGARPERCEPCION.resx">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BORRAREMPLEADO.resx">
-      <DependentUpon>BORRAREMPLEADO.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BUSCARNOMINA.resx">
-      <DependentUpon>BUSCARNOMINA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CAMBIAREMPLEADO.resx">
+    <EmbeddedResource Include="Empleado\CAMBIAREMPLEADO.resx">
       <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATOSDELAEMPRESA.resx">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DEPARTAMENTO.resx">
+    <EmbeddedResource Include="Nomina\DEPARTAMENTO.resx">
       <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EDITAR NOMINA.resx">
+    <EmbeddedResource Include="Nomina\EDITAR NOMINA.resx">
       <DependentUpon>EDITAR NOMINA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarP.resx">
-      <DependentUpon>EliminarP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HeadCounter.resx">
+    <EmbeddedResource Include="Reportes\HeadCounter.resx">
       <DependentUpon>HeadCounter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lista de Empleados.resx">
-      <DependentUpon>Lista de Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nomina\GestionNomina.resx">
+      <DependentUpon>GestionNomina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRIMERAVENTANA.resx">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionNomina.resx">
-      <DependentUpon>GestionNomina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionEmpleados.resx">
-      <DependentUpon>GestionEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PUESTO.resx">
+    <EmbeddedResource Include="Nomina\PUESTO.resx">
       <DependentUpon>PUESTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -319,16 +274,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Recibo_EMP.resx">
+    <EmbeddedResource Include="Empleado\Recibo_EMP.resx">
       <DependentUpon>Recibo_EMP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTEGENERALDENOMINA.resx">
+    <EmbeddedResource Include="Reportes\REPORTEGENERALDENOMINA.resx">
       <DependentUpon>REPORTEGENERALDENOMINA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte_de_nomina.resx">
+    <EmbeddedResource Include="Reportes\Reporte_de_nomina.resx">
       <DependentUpon>Reporte_de_nomina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VENTANA1_EMPLEADO.resx">
+    <EmbeddedResource Include="Empleado\VENTANA1_EMPLEADO.resx">
       <DependentUpon>VENTANA1_EMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -343,7 +298,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="BD\App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

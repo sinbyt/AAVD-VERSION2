@@ -17,10 +17,10 @@ namespace WindowsFormsApp2
     public partial class FORMNOMINA : Form
     {
         AGREGARPERCEPCION NuevaNomina;
-        EliminarP NuevaEliminada;
+        //EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
         PUESTO PuestoNuevo;
-        BUSCARNOMINA BuscarNomina;
+      //  BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
 
@@ -28,10 +28,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             NuevaNomina = new AGREGARPERCEPCION();
-            NuevaEliminada = new EliminarP();
+          //  NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
             PuestoNuevo = new PUESTO();
-            BuscarNomina = new BUSCARNOMINA();
+           // BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
 
@@ -80,7 +80,7 @@ namespace WindowsFormsApp2
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevaEliminada.ShowDialog();
+          //  NuevaEliminada.ShowDialog();
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,9 +119,9 @@ namespace WindowsFormsApp2
 
         private void buscarNominaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BuscarNomina.ShowDialog();
+          //  BuscarNomina.ShowDialog();
         }
-
+        //GENERA NOMINA
         private void button7_Click(object sender, EventArgs e)
         {
 
@@ -129,11 +129,17 @@ namespace WindowsFormsApp2
             var error = false;
             NOMINA NuevaNom = new NOMINA();
             Empleado NuevoEmp = new Empleado();
-            string sueldoBase;
-            string nivelSalarial;
+            string sueldoBase="";
+            string nivelSalarial="";
             //EnlaceCassandra enlace = new EnlaceCassandra();
             var dptoSource = conex.GetDepa();
             var pstoSource = conex.GetPuesto();
+            var dedSource = conex.Get_All_deduc();
+            var perSource = conex.Get_All_per();
+
+            var empsource = conex.Get_All_Empleado();
+
+            NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
             NuevaNom.FechaNom = cbAnio.Text + "/" + cbMes.Text + "/" + "01";
 
             cbDepartamento.Items.Add(dptoSource);
@@ -142,6 +148,52 @@ namespace WindowsFormsApp2
             cbPuesto.Items.Add(pstoSource);
 
 
+           
+
+            /*
+            var ID_Empleado = new Guid();
+            ID_Empleado = Guid.NewGuid();
+
+            var fechaAlta = DateTime.Now.ToString("yyyy'-'MM'-'dd");
+            */
+         
+
+
+           // NuevaNom.percep = cbPercepciones.Text;
+
+            //NuevaNom.deducc = cbDeducciones.Text;
+            float.Parse(NuevaNom.sueldoB);
+            // NuevaNom.deducc =
+            //NuevaNom.jornada = cbDias.Text;
+            // NuevaNom.depa = cbDepartamento.Text;
+            // NuevaNom.puesto = cbPuesto.Text;
+
+            // CALCULO SUELDO BRUTO
+            //  double sueldob = float.Parse(nivelSalarial) * double.Parse(sueldoBase) * dias;
+            // NuevaNom.sueldoB = string.Format("{0:c}", sueldob);
+
+            //CALCULO SUELDO  NETO
+            //   double sueldon = sueldob + double.Parse(NuevaNom.percep) - double.Parse(NuevaNom.deducc);
+
+            //generar todos los empleados
+            foreach (Empleado nuevoem in empsource) {
+
+
+                List<string> listaPercepciones = new List<string>();
+                List<string> listaDeducciones = new List<string>();
+
+                int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
+                NuevaNom.jornada = dias;
+                //Se obtiene el sueldo base
+
+                foreach (Departamento departamento in dptoSource)
+                {
+                    if (departamento.nomDepa == NuevoEmp.depa)
+                    {
+                        sueldoBase = departamento.sueldoBase;
+                        break;
+                    }
+                }
             int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
 
             foreach (Departamento departamento in dptoSource)
@@ -153,6 +205,45 @@ namespace WindowsFormsApp2
                 }
             }
 
+                //Por cada deduccion que le pertenezca al empleado en cuestion, se calcula, abona y docuemtna
+                //lbPercepciones=
+
+                foreach (PERDEC per in perSource)
+                {
+                    if (per.conceptoPD == lbPercepciones.Text)
+                    {
+                        if (per.tipoDato == "Porcentaje")
+                        {
+                            double cantidad= getPorcentaje(double.Parse(NuevaNom.sueldoB), double.Parse(per.monto));
+
+                            //new listadeduc= listadeduc new ();
+                            
+                            //  listaPer.Add(per.conceptoPD, StringFormat({0:c}, cantidad));
+
+                           
+
+                        }
+                        else {
+                       //     listaPer.Add(per.conceptoPD, per.monto);
+
+                        }
+
+                        break;
+                    }
+                }
+                foreach (Departamento departamento in dptoSource)
+                {
+                    if (departamento.nomDepa == NuevoEmp.depa)
+                    {
+                        sueldoBase = departamento.sueldoBase;
+                        break;
+                    }
+                }
+                NuevaNom.nomEmple = nuevoem.nombre;
+                NuevaNom.numEmp = nuevoem.ID_Empleado;
+                NuevaNom.depa = nuevoem.depa;
+                NuevaNom.puesto = nuevoem.puesto;
+                
             //Se obtiene el nivel salarial
 
             foreach (Puesto Nuevopuesto in pstoSource)
@@ -165,17 +256,10 @@ namespace WindowsFormsApp2
                 }
             }
 
-            NuevaNom.percept = cbPercepciones.Text;
 
-            NuevaNom.deducc = cbDeducciones.Text;
-            float.Parse(NuevaNom.sueldoB);
-            NuevaNom.deducc =
-            //NuevaNom.jornada = cbDias.Text;
-            NuevaNom.depa = cbDepartamento.Text;
-            NuevaNom.puesto = cbPuesto.Text;
+            }
 
             error = conex.InsertNomina(NuevaNom);
-
 
 
             //text1.Write(NuevaNom.FechaNom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
@@ -192,7 +276,7 @@ namespace WindowsFormsApp2
         {
             NuevoPuesto.ShowDialog();
         }
-
+        //GENERA CSV
         private void btnCSV_Click(object sender, EventArgs e)
         {
             TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
@@ -217,6 +301,35 @@ namespace WindowsFormsApp2
 
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox1.Checked)
+            {
+                cbDepartamento.Enabled = false;
+                cbPuesto.Enabled = false;
+                    }
+            else
+            {
+                cbDepartamento.Enabled = true;
+                cbPuesto.Enabled = true;
+            }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPuesto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
