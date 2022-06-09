@@ -82,7 +82,7 @@ namespace WindowsFormsApplication2
             }
             return Err;
         }
-
+        
         ///EMPLEADO=====================================================================
         public bool InsertEmpleado(Empleado param)
         {
@@ -127,7 +127,7 @@ namespace WindowsFormsApplication2
 
            
         }
-        public void EditEmpleado(Empleado param, string oldDepto, string oldPuesto)
+        public void EditEmpleado(Lists.Empleado param, string oldDepto, string oldPuesto)
         {
 
             try
@@ -294,13 +294,13 @@ namespace WindowsFormsApplication2
             }
 
         }
-        public List<Empleado> Get_All_Empleado()
+        public List<Lists.Empleado> Get_All_Empleado()
         {
             string query = "SELECT ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra FROM Empleado;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
-            IEnumerable<Empleado> empleado = mapper.Fetch<Empleado>(query);
+            IEnumerable<Lists.Empleado> empleado = mapper.Fetch<Lists.Empleado>(query);
 
             desconectar();
             return empleado.ToList();

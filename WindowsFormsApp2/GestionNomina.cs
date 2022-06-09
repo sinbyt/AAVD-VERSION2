@@ -8,30 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
-
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
-
 using System.IO;
 namespace WindowsFormsApp2
 {
     public partial class FORMNOMINA : Form
     {
         AGREGARPERCEPCION NuevaNomina;
+        //EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
         PUESTO PuestoNuevo;
+      //  BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
-
+        Nomina.Individual_Nomina NuevaNominaIndividual;
+        
         public FORMNOMINA()
         {
             InitializeComponent();
             NuevaNomina = new AGREGARPERCEPCION();
+          //  NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
             PuestoNuevo = new PUESTO();
+           // BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
-
+            NuevaNominaIndividual = new Nomina.Individual_Nomina();
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
            // var error = false;
 
@@ -125,7 +128,7 @@ namespace WindowsFormsApp2
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
-            Empleado NuevoEmp = new Empleado();
+            var NuevoEmp = new Lists.Empleado();
             string sueldoBase="";
             string nivelSalarial="";
             //EnlaceCassandra enlace = new EnlaceCassandra();
@@ -172,7 +175,7 @@ namespace WindowsFormsApp2
             //   double sueldon = sueldob + double.Parse(NuevaNom.percep) - double.Parse(NuevaNom.deducc);
 
             //generar todos los empleados
-            foreach (Empleado nuevoem in empsource) {
+            foreach (Lists.Empleado nuevoem in empsource) {
 
 
                 List<string> listaPercepciones = new List<string>();
@@ -306,9 +309,9 @@ namespace WindowsFormsApp2
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void editarIndividualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            NuevaNominaIndividual.ShowDialog();
         }
 
         /*  private void checkBox1_CheckedChanged(object sender, EventArgs e)

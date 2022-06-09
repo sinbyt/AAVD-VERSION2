@@ -7,23 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Lists;
 
 namespace WindowsFormsApp2
 {
-    public partial class VENTANA1_EMPLEADO : Form
+    public partial class INICIO : Form
     {
         //formCambiar CambiarEmp;
         Recibo_EMP NuevoRecibo;
-        public VENTANA1_EMPLEADO()
+        EditarPropio NuevoPropio;
+        public INICIO()
         {
             InitializeComponent();
             //CambiarEmp = new formCambiar();
             NuevoRecibo = new Recibo_EMP();
+            NuevoPropio = new EditarPropio();
+
+            //NuevoActualizar = new Empleado.SelfEditarEmpleado();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // CambiarEmp.ShowDialog();
+            NuevoPropio.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -45,6 +45,7 @@ namespace WindowsFormsApp2
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,8 +155,10 @@ namespace WindowsFormsApp2
             this.Valor});
             this.dataGridView1.Location = new System.Drawing.Point(376, 79);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(429, 327);
             this.dataGridView1.TabIndex = 51;
             // 
@@ -164,6 +167,7 @@ namespace WindowsFormsApp2
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.MinimumWidth = 6;
             this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
             this.Tipo.Width = 125;
             // 
             // Concepto
@@ -171,6 +175,7 @@ namespace WindowsFormsApp2
             this.Concepto.HeaderText = "Concepto";
             this.Concepto.MinimumWidth = 6;
             this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
             this.Concepto.Width = 125;
             // 
             // Valor
@@ -178,6 +183,7 @@ namespace WindowsFormsApp2
             this.Valor.HeaderText = "Valor";
             this.Valor.MinimumWidth = 6;
             this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
             this.Valor.Width = 125;
             // 
             // button1
@@ -198,6 +204,15 @@ namespace WindowsFormsApp2
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(56, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(211, 373);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nueva Percepcion/Deduccion";
+            // 
             // AGREGARPERCEPCION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,6 +231,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.tbConcepto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AGREGARPERCEPCION";
             this.Text = "Agregar Percepcion/Deduccion";
             this.Load += new System.EventHandler(this.AGREGARPERCEPCION_Load);
@@ -247,5 +263,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -30,17 +30,17 @@ namespace WindowsFormsApp2
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnGenerar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ingreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salario_Diario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGenerar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,10 +57,60 @@ namespace WindowsFormsApp2
             this.Salario_Diario});
             this.dataGridView1.Location = new System.Drawing.Point(235, 108);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(804, 481);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Departamento
+            // 
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.MinimumWidth = 6;
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            this.Departamento.Width = 125;
+            // 
+            // Puesto
+            // 
+            this.Puesto.HeaderText = "Puesto";
+            this.Puesto.MinimumWidth = 6;
+            this.Puesto.Name = "Puesto";
+            this.Puesto.ReadOnly = true;
+            this.Puesto.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 125;
+            // 
+            // Ingreso
+            // 
+            this.Ingreso.HeaderText = "Ingreso";
+            this.Ingreso.MinimumWidth = 6;
+            this.Ingreso.Name = "Ingreso";
+            this.Ingreso.ReadOnly = true;
+            this.Ingreso.Width = 125;
+            // 
+            // Edad
+            // 
+            this.Edad.HeaderText = "Edad";
+            this.Edad.MinimumWidth = 6;
+            this.Edad.Name = "Edad";
+            this.Edad.ReadOnly = true;
+            this.Edad.Width = 125;
+            // 
+            // Salario_Diario
+            // 
+            this.Salario_Diario.HeaderText = "Salario Diario";
+            this.Salario_Diario.MinimumWidth = 6;
+            this.Salario_Diario.Name = "Salario_Diario";
+            this.Salario_Diario.ReadOnly = true;
+            this.Salario_Diario.Width = 125;
             // 
             // btnGenerar
             // 
@@ -105,48 +155,6 @@ namespace WindowsFormsApp2
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mes";
-            // 
-            // Departamento
-            // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.MinimumWidth = 6;
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Width = 125;
-            // 
-            // Puesto
-            // 
-            this.Puesto.HeaderText = "Puesto";
-            this.Puesto.MinimumWidth = 6;
-            this.Puesto.Name = "Puesto";
-            this.Puesto.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Ingreso
-            // 
-            this.Ingreso.HeaderText = "Ingreso";
-            this.Ingreso.MinimumWidth = 6;
-            this.Ingreso.Name = "Ingreso";
-            this.Ingreso.Width = 125;
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.MinimumWidth = 6;
-            this.Edad.Name = "Edad";
-            this.Edad.Width = 125;
-            // 
-            // Salario_Diario
-            // 
-            this.Salario_Diario.HeaderText = "Salario Diario";
-            this.Salario_Diario.MinimumWidth = 6;
-            this.Salario_Diario.Name = "Salario_Diario";
-            this.Salario_Diario.Width = 125;
             // 
             // REPORTEGENERALDENOMINA
             // 

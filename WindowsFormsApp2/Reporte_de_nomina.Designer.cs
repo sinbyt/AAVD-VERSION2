@@ -49,8 +49,10 @@ namespace WindowsFormsApp2
             this.Sueldo_Neto});
             this.dataGridView1.Location = new System.Drawing.Point(58, 256);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(910, 296);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -59,6 +61,7 @@ namespace WindowsFormsApp2
             this.Departamento.HeaderText = "Departamento";
             this.Departamento.MinimumWidth = 6;
             this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
             this.Departamento.Width = 125;
             // 
             // Año
@@ -66,6 +69,7 @@ namespace WindowsFormsApp2
             this.Año.HeaderText = "Año";
             this.Año.MinimumWidth = 6;
             this.Año.Name = "Año";
+            this.Año.ReadOnly = true;
             this.Año.Width = 125;
             // 
             // Mes
@@ -73,6 +77,7 @@ namespace WindowsFormsApp2
             this.Mes.HeaderText = "Mes";
             this.Mes.MinimumWidth = 6;
             this.Mes.Name = "Mes";
+            this.Mes.ReadOnly = true;
             this.Mes.Width = 125;
             // 
             // Sueldo_Bruto
@@ -80,6 +85,7 @@ namespace WindowsFormsApp2
             this.Sueldo_Bruto.HeaderText = "Sueldo_Bruto";
             this.Sueldo_Bruto.MinimumWidth = 6;
             this.Sueldo_Bruto.Name = "Sueldo_Bruto";
+            this.Sueldo_Bruto.ReadOnly = true;
             this.Sueldo_Bruto.Width = 125;
             // 
             // Sueldo_Neto
@@ -87,6 +93,7 @@ namespace WindowsFormsApp2
             this.Sueldo_Neto.HeaderText = "Sueldo_Neto";
             this.Sueldo_Neto.MinimumWidth = 6;
             this.Sueldo_Neto.Name = "Sueldo_Neto";
+            this.Sueldo_Neto.ReadOnly = true;
             this.Sueldo_Neto.Width = 125;
             // 
             // Reporte_de_nomina

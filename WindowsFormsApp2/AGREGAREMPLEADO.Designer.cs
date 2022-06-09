@@ -579,7 +579,7 @@ namespace WindowsFormsApp2
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(13, 50);
+            this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(754, 615);
             this.groupBox1.TabIndex = 52;
