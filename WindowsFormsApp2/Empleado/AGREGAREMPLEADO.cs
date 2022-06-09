@@ -21,10 +21,10 @@ namespace WindowsFormsApp2
     public partial class formAgregar : Form
     {
 
-        formBorrar NuevoBorrado;
+        //formBorrar NuevoBorrado;
         formCambiar NuevoCambiado;
         REPORTEGENERALDENOMINA NuevoReporteN;
-        Lista_de_Empleados NuevaListaEmp;
+        //Lista_de_Empleados NuevaListaEmp;
         HeadCounter NuevoHeadcounter;
         //private BUSSINESLOGICLAYER _BussinesLogicLayer;
         public formAgregar()
@@ -203,7 +203,7 @@ namespace WindowsFormsApp2
 
         private void borrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevoBorrado.ShowDialog();
+            //NuevoBorrado.ShowDialog();
         }
 
         private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -219,7 +219,7 @@ namespace WindowsFormsApp2
 
         private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevaListaEmp.ShowDialog();
+          //  NuevaListaEmp.ShowDialog();
         }
 
         private void nominaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -229,7 +229,7 @@ namespace WindowsFormsApp2
 
         private void borrarEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            NuevoBorrado.ShowDialog();
+           // NuevoBorrado.ShowDialog();
         }
 
         private void editarEmpleadoToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -239,7 +239,7 @@ namespace WindowsFormsApp2
 
         private void listaDeEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            NuevaListaEmp.ShowDialog();
+            //NuevaListaEmp.ShowDialog();
 
         }
 

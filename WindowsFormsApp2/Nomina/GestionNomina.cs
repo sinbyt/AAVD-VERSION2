@@ -17,10 +17,10 @@ namespace WindowsFormsApp2
     public partial class FORMNOMINA : Form
     {
         AGREGARPERCEPCION NuevaNomina;
-        EliminarP NuevaEliminada;
+        //EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
         PUESTO PuestoNuevo;
-        BUSCARNOMINA BuscarNomina;
+      //  BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
 
@@ -28,10 +28,10 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             NuevaNomina = new AGREGARPERCEPCION();
-            NuevaEliminada = new EliminarP();
+          //  NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
             PuestoNuevo = new PUESTO();
-            BuscarNomina = new BUSCARNOMINA();
+           // BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
 
@@ -80,7 +80,7 @@ namespace WindowsFormsApp2
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevaEliminada.ShowDialog();
+          //  NuevaEliminada.ShowDialog();
         }
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace WindowsFormsApp2
 
         private void buscarNominaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BuscarNomina.ShowDialog();
+          //  BuscarNomina.ShowDialog();
         }
         //GENERA NOMINA
         private void button7_Click(object sender, EventArgs e)

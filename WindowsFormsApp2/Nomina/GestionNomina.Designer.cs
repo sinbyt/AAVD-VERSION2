@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
+
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.cbPercepciones = new System.Windows.Forms.ComboBox();
             this.cbAnio = new System.Windows.Forms.ComboBox();
@@ -79,6 +80,7 @@ namespace WindowsFormsApp2
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            
             this.SuspendLayout();
             // 
             // cbMes

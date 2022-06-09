@@ -199,18 +199,6 @@
     <Compile Include="PRIMERAVENTANA.Designer.cs">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionNomina.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestionNomina.Designer.cs">
-      <DependentUpon>GestionNomina.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Empleado\GestionEmpleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empleado\GestionEmpleados.Designer.cs">
-      <DependentUpon>GestionEmpleados.cs</DependentUpon>
-    </Compile>
     <Compile Include="Nomina\PUESTO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,12 +260,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRIMERAVENTANA.resx">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestionNomina.resx">
-      <DependentUpon>GestionNomina.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Empleado\GestionEmpleados.resx">
-      <DependentUpon>GestionEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nomina\PUESTO.resx">
       <DependentUpon>PUESTO.cs</DependentUpon>
