@@ -129,7 +129,7 @@ namespace WindowsFormsApp2
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Puesto
+            // PUESTO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,8 +142,8 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.tbPorcentaje);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
-            this.Name = "Puesto";
-            this.Text = "NuevoPuesto";
+            this.Name = "PUESTO";
+            this.Text = "Gestion de Puestos";
             this.Load += new System.EventHandler(this.NuevoPuesto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
