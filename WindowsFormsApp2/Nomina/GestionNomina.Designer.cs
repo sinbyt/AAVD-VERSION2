@@ -29,7 +29,6 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-
             this.cbMes = new System.Windows.Forms.ComboBox();
             this.cbPercepciones = new System.Windows.Forms.ComboBox();
             this.cbAnio = new System.Windows.Forms.ComboBox();
@@ -67,20 +66,19 @@ namespace WindowsFormsApp2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCSV = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.mtbISR = new System.Windows.Forms.MaskedTextBox();
             this.mtbIMSS = new System.Windows.Forms.MaskedTextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            
             this.SuspendLayout();
             // 
             // cbMes
@@ -317,7 +315,6 @@ namespace WindowsFormsApp2
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // cbPuesto
             // 
@@ -367,8 +364,10 @@ namespace WindowsFormsApp2
             this.numCuenta});
             this.dataGridView1.Location = new System.Drawing.Point(814, 47);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(804, 525);
             this.dataGridView1.TabIndex = 50;
             // 
@@ -377,6 +376,7 @@ namespace WindowsFormsApp2
             this.numEmp.HeaderText = "Num. Empleado";
             this.numEmp.MinimumWidth = 6;
             this.numEmp.Name = "numEmp";
+            this.numEmp.ReadOnly = true;
             this.numEmp.Width = 125;
             // 
             // nomEmp
@@ -384,6 +384,7 @@ namespace WindowsFormsApp2
             this.nomEmp.HeaderText = "Nombre Empleado";
             this.nomEmp.MinimumWidth = 6;
             this.nomEmp.Name = "nomEmp";
+            this.nomEmp.ReadOnly = true;
             this.nomEmp.Width = 125;
             // 
             // fecha
@@ -391,6 +392,7 @@ namespace WindowsFormsApp2
             this.fecha.HeaderText = "Fecha ";
             this.fecha.MinimumWidth = 6;
             this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
             this.fecha.Width = 125;
             // 
             // sueldoB
@@ -398,6 +400,7 @@ namespace WindowsFormsApp2
             this.sueldoB.HeaderText = "Sueldo Bruto";
             this.sueldoB.MinimumWidth = 6;
             this.sueldoB.Name = "sueldoB";
+            this.sueldoB.ReadOnly = true;
             this.sueldoB.Width = 125;
             // 
             // banco
@@ -405,6 +408,7 @@ namespace WindowsFormsApp2
             this.banco.HeaderText = "Banco";
             this.banco.MinimumWidth = 6;
             this.banco.Name = "banco";
+            this.banco.ReadOnly = true;
             this.banco.Width = 125;
             // 
             // numCuenta
@@ -412,6 +416,7 @@ namespace WindowsFormsApp2
             this.numCuenta.HeaderText = "Numero de cuenta";
             this.numCuenta.MinimumWidth = 6;
             this.numCuenta.Name = "numCuenta";
+            this.numCuenta.ReadOnly = true;
             this.numCuenta.Width = 125;
             // 
             // groupBox1
@@ -451,6 +456,14 @@ namespace WindowsFormsApp2
             this.groupBox3.Text = "Seleccione fecha de nomina";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(249, 40);
+            this.maskedTextBox1.Mask = "9999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(66, 22);
+            this.maskedTextBox1.TabIndex = 56;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.mtbISR);
@@ -463,24 +476,6 @@ namespace WindowsFormsApp2
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Deducciones fijas";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(57, 89);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 17);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "IMSS";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(57, 50);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(30, 17);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "ISR";
             // 
             // mtbISR
             // 
@@ -497,6 +492,24 @@ namespace WindowsFormsApp2
             this.mtbIMSS.Name = "mtbIMSS";
             this.mtbIMSS.Size = new System.Drawing.Size(79, 22);
             this.mtbIMSS.TabIndex = 13;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(57, 50);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(30, 17);
+            this.label17.TabIndex = 29;
+            this.label17.Text = "ISR";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(57, 89);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 17);
+            this.label16.TabIndex = 28;
+            this.label16.Text = "IMSS";
             // 
             // groupBox4
             // 
@@ -519,14 +532,6 @@ namespace WindowsFormsApp2
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Seleccione percepciones y deducciones que se aplicaran en la nomina";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(249, 40);
-            this.maskedTextBox1.Mask = "9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(66, 22);
-            this.maskedTextBox1.TabIndex = 56;
             // 
             // FORMNOMINA
             // 

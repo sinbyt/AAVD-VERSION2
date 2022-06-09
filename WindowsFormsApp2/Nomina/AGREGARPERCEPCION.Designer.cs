@@ -76,7 +76,7 @@ namespace WindowsFormsApp2
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(174, 378);
+            this.button8.Location = new System.Drawing.Point(174, 352);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(82, 28);
             this.button8.TabIndex = 7;
@@ -86,7 +86,7 @@ namespace WindowsFormsApp2
             // 
             // btnGuardarPercepcion
             // 
-            this.btnGuardarPercepcion.Location = new System.Drawing.Point(73, 378);
+            this.btnGuardarPercepcion.Location = new System.Drawing.Point(73, 352);
             this.btnGuardarPercepcion.Name = "btnGuardarPercepcion";
             this.btnGuardarPercepcion.Size = new System.Drawing.Size(82, 28);
             this.btnGuardarPercepcion.TabIndex = 6;

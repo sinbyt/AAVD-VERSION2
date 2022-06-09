@@ -147,12 +147,6 @@
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </Compile>
     <Compile Include="BUSSINESLOGICLAYER.cs" />
-    <Compile Include="Empleado\CAMBIAREMPLEADO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empleado\CAMBIAREMPLEADO.Designer.cs">
-      <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="DATOSDELAEMPRESA.cs">
       <SubType>Form</SubType>
@@ -236,9 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nomina\AGREGARPERCEPCION.resx">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Empleado\CAMBIAREMPLEADO.resx">
-      <DependentUpon>CAMBIAREMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATOSDELAEMPRESA.resx">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
