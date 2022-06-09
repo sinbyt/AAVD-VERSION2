@@ -80,9 +80,9 @@ namespace WindowsFormsApp2
             // 
             this.listEmpleado.FormattingEnabled = true;
             this.listEmpleado.ItemHeight = 16;
-            this.listEmpleado.Location = new System.Drawing.Point(583, 16);
+            this.listEmpleado.Location = new System.Drawing.Point(833, 16);
             this.listEmpleado.Name = "listEmpleado";
-            this.listEmpleado.Size = new System.Drawing.Size(205, 148);
+            this.listEmpleado.Size = new System.Drawing.Size(276, 308);
             this.listEmpleado.TabIndex = 11;
             // 
             // label2
@@ -298,7 +298,7 @@ namespace WindowsFormsApp2
             this.mtbCURP.Location = new System.Drawing.Point(438, 47);
             this.mtbCURP.Mask = "AAAAAAAAAAAAAAAA";
             this.mtbCURP.Name = "mtbCURP";
-            this.mtbCURP.Size = new System.Drawing.Size(139, 22);
+            this.mtbCURP.Size = new System.Drawing.Size(220, 22);
             this.mtbCURP.TabIndex = 11;
             // 
             // mtbNSS
@@ -306,7 +306,7 @@ namespace WindowsFormsApp2
             this.mtbNSS.Location = new System.Drawing.Point(438, 82);
             this.mtbNSS.Mask = "9999999999";
             this.mtbNSS.Name = "mtbNSS";
-            this.mtbNSS.Size = new System.Drawing.Size(139, 22);
+            this.mtbNSS.Size = new System.Drawing.Size(220, 22);
             this.mtbNSS.TabIndex = 12;
             this.mtbNSS.ValidatingType = typeof(int);
             // 
@@ -315,7 +315,7 @@ namespace WindowsFormsApp2
             this.mtbNacimiento.Location = new System.Drawing.Point(438, 125);
             this.mtbNacimiento.Mask = "00/00/0000";
             this.mtbNacimiento.Name = "mtbNacimiento";
-            this.mtbNacimiento.Size = new System.Drawing.Size(139, 22);
+            this.mtbNacimiento.Size = new System.Drawing.Size(220, 22);
             this.mtbNacimiento.TabIndex = 13;
             this.mtbNacimiento.ValidatingType = typeof(System.DateTime);
             // 
@@ -323,7 +323,7 @@ namespace WindowsFormsApp2
             // 
             this.mtbEmail.Location = new System.Drawing.Point(438, 209);
             this.mtbEmail.Name = "mtbEmail";
-            this.mtbEmail.Size = new System.Drawing.Size(139, 22);
+            this.mtbEmail.Size = new System.Drawing.Size(220, 22);
             this.mtbEmail.TabIndex = 15;
             // 
             // mtbTelefono
@@ -331,7 +331,7 @@ namespace WindowsFormsApp2
             this.mtbTelefono.Location = new System.Drawing.Point(438, 263);
             this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(139, 22);
+            this.mtbTelefono.Size = new System.Drawing.Size(220, 22);
             this.mtbTelefono.TabIndex = 16;
             // 
             // mtbDomicilio
@@ -362,7 +362,7 @@ namespace WindowsFormsApp2
             "Servicio a Clientes"});
             this.cbDepartamento.Location = new System.Drawing.Point(438, 164);
             this.cbDepartamento.Name = "cbDepartamento";
-            this.cbDepartamento.Size = new System.Drawing.Size(195, 24);
+            this.cbDepartamento.Size = new System.Drawing.Size(220, 24);
             this.cbDepartamento.TabIndex = 60;
             // 
             // cbPuesto
@@ -381,7 +381,7 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1121, 540);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.cbBanco);

@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
-
 using System.IO;
 namespace WindowsFormsApp2
 {
@@ -23,7 +22,7 @@ namespace WindowsFormsApp2
       //  BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
-
+        WindowsFormsApp2.Nomina.NominaIndividual Nuevanominaindividual;
         public FORMNOMINA()
         {
             InitializeComponent();
@@ -34,7 +33,7 @@ namespace WindowsFormsApp2
            // BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
-
+            Nuevanominaindividual = new Nomina.NominaIndividual();
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             // var error = false;
 
@@ -194,7 +193,7 @@ namespace WindowsFormsApp2
                         break;
                     }
                 }
-            int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
+            //int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
 
             foreach (Departamento departamento in dptoSource)
             {
@@ -331,7 +330,12 @@ namespace WindowsFormsApp2
 
         }
 
+        private void editarIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nuevanominaindividual.ShowDialog();
+        }
 
+        /*
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -345,5 +349,6 @@ namespace WindowsFormsApp2
                 cbPuesto.Enabled = true;
             }
         }
+        */
     }
 }

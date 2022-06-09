@@ -61,7 +61,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Name = "VENTANA1_EMPLEADO";
-            this.Text = "INICIO";
+            this.Text = "Inicio";
             this.ResumeLayout(false);
 
         }

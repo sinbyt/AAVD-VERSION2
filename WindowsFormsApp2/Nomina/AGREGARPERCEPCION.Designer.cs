@@ -45,13 +45,15 @@ namespace WindowsFormsApp2
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Informacion = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Informacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(70, 149);
+            this.label10.Location = new System.Drawing.Point(22, 81);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 17);
             this.label10.TabIndex = 27;
@@ -60,7 +62,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 211);
+            this.label1.Location = new System.Drawing.Point(23, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 17);
             this.label1.TabIndex = 30;
@@ -68,7 +70,7 @@ namespace WindowsFormsApp2
             // 
             // tbConcepto
             // 
-            this.tbConcepto.Location = new System.Drawing.Point(73, 169);
+            this.tbConcepto.Location = new System.Drawing.Point(26, 112);
             this.tbConcepto.Name = "tbConcepto";
             this.tbConcepto.Size = new System.Drawing.Size(183, 22);
             this.tbConcepto.TabIndex = 2;
@@ -76,7 +78,7 @@ namespace WindowsFormsApp2
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(174, 378);
+            this.button8.Location = new System.Drawing.Point(129, 299);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(82, 28);
             this.button8.TabIndex = 7;
@@ -86,7 +88,7 @@ namespace WindowsFormsApp2
             // 
             // btnGuardarPercepcion
             // 
-            this.btnGuardarPercepcion.Location = new System.Drawing.Point(73, 378);
+            this.btnGuardarPercepcion.Location = new System.Drawing.Point(25, 299);
             this.btnGuardarPercepcion.Name = "btnGuardarPercepcion";
             this.btnGuardarPercepcion.Size = new System.Drawing.Size(82, 28);
             this.btnGuardarPercepcion.TabIndex = 6;
@@ -100,7 +102,7 @@ namespace WindowsFormsApp2
             this.cbPerDec.Items.AddRange(new object[] {
             "Percepcion",
             "Deduccion"});
-            this.cbPerDec.Location = new System.Drawing.Point(73, 99);
+            this.cbPerDec.Location = new System.Drawing.Point(25, 43);
             this.cbPerDec.Name = "cbPerDec";
             this.cbPerDec.Size = new System.Drawing.Size(183, 24);
             this.cbPerDec.TabIndex = 1;
@@ -108,7 +110,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 79);
+            this.label2.Location = new System.Drawing.Point(22, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 17);
             this.label2.TabIndex = 49;
@@ -116,7 +118,7 @@ namespace WindowsFormsApp2
             // 
             // tbValor
             // 
-            this.tbValor.Location = new System.Drawing.Point(71, 298);
+            this.tbValor.Location = new System.Drawing.Point(26, 258);
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(185, 22);
             this.tbValor.TabIndex = 5;
@@ -125,7 +127,7 @@ namespace WindowsFormsApp2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 278);
+            this.label3.Location = new System.Drawing.Point(23, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(188, 17);
             this.label3.TabIndex = 50;
@@ -138,7 +140,7 @@ namespace WindowsFormsApp2
             this.cbPorcenMonto.Items.AddRange(new object[] {
             "Porcentaje",
             "Monto"});
-            this.cbPorcenMonto.Location = new System.Drawing.Point(73, 231);
+            this.cbPorcenMonto.Location = new System.Drawing.Point(25, 169);
             this.cbPorcenMonto.Name = "cbPorcenMonto";
             this.cbPorcenMonto.Size = new System.Drawing.Size(183, 24);
             this.cbPorcenMonto.TabIndex = 4;
@@ -153,8 +155,10 @@ namespace WindowsFormsApp2
             this.Valor});
             this.dataGridView1.Location = new System.Drawing.Point(376, 79);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(429, 327);
             this.dataGridView1.TabIndex = 51;
             // 
@@ -163,6 +167,7 @@ namespace WindowsFormsApp2
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.MinimumWidth = 6;
             this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
             this.Tipo.Width = 125;
             // 
             // Concepto
@@ -170,6 +175,7 @@ namespace WindowsFormsApp2
             this.Concepto.HeaderText = "Concepto";
             this.Concepto.MinimumWidth = 6;
             this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
             this.Concepto.Width = 125;
             // 
             // Valor
@@ -177,6 +183,7 @@ namespace WindowsFormsApp2
             this.Valor.HeaderText = "Valor";
             this.Valor.MinimumWidth = 6;
             this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
             this.Valor.Width = 125;
             // 
             // button1
@@ -197,6 +204,25 @@ namespace WindowsFormsApp2
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // Informacion
+            // 
+            this.Informacion.Controls.Add(this.button8);
+            this.Informacion.Controls.Add(this.btnGuardarPercepcion);
+            this.Informacion.Controls.Add(this.tbValor);
+            this.Informacion.Controls.Add(this.label2);
+            this.Informacion.Controls.Add(this.cbPorcenMonto);
+            this.Informacion.Controls.Add(this.cbPerDec);
+            this.Informacion.Controls.Add(this.label3);
+            this.Informacion.Controls.Add(this.label10);
+            this.Informacion.Controls.Add(this.tbConcepto);
+            this.Informacion.Controls.Add(this.label1);
+            this.Informacion.Location = new System.Drawing.Point(71, 79);
+            this.Informacion.Name = "Informacion";
+            this.Informacion.Size = new System.Drawing.Size(234, 375);
+            this.Informacion.TabIndex = 54;
+            this.Informacion.TabStop = false;
+            this.Informacion.Text = "Informacion";
+            // 
             // AGREGARPERCEPCION
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -205,22 +231,14 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cbPorcenMonto);
-            this.Controls.Add(this.tbValor);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbPerDec);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.btnGuardarPercepcion);
-            this.Controls.Add(this.tbConcepto);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Informacion);
             this.Name = "AGREGARPERCEPCION";
             this.Text = "Agregar Percepcion/Deduccion";
             this.Load += new System.EventHandler(this.AGREGARPERCEPCION_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Informacion.ResumeLayout(false);
+            this.Informacion.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -246,5 +264,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox Informacion;
     }
 }
