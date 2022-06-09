@@ -134,22 +134,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CARPETA_EMP\AGREGAREMPLEADO.cs">
+    <Compile Include="AGREGAREMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CARPETA_EMP\AGREGAREMPLEADO.designer.cs">
+    <Compile Include="AGREGAREMPLEADO.designer.cs">
       <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
     </Compile>
-    <Compile Include="CARPETA_EMP\SelfEditarEmpleado.cs">
+    <Compile Include="EditarPropio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CARPETA_EMP\SelfEditarEmpleado.Designer.cs">
+    <Compile Include="EditarPropio.Designer.cs">
+      <DependentUpon>EditarPropio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelfEditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelfEditarEmpleado.Designer.cs">
       <DependentUpon>SelfEditarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nomina\AGREGARPERCEPCION.cs">
+    <Compile Include="AGREGARPERCEPCION.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nomina\AGREGARPERCEPCION.Designer.cs">
+    <Compile Include="AGREGARPERCEPCION.Designer.cs">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </Compile>
     <Compile Include="BUSSINESLOGICLAYER.cs" />
@@ -160,24 +166,24 @@
     <Compile Include="DATOSDELAEMPRESA.Designer.cs">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nomina\DEPARTAMENTO.cs">
+    <Compile Include="DEPARTAMENTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nomina\DEPARTAMENTO.Designer.cs">
+    <Compile Include="DEPARTAMENTO.Designer.cs">
       <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nomina\EDITAR NOMINA.cs">
+    <Compile Include="EDITAR NOMINA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nomina\EDITAR NOMINA.Designer.cs">
+    <Compile Include="EDITAR NOMINA.Designer.cs">
       <DependentUpon>EDITAR NOMINA.cs</DependentUpon>
     </Compile>
-    <Compile Include="BD\EnlaceCassandra.cs" />
+    <Compile Include="EnlaceCassandra.cs" />
     <Compile Include="FUNCIONES.cs" />
-    <Compile Include="Nomina\Individual_Nomina.cs">
+    <Compile Include="Individual_Nomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nomina\Individual_Nomina.Designer.cs">
+    <Compile Include="Individual_Nomina.Designer.cs">
       <DependentUpon>Individual_Nomina.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\HeadCounter.cs">
@@ -186,17 +192,17 @@
     <Compile Include="Reportes\HeadCounter.Designer.cs">
       <DependentUpon>HeadCounter.cs</DependentUpon>
     </Compile>
-    <Compile Include="BD\Lists.cs" />
+    <Compile Include="Lists.cs" />
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LOGIN.Designer.cs">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nomina\GestionNomina.cs">
+    <Compile Include="GestionNomina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nomina\GestionNomina.Designer.cs">
+    <Compile Include="GestionNomina.Designer.cs">
       <DependentUpon>GestionNomina.cs</DependentUpon>
     </Compile>
     <Compile Include="PRIMERAVENTANA.cs">
@@ -205,18 +211,18 @@
     <Compile Include="PRIMERAVENTANA.Designer.cs">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nomina\PUESTO.cs">
+    <Compile Include="PUESTO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nomina\PUESTO.Designer.cs">
+    <Compile Include="PUESTO.Designer.cs">
       <DependentUpon>PUESTO.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CARPETA_EMP\Recibo_EMP.cs">
+    <Compile Include="Recibo_EMP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CARPETA_EMP\Recibo_EMP.Designer.cs">
+    <Compile Include="Recibo_EMP.Designer.cs">
       <DependentUpon>Recibo_EMP.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\REPORTEGENERALDENOMINA.cs">
@@ -231,31 +237,34 @@
     <Compile Include="Reportes\Reporte_de_nomina.Designer.cs">
       <DependentUpon>Reporte_de_nomina.cs</DependentUpon>
     </Compile>
-    <Compile Include="CARPETA_EMP\VENTANA1_EMPLEADO.cs">
+    <Compile Include="VENTANA1_EMPLEADO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CARPETA_EMP\VENTANA1_EMPLEADO.Designer.cs">
+    <Compile Include="VENTANA1_EMPLEADO.Designer.cs">
       <DependentUpon>VENTANA1_EMPLEADO.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CARPETA_EMP\AGREGAREMPLEADO.resx">
+    <EmbeddedResource Include="AGREGAREMPLEADO.resx">
       <DependentUpon>AGREGAREMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CARPETA_EMP\SelfEditarEmpleado.resx">
+    <EmbeddedResource Include="EditarPropio.resx">
+      <DependentUpon>EditarPropio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelfEditarEmpleado.resx">
       <DependentUpon>SelfEditarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nomina\AGREGARPERCEPCION.resx">
+    <EmbeddedResource Include="AGREGARPERCEPCION.resx">
       <DependentUpon>AGREGARPERCEPCION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DATOSDELAEMPRESA.resx">
       <DependentUpon>DATOSDELAEMPRESA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nomina\DEPARTAMENTO.resx">
+    <EmbeddedResource Include="DEPARTAMENTO.resx">
       <DependentUpon>DEPARTAMENTO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nomina\EDITAR NOMINA.resx">
+    <EmbeddedResource Include="EDITAR NOMINA.resx">
       <DependentUpon>EDITAR NOMINA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nomina\Individual_Nomina.resx">
+    <EmbeddedResource Include="Individual_Nomina.resx">
       <DependentUpon>Individual_Nomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\HeadCounter.resx">
@@ -264,13 +273,13 @@
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nomina\GestionNomina.resx">
+    <EmbeddedResource Include="GestionNomina.resx">
       <DependentUpon>GestionNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRIMERAVENTANA.resx">
       <DependentUpon>PRIMERAVENTANA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nomina\PUESTO.resx">
+    <EmbeddedResource Include="PUESTO.resx">
       <DependentUpon>PUESTO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -283,7 +292,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="CARPETA_EMP\Recibo_EMP.resx">
+    <EmbeddedResource Include="Recibo_EMP.resx">
       <DependentUpon>Recibo_EMP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\REPORTEGENERALDENOMINA.resx">
@@ -292,7 +301,7 @@
     <EmbeddedResource Include="Reportes\Reporte_de_nomina.resx">
       <DependentUpon>Reporte_de_nomina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CARPETA_EMP\VENTANA1_EMPLEADO.resx">
+    <EmbeddedResource Include="VENTANA1_EMPLEADO.resx">
       <DependentUpon>VENTANA1_EMPLEADO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -307,7 +316,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BD\App.config" />
+    <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

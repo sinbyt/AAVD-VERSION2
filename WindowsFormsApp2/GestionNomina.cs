@@ -23,6 +23,7 @@ namespace WindowsFormsApp2
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
         Nomina.Individual_Nomina NuevaNominaIndividual;
+        
         public FORMNOMINA()
         {
             InitializeComponent();
@@ -127,7 +128,7 @@ namespace WindowsFormsApp2
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
-            Empleado NuevoEmp = new Empleado();
+            var NuevoEmp = new Lists.Empleado();
             string sueldoBase="";
             string nivelSalarial="";
             //EnlaceCassandra enlace = new EnlaceCassandra();
@@ -174,7 +175,7 @@ namespace WindowsFormsApp2
             //   double sueldon = sueldob + double.Parse(NuevaNom.percep) - double.Parse(NuevaNom.deducc);
 
             //generar todos los empleados
-            foreach (Empleado nuevoem in empsource) {
+            foreach (Lists.Empleado nuevoem in empsource) {
 
 
                 List<string> listaPercepciones = new List<string>();

@@ -11,7 +11,6 @@ using Cassandra;
 using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
-
 using static Lists;
 
 
@@ -69,8 +68,8 @@ namespace WindowsFormsApp2
 
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
-
-            Empleado empleado = new Empleado();
+            
+            Lists.Empleado empleado = new Lists.Empleado();
 
             if (tbNombre.Text != "" && tbApellidos.Text != "" && cbDepartamento.Text != "" && cbPuesto.Text != "" && mtbCURP.Text != "" && mtbNSS.Text != "" && DTPNacimiento.Text != "" && tbRFC.Text != "" && tbCalle.Text != "" && cbBanco.Text != "" && tbCuenta.Text != "" && mtbTelefono.Text != "")
             {
