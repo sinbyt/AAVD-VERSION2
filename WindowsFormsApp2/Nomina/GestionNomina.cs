@@ -308,5 +308,19 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                cbDepartamento.Enabled = false;
+                cbPuesto.Enabled = false;
+            }
+            else
+            {
+                cbDepartamento.Enabled = true;
+                cbPuesto.Enabled = true;
+            }
+        }
     }
 }
