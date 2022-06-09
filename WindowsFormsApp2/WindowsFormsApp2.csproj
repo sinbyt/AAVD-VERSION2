@@ -186,9 +186,7 @@
     <Compile Include="Individual_Nomina.Designer.cs">
       <DependentUpon>Individual_Nomina.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\HeadCounter.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Reportes\HeadCounter.cs" />
     <Compile Include="Reportes\HeadCounter.Designer.cs">
       <DependentUpon>HeadCounter.cs</DependentUpon>
     </Compile>
@@ -225,15 +223,11 @@
     <Compile Include="Recibo_EMP.Designer.cs">
       <DependentUpon>Recibo_EMP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\REPORTEGENERALDENOMINA.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Reportes\REPORTEGENERALDENOMINA.cs" />
     <Compile Include="Reportes\REPORTEGENERALDENOMINA.Designer.cs">
       <DependentUpon>REPORTEGENERALDENOMINA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Reporte_de_nomina.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Reportes\Reporte_de_nomina.cs" />
     <Compile Include="Reportes\Reporte_de_nomina.Designer.cs">
       <DependentUpon>Reporte_de_nomina.cs</DependentUpon>
     </Compile>
