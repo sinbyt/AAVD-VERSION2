@@ -22,7 +22,7 @@ namespace WindowsFormsApp2
     {
 
         //formBorrar NuevoBorrado;
-        formCambiar NuevoCambiado;
+        //formCambiar NuevoCambiado;
         REPORTEGENERALDENOMINA NuevoReporteN;
         //Lista_de_Empleados NuevaListaEmp;
         HeadCounter NuevoHeadcounter;
@@ -208,7 +208,7 @@ namespace WindowsFormsApp2
 
         private void editarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevoCambiado.ShowDialog();
+            //NuevoCambiado.ShowDialog();
         }
 
         private void headCounterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -234,7 +234,7 @@ namespace WindowsFormsApp2
 
         private void editarEmpleadoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            NuevoCambiado.ShowDialog();
+            //NuevoCambiado.ShowDialog();
         }
 
         private void listaDeEmpleadosToolStripMenuItem_Click_1(object sender, EventArgs e)

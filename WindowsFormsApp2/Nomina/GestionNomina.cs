@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static WindowsFormsApp2.LOGIN;
 using static WindowsFormsApp2.FUNCIONES;
 using static Lists;
+
 using System.IO;
 namespace WindowsFormsApp2
 {
@@ -22,7 +23,7 @@ namespace WindowsFormsApp2
       //  BUSCARNOMINA BuscarNomina;
         DEPARTAMENTO NuevoDepartamento;
         PUESTO NuevoPuesto;
-        WindowsFormsApp2.Nomina.NominaIndividual Nuevanominaindividual;
+
         public FORMNOMINA()
         {
             InitializeComponent();
@@ -33,9 +34,9 @@ namespace WindowsFormsApp2
            // BuscarNomina = new BUSCARNOMINA();
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
-            Nuevanominaindividual = new Nomina.NominaIndividual();
+
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
-            // var error = false;
+           // var error = false;
 
             var dptoSource = conex.GetDepa();
             var pstSource = conex.GetPuesto();
@@ -47,7 +48,7 @@ namespace WindowsFormsApp2
             foreach (Departamento nuevodepa in dptoSource)
             {
                 cbDepartamento.Items.Add(nuevodepa.nomDepa);
-
+                
             }
             //carga puesto
             foreach (Puesto puesto in pstSource)
@@ -56,13 +57,13 @@ namespace WindowsFormsApp2
 
             }
             //carga percepciones
-
+            
             foreach (PERDEC perdec in perSource)
             {
                 cbPercepciones.Items.Add(perdec.conceptoPD);
 
             }
-
+            
             //carga deducciones
 
             foreach (PERDEC perdec in dedSource)
@@ -106,9 +107,9 @@ namespace WindowsFormsApp2
         {
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
-
+           
             lbPercepciones.Items.Add(cbPercepciones.Text);
-
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -123,7 +124,7 @@ namespace WindowsFormsApp2
         //GENERA NOMINA
         private void button7_Click(object sender, EventArgs e)
         {
-
+            
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             NOMINA NuevaNom = new NOMINA();
@@ -139,7 +140,6 @@ namespace WindowsFormsApp2
             var empsource = conex.Get_All_Empleado();
 
             NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
-            NuevaNom.FechaNom = cbAnio.Text + "/" + cbMes.Text + "/" + "01";
 
             cbDepartamento.Items.Add(dptoSource);
             cbPuesto.Items.Add(pstoSource);
@@ -193,16 +193,6 @@ namespace WindowsFormsApp2
                         break;
                     }
                 }
-            //int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
-
-            foreach (Departamento departamento in dptoSource)
-            {
-                if (departamento.nomDepa == NuevoEmp.depa)
-                {
-                    sueldoBase = departamento.sueldoBase;
-                    break;
-                }
-            }
 
                 //Por cada deduccion que le pertenezca al empleado en cuestion, se calcula, abona y docuemtna
                 //lbPercepciones=
@@ -243,17 +233,6 @@ namespace WindowsFormsApp2
                 NuevaNom.depa = nuevoem.depa;
                 NuevaNom.puesto = nuevoem.puesto;
                 
-            //Se obtiene el nivel salarial
-
-            foreach (Puesto Nuevopuesto in pstoSource)
-            {
-
-                if (Nuevopuesto.nomPuesto == NuevoEmp.puesto)
-                {
-                    nivelSalarial = Nuevopuesto.proporSal;
-                    break;
-                }
-            }
 
 
             }
@@ -297,7 +276,7 @@ namespace WindowsFormsApp2
 
         private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+       
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -330,13 +309,7 @@ namespace WindowsFormsApp2
 
         }
 
-        private void editarIndividualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Nuevanominaindividual.ShowDialog();
-        }
-
-        /*
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+      /*  private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
@@ -348,7 +321,6 @@ namespace WindowsFormsApp2
                 cbDepartamento.Enabled = true;
                 cbPuesto.Enabled = true;
             }
-        }
-        */
+        }*/
     }
 }

@@ -73,7 +73,6 @@ namespace WindowsFormsApp2
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.editarIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -212,32 +211,31 @@ namespace WindowsFormsApp2
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
             this.departamentoToolStripMenuItem,
-            this.puestoToolStripMenuItem,
-            this.editarIndividualToolStripMenuItem});
+            this.puestoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1696, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1696, 33);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
             this.departamentoToolStripMenuItem.Text = "Departamento";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // puestoToolStripMenuItem
             // 
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
             this.puestoToolStripMenuItem.Text = "Puesto";
             this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
@@ -317,7 +315,6 @@ namespace WindowsFormsApp2
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Aplicar a todos los empleados";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // cbPuesto
             // 
@@ -379,6 +376,7 @@ namespace WindowsFormsApp2
             this.numEmp.HeaderText = "Num. Empleado";
             this.numEmp.MinimumWidth = 6;
             this.numEmp.Name = "numEmp";
+            this.numEmp.ReadOnly = true;
             this.numEmp.Width = 125;
             // 
             // nomEmp
@@ -386,6 +384,7 @@ namespace WindowsFormsApp2
             this.nomEmp.HeaderText = "Nombre Empleado";
             this.nomEmp.MinimumWidth = 6;
             this.nomEmp.Name = "nomEmp";
+            this.nomEmp.ReadOnly = true;
             this.nomEmp.Width = 125;
             // 
             // fecha
@@ -393,6 +392,7 @@ namespace WindowsFormsApp2
             this.fecha.HeaderText = "Fecha ";
             this.fecha.MinimumWidth = 6;
             this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
             this.fecha.Width = 125;
             // 
             // sueldoB
@@ -400,6 +400,7 @@ namespace WindowsFormsApp2
             this.sueldoB.HeaderText = "Sueldo Bruto";
             this.sueldoB.MinimumWidth = 6;
             this.sueldoB.Name = "sueldoB";
+            this.sueldoB.ReadOnly = true;
             this.sueldoB.Width = 125;
             // 
             // banco
@@ -407,6 +408,7 @@ namespace WindowsFormsApp2
             this.banco.HeaderText = "Banco";
             this.banco.MinimumWidth = 6;
             this.banco.Name = "banco";
+            this.banco.ReadOnly = true;
             this.banco.Width = 125;
             // 
             // numCuenta
@@ -414,6 +416,7 @@ namespace WindowsFormsApp2
             this.numCuenta.HeaderText = "Numero de cuenta";
             this.numCuenta.MinimumWidth = 6;
             this.numCuenta.Name = "numCuenta";
+            this.numCuenta.ReadOnly = true;
             this.numCuenta.Width = 125;
             // 
             // groupBox1
@@ -530,13 +533,6 @@ namespace WindowsFormsApp2
             this.groupBox4.Text = "Seleccione percepciones y deducciones que se aplicaran en la nomina";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // editarIndividualToolStripMenuItem
-            // 
-            this.editarIndividualToolStripMenuItem.Name = "editarIndividualToolStripMenuItem";
-            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
-            this.editarIndividualToolStripMenuItem.Text = "Editar individual";
-            this.editarIndividualToolStripMenuItem.Click += new System.EventHandler(this.editarIndividualToolStripMenuItem_Click);
-            // 
             // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -618,6 +614,5 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.MaskedTextBox mtbIMSS;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.ToolStripMenuItem editarIndividualToolStripMenuItem;
     }
 }

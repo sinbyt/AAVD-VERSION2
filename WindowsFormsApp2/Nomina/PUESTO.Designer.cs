@@ -40,6 +40,7 @@ namespace WindowsFormsApp2
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +49,7 @@ namespace WindowsFormsApp2
             // 
             this.button3.Location = new System.Drawing.Point(24, 167);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
+            this.button3.Size = new System.Drawing.Size(98, 30);
             this.button3.TabIndex = 2;
             this.button3.Text = "Agregar";
             this.button3.UseVisualStyleBackColor = true;
@@ -56,14 +57,14 @@ namespace WindowsFormsApp2
             // 
             // tbPorcentaje
             // 
-            this.tbPorcentaje.Location = new System.Drawing.Point(48, 185);
+            this.tbPorcentaje.Location = new System.Drawing.Point(54, 161);
             this.tbPorcentaje.Name = "tbPorcentaje";
             this.tbPorcentaje.Size = new System.Drawing.Size(121, 22);
             this.tbPorcentaje.TabIndex = 4;
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(48, 116);
+            this.tbNombre.Location = new System.Drawing.Point(54, 92);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(121, 22);
             this.tbNombre.TabIndex = 64;
@@ -72,7 +73,7 @@ namespace WindowsFormsApp2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 96);
+            this.label2.Location = new System.Drawing.Point(51, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 65;
@@ -81,7 +82,7 @@ namespace WindowsFormsApp2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 162);
+            this.label1.Location = new System.Drawing.Point(51, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 17);
             this.label1.TabIndex = 63;
@@ -96,7 +97,6 @@ namespace WindowsFormsApp2
             this.dataGridView1.Location = new System.Drawing.Point(299, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(428, 242);
@@ -105,22 +105,18 @@ namespace WindowsFormsApp2
             // nompuesto
             // 
             this.nompuesto.HeaderText = "Puesto";
-            this.nompuesto.MinimumWidth = 6;
             this.nompuesto.Name = "nompuesto";
             this.nompuesto.ReadOnly = true;
-            this.nompuesto.Width = 125;
             // 
             // proporsal
             // 
             this.proporsal.HeaderText = "Proporción salarial";
-            this.proporsal.MinimumWidth = 6;
             this.proporsal.Name = "proporsal";
             this.proporsal.ReadOnly = true;
-            this.proporsal.Width = 125;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(759, 115);
+            this.button1.Location = new System.Drawing.Point(600, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 23);
             this.button1.TabIndex = 67;
@@ -129,7 +125,7 @@ namespace WindowsFormsApp2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(759, 185);
+            this.button2.Location = new System.Drawing.Point(600, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 23);
             this.button2.TabIndex = 68;
@@ -150,7 +146,8 @@ namespace WindowsFormsApp2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 450);
+            this.ClientSize = new System.Drawing.Size(719, 371);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -182,5 +179,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
