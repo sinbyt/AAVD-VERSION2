@@ -53,8 +53,10 @@ namespace WindowsFormsApp2
             this.Num_en_depa});
             this.gridEmpleados.Location = new System.Drawing.Point(76, 154);
             this.gridEmpleados.Name = "gridEmpleados";
+            this.gridEmpleados.ReadOnly = true;
             this.gridEmpleados.RowHeadersWidth = 51;
             this.gridEmpleados.RowTemplate.Height = 24;
+            this.gridEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridEmpleados.Size = new System.Drawing.Size(934, 384);
             this.gridEmpleados.TabIndex = 4;
             this.gridEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEmpleados_CellContentClick);
@@ -64,6 +66,7 @@ namespace WindowsFormsApp2
             this.Column3.HeaderText = "Departamento";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
             // 
             // Column4
@@ -71,6 +74,7 @@ namespace WindowsFormsApp2
             this.Column4.HeaderText = "Puesto";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Num_en_puesto
@@ -78,6 +82,7 @@ namespace WindowsFormsApp2
             this.Num_en_puesto.HeaderText = "Num_en_puesto";
             this.Num_en_puesto.MinimumWidth = 6;
             this.Num_en_puesto.Name = "Num_en_puesto";
+            this.Num_en_puesto.ReadOnly = true;
             this.Num_en_puesto.Width = 125;
             // 
             // Num_en_depa
@@ -85,6 +90,7 @@ namespace WindowsFormsApp2
             this.Num_en_depa.HeaderText = "Num_en_depa";
             this.Num_en_depa.MinimumWidth = 6;
             this.Num_en_depa.Name = "Num_en_depa";
+            this.Num_en_depa.ReadOnly = true;
             this.Num_en_depa.Width = 125;
             // 
             // btnGenerar
