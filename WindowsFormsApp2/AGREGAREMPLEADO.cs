@@ -20,21 +20,11 @@ namespace WindowsFormsApp2
     public partial class formAgregar : Form
     {
         private int n = 0;
-        //formBorrar NuevoBorrado;
-        //formCambiar NuevoCambiado;
         REPORTEGENERALDENOMINA NuevoReporteN;
-        //Lista_de_Empleados NuevaListaEmp;
         HeadCounter NuevoHeadcounter;
-        //private BUSSINESLOGICLAYER _BussinesLogicLayer;
         public formAgregar()
         {
             InitializeComponent();
-            //_BussinesLogicLayer = new BUSSINESLOGICLAYER();
-            //NuevoBorrado = new formBorrar();
-            //NuevoCambiado = new formCambiar();
-            //NuevoReporteN = new REPORTEGENERALDENOMINA();
-            //NuevaListaEmp = new Lista_de_Empleados();
-            //NuevoHeadcounter = new HeadCounter();
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
 
             var empSource = conex.Get_All_Empleado();
@@ -49,10 +39,10 @@ namespace WindowsFormsApp2
 
                 int cuenta = dgvEmpleado.Rows.Add();
                 dgvEmpleado.Rows[cuenta].Cells[0].Value = empleadito.ID_Empleado;
-                dgvEmpleado.Rows[cuenta].Cells[0].Value = empleadito.nombre;
-                dgvEmpleado.Rows[cuenta].Cells[0].Value = empleadito.puesto;
-                dgvEmpleado.Rows[cuenta].Cells[0].Value = empleadito.depa;
-                dgvEmpleado.Rows[cuenta].Cells[0].Value = empleadito.RFC;
+                dgvEmpleado.Rows[cuenta].Cells[1].Value = empleadito.nombre;
+                dgvEmpleado.Rows[cuenta].Cells[2].Value = empleadito.puesto;
+                dgvEmpleado.Rows[cuenta].Cells[3].Value = empleadito.depa;
+                dgvEmpleado.Rows[cuenta].Cells[4].Value = empleadito.RFC;
                 //(puesto.nomPuesto);
 
             }
@@ -161,7 +151,7 @@ namespace WindowsFormsApp2
                     else{
 
 
-                        MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+                        MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO EMPLEADO!!!", MessageBoxButtons.OK);
 
                         // MessageBox.Show("el alumno se agregó con éxito.");
                         MessageBox.Show("Bienvenido al equipo!", "FELICIDADES!!!", MessageBoxButtons.OK);
@@ -287,10 +277,10 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow nuevorenglon = dgvEmpleado.Rows[n];
-            nuevorenglon.Cells[1].Value = tbNombre.Text + " " + tbApellidos.Text;
+            nuevorenglon.Cells[1].Value = tbNombre.Text;
             nuevorenglon.Cells[2].Value = cbPuesto.Text;
-            nuevorenglon.Cells[1].Value = cbDepartamento.Text;
-            nuevorenglon.Cells[1].Value = tbRFC.Text;
+            nuevorenglon.Cells[3].Value = cbDepartamento.Text;
+            nuevorenglon.Cells[4].Value = tbRFC.Text;
             //nuevorenglon.Cells[1].Value = tbPorcentaje.Text;
         }
 
@@ -321,12 +311,16 @@ namespace WindowsFormsApp2
         {
             n = e.RowIndex;
             DataGridViewRow renglon = dgvEmpleado.Rows[n];
+
             tbID.Text = renglon.Cells[0].Value.ToString();
             tbNombre.Text = renglon.Cells[1].Value.ToString();
-            tbNombre.Text = renglon.Cells[2].Value.ToString();
-            cbPuesto.Text = renglon.Cells[3].Value.ToString();
-            cbDepartamento.Text = renglon.Cells[4].Value.ToString();
-            tbRFC.Text = renglon.Cells[5].Value.ToString();
+            cbPuesto.Text = renglon.Cells[2].Value.ToString();
+            cbDepartamento.Text = renglon.Cells[3].Value.ToString();
+            tbRFC.Text = renglon.Cells[4].Value.ToString();
+            if (n >= 0)
+            {
+
+            }
         }
     }
 }
