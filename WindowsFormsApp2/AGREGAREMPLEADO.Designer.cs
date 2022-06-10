@@ -82,9 +82,9 @@ namespace WindowsFormsApp2
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.tbcontra = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -161,7 +161,7 @@ namespace WindowsFormsApp2
             this.btnSave.Location = new System.Drawing.Point(306, 572);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(118, 25);
-            this.btnSave.TabIndex = 21;
+            this.btnSave.TabIndex = 22;
             this.btnSave.Text = "ACEPTAR";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -280,6 +280,7 @@ namespace WindowsFormsApp2
             // 
             // cbDepartamento
             // 
+            this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartamento.FormattingEnabled = true;
             this.cbDepartamento.Location = new System.Drawing.Point(515, 196);
             this.cbDepartamento.Name = "cbDepartamento";
@@ -288,6 +289,7 @@ namespace WindowsFormsApp2
             // 
             // cbBanco
             // 
+            this.cbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBanco.FormattingEnabled = true;
             this.cbBanco.Items.AddRange(new object[] {
             "Banco Azteca",
@@ -300,6 +302,7 @@ namespace WindowsFormsApp2
             // 
             // cbPuesto
             // 
+            this.cbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPuesto.FormattingEnabled = true;
             this.cbPuesto.Location = new System.Drawing.Point(166, 246);
             this.cbPuesto.Name = "cbPuesto";
@@ -366,6 +369,7 @@ namespace WindowsFormsApp2
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "    Aguascalientes",
@@ -495,10 +499,13 @@ namespace WindowsFormsApp2
             this.RFC});
             this.dataGridView1.Location = new System.Drawing.Point(801, 96);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(681, 464);
             this.dataGridView1.TabIndex = 49;
+            this.dataGridView1.TabStop = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // numEmp
@@ -506,6 +513,7 @@ namespace WindowsFormsApp2
             this.numEmp.HeaderText = "Num. Empleado";
             this.numEmp.MinimumWidth = 6;
             this.numEmp.Name = "numEmp";
+            this.numEmp.ReadOnly = true;
             this.numEmp.Width = 125;
             // 
             // nomEmp
@@ -513,6 +521,7 @@ namespace WindowsFormsApp2
             this.nomEmp.HeaderText = "Nombre Empleado";
             this.nomEmp.MinimumWidth = 6;
             this.nomEmp.Name = "nomEmp";
+            this.nomEmp.ReadOnly = true;
             this.nomEmp.Width = 125;
             // 
             // puesto
@@ -520,6 +529,7 @@ namespace WindowsFormsApp2
             this.puesto.HeaderText = "Puesto";
             this.puesto.MinimumWidth = 6;
             this.puesto.Name = "puesto";
+            this.puesto.ReadOnly = true;
             this.puesto.Width = 125;
             // 
             // depa
@@ -527,6 +537,7 @@ namespace WindowsFormsApp2
             this.depa.HeaderText = "departamento";
             this.depa.MinimumWidth = 6;
             this.depa.Name = "depa";
+            this.depa.ReadOnly = true;
             this.depa.Width = 125;
             // 
             // RFC
@@ -534,6 +545,7 @@ namespace WindowsFormsApp2
             this.RFC.HeaderText = "RFC";
             this.RFC.MinimumWidth = 6;
             this.RFC.Name = "RFC";
+            this.RFC.ReadOnly = true;
             this.RFC.Width = 125;
             // 
             // button2
@@ -542,6 +554,7 @@ namespace WindowsFormsApp2
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 27);
             this.button2.TabIndex = 50;
+            this.button2.TabStop = false;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -591,15 +604,6 @@ namespace WindowsFormsApp2
             this.groupBox1.Text = "Registro de datos del empleado";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(798, 50);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(206, 17);
-            this.label22.TabIndex = 53;
-            this.label22.Text = "Lista de empleados registrados";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -614,7 +618,16 @@ namespace WindowsFormsApp2
             this.tbcontra.Location = new System.Drawing.Point(154, 513);
             this.tbcontra.Name = "tbcontra";
             this.tbcontra.Size = new System.Drawing.Size(195, 22);
-            this.tbcontra.TabIndex = 54;
+            this.tbcontra.TabIndex = 21;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(798, 50);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(206, 17);
+            this.label22.TabIndex = 53;
+            this.label22.Text = "Lista de empleados registrados";
             // 
             // formAgregar
             // 

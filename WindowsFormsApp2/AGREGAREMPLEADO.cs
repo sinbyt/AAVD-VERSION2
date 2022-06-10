@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
             //NuevaListaEmp = new Lista_de_Empleados();
             //NuevoHeadcounter = new HeadCounter();
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
-            /*
+            
 
             var dptoSource = conex.GetDepa();
             var pstSource = conex.GetPuesto();
@@ -56,7 +56,7 @@ namespace WindowsFormsApp2
                 cbPuesto.Items.Add(puesto.nomPuesto);
 
             }
-            */
+            
         }
         
         private void button1_Click(object sender, EventArgs e)

@@ -83,6 +83,7 @@ namespace WindowsFormsApp2
             // 
             // cbMes
             // 
+            this.cbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMes.FormattingEnabled = true;
             this.cbMes.Items.AddRange(new object[] {
             "01",
@@ -104,6 +105,7 @@ namespace WindowsFormsApp2
             // 
             // cbPercepciones
             // 
+            this.cbPercepciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPercepciones.FormattingEnabled = true;
             this.cbPercepciones.Location = new System.Drawing.Point(19, 60);
             this.cbPercepciones.Name = "cbPercepciones";
@@ -176,6 +178,7 @@ namespace WindowsFormsApp2
             // 
             // cbDeducciones
             // 
+            this.cbDeducciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDeducciones.FormattingEnabled = true;
             this.cbDeducciones.Location = new System.Drawing.Point(339, 61);
             this.cbDeducciones.Name = "cbDeducciones";
@@ -303,6 +306,7 @@ namespace WindowsFormsApp2
             // 
             // cbPuesto
             // 
+            this.cbPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPuesto.FormattingEnabled = true;
             this.cbPuesto.Location = new System.Drawing.Point(164, 239);
             this.cbPuesto.Name = "cbPuesto";
@@ -312,6 +316,7 @@ namespace WindowsFormsApp2
             // 
             // cbDepartamento
             // 
+            this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDepartamento.FormattingEnabled = true;
             this.cbDepartamento.Location = new System.Drawing.Point(164, 196);
             this.cbDepartamento.Name = "cbDepartamento";

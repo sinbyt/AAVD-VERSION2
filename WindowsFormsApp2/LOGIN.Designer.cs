@@ -43,7 +43,7 @@ namespace WindowsFormsApp2
             this.btnLogin.Location = new System.Drawing.Point(415, 239);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(90, 39);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -92,6 +92,7 @@ namespace WindowsFormsApp2
             // 
             // cbTUsuario
             // 
+            this.cbTUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTUsuario.FormattingEnabled = true;
             this.cbTUsuario.Items.AddRange(new object[] {
             "Gerente",
