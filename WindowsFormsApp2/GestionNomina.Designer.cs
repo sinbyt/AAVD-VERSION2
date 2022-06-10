@@ -367,11 +367,13 @@ namespace WindowsFormsApp2
             // 
             // numemp
             // 
+            /*
             this.numemp.HeaderText = "Num. Empleado";
             this.numemp.MinimumWidth = 6;
             this.numemp.Name = "numemp";
             this.numemp.ReadOnly = true;
             this.numemp.Width = 125;
+            */
             // 
             // nomEmp
             // 
