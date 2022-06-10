@@ -26,7 +26,7 @@ namespace WindowsFormsApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
 
@@ -52,6 +52,10 @@ namespace WindowsFormsApp2
 
                 }
             }
+            DataGridViewRow fila = new DataGridViewRow();
+            fila.CreateCells(dgvPuesto);
+            fila.Cells[0].Value = tbNombre.Text;
+            fila.Cells[1].Value = tbPorcentaje.Text + "%";
         }
 
         private void NuevoPuesto_Load(object sender, EventArgs e)
