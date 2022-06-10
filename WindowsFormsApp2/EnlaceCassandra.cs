@@ -97,7 +97,7 @@ namespace WindowsFormsApplication2
                 param.ID_Empleado = num_empleado;
                 // var query = "BEGIN BATCH ";
                 var query1 = "insert into Empleado(ID_Empleado,nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra) values(";
-
+                
                 query1 +=param.ID_Empleado.ToString();
                 query1 += ", '";
                 query1 += param.nombre;
@@ -640,7 +640,6 @@ namespace WindowsFormsApplication2
 
                 var query1 = "insert into NOMINA(numemp,fechanom,nomemple, percep, perpepT, deducc, deduccT, sueldoB, sueldoN, jornada,depa,puesto) values(";
                
-
                 query1 += param.numemp.ToString();
                 query1 += ", '";
                 query1 += param.fechanom;

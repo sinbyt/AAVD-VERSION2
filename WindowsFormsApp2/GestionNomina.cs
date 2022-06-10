@@ -122,16 +122,20 @@ namespace WindowsFormsApp2
             //  BuscarNomina.ShowDialog();
         }
         //GENERA NOMINA
+        
         private void button7_Click(object sender, EventArgs e)
         {
 
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
+
             NOMINA NuevaNom = new NOMINA();
             var NuevoEmp = new Lists.Empleado();
+
             string sueldoBase = "";
             string nivelSalarial = "";
             double cantidad = 0.0;
+            double cantidad2 = 0.0;
 
 
             //EnlaceCassandra enlace = new EnlaceCassandra();
@@ -148,18 +152,9 @@ namespace WindowsFormsApp2
 
             cbPuesto.Items.Add(pstoSource);
 
-
-            // NuevaNom.percep = cbPercepciones.Text;
-
-            //NuevaNom.deducc = cbDeducciones.Text;
-            // float.Parse(NuevaNom.sueldoB);
-            // NuevaNom.deducc =
-            //NuevaNom.jornada = cbDias.Text;
-            // NuevaNom.depa = cbDepartamento.Text;
-            // NuevaNom.puesto = cbPuesto.Text;
             //Generar todos los empleados=====================================================================
-            if (checkBox1.Checked == true)
-            {
+         //   if (checkBox1.Checked == true)
+           // {
                 foreach (Lists.Empleado nuevoem in empsource)
                 {
 
@@ -169,7 +164,7 @@ namespace WindowsFormsApp2
 
                     NuevaNom.fechanom = tbanio.Text + "/" + cbMes.Text + "/" + "01";
                     NuevaNom.numemp = nuevoem.ID_Empleado;
-                    NuevaNom.nomemple = nuevoem.nombre;
+                    //NuevaNom.nomemple = nuevoem.nombre;
 
 
                     int dias = GetLastDayOfMonth(NuevaNom.fechanom);
@@ -189,7 +184,7 @@ namespace WindowsFormsApp2
 
                     foreach (Puesto puesto in pstoSource)
                     {
-                        if (puesto.proporSal == nuevoem.puesto)
+                        if (puesto.nomPuesto == nuevoem.puesto)
                         {
                             NuevaNom.puesto = nuevoem.puesto;
                             nivelSalarial = puesto.proporSal;
@@ -211,16 +206,16 @@ namespace WindowsFormsApp2
                             {
                                 if (per.tipoDato == "Porcentaje")
                                 {
-                                    cantidad = getPorcentaje(NuevaNom.sueldoB, double.Parse(per.monto));
+                                    cantidad += getPorcentaje(NuevaNom.sueldoB, double.Parse(per.monto));
 
                                 }
                                 else
                                 {
-                                    cantidad = double.Parse(per.monto);
+                                    cantidad += double.Parse(per.monto);
 
                                 }
                                 listaPercepciones.Add(per.conceptoPD);
-                                NuevaNom.perpepT = NuevaNom.perpepT + cantidad;
+                               // NuevaNom.perpepT = NuevaNom.perpepT + cantidad;
 
                                 break;
                             }
@@ -232,38 +227,70 @@ namespace WindowsFormsApp2
                     foreach (String str in lbDeducciones.Items)
                     {
 
-                        foreach (PERDEC dec in perSource)
+                        foreach (PERDEC dec in dedSource)
                         {
                             if (dec.conceptoPD == str)
                             {
-                                if (dec.tipoDato == "Porcentaje")
+                                if (dec.porcentPD == "Porcentaje")
                                 {
-                                    cantidad = getPorcentaje(NuevaNom.sueldoB, double.Parse(dec.monto));
+                                    cantidad2 += getPorcentaje(NuevaNom.sueldoB, double.Parse(dec.monto));
 
                                 }
                                 else
                                 {
-                                    cantidad = double.Parse(dec.monto);
+                                    cantidad2 += double.Parse(dec.monto);
 
                                 }
                                 listaDeducciones.Add(dec.conceptoPD);
 
-                                NuevaNom.deduccT = NuevaNom.deduccT + cantidad;
+                                //NuevaNom.deduccT = NuevaNom.deduccT + cantidad2;
 
                                 break;
                             }
                         }
                     }
-                    //CALCULO SUELDO  NETO
-                    double sueldon = sueldob + double.Parse(NuevaNom.perpepT) - double.Parse(NuevaNom.deduccT);
+                if (listaDeducciones.Any()==false) {
+                    listaDeducciones.Add( " ");
+
+                }
+          
+
+                if (comboBox1.Text == "Porcentaje") {
+
+                    cantidad2+=getPorcentaje(sueldob, double.Parse(mtbISR.Text));
+                    listaDeducciones.Add("ISR");
+
+
+                }
+                else {
+                    cantidad2+= double.Parse(mtbISR.Text);
+                    listaDeducciones.Add("ISR");
+                }
+
+                if (comboBox2.Text == "Porcentaje")
+                {
+                    cantidad2 += getPorcentaje(sueldob, double.Parse(mtbIMSS.Text));
+                    listaDeducciones.Add("IMSS");
+
+                }
+                else {
+
+                    cantidad2+= double.Parse(mtbIMSS.Text);
+                    listaDeducciones.Add("IMSS");
+
+                }
+
+
+                //CALCULO SUELDO  NETO
+                double sueldon = sueldob +cantidad -cantidad2;
 
                     NuevaNom.numemp = nuevoem.ID_Empleado;
                     NuevaNom.nomemple = nuevoem.nombre + " " + nuevoem.apellidos;
                     //NuevaNom.fechanom = "2022/02/02";
                     NuevaNom.percep = listaPercepciones;
-                    //     NuevaNom.perpepT = "500";
+                    NuevaNom.perpepT = cantidad.ToString();
                     NuevaNom.deducc = listaDeducciones;
-                    //   NuevaNom.deduccT = "je";
+                     NuevaNom.deduccT = cantidad2.ToString();
                     NuevaNom.sueldoB = sueldob;
                     NuevaNom.sueldoN = sueldon;
                     // NuevaNom.jornada = 30;
@@ -285,63 +312,15 @@ namespace WindowsFormsApp2
                     }
                 }
 
-            }
+          //  }
 
         }
-
+        
     //text1.Write(NuevaNom.fechanom + "," + NuevaNom.percept + "," + NuevaNom.deducc + "," + NuevaNom.jornada + "," + NuevaNom.depa + "," + NuevaNom.puesto);
     //            text1.Close();
 
 
-        /*
-
-      private void button7_Click(object sender, EventArgs e)
-        {
-
-
-
-
-            var conex = new WindowsFormsApplication2.EnlaceCassandra();
-            var error = false;
-
-            Lists.NOMINA nom = new Lists.NOMINA();
-
-            nom.numemp = "";
-            nom.nomemple = "jose perez";
-            nom.fechanom = "2022-02-02";
-            nom.percep = "[tarde]";
-            nom.perpepT = "varios";
-            nom.deducc = "hola";
-            nom.deduccT = "je";
-            nom.sueldoB = 5000.0;
-            nom.sueldoN = 5000.0;
-            nom.jornada = 30;
-            nom.depa = "?";
-            nom.puesto = "?";
-
-
-
-            error = conex.InsertNomina(nom);
-            
-            
-
-            if (error)
-            {
-                MessageBox.Show("No se pudo agregar el puesto");
-            }
-            else
-            {
-                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO PUESTO!!!", MessageBoxButtons.OK);
-
-
-
-            }
-
-        }
-
-        
-        */
-
+      
 
 
         private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
