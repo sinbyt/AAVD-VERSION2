@@ -65,6 +65,9 @@ namespace WindowsFormsApp2
 
                         doc.Add(new iTextSharp.text.Paragraph(lbPer.Text + " "));
                         doc.Add(new iTextSharp.text.Paragraph(lbDec.Text + " "));
+                        doc.Add(new iTextSharp.text.Paragraph(tbNeto.Text + " "));
+                        doc.Add(new iTextSharp.text.Paragraph(tbNetoLetra.Text + "pesos"));
+
                         //doc.Add(new iTextSharp.text.Paragraph(RTB.Text));
                     }
                     catch (Exception ex)
