@@ -59,7 +59,7 @@ namespace WindowsFormsApp2
 
             var error = false;
             RECIBO recibo = new RECIBO();
-            recibo.nomEmple = tbEmpleado.Text;
+            recibo.nomemple = tbEmpleado.Text;
 
             //recibo.
 

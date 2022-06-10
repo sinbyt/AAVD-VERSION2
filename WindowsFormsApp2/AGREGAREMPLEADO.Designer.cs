@@ -74,7 +74,7 @@ namespace WindowsFormsApp2
             this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
-            this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -492,7 +492,7 @@ namespace WindowsFormsApp2
             // 
             this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numEmp,
+            this.numemp,
             this.nomEmp,
             this.puesto,
             this.depa,
@@ -509,13 +509,13 @@ namespace WindowsFormsApp2
             this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellClick);
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // numEmp
+            // numemp
             // 
-            this.numEmp.HeaderText = "Num. Empleado";
-            this.numEmp.MinimumWidth = 6;
-            this.numEmp.Name = "numEmp";
-            this.numEmp.ReadOnly = true;
-            this.numEmp.Width = 125;
+            this.numemp.HeaderText = "Num. Empleado";
+            this.numemp.MinimumWidth = 6;
+            this.numemp.Name = "numemp";
+            this.numemp.ReadOnly = true;
+            this.numemp.Width = 125;
             // 
             // nomEmp
             // 
@@ -717,7 +717,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridView dgvEmpleado;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numemp;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn puesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn depa;

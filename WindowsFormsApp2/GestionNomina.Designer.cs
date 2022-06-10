@@ -365,13 +365,13 @@ namespace WindowsFormsApp2
             this.dgvNomina.Size = new System.Drawing.Size(804, 525);
             this.dgvNomina.TabIndex = 50;
             // 
-            // numEmp
+            // numemp
             // 
-            this.numEmp.HeaderText = "Num. Empleado";
-            this.numEmp.MinimumWidth = 6;
-            this.numEmp.Name = "numEmp";
-            this.numEmp.ReadOnly = true;
-            this.numEmp.Width = 125;
+            this.numemp.HeaderText = "Num. Empleado";
+            this.numemp.MinimumWidth = 6;
+            this.numemp.Name = "numemp";
+            this.numemp.ReadOnly = true;
+            this.numemp.Width = 125;
             // 
             // nomEmp
             // 
@@ -520,7 +520,7 @@ namespace WindowsFormsApp2
             // mtbISR
             // 
             this.mtbISR.Location = new System.Drawing.Point(9, 38);
-            this.mtbISR.Mask = "00";
+            this.mtbISR.Mask = "00000";
             this.mtbISR.Name = "mtbISR";
             this.mtbISR.Size = new System.Drawing.Size(61, 22);
             this.mtbISR.TabIndex = 12;
@@ -528,7 +528,7 @@ namespace WindowsFormsApp2
             // mtbIMSS
             // 
             this.mtbIMSS.Location = new System.Drawing.Point(9, 113);
-            this.mtbIMSS.Mask = "00";
+            this.mtbIMSS.Mask = "00000";
             this.mtbIMSS.Name = "mtbIMSS";
             this.mtbIMSS.Size = new System.Drawing.Size(61, 22);
             this.mtbIMSS.TabIndex = 13;
