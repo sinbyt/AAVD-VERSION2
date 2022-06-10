@@ -488,7 +488,7 @@ namespace WindowsFormsApplication2
 
         public List<PERDEC> Get_All_perdec()
         {
-            string query = "SELECT clavePD, tipoDato, conceptoPD, porcentPD, monto FROM PERDEC;";
+            string query = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Percepcion'ALLOW FILTERING; ";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -505,7 +505,7 @@ namespace WindowsFormsApplication2
          
             try
             {
-                string qry = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Percepcion'ALLOW FILTERING;";
+                string qry = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Deduccion'ALLOW FILTERING;";
                
                 conectar();
                 IMapper mapper = new Mapper(_instancia);
