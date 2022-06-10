@@ -598,11 +598,11 @@ namespace WindowsFormsApplication2
                 query1 += "', '";
                 query1 += param.percep;
                 query1 += "', '";
-                //query1 += param.perpepT.ToString();
+                query1 += param.perpepT.ToString();
                 query1 += "', '";
-                query1 += param.deducc;
+                query1 += param.deduccT.ToString(); ;
                 query1 += "', '";
-             //   query1 += param.deduccT;
+                query1 += param.deduccT;
                 query1 += "', ";
                 query1 += param.sueldoB;
                 query1 += ", ";

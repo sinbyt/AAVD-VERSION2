@@ -80,8 +80,8 @@ public class Lists
             public string perpepT { get; set; }
             public string deduccT { get; set; }
             public List<string> deducc { get; set; }
-            public string sueldoB { get; set; }
-            public string sueldoN { get; set; }
+            public double sueldoB { get; set; }
+            public double sueldoN { get; set; }
             public int jornada { get; set; }
             public string depa { get; set; }
             public string puesto { get; set; }
