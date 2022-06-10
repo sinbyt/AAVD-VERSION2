@@ -45,6 +45,8 @@ namespace WindowsFormsApp2
                 dgvNomina.Rows[cuenta].Cells[3].Value = nominita.sueldoB;
                 dgvNomina.Rows[cuenta].Cells[4].Value = nominita.depa;
                 dgvNomina.Rows[cuenta].Cells[5].Value = nominita.puesto;
+                dgvNomina.Rows[cuenta].Cells[6].Value = nominita.sueldoN;
+
 
                 //(puesto.nomPuesto);
 
@@ -325,7 +327,7 @@ namespace WindowsFormsApp2
                     error = conex.InsertNomina(NuevaNom);
                     if (error)
                     {
-                        MessageBox.Show("No se pudo agregar al alumno");
+                        MessageBox.Show("No se pudo agregar");
                     }
                     else
                     {
@@ -426,6 +428,7 @@ namespace WindowsFormsApp2
             DataGridViewRow nuevorenglon = dgvNomina.Rows[n];
             nuevorenglon.Cells[0].Value = mtbISR.Text;
             nuevorenglon.Cells[1].Value = mtbIMSS.Text;
+
             MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se han hecho los cambios deseados!!!", MessageBoxButtons.OK);
 
         }

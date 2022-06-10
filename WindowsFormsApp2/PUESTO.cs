@@ -114,6 +114,7 @@ namespace WindowsFormsApp2
         //EDITAAAAAAAAAAAAAAAAAAAAAAAAAR
         private void button1_Click(object sender, EventArgs e)
         {
+            
             DataGridViewRow nuevorenglon = dgvPuesto.Rows[n];
             nuevorenglon.Cells[0].Value = tbNombre.Text;
             nuevorenglon.Cells[1].Value = tbPorcentaje.Text;

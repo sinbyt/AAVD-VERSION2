@@ -57,12 +57,6 @@ namespace WindowsFormsApp2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvNomina = new System.Windows.Forms.DataGridView();
-            this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sueldoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCSV = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -79,6 +73,13 @@ namespace WindowsFormsApp2
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sueldoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUELDONETO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -357,63 +358,17 @@ namespace WindowsFormsApp2
             this.fecha,
             this.sueldoB,
             this.banco,
-            this.numCuenta});
-            this.dgvNomina.Location = new System.Drawing.Point(814, 47);
+            this.numCuenta,
+            this.SUELDONETO});
+            this.dgvNomina.Location = new System.Drawing.Point(705, 47);
             this.dgvNomina.Name = "dgvNomina";
             this.dgvNomina.ReadOnly = true;
             this.dgvNomina.RowHeadersWidth = 51;
             this.dgvNomina.RowTemplate.Height = 24;
             this.dgvNomina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNomina.Size = new System.Drawing.Size(804, 525);
+            this.dgvNomina.Size = new System.Drawing.Size(938, 525);
             this.dgvNomina.TabIndex = 50;
             this.dgvNomina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellClick);
-            // 
-            // numEmp
-            // 
-            this.numEmp.MinimumWidth = 6;
-            this.numEmp.Name = "numEmp";
-            this.numEmp.ReadOnly = true;
-            this.numEmp.Width = 125;
-            // 
-            // nomEmp
-            // 
-            this.nomEmp.HeaderText = "Nombre Empleado";
-            this.nomEmp.MinimumWidth = 6;
-            this.nomEmp.Name = "nomEmp";
-            this.nomEmp.ReadOnly = true;
-            this.nomEmp.Width = 125;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha ";
-            this.fecha.MinimumWidth = 6;
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 125;
-            // 
-            // sueldoB
-            // 
-            this.sueldoB.HeaderText = "Sueldo Bruto";
-            this.sueldoB.MinimumWidth = 6;
-            this.sueldoB.Name = "sueldoB";
-            this.sueldoB.ReadOnly = true;
-            this.sueldoB.Width = 125;
-            // 
-            // banco
-            // 
-            this.banco.HeaderText = "Banco";
-            this.banco.MinimumWidth = 6;
-            this.banco.Name = "banco";
-            this.banco.ReadOnly = true;
-            this.banco.Width = 125;
-            // 
-            // numCuenta
-            // 
-            this.numCuenta.HeaderText = "Numero de cuenta";
-            this.numCuenta.MinimumWidth = 6;
-            this.numCuenta.Name = "numCuenta";
-            this.numCuenta.ReadOnly = true;
-            this.numCuenta.Width = 125;
             // 
             // groupBox1
             // 
@@ -595,6 +550,62 @@ namespace WindowsFormsApp2
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // numEmp
+            // 
+            this.numEmp.HeaderText = "numEmp";
+            this.numEmp.MinimumWidth = 6;
+            this.numEmp.Name = "numEmp";
+            this.numEmp.ReadOnly = true;
+            this.numEmp.Width = 125;
+            // 
+            // nomEmp
+            // 
+            this.nomEmp.HeaderText = "Nombre Empleado";
+            this.nomEmp.MinimumWidth = 6;
+            this.nomEmp.Name = "nomEmp";
+            this.nomEmp.ReadOnly = true;
+            this.nomEmp.Width = 125;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha ";
+            this.fecha.MinimumWidth = 6;
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 125;
+            // 
+            // sueldoB
+            // 
+            this.sueldoB.HeaderText = "Sueldo Bruto";
+            this.sueldoB.MinimumWidth = 6;
+            this.sueldoB.Name = "sueldoB";
+            this.sueldoB.ReadOnly = true;
+            this.sueldoB.Width = 125;
+            // 
+            // banco
+            // 
+            this.banco.HeaderText = "Banco";
+            this.banco.MinimumWidth = 6;
+            this.banco.Name = "banco";
+            this.banco.ReadOnly = true;
+            this.banco.Width = 125;
+            // 
+            // numCuenta
+            // 
+            this.numCuenta.HeaderText = "Numero de cuenta";
+            this.numCuenta.MinimumWidth = 6;
+            this.numCuenta.Name = "numCuenta";
+            this.numCuenta.ReadOnly = true;
+            this.numCuenta.Width = 125;
+            // 
+            // SUELDONETO
+            // 
+            this.SUELDONETO.HeaderText = "Sueldo neto";
+            this.SUELDONETO.MinimumWidth = 6;
+            this.SUELDONETO.Name = "SUELDONETO";
+            this.SUELDONETO.ReadOnly = true;
+            this.SUELDONETO.Width = 125;
+            // 
             // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -659,12 +670,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvNomina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sueldoB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn banco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numCuenta;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puestoToolStripMenuItem;
@@ -684,5 +689,12 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sueldoB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn banco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numCuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SUELDONETO;
     }
 }
