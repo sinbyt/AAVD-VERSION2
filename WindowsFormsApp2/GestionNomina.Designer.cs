@@ -56,7 +56,7 @@ namespace WindowsFormsApp2
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvNomina = new System.Windows.Forms.DataGridView();
             this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,17 +68,17 @@ namespace WindowsFormsApp2
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbanio = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.mtbISR = new System.Windows.Forms.MaskedTextBox();
             this.mtbIMSS = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -199,35 +199,35 @@ namespace WindowsFormsApp2
             this.editarIndividualToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1696, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1696, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
             this.departamentoToolStripMenuItem.Text = "Departamento";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // puestoToolStripMenuItem
             // 
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.puestoToolStripMenuItem.Text = "Puesto";
             this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
             // editarIndividualToolStripMenuItem
             // 
             this.editarIndividualToolStripMenuItem.Name = "editarIndividualToolStripMenuItem";
-            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(161, 29);
+            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.editarIndividualToolStripMenuItem.Text = "Editar Individual";
             this.editarIndividualToolStripMenuItem.Click += new System.EventHandler(this.editarIndividualToolStripMenuItem_Click);
             // 
@@ -346,24 +346,24 @@ namespace WindowsFormsApp2
             this.label4.TabIndex = 35;
             this.label4.Text = "Puesto";
             // 
-            // dataGridView1
+            // dgvNomina
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNomina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numEmp,
             this.nomEmp,
             this.fecha,
             this.sueldoB,
             this.banco,
             this.numCuenta});
-            this.dataGridView1.Location = new System.Drawing.Point(814, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 525);
-            this.dataGridView1.TabIndex = 50;
+            this.dgvNomina.Location = new System.Drawing.Point(814, 47);
+            this.dgvNomina.Name = "dgvNomina";
+            this.dgvNomina.ReadOnly = true;
+            this.dgvNomina.RowHeadersWidth = 51;
+            this.dgvNomina.RowTemplate.Height = 24;
+            this.dgvNomina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNomina.Size = new System.Drawing.Size(804, 525);
+            this.dgvNomina.TabIndex = 50;
             // 
             // numEmp
             // 
@@ -475,6 +475,48 @@ namespace WindowsFormsApp2
             this.groupBox2.Text = "Deducciones fijas";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Monto",
+            "Porcentaje"});
+            this.comboBox2.Location = new System.Drawing.Point(104, 113);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(128, 24);
+            this.comboBox2.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(101, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 17);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Monto o Porcentaje";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(101, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 17);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Monto o Porcentaje";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monto",
+            "Porcentaje"});
+            this.comboBox1.Location = new System.Drawing.Point(104, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(128, 24);
+            this.comboBox1.TabIndex = 30;
+            // 
             // mtbISR
             // 
             this.mtbISR.Location = new System.Drawing.Point(9, 38);
@@ -531,55 +573,13 @@ namespace WindowsFormsApp2
             this.groupBox4.Text = "Seleccione percepciones y deducciones que se aplicaran en la nomina";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Monto",
-            "Porcentaje"});
-            this.comboBox1.Location = new System.Drawing.Point(104, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 24);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(101, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 17);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Monto o Porcentaje";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(101, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 17);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Monto o Porcentaje";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Monto",
-            "Porcentaje"});
-            this.comboBox2.Location = new System.Drawing.Point(104, 113);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 24);
-            this.comboBox2.TabIndex = 34;
-            // 
             // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1696, 683);
             this.Controls.Add(this.btnCSV);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvNomina);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.button8);
@@ -594,7 +594,7 @@ namespace WindowsFormsApp2
             this.Text = "Calculo de Nomina";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -634,7 +634,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvNomina;
         private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
