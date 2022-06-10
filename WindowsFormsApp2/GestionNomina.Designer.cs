@@ -56,8 +56,8 @@ namespace WindowsFormsApp2
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvNomina = new System.Windows.Forms.DataGridView();
+            this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +80,7 @@ namespace WindowsFormsApp2
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -201,35 +201,35 @@ namespace WindowsFormsApp2
             this.editarIndividualToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1772, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1696, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
             this.departamentoToolStripMenuItem.Text = "Departamento";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // puestoToolStripMenuItem
             // 
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.puestoToolStripMenuItem.Text = "Puesto";
             this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
             // 
             // editarIndividualToolStripMenuItem
             // 
             this.editarIndividualToolStripMenuItem.Name = "editarIndividualToolStripMenuItem";
-            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(161, 29);
+            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.editarIndividualToolStripMenuItem.Text = "Editar Individual";
             this.editarIndividualToolStripMenuItem.Click += new System.EventHandler(this.editarIndividualToolStripMenuItem_Click);
             // 
@@ -348,32 +348,34 @@ namespace WindowsFormsApp2
             this.label4.TabIndex = 35;
             this.label4.Text = "Puesto";
             // 
-            // dataGridView1
+            // dgvNomina
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numemp,
+            this.dgvNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNomina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numEmp,
             this.nomEmp,
             this.fecha,
             this.sueldoB,
             this.banco,
             this.numCuenta});
-            this.dataGridView1.Location = new System.Drawing.Point(814, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 525);
-            this.dataGridView1.TabIndex = 50;
+            this.dgvNomina.Location = new System.Drawing.Point(814, 47);
+            this.dgvNomina.Name = "dgvNomina";
+            this.dgvNomina.ReadOnly = true;
+            this.dgvNomina.RowHeadersWidth = 51;
+            this.dgvNomina.RowTemplate.Height = 24;
+            this.dgvNomina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNomina.Size = new System.Drawing.Size(804, 525);
+            this.dgvNomina.TabIndex = 50;
             // 
             // numemp
             // 
+            /*
             this.numemp.HeaderText = "Num. Empleado";
             this.numemp.MinimumWidth = 6;
             this.numemp.Name = "numemp";
             this.numemp.ReadOnly = true;
             this.numemp.Width = 125;
+            */
             // 
             // nomEmp
             // 
@@ -601,7 +603,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCSV);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvNomina);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.cbDepartamento);
             this.Controls.Add(this.button8);
@@ -616,7 +618,7 @@ namespace WindowsFormsApp2
             this.Text = "Calculo de Nomina";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNomina)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -656,8 +658,8 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox cbDepartamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numemp;
+        private System.Windows.Forms.DataGridView dgvNomina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldoB;
