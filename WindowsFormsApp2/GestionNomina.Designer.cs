@@ -201,7 +201,7 @@ namespace WindowsFormsApp2
             this.editarIndividualToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1696, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1772, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -366,16 +366,14 @@ namespace WindowsFormsApp2
             this.dgvNomina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNomina.Size = new System.Drawing.Size(804, 525);
             this.dgvNomina.TabIndex = 50;
+            this.dgvNomina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNomina_CellClick);
             // 
-            // numemp
+            // numEmp
             // 
-            /*
-            this.numemp.HeaderText = "Num. Empleado";
-            this.numemp.MinimumWidth = 6;
-            this.numemp.Name = "numemp";
-            this.numemp.ReadOnly = true;
-            this.numemp.Width = 125;
-            */
+            this.numEmp.MinimumWidth = 6;
+            this.numEmp.Name = "numEmp";
+            this.numEmp.ReadOnly = true;
+            this.numEmp.Width = 125;
             // 
             // nomEmp
             // 
@@ -585,6 +583,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 56;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -594,6 +593,7 @@ namespace WindowsFormsApp2
             this.button3.TabIndex = 57;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // FORMNOMINA
             // 

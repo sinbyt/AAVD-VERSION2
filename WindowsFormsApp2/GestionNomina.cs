@@ -15,6 +15,7 @@ namespace WindowsFormsApp2
 {
     public partial class FORMNOMINA : Form
     {
+        private int n = 0;
         AGREGARPERCEPCION NuevaNomina;
         //EliminarP NuevaEliminada;
         EDITAR_NOMINA NuevaNominaEditada;
@@ -27,6 +28,24 @@ namespace WindowsFormsApp2
         public FORMNOMINA()
         {
             InitializeComponent();
+            //CONEXION CON CASSANDRA
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+
+
+            var nmnSource = conex.InsertNomina();
+
+            foreach (NOMINA nominita in pstSource)
+            {
+
+                int cuenta = dgvPuesto.Rows.Add();
+                dgvPuesto.Rows[cuenta].Cells[0].Value = nominita.nomPuesto;
+                dgvPuesto.Rows[cuenta].Cells[1].Value = nominita.proporSal;
+
+                //(puesto.nomPuesto);
+
+            }
+
+            //CONEXION CON CASSANDRA
             NuevaNomina = new AGREGARPERCEPCION();
             //  NuevaEliminada = new EliminarP();
             NuevaNominaEditada = new EDITAR_NOMINA();
@@ -397,19 +416,21 @@ namespace WindowsFormsApp2
 
         }
 
-        /*  private void checkBox1_CheckedChanged(object sender, EventArgs e)
-          {
-              if (checkBox1.Checked)
-              {
-                  cbDepartamento.Enabled = false;
-                  cbPuesto.Enabled = false;
-              }
-              else
-              {
-                  cbDepartamento.Enabled = true;
-                  cbPuesto.Enabled = true;
-              }
-          }*/
+        //EDITAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        //ELIMINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        //IMPRIMIR A TEXT BOOOOOOOOOOOOOOOOOOOOOOOOOOOOX
+        private void dgvNomina_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 
