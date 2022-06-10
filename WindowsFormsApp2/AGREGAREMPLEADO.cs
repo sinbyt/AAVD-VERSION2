@@ -19,7 +19,7 @@ namespace WindowsFormsApp2
 
     public partial class formAgregar : Form
     {
-
+        private int n = 0;
         //formBorrar NuevoBorrado;
         //formCambiar NuevoCambiado;
         REPORTEGENERALDENOMINA NuevoReporteN;
@@ -270,10 +270,12 @@ namespace WindowsFormsApp2
             //NuevaListaEmp.ShowDialog();
 
         }
-
+        //EDITARRRRRRRRR
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow nuevorenglon = dgvEmpleado.Rows[n];
+            nuevorenglon.Cells[0].Value = tbNombre.Text;
+            //nuevorenglon.Cells[1].Value = tbPorcentaje.Text;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -289,6 +291,40 @@ namespace WindowsFormsApp2
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+        //ELIMINARRRRRRRRRRRRRRRRRRRRRRRRRR
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (n >= 0)
+            {
+                dgvEmpleado.Rows.RemoveAt(n);
+            }
+        }
+
+        private void dgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            n = e.RowIndex;
+            DataGridViewRow renglon = dgvEmpleado.Rows[n];
+
+
+            tbID.Text = renglon.Cells[0].Value.ToString();
+            tbApellidos.Text = renglon.Cells[1].Value.ToString();
+            tbNombre.Text = renglon.Cells[2].Value.ToString();
+            tbNombre.Text = renglon.Cells[3].Value.ToString();
+            tbNombre.Text = renglon.Cells[4].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
+            tbNombre.Text = renglon.Cells[0].Value.ToString();
         }
     }
 }

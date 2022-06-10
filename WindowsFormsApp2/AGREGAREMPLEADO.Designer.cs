@@ -73,7 +73,7 @@ namespace WindowsFormsApp2
             this.mtbCURP = new System.Windows.Forms.MaskedTextBox();
             this.mtbNSS = new System.Windows.Forms.MaskedTextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEmpleado = new System.Windows.Forms.DataGridView();
             this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +85,7 @@ namespace WindowsFormsApp2
             this.label23 = new System.Windows.Forms.Label();
             this.tbcontra = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -488,25 +488,26 @@ namespace WindowsFormsApp2
             this.tbEmail.Size = new System.Drawing.Size(195, 22);
             this.tbEmail.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvEmpleado
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numEmp,
             this.nomEmp,
             this.puesto,
             this.depa,
             this.RFC});
-            this.dataGridView1.Location = new System.Drawing.Point(801, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(681, 464);
-            this.dataGridView1.TabIndex = 49;
-            this.dataGridView1.TabStop = false;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvEmpleado.Location = new System.Drawing.Point(801, 96);
+            this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.ReadOnly = true;
+            this.dgvEmpleado.RowHeadersWidth = 51;
+            this.dgvEmpleado.RowTemplate.Height = 24;
+            this.dgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleado.Size = new System.Drawing.Size(681, 464);
+            this.dgvEmpleado.TabIndex = 49;
+            this.dgvEmpleado.TabStop = false;
+            this.dgvEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellClick);
+            this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // numEmp
             // 
@@ -567,6 +568,7 @@ namespace WindowsFormsApp2
             this.button3.TabIndex = 51;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox1
             // 
@@ -637,7 +639,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label22);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.mtbCP);
             this.Controls.Add(this.mtbNum);
@@ -659,7 +661,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.groupBox1);
             this.Name = "formAgregar";
             this.Text = "Gestion de empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -712,7 +714,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.MaskedTextBox mtbCURP;
         private System.Windows.Forms.MaskedTextBox mtbNSS;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEmpleado;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
