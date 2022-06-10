@@ -139,7 +139,7 @@ namespace WindowsFormsApp2
 
             var empsource = conex.Get_All_Empleado();
 
-            NuevaNom.FechaNom = cbAnio.Text +"/" + cbMes.Text + "/" + "01" ;
+           NuevaNom.FechaNom = tbanio.Text +"/" + cbMes.Text + "/" + "01" ;
 
             cbDepartamento.Items.Add(dptoSource);
             cbPuesto.Items.Add(pstoSource);
@@ -258,7 +258,7 @@ namespace WindowsFormsApp2
         private void btnCSV_Click(object sender, EventArgs e)
         {
             TextWriter text1 = new StreamWriter(@"C:\Users\E\source\repos\WindowsFormsApp2\CSV");
-            text1.Write(cbMes.Text + "," + cbAnio.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," + cbDepartamento.Text + "," + cbPuesto.Text);
+            text1.Write(cbMes.Text + "," + tbanio.Text + "," + cbPercepciones.Text + "," + cbDeducciones.Text + "," + cbDepartamento.Text + "," + cbPuesto.Text);
             text1.Close();
         }
 

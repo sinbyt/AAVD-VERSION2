@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
             //NuevaListaEmp = new Lista_de_Empleados();
             //NuevoHeadcounter = new HeadCounter();
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
-
+            
 
             var dptoSource = conex.GetDepa();
             var pstSource = conex.GetPuesto();
@@ -56,99 +56,128 @@ namespace WindowsFormsApp2
                 cbPuesto.Items.Add(puesto.nomPuesto);
 
             }
+            
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //if()
 
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
             
             Lists.Empleado empleado = new Lists.Empleado();
+            //Guid num_empleado = Guid.NewGuid();
 
-            if (tbNombre.Text != "" && tbApellidos.Text != "" && cbDepartamento.Text != "" && cbPuesto.Text != "" && mtbCURP.Text != "" && mtbNSS.Text != "" && DTPNacimiento.Text != "" && tbRFC.Text != "" && tbCalle.Text != "" && cbBanco.Text != "" && tbCuenta.Text != "" && mtbTelefono.Text != "")
+            //empleado.ID_Empleado = num_empleado;
+            /*
+            empleado.nombre = "hola";
+            empleado.apellidos = "mi";
+            empleado.fechaAlta = "nombre";
+
+            empleado.depa = "es";
+            empleado.puesto = "fray";
+            empleado.fechaNacimiento = "ernesto";
+
+            
+            empleado.edad = 17;
+
+            empleado.CURP = "perez";
+            empleado.NSS = "y";
+            empleado.RFC = "vengo";
+            empleado.domicilio = "a";
+            empleado.banco = "celebrar";
+            empleado.numCuenta = "la";
+            empleado.telefono ="lala";
+            empleado.email = "lalaa";
+            empleado.contra = "larala";
+            */
+
+            
+                        empleado.nombre = tbNombre.Text;
+                        empleado.apellidos = tbApellidos.Text;
+                        empleado.fechaAlta = DTPAlta.Text;
+
+                        empleado.depa = cbDepartamento.Text;
+                        empleado.puesto = cbPuesto.Text;
+                        empleado.fechaNacimiento = DTPNacimiento.Text;
+
+                        //Calcular Edad
+                        DateTime today = DateTime.Today;
+                        DateTime bday = DateTime.Parse(empleado.fechaNacimiento);
+                        int age = today.Year - bday.Year;
+                        if (bday > today.AddYears(-age))
+                            age--;
+                        empleado.edad = age;
+
+                        empleado.CURP = mtbCURP.Text;
+                        empleado.NSS = mtbNSS.Text;
+                        empleado.RFC = tbRFC.Text;
+                        empleado.domicilio = tbCalle.Text + ", " + mtbNum.Text+", "+tbColonia.Text + ", " +mtbCP.Text + ", " +tbMunicipio.Text + ", " +cbEstado.Text ;
+                        empleado.banco = cbBanco.Text;
+                        empleado.numCuenta = tbCuenta.Text;
+                        empleado.telefono = mtbTelefono.Text;
+                        empleado.email = tbEmail.Text;
+                        empleado.contra = tbcontra.Text;
+                        
+            // if (tbNombre.Text != "" && tbApellidos.Text != "" && cbDepartamento.Text != "" && cbPuesto.Text != "" && mtbCURP.Text != "" && mtbNSS.Text != "" && DTPNacimiento.Text != "" && tbRFC.Text != "" && tbCalle.Text != "" && cbBanco.Text != "" && tbCuenta.Text != "" && mtbTelefono.Text != "")
+            //{
+            // public Guid id_emp;
+
+
+            // if (EsValidoRFC(empleado.RFC) == false)
+            // {
+            //   MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            // }
+            /*
+            else if (EsValidoCURP(empleado.CURP) == false)
             {
-                error = conex.InsertEmpleado(empleado);
-                // public Guid id_emp;
-                Guid num_empleado = Guid.NewGuid();
-
-                empleado.ID_Empleado = num_empleado;
-
-                empleado.nombre = tbNombre.Text;
-                empleado.apellidos = tbApellidos.Text;
-                empleado.fechaAlta = DTPAlta.Text;
-
-                empleado.depa = cbDepartamento.Text;
-                empleado.puesto = cbPuesto.Text;
-                empleado.fechaNacimiento = DTPNacimiento.Text;
-
-                //Calcular Edad
-                DateTime today = DateTime.Today;
-                DateTime bday = DateTime.Parse(empleado.fechaNacimiento);
-                int age = today.Year - bday.Year;
-                if (bday > today.AddYears(-age))
-                    age--;
-                empleado.edad = age;
-
-                empleado.CURP = mtbCURP.Text;
-                empleado.NSS = mtbNSS.Text;
-                empleado.RFC = tbRFC.Text;
-                empleado.domicilio = tbCalle.Text;
-                empleado.banco = cbBanco.Text;
-                empleado.numCuenta = tbCuenta.Text;
-                empleado.telefono = tbCuenta.Text;
-                empleado.email = tbCuenta.Text;
-                empleado.contra = tbCuenta.Text;
-
-                if (EsValidoRFC(empleado.RFC) == false)
-                {
-                    MessageBox.Show("Porfavor ponga un RFC valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (EsValidoCURP(empleado.CURP) == false)
-                {
-                    MessageBox.Show("Porfavor ponga un CURP valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                if (error)
-                {
-                    MessageBox.Show("No se pudo agregar al alumno");
-                }
-                else
-                {
-                    MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
-
-                    // MessageBox.Show("el alumno se agregó con éxito.");
-                    MessageBox.Show("Bienvenido al equipo!", "FELICIDADES!!!", MessageBoxButtons.OK);
-                    tbNombre.Text = "";
-                    tbApellidos.Text = "";
-                    cbDepartamento.Text = "";
-                    cbPuesto.Text = "";
-                    mtbCURP.Text = "";
-                    mtbNSS.Text = "";
-                    DTPNacimiento.Text = "";
-                    tbRFC.Text = "";
-                    tbCalle.Text = "";
-                    cbBanco.Text = "";
-                    tbCuenta.Text = "";
-                    mtbTelefono.Text = "";
-                    tbColonia.Text = "";
-                    mtbNSS.Text = "";
-                    mtbNum.Text = "";
-                    tbID.Text = "";
-                    tbEmail.Text = "";
-                    tbMunicipio.Text = "";
-                    mtbCP.Text = "";
-
-                }
+                MessageBox.Show("Porfavor ponga un CURP valido", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
+            //else  {
+            error = conex.InsertEmpleado(empleado);
+
+                   if (error)
+                    {
+                        MessageBox.Show("No se pudo agregar al alumno");
+                    }
+                    else{
+
+
+                        MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+
+                        // MessageBox.Show("el alumno se agregó con éxito.");
+                        MessageBox.Show("Bienvenido al equipo!", "FELICIDADES!!!", MessageBoxButtons.OK);
+                        tbNombre.Text = "";
+                        tbApellidos.Text = "";
+                        cbDepartamento.Text = "";
+                        cbPuesto.Text = "";
+                        mtbCURP.Text = "";
+                        mtbNSS.Text = "";
+                        DTPNacimiento.Text = "";
+                        tbRFC.Text = "";
+                        tbCalle.Text = "";
+                        cbBanco.Text = "";
+                        tbCuenta.Text = "";
+                        mtbTelefono.Text = "";
+                        tbColonia.Text = "";
+                        mtbNSS.Text = "";
+                        mtbNum.Text = "";
+                        tbID.Text = "";
+                        tbEmail.Text = "";
+                        tbMunicipio.Text = "";
+                        mtbCP.Text = "";
+
+                    }
+                //}
+           // }
 
            
-          
+          /*
             else
             {
                 MessageBox.Show("Porfavor agregue la informacion completa", "ERROR");
@@ -173,7 +202,7 @@ namespace WindowsFormsApp2
                 mtbCP.Text = "";
 
             }
-            
+            */
             //ESTO ES PARA SACAR EL VALOR DE UN COMBO BOX 
             //MessageBox.Show(this.cbEstado.SelectedItem.ToString());
 

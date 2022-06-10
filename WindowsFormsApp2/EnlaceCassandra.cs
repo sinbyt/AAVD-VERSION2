@@ -91,21 +91,50 @@ namespace WindowsFormsApplication2
             {
                 conectar();
                 //var fecha = param.fechaAlta.ToString("yyyy-MM-dd");
-             
 
-               // var query = "BEGIN BATCH ";
-                var query1 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
-                query1 += "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
-                query1 += "if not exists; ";
-                query1 = string.Format(query1, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
+                var num_empleado = new Guid();
+                num_empleado = Guid.NewGuid();
+                param.ID_Empleado = num_empleado;
+                // var query = "BEGIN BATCH ";
+                var query1 = "insert into Empleado(ID_Empleado,nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra) values(";
 
-                /*
-                var query2 = "insert into Empleado(ID_Empleado, nombre,apellidos, fechaAlta, edad, depa, puesto, fechaNacimiento, CURP, NSS,RFC,domicilio,banco,numCuenta,telefono,email,contra)";
-                query2 = "values'({0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}');";
-                query2 = string.Format(query2, param.ID_Empleado, param.nombre + param.apellidos, param.fechaAlta, param.edad, param.depa, param.puesto, param.fechaNacimiento, param.CURP, param.NSS, param.RFC, param.domicilio, param.banco, param.numCuenta, param.telefono, param.email, param.contra);
-                query = query + query1 + query2 + " APPLY BATCH;";
-                */
+                query1 +=param.ID_Empleado.ToString();
+                query1 += ", '";
+                query1 += param.nombre;
+                query1 += "', '";
+                query1 += param.apellidos;
+                query1 += "', '";
+                query1 += param.fechaAlta;
+                query1 += "', ";
+                query1 += param.edad.ToString();
+                query1 += ", '";
+                query1 += param.depa;
+                query1 += "', '";
+                query1 += param.puesto;
+                query1 += "', '";
+                query1 += param.fechaNacimiento;
+                query1 += "', '";
+                query1 += param.CURP;
+                query1 += "', '";
+                query1 += param.NSS;
+                query1 += "', '";
+                query1 += param.RFC;
+                query1 += "', '";
+                query1 += param.domicilio;
+                query1 += "', '";
+                query1 += param.banco;
+                query1 += "', '";
+                query1 += param.numCuenta;
+                query1 += "', '";
+                query1 += param.telefono;
+                query1 += "', '";
+                query1 += param.email;
+                query1 += "', '";
+                query1 += param.contra;
 
+                query1 += "');";
+
+              
                 _instancia.Execute(query1);
             }
 
@@ -342,9 +371,9 @@ namespace WindowsFormsApplication2
             {
                 conectar();
 
-                var query1 = "insert into Departamento(nomDepa, sueldoBase) ";
+                var query1 = "insert into Departamento(nomDepa, sueldoBase)";
                 query1 += "values('{0}','{1}')";
-                query1 += "if not exists; ";
+                query1 += "if not exists;";
                 query1 = string.Format(query1, param.nomDepa, param.sueldoBase);
 
                 _instancia.Execute(query1);

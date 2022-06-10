@@ -88,5 +88,10 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void cbPerDec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
