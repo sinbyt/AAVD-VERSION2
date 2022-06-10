@@ -74,13 +74,13 @@ public class Lists
     public class NOMINA
         {
             public Guid numemp { get; set; }
-            public string nomemple { get; set; }
-            public string fechanom { get; set; }
+        public string fechanom { get; set; }
+        public string nomemple { get; set; }
             public List<string> percep { get; set; }
             public string perpepT { get; set; }
-            public string deduccT { get; set; }
             public List<string> deducc { get; set; }
-            public double sueldoB { get; set; }
+        public string deduccT { get; set; }
+        public double sueldoB { get; set; }
             public double sueldoN { get; set; }
             public int jornada { get; set; }
             public string depa { get; set; }

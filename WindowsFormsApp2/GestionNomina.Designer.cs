@@ -77,6 +77,8 @@ namespace WindowsFormsApp2
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -199,7 +201,7 @@ namespace WindowsFormsApp2
             this.editarIndividualToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1696, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1772, 33);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -573,11 +575,31 @@ namespace WindowsFormsApp2
             this.groupBox4.Text = "Seleccione percepciones y deducciones que se aplicaran en la nomina";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1649, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1649, 153);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 57;
+            this.button3.Text = "Eliminar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // FORMNOMINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1696, 683);
+            this.ClientSize = new System.Drawing.Size(1772, 683);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCSV);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbPuesto);
@@ -658,5 +680,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
