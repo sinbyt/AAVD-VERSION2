@@ -38,6 +38,33 @@ namespace WindowsFormsApp2
                     {
                         PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
                         doc.Open();
+                        //DATOS DE FECHA
+                        doc.Add(new iTextSharp.text.Phrase(cbFecha.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(listBox3.Text + " " + "/n"));
+
+                        //DATOS DE LA EMPRESA
+                        doc.Add(new iTextSharp.text.Phrase(tbRazon.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbDomicilio.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbRFCEMP.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbInicio.Text + " "+ "/n"));
+
+                        //DATOS DE EMPLEADO
+                        doc.Add(new iTextSharp.text.Phrase(tbEmpleado.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbNSS.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbCURP.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbRFC.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbID.Text + " " + "/n"));
+
+                        //DATOS DE PUESTO
+                        doc.Add(new iTextSharp.text.Phrase(tbPuesto.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbDepa.Text)); 
+                        doc.Add(new iTextSharp.text.Phrase(tbDias.Text + " "));
+                        doc.Add(new iTextSharp.text.Phrase(tbSalario.Text + " "));
+
+                        //LISTAS DE PERCEPCIONES Y DEDUCCIONES
+
+                        doc.Add(new iTextSharp.text.Paragraph(lbPer.Text + " "));
+                        doc.Add(new iTextSharp.text.Paragraph(lbDec.Text + " "));
                         //doc.Add(new iTextSharp.text.Paragraph(RTB.Text));
                     }
                     catch (Exception ex)

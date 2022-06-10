@@ -344,7 +344,7 @@ namespace WindowsFormsApp2
             // 
             // btnPDF
             // 
-            this.btnPDF.Location = new System.Drawing.Point(388, 510);
+            this.btnPDF.Location = new System.Drawing.Point(389, 510);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(124, 41);
             this.btnPDF.TabIndex = 60;
@@ -432,7 +432,7 @@ namespace WindowsFormsApp2
             this.tbPuesto.Size = new System.Drawing.Size(122, 22);
             this.tbPuesto.TabIndex = 68;
             // 
-            // Recibo
+            // Recibo_EMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -479,7 +479,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.tbCURP);
             this.Controls.Add(this.tbNSS);
             this.Controls.Add(this.tbEmpleado);
-            this.Name = "Recibo";
+            this.Name = "Recibo_EMP";
             this.Text = "Recibo";
             this.ResumeLayout(false);
             this.PerformLayout();
