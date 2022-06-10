@@ -687,6 +687,20 @@ namespace WindowsFormsApplication2
 
         }
 
+        public List<Lists.NOMINA> GetAllNomina()
+        {
+            string query = "SELECT numemp,fechanom, nomemple,percep, perpepT, deducc, deduccT, sueldoB, sueldoN, jornada,depa,puesto FROM NOMINA;";
+            conectar();
+
+            IMapper mapper = new Mapper(_instancia);
+            IEnumerable<Lists.NOMINA> nomina = mapper.Fetch<Lists.NOMINA>(query);
+
+            desconectar();
+            return nomina.ToList();
+
+        }
+
+
         public bool listapercepc(listapercep param)
         {
             var Err = false; // SI no hay error
@@ -791,24 +805,20 @@ namespace WindowsFormsApplication2
             return lista2.ToList();
 
         }
-        public void InsertPercepcionEmpleado(string nombre, string cantidad, string porcentaje, string fecha, string id)
+        public void insert_listadeduc(string id, string fecha, string tipo, string nom, string monto)
         {
-
-            try
-            {
+            try {
                 conectar();
-
-
-                var query1 = "INSERT INTO percepciones_por_empleado_fecha (nombre, cantidad, porcentaje, num_empleado, fecha) values('";
-                query1 += nombre;
-                query1 += "',";
-                query1 += cantidad;
-                query1 += ", ";
-                query1 += porcentaje;
-                query1 += ", ";
+                var query1 = "INSERT INTO listadeduc (idemp, fechanom, tipo, nom, monto) values(";
                 query1 += id;
-                query1 += ", '";
+                query1 += ",'";
                 query1 += fecha;
+                query1 += "','";
+                query1 += tipo;
+                query1 += "','";
+                query1 += nom;
+                query1 += "','";
+                query1 += monto;
                 query1 += "');";
 
                 _instancia.Execute(query1);
@@ -827,7 +837,38 @@ namespace WindowsFormsApplication2
 
         }
 
+        public void insert_listapercepc(Guid id, string fecha, string tipo, string nom, string monto)
+        {
+            try
+            {
+                conectar();
+                var query1 = "INSERT INTO listapercep (idemp, fechanom, tipo, nom, monto) values(";
+                query1 += id.ToString();
+                query1 += ",'";
+                query1 += fecha;
+                query1 += "','";
+                query1 += tipo;
+                query1 += "','";
+                query1 += nom;
+                query1 += "','";
+                query1 += monto;
+                query1 += "');";
 
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+
+        }
 
         ///RECIBO=====================================================================
         public bool InsertRecibo(RECIBO param)

@@ -207,7 +207,7 @@ namespace WindowsFormsApp2
                                 if (per.tipoDato == "Porcentaje")
                                 {
                                     cantidad += getPorcentaje(NuevaNom.sueldoB, double.Parse(per.monto));
-
+                                conex.insert_listadeduc(nuevoem.ID_Empleado,NuevaNom.fechanom,"Percecpcion",per.conceptoPD,String.Format(cant,{ 0:c} ));
                                 }
                                 else
                                 {
