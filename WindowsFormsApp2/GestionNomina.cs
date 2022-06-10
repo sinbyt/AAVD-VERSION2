@@ -131,6 +131,9 @@ namespace WindowsFormsApp2
             var NuevoEmp = new Lists.Empleado();
             string sueldoBase="";
             string nivelSalarial="";
+            double cantidad = 0.0;
+
+
             //EnlaceCassandra enlace = new EnlaceCassandra();
             var dptoSource = conex.GetDepa();
             var pstoSource = conex.GetPuesto();
@@ -168,7 +171,8 @@ namespace WindowsFormsApp2
             //   double sueldon = sueldob + double.Parse(NuevaNom.percep) - double.Parse(NuevaNom.deducc);
 
             //Generar todos los empleados=====================================================================
-            foreach (Lists.Empleado nuevoem in empsource) {
+            foreach (Lists.Empleado nuevoem in empsource)
+            {
 
 
                 List<string> listaPercepciones = new List<string>();
@@ -200,35 +204,95 @@ namespace WindowsFormsApp2
                         break;
                     }
                 }
+
+                //SUMAR PERCEPCIONES
+                foreach (String str in lbPercepciones.Items) {
+
+                    foreach (PERDEC per in perSource)
+                    {
+                        if (per.conceptoPD == str)
+                        {
+                            if (per.tipoDato == "Porcentaje")
+                            {
+                                 cantidad = getPorcentaje(double.Parse(NuevaNom.sueldoB), double.Parse(per.monto));
+
+                               
+                                //new listadeduc= listadeduc new ();
+
+                                //  listaPer.Add(per.conceptoPD, StringFormat({0:c}, cantidad));
+                            }
+                            else
+                            {
+                                //     listaPer.Add(per.conceptoPD, per.monto);
+                                cantidad = double.Parse(per.monto);
+
+                            }
+                            NuevaNom.perpepT = NuevaNom.perpepT + cantidad;
+
+                            break;
+                        }
+                    }
+                }
+
+
+                //SUMAR PERCEPCIONES
+                foreach (String str in lbDeducciones.Items)
+                {
+
+                    foreach (PERDEC dec in perSource)
+                    {
+                        if (dec.conceptoPD == str)
+                        {
+                            if (dec.tipoDato == "Porcentaje")
+                            {
+                                cantidad = getPorcentaje(double.Parse(NuevaNom.sueldoB), double.Parse(dec.monto));
+
+
+                                //new listadeduc= listadeduc new ();
+
+                                //  listaPer.Add(per.conceptoPD, StringFormat({0:c}, cantidad));
+                            }
+                            else
+                            {
+                                //     listaPer.Add(per.conceptoPD, per.monto);
+                                cantidad = double.Parse(dec.monto);
+
+                            }
+                            NuevaNom.perpepT = NuevaNom.perpepT + cantidad;
+
+                            break;
+                        }
+                    }
+                }
                 //Por cada deduccion que le pertenezca al empleado en cuestion, se calcula, abona y docuemtna
                 //lbPercepciones=
 
-                foreach (PERDEC per in perSource)
-                {
-                    if (per.conceptoPD == lbPercepciones.Text)
-                    {
-                        if (per.tipoDato == "Porcentaje")
-                        {
-                            double cantidad= getPorcentaje(double.Parse(NuevaNom.sueldoB), double.Parse(per.monto));
+                /* foreach (PERDEC per in perSource)
+                 {
+                     if (per.conceptoPD == lbPercepciones.Text)
+                     {
+                         if (per.tipoDato == "Porcentaje")
+                         {
+                             double cantidad= getPorcentaje(double.Parse(NuevaNom.sueldoB), double.Parse(per.monto));
 
-                            //new listadeduc= listadeduc new ();
-                            
-                            //  listaPer.Add(per.conceptoPD, StringFormat({0:c}, cantidad));
-                        }
-                        else {
-                       //     listaPer.Add(per.conceptoPD, per.monto);
+                             //new listadeduc= listadeduc new ();
 
-                        }
+                             //  listaPer.Add(per.conceptoPD, StringFormat({0:c}, cantidad));
+                         }
+                         else {
+                        //     listaPer.Add(per.conceptoPD, per.monto);
 
-                        break;
-                    }
-                }
-              
-                NuevaNom.NomEmple = nuevoem.nombre;
-                NuevaNom.numEmp = nuevoem.ID_Empleado;
-                NuevaNom.depa = nuevoem.depa;
-                NuevaNom.puesto = nuevoem.puesto;
-                
+                         }
+
+                         break;
+                     }
+                 }*/
+                /*
+                  NuevaNom.NomEmple = nuevoem.nombre;
+                  NuevaNom.numEmp = nuevoem.ID_Empleado;
+                  NuevaNom.depa = nuevoem.depa;
+                  NuevaNom.puesto = nuevoem.puesto;
+                  */
 
 
             }
