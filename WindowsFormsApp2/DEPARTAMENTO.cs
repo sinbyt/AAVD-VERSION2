@@ -15,13 +15,55 @@ namespace WindowsFormsApp2
 {
     public partial class DEPARTAMENTO : Form
     {
-
+        private int n= 0;
         
 
         public DEPARTAMENTO()
         {
-            List<Departamento> lst = new List<Departamento>();
+            
+           // List<Departamento> lst = new List<Departamento>();
             InitializeComponent();
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+
+
+            var dptoSource = conex.GetDepa();
+
+            foreach (Departamento nuevodepa in dptoSource)
+            {
+                int cuenta = dgvDepartamento.Rows.Add();
+                dgvDepartamento.Rows[cuenta].Cells[0].Value = nuevodepa.nomDepa;
+                dgvDepartamento.Rows[cuenta].Cells[1].Value = nuevodepa.sueldoBase;
+
+
+            }
+        }
+        private void Agregarbtn_Click(object sender, EventArgs e)
+        {
+            var conex = new WindowsFormsApplication2.EnlaceCassandra();
+            var error = false;
+
+            Departamento NuevoDepa = new Departamento();
+            NuevoDepa.nomDepa = tbdepa.Text;
+            NuevoDepa.sueldoBase = mtbSueldo.Text;
+            if (tbdepa.Text != "" && mtbSueldo.Text != "")
+            {
+                error = conex.InsertDepa(NuevoDepa);
+
+
+                if (error)
+                {
+                    MessageBox.Show("No se pudo agregar el departamento");
+                }
+                else
+                {
+                    MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "NUEVO DEPARTAMENTO!!!", MessageBoxButtons.OK);
+
+                    // MessageBox.Show("el alumno se agregó con éxito.");
+                    tbdepa.Text = "";
+                    mtbSueldo.Text = "";
+
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,7 +96,7 @@ namespace WindowsFormsApp2
         {
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregar(object sender, EventArgs e)
         {
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
             var error = false;
@@ -93,19 +135,29 @@ namespace WindowsFormsApp2
             //mtbRFC.Text = "";
 
         }
-
+        //EDITAR
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow nuevorenglon = dgvDepartamento.Rows[n];
+            nuevorenglon.Cells[0].Value = tbdepa.Text;
+            nuevorenglon.Cells[1].Value = mtbSueldo.Text;
         }
-
+        //ELIMINAR
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (n >= 0)
+            {
+                dgvDepartamento.Rows.RemoveAt(n);
+            }
         }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        //LLENAR TB CON RENGLON ACTUAL
+        private void dgvDepartamento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            n = e.RowIndex;
+            DataGridViewRow renglon = dgvDepartamento.Rows[n];
+
+            tbdepa.Text = renglon.Cells[0].Value.ToString();
+           mtbSueldo.Text = renglon.Cells[1].Value.ToString();
 
         }
     }

@@ -102,6 +102,7 @@ namespace WindowsFormsApp2
             this.dgvPuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPuesto.Size = new System.Drawing.Size(428, 295);
             this.dgvPuesto.TabIndex = 66;
+            this.dgvPuesto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuesto_CellClick);
             // 
             // nompuesto
             // 
@@ -127,6 +128,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 67;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -136,6 +138,7 @@ namespace WindowsFormsApp2
             this.button2.TabIndex = 68;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // groupBox1
             // 
