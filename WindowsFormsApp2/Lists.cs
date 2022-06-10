@@ -74,11 +74,11 @@ public class Lists
     public class NOMINA
         {
             public Guid numEmp { get; set; }
-            public string nomEmple { get; set; }
+            public string NomEmple { get; set; }
             public string FechaNom { get; set; }
             public List<string> percep { get; set; }
-        public string perpepT { get; set; }
-        public string deduccT { get; set; }
+            public string perpepT { get; set; }
+            public string deduccT { get; set; }
             public List<string> deducc { get; set; }
             public string sueldoB { get; set; }
             public string sueldoN { get; set; }
@@ -90,8 +90,9 @@ public class Lists
 
     public class listapercep
     {
-        public string idemp { get; set; }
+        public Guid idemp { get; set; }
         public string fechanom { get; set; }
+        public string tipo { get; set; }
         public string nom { get; set; }
         public double monto { get; set; }
 
@@ -102,6 +103,7 @@ public class Lists
 
         public Guid idemp { get; set; }
         public string fechanom { get; set; }
+        public string tipo { get; set; }
         public string nom { get; set; }
         public double monto { get; set; }
     }

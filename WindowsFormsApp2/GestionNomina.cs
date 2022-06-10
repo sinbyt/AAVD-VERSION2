@@ -149,14 +149,7 @@ namespace WindowsFormsApp2
 
            
 
-            /*
-            var ID_Empleado = new Guid();
-            ID_Empleado = Guid.NewGuid();
-
-            var fechaAlta = DateTime.Now.ToString("yyyy'-'MM'-'dd");
-            */
-         
-
+           
 
            // NuevaNom.percep = cbPercepciones.Text;
 
@@ -168,18 +161,22 @@ namespace WindowsFormsApp2
             // NuevaNom.puesto = cbPuesto.Text;
 
             // CALCULO SUELDO BRUTO
-            //  double sueldob = float.Parse(nivelSalarial) * double.Parse(sueldoBase) * dias;
+            //double sueldob = float.Parse(nivelSalarial) * double.Parse(sueldoBase) * dias;
             // NuevaNom.sueldoB = string.Format("{0:c}", sueldob);
 
             //CALCULO SUELDO  NETO
             //   double sueldon = sueldob + double.Parse(NuevaNom.percep) - double.Parse(NuevaNom.deducc);
 
-            //generar todos los empleados
+            //Generar todos los empleados=====================================================================
             foreach (Lists.Empleado nuevoem in empsource) {
 
 
                 List<string> listaPercepciones = new List<string>();
                 List<string> listaDeducciones = new List<string>();
+
+                NuevaNom.numEmp = nuevoem.ID_Empleado;
+                NuevaNom.NomEmple = nuevoem.nombre;
+
 
                 int dias = GetLastDayOfMonth(NuevaNom.FechaNom);
                 NuevaNom.jornada = dias;
@@ -193,7 +190,16 @@ namespace WindowsFormsApp2
                         break;
                     }
                 }
+                //Se obtiene la base salarial
 
+                foreach (Puesto puesto in pstoSource)
+                {
+                    if (puesto.proporSal == NuevoEmp.puesto)
+                    {
+                        nivelSalarial = puesto.proporSal;
+                        break;
+                    }
+                }
                 //Por cada deduccion que le pertenezca al empleado en cuestion, se calcula, abona y docuemtna
                 //lbPercepciones=
 
@@ -208,9 +214,6 @@ namespace WindowsFormsApp2
                             //new listadeduc= listadeduc new ();
                             
                             //  listaPer.Add(per.conceptoPD, StringFormat({0:c}, cantidad));
-
-                           
-
                         }
                         else {
                        //     listaPer.Add(per.conceptoPD, per.monto);
@@ -220,15 +223,8 @@ namespace WindowsFormsApp2
                         break;
                     }
                 }
-                foreach (Departamento departamento in dptoSource)
-                {
-                    if (departamento.nomDepa == NuevoEmp.depa)
-                    {
-                        sueldoBase = departamento.sueldoBase;
-                        break;
-                    }
-                }
-                NuevaNom.nomEmple = nuevoem.nombre;
+              
+                NuevaNom.NomEmple = nuevoem.nombre;
                 NuevaNom.numEmp = nuevoem.ID_Empleado;
                 NuevaNom.depa = nuevoem.depa;
                 NuevaNom.puesto = nuevoem.puesto;
@@ -312,6 +308,11 @@ namespace WindowsFormsApp2
         private void editarIndividualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NuevaNominaIndividual.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
 
         /*  private void checkBox1_CheckedChanged(object sender, EventArgs e)

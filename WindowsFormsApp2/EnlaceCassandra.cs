@@ -578,20 +578,48 @@ namespace WindowsFormsApplication2
         ///NOMINA=====================================================================
         public bool InsertNomina(NOMINA param)
         {
+
             var Err = false; // SI no hay error
             try
             {
                 conectar();
-                var query1 = "insert into NOMINA(numEmp,nomEmple, FechaNom, percep,percepT, deducc,deduccT, sueldoB, sueldoN, jornada,depa,puesto)";
-                query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')";
-                query1 += "if not exists; ";
-                query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percep,param.perpepT, param.deducc, param.deduccT, param.sueldoB, param.sueldoN, param.jornada,  param.depa, param.puesto);
+                //var fecha = param.fechaAlta.ToString("yyyy-MM-dd");
 
+                //var num_empleado = new Guid();
+                //num_empleado = Guid.NewGuid();
+                //param.numEmp = num_empleado;
+                var query1 = "insert into Empleado(numEmp,FechaNom,NomEmple, percep, perpepT, deducc, deduccT, sueldoB, sueldoN, jornada,depa,puesto) values(";
 
+                query1 += param.numEmp.ToString();
+                query1 += ", '";
+                query1 += param.FechaNom;
+                query1 += "', '";
+                query1 += param.NomEmple;
+                query1 += "', '";
+                query1 += param.percep;
+                query1 += "', '";
+                //query1 += param.perpepT.ToString();
+                query1 += "', '";
+                query1 += param.deducc;
+                query1 += "', '";
+             //   query1 += param.deduccT;
+                query1 += "', ";
+                query1 += param.sueldoB;
+                query1 += ", ";
+                query1 += param.sueldoN;
+                query1 += ", ";
+                query1 += param.jornada;
+                query1 += ", '";
+                query1 += param.depa;
+                query1 += "', '";
+                query1 += param.puesto;           
+                query1 += "');";
 
 
                 _instancia.Execute(query1);
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -605,6 +633,8 @@ namespace WindowsFormsApplication2
 
             }
             return Err;
+
+
         }
 
         public bool listapercepc(listapercep param)
@@ -612,20 +642,27 @@ namespace WindowsFormsApplication2
             var Err = false; // SI no hay error
             try
             {
-
                 conectar();
-                var query5 = "insert into listapercep(idemp,fechanom,nom, monto)";
-                query5 += "values('{0}','{1}','{2}','{3}')";
-                query5 += "if not exists; ";
-                query5 = string.Format(query5, param.idemp, param.fechanom, param.nom, param.monto);
+                var query1 = "insert into listapercep(idemp,fechanom,tipo, nom, monto) values(";
+                query1 += param.idemp.ToString();
+                query1 += ", '";
+                query1 += param.fechanom;
+                query1 += "', '";
+                query1 += param.tipo;
+                query1 += "', '";
+                query1 += param.nom;
+                query1 += "', ";
+                query1 += param.monto.ToString();
+                query1 += ");";
 
 
-                _instancia.Execute(query5);
+                _instancia.Execute(query1);
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
                 Err = true;
                 throw ex;
             }
@@ -657,20 +694,28 @@ namespace WindowsFormsApplication2
             var Err = false; // SI no hay error
             try
             {
-
                 conectar();
-                var query5 = "insert into listadeducc(idemp,fechanom,nom, monto)";
-                query5 += "values('{0}','{1}','{2}','{3}')";
-                query5 += "if not exists; ";
-                query5 = string.Format(query5, param.idemp, param.fechanom, param.nom, param.monto);
+                var query1 = "insert into listadeduc(idemp,fechanom,tipo, nom, monto) values(";
+
+                query1 += param.idemp.ToString();
+                query1 += ", '";
+                query1 += param.fechanom;
+                query1 += "', '";
+                query1 += param.tipo;
+                query1 += "', '";
+                query1 += param.nom;
+                query1 += "', ";
+                query1 += param.monto.ToString();
+                query1 += ");";
 
 
-                _instancia.Execute(query5);
+                _instancia.Execute(query1);
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
                 Err = true;
                 throw ex;
             }
@@ -696,6 +741,42 @@ namespace WindowsFormsApplication2
             return lista2.ToList();
 
         }
+        public void InsertPercepcionEmpleado(string nombre, string cantidad, string porcentaje, string fecha, string id)
+        {
+
+            try
+            {
+                conectar();
+
+
+                var query1 = "INSERT INTO percepciones_por_empleado_fecha (nombre, cantidad, porcentaje, num_empleado, fecha) values('";
+                query1 += nombre;
+                query1 += "',";
+                query1 += cantidad;
+                query1 += ", ";
+                query1 += porcentaje;
+                query1 += ", ";
+                query1 += id;
+                query1 += ", '";
+                query1 += fecha;
+                query1 += "');";
+
+                _instancia.Execute(query1);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+
+            }
+            finally
+            {
+                // desconectar o cerrar la conexión
+                desconectar();
+
+            }
+
+        }
+
 
 
         ///RECIBO=====================================================================
