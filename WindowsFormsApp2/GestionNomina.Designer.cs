@@ -43,6 +43,7 @@ namespace WindowsFormsApp2
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puestoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lbDeducciones = new System.Windows.Forms.ListBox();
@@ -65,14 +66,13 @@ namespace WindowsFormsApp2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCSV = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.tbanio = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mtbISR = new System.Windows.Forms.MaskedTextBox();
             this.mtbIMSS = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.editarIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -192,30 +192,37 @@ namespace WindowsFormsApp2
             this.editarIndividualToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1696, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1696, 33);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.nuevoToolStripMenuItem.Text = "Nueva P/D";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // departamentoToolStripMenuItem
             // 
             this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
             this.departamentoToolStripMenuItem.Text = "Departamento";
             this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
             // 
             // puestoToolStripMenuItem
             // 
             this.puestoToolStripMenuItem.Name = "puestoToolStripMenuItem";
-            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.puestoToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
             this.puestoToolStripMenuItem.Text = "Puesto";
             this.puestoToolStripMenuItem.Click += new System.EventHandler(this.puestoToolStripMenuItem_Click);
+            // 
+            // editarIndividualToolStripMenuItem
+            // 
+            this.editarIndividualToolStripMenuItem.Name = "editarIndividualToolStripMenuItem";
+            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(161, 29);
+            this.editarIndividualToolStripMenuItem.Text = "Editar Individual";
+            this.editarIndividualToolStripMenuItem.Click += new System.EventHandler(this.editarIndividualToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -263,7 +270,6 @@ namespace WindowsFormsApp2
             this.button2.TabIndex = 11;
             this.button2.Text = "DESHACER";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button7
             // 
@@ -422,7 +428,7 @@ namespace WindowsFormsApp2
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.maskedTextBox1);
+            this.groupBox3.Controls.Add(this.tbanio);
             this.groupBox3.Controls.Add(this.cbMes);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label11);
@@ -434,13 +440,13 @@ namespace WindowsFormsApp2
             this.groupBox3.Text = "Seleccione fecha de nomina";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // maskedTextBox1
+            // tbanio
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(177, 41);
-            this.maskedTextBox1.Mask = "9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(66, 22);
-            this.maskedTextBox1.TabIndex = 56;
+            this.tbanio.Location = new System.Drawing.Point(177, 41);
+            this.tbanio.Mask = "9999";
+            this.tbanio.Name = "tbanio";
+            this.tbanio.Size = new System.Drawing.Size(66, 22);
+            this.tbanio.TabIndex = 56;
             // 
             // groupBox2
             // 
@@ -510,13 +516,6 @@ namespace WindowsFormsApp2
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Seleccione percepciones y deducciones que se aplicaran en la nomina";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // editarIndividualToolStripMenuItem
-            // 
-            this.editarIndividualToolStripMenuItem.Name = "editarIndividualToolStripMenuItem";
-            this.editarIndividualToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
-            this.editarIndividualToolStripMenuItem.Text = "Editar Individual";
-            this.editarIndividualToolStripMenuItem.Click += new System.EventHandler(this.editarIndividualToolStripMenuItem_Click);
             // 
             // FORMNOMINA
             // 
@@ -597,7 +596,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.MaskedTextBox mtbISR;
         private System.Windows.Forms.MaskedTextBox mtbIMSS;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox tbanio;
         private System.Windows.Forms.ToolStripMenuItem editarIndividualToolStripMenuItem;
     }
 }

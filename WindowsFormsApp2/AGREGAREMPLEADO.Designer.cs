@@ -83,6 +83,8 @@ namespace WindowsFormsApp2
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbcontra = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -555,7 +557,9 @@ namespace WindowsFormsApp2
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tbcontra);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
@@ -595,6 +599,22 @@ namespace WindowsFormsApp2
             this.label22.Size = new System.Drawing.Size(206, 17);
             this.label22.TabIndex = 53;
             this.label22.Text = "Lista de empleados registrados";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 513);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 17);
+            this.label23.TabIndex = 55;
+            this.label23.Text = "Contraseña";
+            // 
+            // tbcontra
+            // 
+            this.tbcontra.Location = new System.Drawing.Point(154, 513);
+            this.tbcontra.Name = "tbcontra";
+            this.tbcontra.Size = new System.Drawing.Size(195, 22);
+            this.tbcontra.TabIndex = 54;
             // 
             // formAgregar
             // 
@@ -689,5 +709,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.DataGridViewTextBoxColumn RFC;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox tbcontra;
     }
 }
