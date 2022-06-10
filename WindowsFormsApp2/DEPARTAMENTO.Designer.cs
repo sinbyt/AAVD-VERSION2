@@ -33,15 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mtbSueldo = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDepartamento = new System.Windows.Forms.DataGridView();
             this.depa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldobase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Agregarbtn = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamento)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,23 +91,23 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // dgvDepartamento
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDepartamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDepartamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.depa,
             this.sueldobase});
-            this.dataGridView1.Location = new System.Drawing.Point(450, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(326, 313);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvDepartamento.Location = new System.Drawing.Point(450, 39);
+            this.dgvDepartamento.Name = "dgvDepartamento";
+            this.dgvDepartamento.ReadOnly = true;
+            this.dgvDepartamento.RowHeadersWidth = 51;
+            this.dgvDepartamento.RowTemplate.Height = 24;
+            this.dgvDepartamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDepartamento.Size = new System.Drawing.Size(326, 313);
+            this.dgvDepartamento.TabIndex = 6;
+            this.dgvDepartamento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDepartamento_CellClick);
+            this.dgvDepartamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // depa
             // 
@@ -155,7 +156,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.Agregarbtn);
             this.groupBox1.Location = new System.Drawing.Point(39, 39);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(390, 313);
@@ -163,15 +165,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo departamento";
             // 
-            // btnAgregar
+            // Agregarbtn
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(143, 181);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 29);
-            this.btnAgregar.TabIndex = 11;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.Agregarbtn.Location = new System.Drawing.Point(157, 190);
+            this.Agregarbtn.Name = "Agregarbtn";
+            this.Agregarbtn.Size = new System.Drawing.Size(75, 23);
+            this.Agregarbtn.TabIndex = 0;
+            this.Agregarbtn.Text = "Agregar";
+            this.Agregarbtn.UseVisualStyleBackColor = true;
+            this.Agregarbtn.Click += new System.EventHandler(this.Agregarbtn_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(275, 136);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(8, 8);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // DEPARTAMENTO
             // 
@@ -181,7 +192,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDepartamento);
             this.Controls.Add(this.mtbSueldo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -190,7 +201,7 @@
             this.Name = "DEPARTAMENTO";
             this.Text = "DEPARTAMENTOS";
             this.Load += new System.EventHandler(this.DEPARTAMENTOS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamento)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,13 +215,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox mtbSueldo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDepartamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn depa;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldobase;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Agregarbtn;
+        //private System.Windows.Forms.Button btnAgregar;
     }
 }

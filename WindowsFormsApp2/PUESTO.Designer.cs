@@ -34,14 +34,14 @@ namespace WindowsFormsApp2
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPuesto = new System.Windows.Forms.DataGridView();
             this.nompuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proporsal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuesto)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,20 +88,21 @@ namespace WindowsFormsApp2
             this.label1.TabIndex = 63;
             this.label1.Text = "Proporción salarial";
             // 
-            // dataGridView1
+            // dgvPuesto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPuesto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nompuesto,
             this.proporsal});
-            this.dataGridView1.Location = new System.Drawing.Point(302, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(428, 295);
-            this.dataGridView1.TabIndex = 66;
+            this.dgvPuesto.Location = new System.Drawing.Point(302, 26);
+            this.dgvPuesto.Name = "dgvPuesto";
+            this.dgvPuesto.ReadOnly = true;
+            this.dgvPuesto.RowHeadersWidth = 51;
+            this.dgvPuesto.RowTemplate.Height = 24;
+            this.dgvPuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPuesto.Size = new System.Drawing.Size(428, 295);
+            this.dgvPuesto.TabIndex = 66;
+            this.dgvPuesto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuesto_CellClick);
             // 
             // nompuesto
             // 
@@ -127,6 +128,7 @@ namespace WindowsFormsApp2
             this.button1.TabIndex = 67;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -136,6 +138,7 @@ namespace WindowsFormsApp2
             this.button2.TabIndex = 68;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // groupBox1
             // 
@@ -166,12 +169,12 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPuesto);
             this.Controls.Add(this.groupBox1);
             this.Name = "PUESTO";
             this.Text = "Gestion de Puestos";
             this.Load += new System.EventHandler(this.NuevoPuesto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPuesto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -185,7 +188,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nompuesto;
         private System.Windows.Forms.DataGridViewTextBoxColumn proporsal;
         private System.Windows.Forms.Button button1;
