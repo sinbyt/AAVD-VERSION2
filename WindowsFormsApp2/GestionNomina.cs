@@ -29,17 +29,22 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             //CONEXION CON CASSANDRA
+
             var conex = new WindowsFormsApplication2.EnlaceCassandra();
 
 
-            var nmnSource = conex.InsertNomina();
+            var nmnSource = conex.GetAllNomina();
 
-            foreach (NOMINA nominita in pstSource)
+            foreach (NOMINA nominita in nmnSource)
             {
 
-                int cuenta = dgvPuesto.Rows.Add();
-                dgvPuesto.Rows[cuenta].Cells[0].Value = nominita.nomPuesto;
-                dgvPuesto.Rows[cuenta].Cells[1].Value = nominita.proporSal;
+                int cuenta = dgvNomina.Rows.Add();
+                dgvNomina.Rows[cuenta].Cells[0].Value = nominita.numemp;
+                dgvNomina.Rows[cuenta].Cells[1].Value = nominita.nomemple;
+                dgvNomina.Rows[cuenta].Cells[2].Value = nominita.fechanom;
+                dgvNomina.Rows[cuenta].Cells[3].Value = nominita.sueldoB;
+                dgvNomina.Rows[cuenta].Cells[4].Value = nominita.depa;
+                dgvNomina.Rows[cuenta].Cells[5].Value = nominita.puesto;
 
                 //(puesto.nomPuesto);
 
@@ -54,7 +59,6 @@ namespace WindowsFormsApp2
             NuevoDepartamento = new DEPARTAMENTO();
             NuevoPuesto = new PUESTO();
             NuevaNominaIndividual = new Nomina.Individual_Nomina();
-            var conex = new WindowsFormsApplication2.EnlaceCassandra();
             // var error = false;
 
             var dptoSource = conex.GetDepa();
@@ -226,7 +230,7 @@ namespace WindowsFormsApp2
                                 if (per.tipoDato == "Porcentaje")
                                 {
                                     cantidad += getPorcentaje(NuevaNom.sueldoB, double.Parse(per.monto));
-                                conex.insert_listadeduc(nuevoem.ID_Empleado,NuevaNom.fechanom,"Percecpcion",per.conceptoPD,String.Format(cant,{ 0:c} ));
+                                //conex.insert_listadeduc(nuevoem.ID_Empleado,NuevaNom.fechanom,"Percecpcion",per.conceptoPD,String.Format(cant,{ 0:c} ));
                                 }
                                 else
                                 {
@@ -419,17 +423,30 @@ namespace WindowsFormsApp2
         //EDITAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
         private void button1_Click(object sender, EventArgs e)
         {
+            DataGridViewRow nuevorenglon = dgvNomina.Rows[n];
+            nuevorenglon.Cells[0].Value = mtbISR.Text;
+            nuevorenglon.Cells[1].Value = mtbIMSS.Text;
+            MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se han hecho los cambios deseados!!!", MessageBoxButtons.OK);
 
         }
         //ELIMINAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR
         private void button3_Click_1(object sender, EventArgs e)
         {
+            if (n >= 0)
+            {
+                dgvNomina.Rows.RemoveAt(n);
+                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se elimino la informacion correctamente!!!", MessageBoxButtons.OK);
 
+            }
         }
         //IMPRIMIR A TEXT BOOOOOOOOOOOOOOOOOOOOOOOOOOOOX
         private void dgvNomina_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            n = e.RowIndex;
+            DataGridViewRow renglon = dgvNomina.Rows[n];
 
+            mtbIMSS.Text = renglon.Cells[0].Value.ToString();
+            mtbISR.Text = renglon.Cells[1].Value.ToString();
         }
     }
 

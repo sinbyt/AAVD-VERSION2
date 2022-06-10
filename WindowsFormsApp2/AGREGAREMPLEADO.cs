@@ -281,6 +281,8 @@ namespace WindowsFormsApp2
             nuevorenglon.Cells[2].Value = cbPuesto.Text;
             nuevorenglon.Cells[3].Value = cbDepartamento.Text;
             nuevorenglon.Cells[4].Value = tbRFC.Text;
+            MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Informacion actualizada!!!", MessageBoxButtons.OK);
+
             //nuevorenglon.Cells[1].Value = tbPorcentaje.Text;
         }
 
@@ -304,6 +306,8 @@ namespace WindowsFormsApp2
             if (n >= 0)
             {
                 dgvEmpleado.Rows.RemoveAt(n);
+                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se ha eliminado con exito!!!", MessageBoxButtons.OK);
+
             }
         }
         //POPULAR TBS CON INFO DEL GRID

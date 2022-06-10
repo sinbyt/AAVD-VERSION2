@@ -107,6 +107,8 @@ namespace WindowsFormsApp2
             if (n>= 0)
             {
                 dgvPuesto.Rows.RemoveAt(n);
+                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se elimino correctamente!!!", MessageBoxButtons.OK);
+
             }
         }
         //EDITAAAAAAAAAAAAAAAAAAAAAAAAAR
@@ -115,6 +117,8 @@ namespace WindowsFormsApp2
             DataGridViewRow nuevorenglon = dgvPuesto.Rows[n];
             nuevorenglon.Cells[0].Value = tbNombre.Text;
             nuevorenglon.Cells[1].Value = tbPorcentaje.Text;
+            MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se actualizo correctamente!!!", MessageBoxButtons.OK);
+
 
         }
     }

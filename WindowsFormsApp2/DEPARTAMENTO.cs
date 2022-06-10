@@ -141,6 +141,8 @@ namespace WindowsFormsApp2
             DataGridViewRow nuevorenglon = dgvDepartamento.Rows[n];
             nuevorenglon.Cells[0].Value = tbdepa.Text;
             nuevorenglon.Cells[1].Value = mtbSueldo.Text;
+            MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Muchas gracias!!!", MessageBoxButtons.OK);
+
         }
         //ELIMINAR
         private void button3_Click(object sender, EventArgs e)
@@ -148,6 +150,8 @@ namespace WindowsFormsApp2
             if (n >= 0)
             {
                 dgvDepartamento.Rows.RemoveAt(n);
+                MessageBox.Show("SE HAN ACTUALIZADO LOS DATOS", "Se han eliminado los datos!!!", MessageBoxButtons.OK);
+
             }
         }
         //LLENAR TB CON RENGLON ACTUAL
