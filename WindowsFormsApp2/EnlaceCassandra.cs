@@ -505,7 +505,7 @@ namespace WindowsFormsApplication2
          
             try
             {
-                string qry = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Deduccion'ALLOW FILTERING;";
+                string qry = "SELECT tipoDato, conceptoPD, porcentPD, monto FROM PERDEC WHERE tipoDato = 'Percepcion'ALLOW FILTERING;";
                
                 conectar();
                 IMapper mapper = new Mapper(_instancia);
@@ -587,28 +587,79 @@ namespace WindowsFormsApplication2
 
                 //var num_empleado = new Guid();
                 //num_empleado = Guid.NewGuid();
-                //param.numEmp = num_empleado;
-                var query1 = "insert into Empleado(numEmp,FechaNom,NomEmple, percep, perpepT, deducc, deduccT, sueldoB, sueldoN, jornada,depa,puesto) values(";
+                //param.numemp = num_empleado;
+                 string percepciones = "";
+                int i = 0;
+                foreach (string percep in param.percep)
+                {
+                    if (i == 0)
+                    {
+                        percepciones += "['" + percep;
+                    }
+                    else if (i == (param.percep.Count - 1))
+                    {
+                        percepciones += "', '" + percep + "'] ";
+                    }
+                    else
+                    {
+                        percepciones += "', '" + percep;
+                    }
 
-                query1 += param.numEmp.ToString();
+                    if (i == 0 && i == (param.percep.Count - 1))
+                    {
+                        percepciones += "'] ";
+                    }
+
+                    i++;
+                }
+
+                string deducciones = "";
+                i = 0;
+                foreach (string ded in param.deducc)
+                {
+                    if (i == 0)
+                    {
+                        deducciones += "['" + ded;
+                    }
+                    else if (i == (param.deducc.Count - 1))
+                    {
+                        deducciones += "', '" + ded + "'] ";
+                    }
+                    else
+                    {
+                        deducciones += "', '" + ded;
+                    }
+
+                    if (i == 0 && i == (param.deducc.Count - 1))
+                    {
+                        deducciones += "'] ";
+                    }
+
+                    i++;
+                }
+
+                var query1 = "insert into NOMINA(numemp,fechanom,nomemple, percep, perpepT, deducc, deduccT, sueldoB, sueldoN, jornada,depa,puesto) values(";
+               
+
+                query1 += param.numemp.ToString();
                 query1 += ", '";
-                query1 += param.FechaNom;
+                query1 += param.fechanom;
                 query1 += "', '";
-                query1 += param.NomEmple;
-                query1 += "', '";
-                query1 += param.percep;
-                query1 += "', '";
-                query1 += param.perpepT.ToString();
-                query1 += "', '";
-                query1 += param.deduccT.ToString(); ;
-                query1 += "', '";
+                query1 += param.nomemple;
+                query1 += "', ";
+                query1 += percepciones;
+                query1 += ", '";
+                query1 += param.perpepT;
+                query1 += "', ";
+                query1 += deducciones;
+                query1 += ", '";
                 query1 += param.deduccT;
                 query1 += "', ";
-                query1 += param.sueldoB;
+                query1 += param.sueldoB.ToString();
                 query1 += ", ";
-                query1 += param.sueldoN;
+                query1 += param.sueldoN.ToString();
                 query1 += ", ";
-                query1 += param.jornada;
+                query1 += param.jornada.ToString();
                 query1 += ", '";
                 query1 += param.depa;
                 query1 += "', '";
@@ -786,10 +837,10 @@ namespace WindowsFormsApplication2
             try
             {
                 conectar();
-                var query1 = "insert into RECIBO(numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa)";
+                var query1 = "insert into RECIBO(numemp,nomemple, fechanom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa)";
                 query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}');";
                 query1 += "if not exists; ";
-                query1 = string.Format(query1, param.numEmp, param.nomEmple, param.FechaNom, param.percept, param.deducc, param.NumRec, param.sueldoB, param.sueldoN, param.jornada, param.fechaAlta, param.depa, param.puesto, param.sueldoNletra, param.RegPat, param.RFC_emple, param.RFC_EMP, param.inicioOp, param.razon_social, param.nomEmpresa);
+                query1 = string.Format(query1, param.numemp, param.nomemple, param.fechanom, param.percept, param.deducc, param.NumRec, param.sueldoB, param.sueldoN, param.jornada, param.fechaAlta, param.depa, param.puesto, param.sueldoNletra, param.RegPat, param.RFC_emple, param.RFC_EMP, param.inicioOp, param.razon_social, param.nomEmpresa);
 
 
 
@@ -812,7 +863,7 @@ namespace WindowsFormsApplication2
         }
         public List<RECIBO> Get_All_Recibo() {
 
-            string query = "SELECT numEmp,nomEmple, FechaNom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa FROM RECIBO;";
+            string query = "SELECT numemp,nomemple, fechanom, percept, deducc, NumRec,sueldoB, sueldoN, jornada, fechaAlta,depa,puesto,sueldoNletra,RegPat,RFC_emple,RFC_EMP,inicioOp,razon_social,nomEmpresa FROM RECIBO;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);
@@ -831,10 +882,10 @@ namespace WindowsFormsApplication2
             try
             {
                 conectar();
-                var query1 = "insert REPORTE_GEN_NOM(depa, puesto, FechaNom, NomEmple, edad,salDiario)";
+                var query1 = "insert REPORTE_GEN_NOM(depa, puesto, fechanom, nomemple, edad,salDiario)";
                 query1 = "values('{0}','{1}','{2}','{3}','{4}','{5}','{6});";
                 query1 += "if not exists; ";
-                query1 = string.Format(query1, param.depa, param.puesto, param.FechaNom, param.NomEmple, param.edad, param.salDiario);
+                query1 = string.Format(query1, param.depa, param.puesto, param.fechanom, param.nomemple, param.edad, param.salDiario);
 
                 _instancia.Execute(query1);
             }
@@ -856,7 +907,7 @@ namespace WindowsFormsApplication2
         public List<REPORTE_GEN_NOM> Get_All_REPORTE_GEN_NOM()
         {
 
-            string query = "SELECT depa, puesto, FechaNom, NomEmple, edad,salDiario FROM REPORTE_GEN_NOM;";
+            string query = "SELECT depa, puesto, fechanom, nomemple, edad,salDiario FROM REPORTE_GEN_NOM;";
             conectar();
 
             IMapper mapper = new Mapper(_instancia);

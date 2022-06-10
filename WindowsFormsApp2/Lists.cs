@@ -73,9 +73,9 @@ public class Lists
 
     public class NOMINA
         {
-            public Guid numEmp { get; set; }
-            public string NomEmple { get; set; }
-            public string FechaNom { get; set; }
+            public Guid numemp { get; set; }
+            public string nomemple { get; set; }
+            public string fechanom { get; set; }
             public List<string> percep { get; set; }
             public string perpepT { get; set; }
             public string deduccT { get; set; }
@@ -109,9 +109,9 @@ public class Lists
     }
     public class RECIBO
         {
-        public string numEmp { get; set; }
-        public string nomEmple { get; set; }
-        public string FechaNom { get; set; }
+        public string numemp { get; set; }
+        public string nomemple { get; set; }
+        public string fechanom { get; set; }
         public string percept { get; set; }
         public string deducc { get; set; }
         public string NumRec { get; set; }
@@ -134,8 +134,8 @@ public class Lists
     {
         public string depa { get; set; }
         public string puesto { get; set; }
-        public string FechaNom { get; set; }
-        public string NomEmple { get; set; }
+        public string fechanom { get; set; }
+        public string nomemple { get; set; }
         public int edad { get; set; }
         public float salDiario { get; set; }
      

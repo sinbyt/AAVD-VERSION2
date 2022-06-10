@@ -57,7 +57,7 @@ namespace WindowsFormsApp2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sueldoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,15 +68,15 @@ namespace WindowsFormsApp2
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbanio = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.mtbISR = new System.Windows.Forms.MaskedTextBox();
             this.mtbIMSS = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -350,7 +350,7 @@ namespace WindowsFormsApp2
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numEmp,
+            this.numemp,
             this.nomEmp,
             this.fecha,
             this.sueldoB,
@@ -365,13 +365,13 @@ namespace WindowsFormsApp2
             this.dataGridView1.Size = new System.Drawing.Size(804, 525);
             this.dataGridView1.TabIndex = 50;
             // 
-            // numEmp
+            // numemp
             // 
-            this.numEmp.HeaderText = "Num. Empleado";
-            this.numEmp.MinimumWidth = 6;
-            this.numEmp.Name = "numEmp";
-            this.numEmp.ReadOnly = true;
-            this.numEmp.Width = 125;
+            this.numemp.HeaderText = "Num. Empleado";
+            this.numemp.MinimumWidth = 6;
+            this.numemp.Name = "numemp";
+            this.numemp.ReadOnly = true;
+            this.numemp.Width = 125;
             // 
             // nomEmp
             // 
@@ -475,10 +475,52 @@ namespace WindowsFormsApp2
             this.groupBox2.Text = "Deducciones fijas";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Monto",
+            "Porcentaje"});
+            this.comboBox2.Location = new System.Drawing.Point(104, 113);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(128, 24);
+            this.comboBox2.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(101, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 17);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Monto o Porcentaje";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(101, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 17);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Monto o Porcentaje";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monto",
+            "Porcentaje"});
+            this.comboBox1.Location = new System.Drawing.Point(104, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(128, 24);
+            this.comboBox1.TabIndex = 30;
+            // 
             // mtbISR
             // 
             this.mtbISR.Location = new System.Drawing.Point(9, 38);
-            this.mtbISR.Mask = "00";
+            this.mtbISR.Mask = "00000";
             this.mtbISR.Name = "mtbISR";
             this.mtbISR.Size = new System.Drawing.Size(61, 22);
             this.mtbISR.TabIndex = 12;
@@ -486,7 +528,7 @@ namespace WindowsFormsApp2
             // mtbIMSS
             // 
             this.mtbIMSS.Location = new System.Drawing.Point(9, 113);
-            this.mtbIMSS.Mask = "00";
+            this.mtbIMSS.Mask = "00000";
             this.mtbIMSS.Name = "mtbIMSS";
             this.mtbIMSS.Size = new System.Drawing.Size(61, 22);
             this.mtbIMSS.TabIndex = 13;
@@ -530,48 +572,6 @@ namespace WindowsFormsApp2
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Seleccione percepciones y deducciones que se aplicaran en la nomina";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Monto",
-            "Porcentaje"});
-            this.comboBox1.Location = new System.Drawing.Point(104, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 24);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(101, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 17);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Monto o Porcentaje";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(101, 91);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 17);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Monto o Porcentaje";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Monto",
-            "Porcentaje"});
-            this.comboBox2.Location = new System.Drawing.Point(104, 113);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 24);
-            this.comboBox2.TabIndex = 34;
             // 
             // FORMNOMINA
             // 
@@ -635,7 +635,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numemp;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn sueldoB;
